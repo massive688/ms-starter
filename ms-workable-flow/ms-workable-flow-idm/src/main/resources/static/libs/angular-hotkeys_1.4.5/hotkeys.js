@@ -19,20 +19,20 @@
 
   angular.module('cfp.hotkeys', []).provider('hotkeys', function() {
 
-    /**
+   /*
      * Configurable setting to disable the cheatsheet entirely
      * @type {Boolean}
      */
     this.includeCheatSheet = true;
 
-    /**
+   /*
      * Configurable setting for the cheat sheet title
      * @type {String}
      */
 
     this.templateTitle = 'Keyboard Shortcuts:';
 
-    /**
+   /*
      * Cheat sheet template in the event you want to totally customize it.
      * @type {String}
      */
@@ -49,13 +49,13 @@
                       '<div class="cfp-hotkeys-close" ng-click="toggleCheatSheet()">×</div>' +
                     '</div></div>';
 
-    /**
+   /*
      * Configurable setting for the cheat sheet hotkey
      * @type {String}
      */
     this.cheatSheetHotkey = '?';
 
-    /**
+   /*
      * Configurable setting for the cheat sheet description
      * @type {String}
      */
@@ -75,7 +75,7 @@
         return (element.contentEditable && element.contentEditable == 'true');
       };
 
-      /**
+     /*
        * Convert strings like cmd into symbols like ⌘
        * @param  {String} combo Key combination, e.g. 'mod+f'
        * @return {String}       The key combination with symbols
@@ -109,7 +109,7 @@
         return combo.join(' + ');
       }
 
-      /**
+     /*
        * Hotkey object used internally for consistency
        *
        * @param {array}    combo       The keycombo. it's an array to support multiple combos
@@ -132,7 +132,7 @@
         this.persistent = persistent;
       }
 
-      /**
+     /*
        * Helper method to format (symbolize) the key combo for display
        *
        * @return {[Array]} An array of the key combination sequence
@@ -154,31 +154,31 @@
         return sequence;
       };
 
-      /**
+     /*
        * A new scope used internally for the cheatsheet
        * @type {$rootScope.Scope}
        */
       var scope = $rootScope.$new();
 
-      /**
+     /*
        * Holds an array of Hotkey objects currently bound
        * @type {Array}
        */
       scope.hotkeys = [];
 
-      /**
+     /*
        * Contains the state of the help's visibility
        * @type {Boolean}
        */
       scope.helpVisible = false;
 
-      /**
+     /*
        * Holds the title string for the help menu
        * @type {String}
        */
       scope.title = this.templateTitle;
 
-      /**
+     /*
        * Expose toggleCheatSheet to hotkeys scope so we can call it using
        * ng-click from the template
        * @type {function}
@@ -186,7 +186,7 @@
       scope.toggleCheatSheet = toggleCheatSheet;
 
 
-      /**
+     /*
        * Holds references to the different scopes that have bound hotkeys
        * attached.  This is useful to catch when the scopes are `$destroy`d and
        * then automatically unbind the hotkey.
@@ -234,7 +234,7 @@
       }
 
 
-      /**
+     /*
        * Purges all non-persistent hotkeys (such as those defined in routes)
        *
        * Without this, the same hotkey would get recreated everytime
@@ -250,7 +250,7 @@
         }
       }
 
-      /**
+     /*
        * Toggles the help menu element's visiblity
        */
       var previousEsc = false;
@@ -279,7 +279,7 @@
         }
       }
 
-      /**
+     /*
        * Creates a new Hotkey and creates the Mousetrap binding
        *
        * @param {string}   combo       mousetrap key binding
@@ -385,7 +385,7 @@
         return hotkey;
       }
 
-      /**
+     /*
        * delete and unbind a Hotkey
        *
        * @param  {mixed} hotkey   Either the bound key or an instance of Hotkey
@@ -421,7 +421,7 @@
 
       }
 
-      /**
+     /*
        * Get a Hotkey object by key binding
        *
        * @param  {[string]} combo  the key the Hotkey is bound to
@@ -442,7 +442,7 @@
         return false;
       }
 
-      /**
+     /*
        * Binds the hotkey to a particular scope.  Useful if the scope is
        * destroyed, we can automatically destroy the hotkey binding.
        *
@@ -481,7 +481,7 @@
         };
       }
 
-      /**
+     /*
        * All callbacks sent to Mousetrap are wrapped using this function
        * so that we can force a $scope.$apply()
        *
@@ -592,7 +592,7 @@
  */
 (function(window, document, undefined) {
 
-    /**
+   /*
      * mapping of special keycodes to their corresponding keys
      *
      * everything in this dictionary cannot use keypress events
@@ -626,7 +626,7 @@
             224: 'meta'
         },
 
-        /**
+       /*
          * mapping for special characters so they can support
          *
          * this dictionary is only used incase you want to bind a
@@ -653,7 +653,7 @@
             222: '\''
         },
 
-        /**
+       /*
          * this is a mapping of keys that require shift on a US keypad
          * back to the non shift equivelents
          *
@@ -685,7 +685,7 @@
             '|': '\\'
         },
 
-        /**
+       /*
          * this is a list of special strings you can use to map
          * to modifier keys when you specify your keyboard shortcuts
          *
@@ -699,7 +699,7 @@
             'mod': /Mac|iPod|iPhone|iPad/.test(navigator.platform) ? 'meta' : 'ctrl'
         },
 
-        /**
+       /*
          * variable to store the flipped version of _MAP from above
          * needed to check if we should use keypress or not when no action
          * is specified
@@ -708,21 +708,21 @@
          */
         _REVERSE_MAP,
 
-        /**
+       /*
          * a list of all the callbacks setup via Mousetrap.bind()
          *
          * @type {Object}
          */
         _callbacks = {},
 
-        /**
+       /*
          * direct map of string combinations to callbacks used for trigger()
          *
          * @type {Object}
          */
         _directMap = {},
 
-        /**
+       /*
          * keeps track of what level each sequence is at since multiple
          * sequences can start out with the same sequence
          *
@@ -730,28 +730,28 @@
          */
         _sequenceLevels = {},
 
-        /**
+       /*
          * variable to store the setTimeout call
          *
          * @type {null|number}
          */
         _resetTimer,
 
-        /**
+       /*
          * temporary state where we will ignore the next keyup
          *
          * @type {boolean|string}
          */
         _ignoreNextKeyup = false,
 
-        /**
+       /*
          * temporary state where we will ignore the next keypress
          *
          * @type {boolean}
          */
         _ignoreNextKeypress = false,
 
-        /**
+       /*
          * are we currently inside of a sequence?
          * type of action ("keyup" or "keydown" or "keypress") or false
          *
@@ -759,7 +759,7 @@
          */
         _nextExpectedAction = false;
 
-    /**
+   /*
      * loop through the f keys, f1 to f19 and add them to the map
      * programatically
      */
@@ -767,14 +767,14 @@
         _MAP[111 + i] = 'f' + i;
     }
 
-    /**
+   /*
      * loop through to map numbers on the numeric keypad
      */
     for (i = 0; i <= 9; ++i) {
         _MAP[i + 96] = i;
     }
 
-    /**
+   /*
      * cross browser add event method
      *
      * @param {Element|HTMLDocument} object
@@ -791,7 +791,7 @@
         object.attachEvent('on' + type, callback);
     }
 
-    /**
+   /*
      * takes the event and returns the key character
      *
      * @param {Event} e
@@ -836,7 +836,7 @@
         return String.fromCharCode(e.which).toLowerCase();
     }
 
-    /**
+   /*
      * checks if two arrays are equal
      *
      * @param {Array} modifiers1
@@ -847,7 +847,7 @@
         return modifiers1.sort().join(',') === modifiers2.sort().join(',');
     }
 
-    /**
+   /*
      * resets all sequence counters except for the ones passed in
      *
      * @param {Object} doNotReset
@@ -872,7 +872,7 @@
         }
     }
 
-    /**
+   /*
      * finds all callbacks that match based on the keycode, modifiers,
      * and action
      *
@@ -944,7 +944,7 @@
         return matches;
     }
 
-    /**
+   /*
      * takes a key event and figures out what the modifiers are
      *
      * @param {Event} e
@@ -972,7 +972,7 @@
         return modifiers;
     }
 
-    /**
+   /*
      * prevents default for this event
      *
      * @param {Event} e
@@ -987,7 +987,7 @@
         e.returnValue = false;
     }
 
-    /**
+   /*
      * stops propogation for this event
      *
      * @param {Event} e
@@ -1002,7 +1002,7 @@
         e.cancelBubble = true;
     }
 
-    /**
+   /*
      * actually calls the callback function
      *
      * if your callback function returns false this will use the jquery
@@ -1025,7 +1025,7 @@
         }
     }
 
-    /**
+   /*
      * handles a character key event
      *
      * @param {string} character
@@ -1113,7 +1113,7 @@
         _ignoreNextKeypress = processedSequenceCallback && e.type == 'keydown';
     }
 
-    /**
+   /*
      * handles a keydown event
      *
      * @param {Event} e
@@ -1143,7 +1143,7 @@
         Mousetrap.handleKey(character, _eventModifiers(e), e);
     }
 
-    /**
+   /*
      * determines if the keycode specified is a modifier key or not
      *
      * @param {string} key
@@ -1153,7 +1153,7 @@
         return key == 'shift' || key == 'ctrl' || key == 'alt' || key == 'meta';
     }
 
-    /**
+   /*
      * called to set a 1 second timeout on the specified sequence
      *
      * this is so after each key press in the sequence you have 1 second
@@ -1166,7 +1166,7 @@
         _resetTimer = setTimeout(_resetSequences, 1000);
     }
 
-    /**
+   /*
      * reverses the map lookup so that we can look for specific keys
      * to see what can and can't use keypress
      *
@@ -1191,7 +1191,7 @@
         return _REVERSE_MAP;
     }
 
-    /**
+   /*
      * picks the best action based on the key combination
      *
      * @param {string} key - character for key
@@ -1215,7 +1215,7 @@
         return action;
     }
 
-    /**
+   /*
      * binds a key sequence to an event
      *
      * @param {string} combo - combo specified in bind call
@@ -1230,7 +1230,7 @@
         // and setting the level to 0
         _sequenceLevels[combo] = 0;
 
-        /**
+       /*
          * callback to increase the sequence level for this sequence and reset
          * all other sequences that were active
          *
@@ -1245,7 +1245,7 @@
             };
         }
 
-        /**
+       /*
          * wraps the specified callback inside of another function in order
          * to reset all sequence counters as soon as this sequence is done
          *
@@ -1283,7 +1283,7 @@
         }
     }
 
-    /**
+   /*
      * Converts from a string key combination to an array
      *
      * @param  {string} combination like "command+shift+l"
@@ -1297,7 +1297,7 @@
         return combination.split('+');
     }
 
-    /**
+   /*
      * Gets info for a specific key combination
      *
      * @param  {string} combination key combination ("command+s" or "a" or "*")
@@ -1347,7 +1347,7 @@
         };
     }
 
-    /**
+   /*
      * binds a single keyboard combination
      *
      * @param {string} combination
@@ -1400,7 +1400,7 @@
         });
     }
 
-    /**
+   /*
      * binds multiple combinations to the same callback
      *
      * @param {Array} combinations
@@ -1421,7 +1421,7 @@
 
     var Mousetrap = {
 
-        /**
+       /*
          * binds an event to mousetrap
          *
          * can be a single key, a combination of keys separated with +,
@@ -1441,7 +1441,7 @@
             return this;
         },
 
-        /**
+       /*
          * unbinds an event to mousetrap
          *
          * the unbinding sets the callback function of the specified key combo
@@ -1462,7 +1462,7 @@
             return Mousetrap.bind(keys, function() {}, action);
         },
 
-        /**
+       /*
          * triggers an event that has already been bound
          *
          * @param {string} keys
@@ -1476,7 +1476,7 @@
             return this;
         },
 
-        /**
+       /*
          * resets the library back to its initial state.  this is useful
          * if you want to clear out the current keyboard shortcuts and bind
          * new ones - for example if you switch to another page
@@ -1489,7 +1489,7 @@
             return this;
         },
 
-       /**
+      /*
         * should we stop this event before firing off callbacks
         *
         * @param {Event} e
@@ -1507,7 +1507,7 @@
             return element.tagName == 'INPUT' || element.tagName == 'SELECT' || element.tagName == 'TEXTAREA' || element.isContentEditable;
         },
 
-        /**
+       /*
          * exposes _handleKey publicly so it can be overwritten by extensions
          */
         handleKey: _handleKey

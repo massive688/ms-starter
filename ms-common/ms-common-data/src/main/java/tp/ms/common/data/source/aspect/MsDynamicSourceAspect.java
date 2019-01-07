@@ -24,7 +24,7 @@ public class MsDynamicSourceAspect {
 	protected static final ThreadLocal<String> preDatasourceHolder = new ThreadLocal<>();
 
 
-    /**
+    /*
      * 		args			参数
      *	 	@within 		拦截接口或者类带有TargetDataSource注解，执行方法是在拦截的类或者接口里面的方法
      *		@annotation		拦截所有带有TargetDataSource注解的方法
@@ -51,14 +51,14 @@ public class MsDynamicSourceAspect {
 
 
 
-	/**
+	/*
 	 * 根据@TargetDataSource的属性值设置不同的dataSourceKey,以供DynamicDataSource
 	 */
 	@Before("sourceAspect() || sourceServiceAspect()")
 	public void sourceServiceAspectMethodExecution(JoinPoint jp) {
 		determineServiceSource(jp);
 	}
-	/**
+	/*
 	 * 留着方法备用吧，懒了
 	 * @param jp
 	 */
@@ -82,7 +82,7 @@ public class MsDynamicSourceAspect {
 		preDatasourceHolder.remove();
 	}
 
-	/**
+	/*
 	 * 通过拦截service层的注解确定数据源
 	 * @param jp
 	 */
@@ -102,7 +102,7 @@ public class MsDynamicSourceAspect {
 		}
 	}
 
-	/**
+	/*
 	 * 通过拦截mapper接口解析出的注解确定数据源
 	 * @param jp
 	 */
@@ -126,7 +126,7 @@ public class MsDynamicSourceAspect {
 		return result;
 	}
 	
-	/**
+	/*
 	 * 注解重置数据源
 	 * @param annotation
 	 */
@@ -139,7 +139,7 @@ public class MsDynamicSourceAspect {
 		preDatasourceHolder.set(MsDynamicDataSourceHolder.getDataSourceRouterKey());
 		MsDynamicDataSourceHolder.setDataSourceRouterKey(targetSource);
 	}
-	/**
+	/*
 	 * 通过类找注解
 	 * @param clazz
 	 * @return
@@ -154,7 +154,7 @@ public class MsDynamicSourceAspect {
 		}
 		return null;
     }
-    /**
+    /*
      * 通过类及方法名找出该方法的注解
      * @param clazz
      * @param methodName

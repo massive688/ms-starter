@@ -28,7 +28,7 @@ public class Result<T> {
     private T data;
 
 	private Object parameter;
-    /**
+   /*
      * Only used when 202 Created
      */
 	@JSONField(ordinal=4)

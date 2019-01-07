@@ -23,7 +23,7 @@ public class HttpKit {
        return HttpKit.getRequest().getRemoteHost();
     }
 
-    /**
+   /*
      * 获取所有请求的值
      */
     public static Map<String, String> getRequestParameters() {
@@ -38,7 +38,7 @@ public class HttpKit {
         return values;
     }
 
-    /**
+   /*
      * 获取 HttpServletRequest
      */
     public static HttpServletResponse getResponse() {
@@ -46,7 +46,7 @@ public class HttpKit {
         return response;
     }
 
-    /**
+   /*
      * 获取 包装防Xss Sql注入的 HttpServletRequest
      * @return request
      */
@@ -55,7 +55,7 @@ public class HttpKit {
         return new WafRequestWrapper(request);
     }
 
-    /**
+   /*
      * 向指定URL发送GET方法的请求
      *
      * @param url 发送请求的URL
@@ -115,7 +115,7 @@ public class HttpKit {
         return result;
     }
 
-    /**
+   /*
      * 向指定 URL 发送POST方法的请求
      *
      * @param url 发送请求的 URL

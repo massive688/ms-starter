@@ -15,7 +15,7 @@ public interface IPolyVO {
 	 */
 	Object clone();
 
-	/**
+	/*
 	 * 根据子实体的类型获得得到子实体数据，主要应用场景为多子表的时候
 	 * 
 	 * @param clazz
@@ -26,21 +26,21 @@ public interface IPolyVO {
 
 //	IChildVO[] getChildren(Class<? extends IChildVO> clazz);
 	
-	/**
+	/*
 	 * 获取一主多子单据的主实体
 	 * 
 	 * @return 一主多子单据的主实体
 	 */
 	IBaseVO getParent();
 
-	/**
+	/*
 	 * 获得一主多子单据的主键
 	 * 
 	 * @return 一主多子单据的主键
 	 */
 	String getPrimaryKey();
 
-	/**
+	/*
 	 * 获取初始化子实体的类型
 	 * 
 	 * @param clazz
@@ -51,7 +51,7 @@ public interface IPolyVO {
 	  
 	List<Class<ChildBaseVO>> getChildrenClass();
 
-	/**
+	/*
 	 * 根据子实体的类型设置子实体数据
 	 * 
 	 * @param clazz
@@ -80,7 +80,7 @@ public interface IPolyVO {
 	 */
 	void registerChildrenClass();
 
-	/**
+	/*
 	 * 得到父类的类型
 	 * 
 	 * @return
@@ -89,7 +89,7 @@ public interface IPolyVO {
 	@JSONField(serialize=false)
 	Class<? extends IMajorVO> getParentClass();
 
-	/**
+	/*
 	 * 设置子表VO对象数组。
 	 * 
 	 * @param children

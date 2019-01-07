@@ -222,7 +222,7 @@ public class HttpClientUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		/** 请求发送成功，并得到响应 **/
+		/* 请求发送成功，并得到响应 **/
 		JSONObject jsonObject = null;
 		if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
 			HttpEntity httpEntity = response.getEntity();
@@ -239,24 +239,20 @@ public class HttpClientUtil {
 		return jsonObject;
 	}
 
-	/**
+	/*
 	 * Creates {@link CloseableHttpClient} instance with default configuration.
 	 */
 	public static CloseableHttpClient createDefault() {
 		return HttpClientBuilder.create().build();
 	}
 
-	/**
+	/*
 	 * http发送post请求
-	 * 
-	 * @param url
-	 * @param maps
-	 * @return
 	 */
 	@SuppressWarnings({ "resource" })
 	public static JSONObject sendPost(String url, Map<String, String> params) {
 		DefaultHttpClient client = new DefaultHttpClient();
-		/** NameValuePair是传送给服务器的请求参数 param.get("name") **/
+		/* NameValuePair是传送给服务器的请求参数 param.get("name") **/
 		List<NameValuePair> list = new ArrayList<NameValuePair>();
 		for (Map.Entry<String, String> entry : params.entrySet()) {
 			String key = entry.getKey().toString();
@@ -267,24 +263,24 @@ public class HttpClientUtil {
 		}
 		UrlEncodedFormEntity entity = null;
 		try {
-			/** 设置编码 **/
+			/* 设置编码 **/
 			entity = new UrlEncodedFormEntity(list, "UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-		/** 新建一个post请求 **/
+		/* 新建一个post请求 **/
 		HttpPost post = new HttpPost(url);
 		post.setEntity(entity);
 		HttpResponse response = null;
 		try {
-			/** 客服端向服务器发送请求 **/
+			/* 客服端向服务器发送请求 **/
 			response = client.execute(post);
 		} catch (ClientProtocolException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		/** 请求发送成功，并得到响应 **/
+		/* 请求发送成功，并得到响应 **/
 		JSONObject jsonObject = null;
 		if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
 			HttpEntity httpEntity = response.getEntity();

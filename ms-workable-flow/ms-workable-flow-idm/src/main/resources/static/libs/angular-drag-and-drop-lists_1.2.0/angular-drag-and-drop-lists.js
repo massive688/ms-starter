@@ -8,7 +8,7 @@
  */
 angular.module('dndLists', [])
 
-  /**
+ /*
    * Use the dnd-draggable attribute to make your element draggable
    *
    * Attributes:
@@ -73,7 +73,7 @@ angular.module('dndLists', [])
         });
       }
 
-      /**
+     /*
        * When the drag operation is started we have to prepare the dataTransfer object,
        * which is the primary way we communicate with the target element
        */
@@ -116,7 +116,7 @@ angular.module('dndLists', [])
         event.stopPropagation();
       });
 
-      /**
+     /*
        * The dragend event is triggered when the element was dropped or when the drag
        * operation was aborted (e.g. hit escape button). Depending on the executed action
        * we will invoke the callbacks specified with the dnd-moved or dnd-copied attribute.
@@ -148,7 +148,7 @@ angular.module('dndLists', [])
         event.stopPropagation();
       });
 
-      /**
+     /*
        * When the element is clicked we invoke the callback function
        * specified with the dnd-selected attribute.
        */
@@ -162,7 +162,7 @@ angular.module('dndLists', [])
         event.stopPropagation();
       });
 
-      /**
+     /*
        * Workaround to make element draggable in IE9
        */
       element.on('selectstart', function() {
@@ -172,7 +172,7 @@ angular.module('dndLists', [])
     };
   }])
 
-  /**
+ /*
    * Use the dnd-list attribute to make your list element a dropzone. Usually you will add a single
    * li element as child with the ng-repeat directive. If you don't do that, we will not be able to
    * position the dropped element correctly. If you want your list to be sortable, also add the
@@ -231,7 +231,7 @@ angular.module('dndLists', [])
       var horizontal = attr.dndHorizontalList && scope.$eval(attr.dndHorizontalList);
       var externalSources = attr.dndExternalSources && scope.$eval(attr.dndExternalSources);
 
-      /**
+     /*
        * The dragover event is triggered "every few hundred milliseconds" while an element
        * is being dragged over our list, or over an child element.
        */
@@ -300,7 +300,7 @@ angular.module('dndLists', [])
         return false;
       });
 
-      /**
+     /*
        * When the element is dropped, we use the position of the placeholder element as the
        * position where we insert the transferred data. This assumes that the list has exactly
        * one child element per array element.
@@ -361,7 +361,7 @@ angular.module('dndLists', [])
         return false;
       });
 
-      /**
+     /*
        * We have to remove the placeholder when the element is no longer dragged over our list. The
        * problem is that the dragleave event is not only fired when the element leaves our list,
        * but also when it leaves a child element -- so practically it's fired all the time. As a
@@ -380,7 +380,7 @@ angular.module('dndLists', [])
         }, 100);
       });
 
-      /**
+     /*
        * Checks whether the mouse pointer is in the first half of the given target element.
        *
        * In Chrome we can just use offsetY, but in Firefox we have to use layerY, which only
@@ -397,7 +397,7 @@ angular.module('dndLists', [])
         return mousePointer < targetPosition + targetSize / 2;
       }
 
-        /**
+       /*
          * Flowable-patched version of isMouseInFirstHalf that uses page and bounding client rect
          * instead of the offsetX and layerX properties to determine which half of target the mouse pointer is hovering
          * this is more natural since th method now actually works like above, but it also adds some mild
@@ -412,7 +412,7 @@ angular.module('dndLists', [])
                 return (event.pageY - targetNodeRect.top) < (targetNodeRect.height / 2);
             }
         }
-      /**
+     /*
        * We use the position of the placeholder node to determine at which position of the array the
        * object needs to be inserted
        */
@@ -420,7 +420,7 @@ angular.module('dndLists', [])
         return Array.prototype.indexOf.call(listNode.children, placeholderNode);
       }
 
-      /**
+     /*
        * Checks various conditions that must be fulfilled for a drop to be allowed
        */
       function isDropAllowed(event) {
@@ -446,7 +446,7 @@ angular.module('dndLists', [])
         return true;
       }
 
-      /**
+     /*
        * Small helper function that cleans up if we aborted a drop.
        */
       function stopDragover() {
@@ -455,7 +455,7 @@ angular.module('dndLists', [])
         return true;
       }
 
-      /**
+     /*
        * Invokes a callback with some interesting parameters and returns the callbacks return value.
        */
       function invokeCallback(expression, event, item) {
@@ -468,7 +468,7 @@ angular.module('dndLists', [])
         });
       }
 
-      /**
+     /*
        * Check if the dataTransfer object contains a drag type that we can handle. In old versions
        * of IE the types collection will not even be there, so we just assume a drop is possible.
        */
@@ -483,7 +483,7 @@ angular.module('dndLists', [])
     };
   }])
 
-  /**
+ /*
    * This workaround handles the fact that Internet Explorer does not support drag types other than
    * "Text" and "URL". That means we can not know whether the data comes from one of our elements or
    * is just some other data like a text selection. As a workaround we save the isDragging flag in
@@ -492,7 +492,7 @@ angular.module('dndLists', [])
    */
   .factory('dndDragTypeWorkaround', function(){ return {} })
 
-  /**
+ /*
    * Chrome on Windows does not set the dropEffect field, which we need in dragend to determine
    * whether a drag operation was successful. Therefore we have to maintain it in this global
    * variable. The bug report for that has been open for years:

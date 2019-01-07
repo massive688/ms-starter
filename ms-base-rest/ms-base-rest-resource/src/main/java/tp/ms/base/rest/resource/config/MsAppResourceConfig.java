@@ -31,7 +31,7 @@ import tp.ms.base.rest.resource.converter.PolyJsonHttpMessageConverter;
 })
 public class MsAppResourceConfig
 {
-	/**
+	/*
 	 * 配置消息转换器为fastjson
 	 * @return
 	 */

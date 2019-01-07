@@ -27,7 +27,7 @@
         return;
     }
 
-    /**
+   /*
      * mapping of special keycodes to their corresponding keys
      *
      * everything in this dictionary cannot use keypress events
@@ -61,7 +61,7 @@
         224: 'meta'
     };
 
-    /**
+   /*
      * mapping for special characters so they can support
      *
      * this dictionary is only used incase you want to bind a
@@ -88,7 +88,7 @@
         222: '\''
     };
 
-    /**
+   /*
      * this is a mapping of keys that require shift on a US keypad
      * back to the non shift equivelents
      *
@@ -120,7 +120,7 @@
         '|': '\\'
     };
 
-    /**
+   /*
      * this is a list of special strings you can use to map
      * to modifier keys when you specify your keyboard shortcuts
      *
@@ -135,7 +135,7 @@
         'mod': /Mac|iPod|iPhone|iPad/.test(navigator.platform) ? 'meta' : 'ctrl'
     };
 
-    /**
+   /*
      * variable to store the flipped version of _MAP from above
      * needed to check if we should use keypress or not when no action
      * is specified
@@ -144,7 +144,7 @@
      */
     var _REVERSE_MAP;
 
-    /**
+   /*
      * loop through the f keys, f1 to f19 and add them to the map
      * programatically
      */
@@ -152,14 +152,14 @@
         _MAP[111 + i] = 'f' + i;
     }
 
-    /**
+   /*
      * loop through to map numbers on the numeric keypad
      */
     for (i = 0; i <= 9; ++i) {
         _MAP[i + 96] = i;
     }
 
-    /**
+   /*
      * cross browser add event method
      *
      * @param {Element|HTMLDocument} object
@@ -176,7 +176,7 @@
         object.attachEvent('on' + type, callback);
     }
 
-    /**
+   /*
      * takes the event and returns the key character
      *
      * @param {Event} e
@@ -221,7 +221,7 @@
         return String.fromCharCode(e.which).toLowerCase();
     }
 
-    /**
+   /*
      * checks if two arrays are equal
      *
      * @param {Array} modifiers1
@@ -232,7 +232,7 @@
         return modifiers1.sort().join(',') === modifiers2.sort().join(',');
     }
 
-    /**
+   /*
      * takes a key event and figures out what the modifiers are
      *
      * @param {Event} e
@@ -260,7 +260,7 @@
         return modifiers;
     }
 
-    /**
+   /*
      * prevents default for this event
      *
      * @param {Event} e
@@ -275,7 +275,7 @@
         e.returnValue = false;
     }
 
-    /**
+   /*
      * stops propogation for this event
      *
      * @param {Event} e
@@ -290,7 +290,7 @@
         e.cancelBubble = true;
     }
 
-    /**
+   /*
      * determines if the keycode specified is a modifier key or not
      *
      * @param {string} key
@@ -300,7 +300,7 @@
         return key == 'shift' || key == 'ctrl' || key == 'alt' || key == 'meta';
     }
 
-    /**
+   /*
      * reverses the map lookup so that we can look for specific keys
      * to see what can and can't use keypress
      *
@@ -325,7 +325,7 @@
         return _REVERSE_MAP;
     }
 
-    /**
+   /*
      * picks the best action based on the key combination
      *
      * @param {string} key - character for key
@@ -349,7 +349,7 @@
         return action;
     }
 
-    /**
+   /*
      * Converts from a string key combination to an array
      *
      * @param  {string} combination like "command+shift+l"
@@ -364,7 +364,7 @@
         return combination.split('+');
     }
 
-    /**
+   /*
      * Gets info for a specific key combination
      *
      * @param  {string} combination key combination ("command+s" or "a" or "*")
@@ -435,28 +435,28 @@
             return new Mousetrap(targetElement);
         }
 
-        /**
+       /*
          * element to attach key events to
          *
          * @type {Element}
          */
         self.target = targetElement;
 
-        /**
+       /*
          * a list of all the callbacks setup via Mousetrap.bind()
          *
          * @type {Object}
          */
         self._callbacks = {};
 
-        /**
+       /*
          * direct map of string combinations to callbacks used for trigger()
          *
          * @type {Object}
          */
         self._directMap = {};
 
-        /**
+       /*
          * keeps track of what level each sequence is at since multiple
          * sequences can start out with the same sequence
          *
@@ -464,28 +464,28 @@
          */
         var _sequenceLevels = {};
 
-        /**
+       /*
          * variable to store the setTimeout call
          *
          * @type {null|number}
          */
         var _resetTimer;
 
-        /**
+       /*
          * temporary state where we will ignore the next keyup
          *
          * @type {boolean|string}
          */
         var _ignoreNextKeyup = false;
 
-        /**
+       /*
          * temporary state where we will ignore the next keypress
          *
          * @type {boolean}
          */
         var _ignoreNextKeypress = false;
 
-        /**
+       /*
          * are we currently inside of a sequence?
          * type of action ("keyup" or "keydown" or "keypress") or false
          *
@@ -493,7 +493,7 @@
          */
         var _nextExpectedAction = false;
 
-        /**
+       /*
          * resets all sequence counters except for the ones passed in
          *
          * @param {Object} doNotReset
@@ -518,7 +518,7 @@
             }
         }
 
-        /**
+       /*
          * finds all callbacks that match based on the keycode, modifiers,
          * and action
          *
@@ -590,7 +590,7 @@
             return matches;
         }
 
-        /**
+       /*
          * actually calls the callback function
          *
          * if your callback function returns false this will use the jquery
@@ -613,7 +613,7 @@
             }
         }
 
-        /**
+       /*
          * handles a character key event
          *
          * @param {string} character
@@ -701,7 +701,7 @@
             _ignoreNextKeypress = processedSequenceCallback && e.type == 'keydown';
         };
 
-        /**
+       /*
          * handles a keydown event
          *
          * @param {Event} e
@@ -731,7 +731,7 @@
             self.handleKey(character, _eventModifiers(e), e);
         }
 
-        /**
+       /*
          * called to set a 1 second timeout on the specified sequence
          *
          * this is so after each key press in the sequence you have 1 second
@@ -744,7 +744,7 @@
             _resetTimer = setTimeout(_resetSequences, 1000);
         }
 
-        /**
+       /*
          * binds a key sequence to an event
          *
          * @param {string} combo - combo specified in bind call
@@ -759,7 +759,7 @@
             // and setting the level to 0
             _sequenceLevels[combo] = 0;
 
-            /**
+           /*
              * callback to increase the sequence level for this sequence and reset
              * all other sequences that were active
              *
@@ -774,7 +774,7 @@
                 };
             }
 
-            /**
+           /*
              * wraps the specified callback inside of another function in order
              * to reset all sequence counters as soon as this sequence is done
              *
@@ -812,7 +812,7 @@
             }
         }
 
-        /**
+       /*
          * binds a single keyboard combination
          *
          * @param {string} combination
@@ -865,7 +865,7 @@
             });
         }
 
-        /**
+       /*
          * binds multiple combinations to the same callback
          *
          * @param {Array} combinations
@@ -885,7 +885,7 @@
         _addEvent(targetElement, 'keyup', _handleKeyEvent);
     }
 
-    /**
+   /*
      * binds an event to mousetrap
      *
      * can be a single key, a combination of keys separated with +,
@@ -906,7 +906,7 @@
         return self;
     };
 
-    /**
+   /*
      * unbinds an event to mousetrap
      *
      * the unbinding sets the callback function of the specified key combo
@@ -928,7 +928,7 @@
         return self.bind.call(self, keys, function() {}, action);
     };
 
-    /**
+   /*
      * triggers an event that has already been bound
      *
      * @param {string} keys
@@ -943,7 +943,7 @@
         return self;
     };
 
-    /**
+   /*
      * resets the library back to its initial state.  this is useful
      * if you want to clear out the current keyboard shortcuts and bind
      * new ones - for example if you switch to another page
@@ -957,7 +957,7 @@
         return self;
     };
 
-    /**
+   /*
      * should we stop this event before firing off callbacks
      *
      * @param {Event} e
@@ -980,7 +980,7 @@
         return element.tagName == 'INPUT' || element.tagName == 'SELECT' || element.tagName == 'TEXTAREA' || element.isContentEditable;
     };
 
-    /**
+   /*
      * exposes _handleKey publicly so it can be overwritten by extensions
      */
     Mousetrap.prototype.handleKey = function() {
@@ -988,7 +988,7 @@
         return self._handleKey.apply(self, arguments);
     };
 
-    /**
+   /*
      * allow custom key mappings
      */
     Mousetrap.addKeycodes = function(object) {
@@ -1000,7 +1000,7 @@
         _REVERSE_MAP = null;
     };
 
-    /**
+   /*
      * Init the global mousetrap functions
      *
      * This method is needed to allow the global mousetrap functions to work

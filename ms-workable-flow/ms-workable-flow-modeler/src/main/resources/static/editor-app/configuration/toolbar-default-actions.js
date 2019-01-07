@@ -228,7 +228,7 @@ FLOWABLE.TOOLBAR = {
             }
         },
 
-        /**
+       /*
          * Helper method: fetches the Oryx Edit plugin from the provided scope,
          * if not on the scope, it is created and put on the scope for further use.
          *
@@ -276,7 +276,7 @@ FLOWABLE.TOOLBAR = {
             FLOWABLE_EDITOR_TOUR.gettingStarted(services.$scope, services.$translate, services.$q);
         },
         
-        /**
+       /*
          * Helper method: fetches the Oryx View plugin from the provided scope,
          * if not on the scope, it is created and put on the scope for further use.
          */

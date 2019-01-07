@@ -4770,7 +4770,7 @@ Prototype._original_property = window.Sizzle;
         return select( selector.replace( rtrim, "$1" ), context, results, seed );
     }
 
-    /**
+   /*
      * Create key-value caches of limited size
      * @returns {Function(string, Object)} Returns the Object data after storing it on itself with
      *	property name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)
@@ -4788,7 +4788,7 @@ Prototype._original_property = window.Sizzle;
         return cache;
     }
 
-    /**
+   /*
      * Mark a function for special use by Sizzle
      * @param {Function} fn The function to mark
      */
@@ -4797,7 +4797,7 @@ Prototype._original_property = window.Sizzle;
         return fn;
     }
 
-    /**
+   /*
      * Support testing using an element
      * @param {Function} fn Passed the created div and expects a boolean result
      */
@@ -4816,7 +4816,7 @@ Prototype._original_property = window.Sizzle;
         }
     }
 
-    /**
+   /*
      * Adds the same handler for all of the specified attrs
      * @param {String} attrs Pipe-separated list of attributes
      * @param {Function} handler The method that will be applied
@@ -4830,7 +4830,7 @@ Prototype._original_property = window.Sizzle;
         }
     }
 
-    /**
+   /*
      * Checks document order of two siblings
      * @param {Element} a
      * @param {Element} b
@@ -4857,7 +4857,7 @@ Prototype._original_property = window.Sizzle;
         return a ? 1 : -1;
     }
 
-    /**
+   /*
      * Returns a function to use in pseudos for input types
      * @param {String} type
      */
@@ -4868,7 +4868,7 @@ Prototype._original_property = window.Sizzle;
         };
     }
 
-    /**
+   /*
      * Returns a function to use in pseudos for buttons
      * @param {String} type
      */
@@ -4879,7 +4879,7 @@ Prototype._original_property = window.Sizzle;
         };
     }
 
-    /**
+   /*
      * Returns a function to use in pseudos for positionals
      * @param {Function} fn
      */
@@ -4900,7 +4900,7 @@ Prototype._original_property = window.Sizzle;
         });
     }
 
-    /**
+   /*
      * Checks a node for validity as a Sizzle context
      * @param {Element|Object=} context
      * @returns {Element|Object|Boolean} The input node if acceptable, otherwise a falsy value
@@ -4911,7 +4911,7 @@ Prototype._original_property = window.Sizzle;
 
     support = Sizzle.support = {};
 
-    /**
+   /*
      * Detects XML nodes
      * @param {Element|Object} elem An element or a document
      * @returns {Boolean} True iff elem is a non-HTML XML node
@@ -4921,7 +4921,7 @@ Prototype._original_property = window.Sizzle;
         return documentElement ? documentElement.nodeName !== "HTML" : false;
     };
 
-    /**
+   /*
      * Sets document-related variables once based on the current document
      * @param {Element|Object} [doc] An element or document object to use to set the document
      * @returns {Object} Returns the current document
@@ -5265,7 +5265,7 @@ Prototype._original_property = window.Sizzle;
         throw new Error( "Syntax error, unrecognized expression: " + msg );
     };
 
-    /**
+   /*
      * Document sorting and removing duplicates
      * @param {ArrayLike} results
      */
@@ -5295,7 +5295,7 @@ Prototype._original_property = window.Sizzle;
         return results;
     };
 
-    /**
+   /*
      * Utility function for retrieving the text value of an array of DOM nodes
      * @param {Array|Element} elem
      */
@@ -6145,7 +6145,7 @@ Prototype._original_property = window.Sizzle;
         return cached;
     };
 
-    /**
+   /*
      * A low-level selection function that works with Sizzle's compiled
      *  selector functions
      * @param {String|Function} selector A selector or a pre-compiled

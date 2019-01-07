@@ -4,28 +4,28 @@
  * @author Dan Tao <daniel.tao@gmail.com>
  */
 (function(Mousetrap) {
-    /**
+   /*
      * the sequence currently being recorded
      *
      * @type {Array}
      */
     var _recordedSequence = [],
 
-        /**
+       /*
          * a callback to invoke after recording a sequence
          *
          * @type {Function|null}
          */
         _recordedSequenceCallback = null,
 
-        /**
+       /*
          * a list of all of the keys currently held down
          *
          * @type {Array}
          */
         _currentRecordedKeys = [],
 
-        /**
+       /*
          * temporary state where we remember if we've already captured a
          * character key in the current combo
          *
@@ -33,14 +33,14 @@
          */
         _recordedCharacterKey = false,
 
-        /**
+       /*
          * a handle for the timer of the current recording
          *
          * @type {null|number}
          */
         _recordTimer = null,
 
-        /**
+       /*
          * the original handleKey method to override when Mousetrap.record() is
          * called
          *
@@ -48,7 +48,7 @@
          */
         _origHandleKey = Mousetrap.prototype.handleKey;
 
-    /**
+   /*
      * handles a character key event
      *
      * @param {string} character
@@ -82,7 +82,7 @@
         }
     }
 
-    /**
+   /*
      * marks a character key as held down while recording a sequence
      *
      * @param {string} key
@@ -105,7 +105,7 @@
         }
     }
 
-    /**
+   /*
      * marks whatever key combination that's been recorded so far as finished
      * and gets ready for the next combo
      *
@@ -118,7 +118,7 @@
         _restartRecordTimer();
     }
 
-    /**
+   /*
      * ensures each combo in a sequence is in a predictable order and formats
      * key combos to be '+'-delimited
      *
@@ -148,7 +148,7 @@
         }
     }
 
-    /**
+   /*
      * finishes the current recording, passes the recorded sequence to the stored
      * callback, and sets Mousetrap.handleKey back to its original function
      *
@@ -166,7 +166,7 @@
         _currentRecordedKeys = [];
     }
 
-    /**
+   /*
      * called to set a 1 second timeout on the current recording
      *
      * this is so after each key press in the sequence the recording will wait for
@@ -179,7 +179,7 @@
         _recordTimer = setTimeout(_finishRecording, 1000);
     }
 
-    /**
+   /*
      * records the next sequence and passes it to a callback once it's
      * completed
      *

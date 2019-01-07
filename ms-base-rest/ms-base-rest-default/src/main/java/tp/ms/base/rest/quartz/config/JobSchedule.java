@@ -28,7 +28,7 @@
 //        
 //    }
 //    
-//    /**
+//   /*
 //     * @Description: 添加一个定时任务，使用默认的任务组名，触发器名，触发器组名
 //     * 
 //     * @param jobName
@@ -63,7 +63,7 @@
 //        }
 //    }
 //
-//    /**
+//   /*
 //     * @Description: 添加一个定时任务
 //     * 
 //     * @param jobName
@@ -104,7 +104,7 @@
 //
 //    }
 //
-//    /**
+//   /*
 //     * @Description: 修改一个任务的触发时间(使用默认的任务组名，触发器名，触发器组名)
 //     * 
 //     * @param jobName
@@ -131,7 +131,7 @@
 //        }
 //    }
 //
-//    /**
+//   /*
 //     * @Description: 移除一个任务(使用默认的任务组名，触发器名，触发器组名)
 //     * 
 //     * @param jobName
@@ -149,7 +149,7 @@
 //        LOGGER.debug("移除任务:{}",jobName);
 //    }
 //
-//    /**
+//   /*
 //     * 移除任务
 //     * 
 //     * @param jobName
@@ -170,7 +170,7 @@
 //        LOGGER.debug("移除任务:{},{},{},{},{},{}",jobName,jobGroupName,triggerName,triggerGroupName);
 //    }
 //
-//    /**
+//   /*
 //     * 启动所有任务
 //     * 
 //     * @throws SchedulerException
@@ -181,7 +181,7 @@
 //        LOGGER.debug("启动所有任务");
 //    }
 //
-//    /**
+//   /*
 //     * 关闭所有定时任务
 //     * 
 //     * @throws SchedulerException

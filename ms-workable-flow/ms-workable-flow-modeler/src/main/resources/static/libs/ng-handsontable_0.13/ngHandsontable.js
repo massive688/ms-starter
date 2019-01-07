@@ -121,7 +121,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
     return {
       containerClassName: 'handsontable-container',
 
-      /**
+     /*
        * Append handsontable container div and initialize handsontable instance inside element.
        *
        * @param {qLite} element
@@ -146,7 +146,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
         return hot;
       },
 
-      /**
+     /*
        * Set new settings to handsontable instance.
        *
        * @param {Handsontable} instance
@@ -158,7 +158,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
         }
       },
 
-      /**
+     /*
        * Render handsontable instance inside element.
        *
        * @param {Handsontable} instance
@@ -169,7 +169,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
         }
       },
 
-      /**
+     /*
        * Merge original handsontable settings with setting defined in scope.
        *
        * @param {Object} settings
@@ -194,7 +194,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
         return settings;
       },
 
-      /**
+     /*
        * Merge original handsontable hooks with hooks defined in scope.
        *
        * @param {Object} settings
@@ -221,7 +221,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
         return settings;
       },
 
-      /**
+     /*
        * Trim scope definition according to attrs object from directive.
        *
        * @param {Object} scopeDefinition
@@ -239,7 +239,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
         return scopeDefinition;
       },
 
-      /**
+     /*
        * Get isolate scope definition for main handsontable directive.
        *
        * @return {Object}
@@ -258,7 +258,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
         return scopeDefinition;
       },
 
-      /**
+     /*
        * Get isolate scope definition for column directive.
        *
        * @return {Object}
@@ -272,7 +272,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
         return scopeDefinition;
       },
 
-      /**
+     /*
        * Apply all available handsontable settings into object which represents scope definition.
        *
        * @param {Object} [scopeDefinition]
@@ -290,7 +290,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
         return scopeDefinition;
       },
 
-      /**
+     /*
        * Apply all available handsontable hooks into object which represents scope definition.
        *
        * @param {Object} [scopeDefinition]
@@ -308,7 +308,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
         return scopeDefinition;
       },
 
-      /**
+     /*
        * Get all available settings from handsontable, returns settings by default in camelCase mode.
        *
        * @param {Boolean} [hyphenateStyle=undefined] If `true` then returns options in hyphenate mode (eq. row-header)
@@ -333,7 +333,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
         return settings;
       },
 
-      /**
+     /*
        * Get all available hooks from handsontable, returns hooks by default in camelCase mode.
        *
        * @param {Boolean} [hyphenateStyle=undefined] If `true` then returns hooks in hyphenate mode (eq. on-after-init)
@@ -358,7 +358,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
 }());
 
 (function() {
-  /**
+ /*
    * Angular Handsontable directive for autocomplete settings
    */
   function hotAutocomplete() {
@@ -379,7 +379,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
 }());
 
 (function() {
-  /**
+ /*
    * Angular Handsontable directive for single column settings
    */
   function hotColumn(settingFactory) {
@@ -449,7 +449,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
 }());
 
 (function() {
-  /**
+ /*
    * Main Angular Handsontable directive
    */
   function hotTable(settingFactory, autoCompleteFactory, $rootScope, $parse) {
@@ -575,7 +575,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
             }, ['datarows', 'columns', 'rowHeights', 'colWidths', 'rowHeaders', 'colHeaders'].indexOf(key) >= 0);
           });
 
-          /**
+         /*
            * Check for reference equality changes for datarows
            * TODO: must the remaining bindingsKeys need to be added also if their reference changes
            */
@@ -588,7 +588,7 @@ Handsontable.hooks.add('afterContextMenuShow', function() {
             }
           });
 
-          /**
+         /*
            * Check if data length has been changed
            */
           scope.$watchCollection('datarows', function(newValue, oldValue) {

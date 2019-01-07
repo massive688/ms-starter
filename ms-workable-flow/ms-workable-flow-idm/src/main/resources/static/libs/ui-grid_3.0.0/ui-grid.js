@@ -243,7 +243,7 @@ function ( i18nService, uiGridConstants, gridUtil ) {
  */
 
   var service = {
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:uiGridColumnMenuService
      * @name initialize
@@ -266,7 +266,7 @@ function ( i18nService, uiGridConstants, gridUtil ) {
     },
     
     
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:uiGridColumnMenuService
      * @name setColMenuItemWatch
@@ -299,14 +299,14 @@ function ( i18nService, uiGridConstants, gridUtil ) {
     },
 
 
-    /**
+   /*
      * @ngdoc boolean
      * @name enableSorting
      * @propertyOf ui.grid.class:GridOptions.columnDef
      * @description (optional) True by default. When enabled, this setting adds sort
      * widgets to the column header, allowing sorting of the data in the individual column.
      */
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:uiGridColumnMenuService
      * @name sortable
@@ -323,7 +323,7 @@ function ( i18nService, uiGridConstants, gridUtil ) {
       }
     },
     
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:uiGridColumnMenuService
      * @name isActiveSort
@@ -339,14 +339,14 @@ function ( i18nService, uiGridConstants, gridUtil ) {
       
     },
     
-    /**
+   /*
      * @ngdoc boolean
      * @name suppressRemoveSort
      * @propertyOf ui.grid.class:GridOptions.columnDef
      * @description (optional) False by default. When enabled, this setting hides the removeSort option
      * in the menu.
      */
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:uiGridColumnMenuService
      * @name suppressRemoveSort
@@ -364,14 +364,14 @@ function ( i18nService, uiGridConstants, gridUtil ) {
     },       
 
 
-    /**
+   /*
      * @ngdoc boolean
      * @name enableHiding
      * @propertyOf ui.grid.class:GridOptions.columnDef
      * @description (optional) True by default. When set to false, this setting prevents a user from hiding the column
      * using the column menu or the grid menu.
      */
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:uiGridColumnMenuService
      * @name hideable
@@ -389,7 +389,7 @@ function ( i18nService, uiGridConstants, gridUtil ) {
     },     
 
 
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:uiGridColumnMenuService
      * @name getDefaultMenuItems
@@ -456,7 +456,7 @@ function ( i18nService, uiGridConstants, gridUtil ) {
     },
     
 
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:uiGridColumnMenuService
      * @name getColumnElementPosition
@@ -486,7 +486,7 @@ function ( i18nService, uiGridConstants, gridUtil ) {
     },
     
 
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:uiGridColumnMenuService
      * @name repositionMenu
@@ -574,7 +574,7 @@ function ($timeout, gridUtil, uiGridConstants, uiGridColumnMenuService) {
       uiGridColumnMenuService.setColMenuItemWatch( $scope );
 
   
-      /**
+     /*
        * @ngdoc method
        * @methodOf ui.grid.directive:uiGridColumnMenu
        * @name showMenu
@@ -613,7 +613,7 @@ function ($timeout, gridUtil, uiGridConstants, uiGridColumnMenuService) {
       };
 
 
-      /**
+     /*
        * @ngdoc method
        * @methodOf ui.grid.directive:uiGridColumnMenu
        * @name hideMenu
@@ -1027,7 +1027,7 @@ function ($timeout, gridUtil, uiGridConstants, uiGridColumnMenuService) {
                 });
             }
     
-            /**
+           /*
             * @ngdoc property
             * @name enableColumnMenu
             * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -1037,7 +1037,7 @@ function ($timeout, gridUtil, uiGridConstants, uiGridColumnMenuService) {
             * menus irrespective of the value of this option ).  Defaults to true.
             *
             */
-            /**
+           /*
             * @ngdoc property
             * @name enableColumnMenus
             * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -1385,7 +1385,7 @@ function ($timeout, gridUtil, uiGridConstants, uiGridColumnMenuService) {
 
 angular.module('ui.grid')
 .service('uiGridGridMenuService', [ 'gridUtil', 'i18nService', 'uiGridConstants', function( gridUtil, i18nService, uiGridConstants ) {
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.gridMenuService
    *
@@ -1393,7 +1393,7 @@ angular.module('ui.grid')
    */
 
   var service = {
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.gridMenuService
      * @name initialize
@@ -1425,7 +1425,7 @@ angular.module('ui.grid')
       
       $scope.registeredMenuItems = [];
 
-      /**
+     /*
        * @ngdoc function
        * @name addToGridMenu
        * @methodOf ui.grid.core.api:PublicApi
@@ -1443,7 +1443,7 @@ angular.module('ui.grid')
        */
       grid.api.registerMethod( 'core', 'addToGridMenu', service.addToGridMenu );
   
-      /**
+     /*
        * @ngdoc function
        * @name removeFromGridMenu
        * @methodOf ui.grid.core.api:PublicApi
@@ -1458,7 +1458,7 @@ angular.module('ui.grid')
     },
  
     
-    /**
+   /*
      * @ngdoc function
      * @name addToGridMenu
      * @propertyOf ui.grid.class:GridOptions
@@ -1488,7 +1488,7 @@ angular.module('ui.grid')
     },
     
 
-    /**
+   /*
      * @ngdoc function
      * @name removeFromGridMenu
      * @methodOf ui.grid.core.api:PublicApi
@@ -1523,7 +1523,7 @@ angular.module('ui.grid')
     },
     
         
-    /**
+   /*
      * @ngdoc array
      * @name gridMenuCustomItems
      * @propertyOf ui.grid.class:GridOptions
@@ -1535,7 +1535,7 @@ angular.module('ui.grid')
      * some of the management of items for you.
      * 
      */
-    /**
+   /*
      * @ngdoc boolean
      * @name gridMenuShowHideColumns
      * @propertyOf ui.grid.class:GridOptions
@@ -1543,7 +1543,7 @@ angular.module('ui.grid')
      * of columns
      * 
      */
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.gridMenuService
      * @name getMenuItems
@@ -1583,7 +1583,7 @@ angular.module('ui.grid')
     },
     
     
-    /**
+   /*
      * @ngdoc array
      * @name gridMenuTitleFilter
      * @propertyOf ui.grid.class:GridOptions
@@ -1601,7 +1601,7 @@ angular.module('ui.grid')
      *   }
      * </pre>
      */
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.gridMenuService
      * @name showHideColumns
@@ -1661,7 +1661,7 @@ angular.module('ui.grid')
     },
     
     
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.gridMenuService
      * @name setMenuItemTitle
@@ -1692,7 +1692,7 @@ angular.module('ui.grid')
       }
     },
 
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.gridMenuService
      * @name toggleColumnVisibility
@@ -2498,7 +2498,7 @@ function ($compile, $timeout, $window, $document, gridUtil, uiGridConstants) {
 (function(){
 // 'use strict';
 
-  /**
+ /*
    * @ngdoc directive
    * @name ui.grid.directive:uiGridStyle
    * @element style
@@ -3082,14 +3082,14 @@ angular.module('ui.grid')
 .factory('Grid', ['$q', '$compile', '$parse', 'gridUtil', 'uiGridConstants', 'GridOptions', 'GridColumn', 'GridRow', 'GridApi', 'rowSorter', 'rowSearcher', 'GridRenderContainer', '$timeout',
     function($q, $compile, $parse, gridUtil, uiGridConstants, GridOptions, GridColumn, GridRow, GridApi, rowSorter, rowSearcher, GridRenderContainer, $timeout) {
 
-  /**
+ /*
    * @ngdoc object
    * @name ui.grid.core.api:PublicApi
    * @description Public Api for the core grid features
    *
    */
   
-  /**
+ /*
    * @ngdoc function
    * @name ui.grid.class:Grid
    * @description Grid is the main viewModel.  Any properties or methods needed to maintain state are defined in
@@ -3114,7 +3114,7 @@ angular.module('ui.grid')
     // Get default options
     self.options = GridOptions.initialize( options );
 
-    /**
+   /*
      * @ngdoc object
      * @name appScope
      * @propertyOf ui.grid.class:Grid
@@ -3162,7 +3162,7 @@ angular.module('ui.grid')
     //represents the columns on the grid
     self.columns = [];
   
-    /**
+   /*
      * @ngdoc boolean
      * @name isScrollingVertically
      * @propertyOf ui.grid.class:Grid
@@ -3170,7 +3170,7 @@ angular.module('ui.grid')
      */
     self.isScrollingVertically = false;
   
-    /**
+   /*
      * @ngdoc boolean
      * @name isScrollingHorizontally
      * @propertyOf ui.grid.class:Grid
@@ -3178,7 +3178,7 @@ angular.module('ui.grid')
      */
     self.isScrollingHorizontally = false;
 
-    /**
+   /*
      * @ngdoc property
      * @name scrollDirection
      * @propertyOf ui.grid.class:Grid
@@ -3198,7 +3198,7 @@ angular.module('ui.grid')
     }, 1000);
   
   
-    /**
+   /*
      * @ngdoc function
      * @name flagScrollingVertically
      * @methodOf ui.grid.class:Grid
@@ -3209,7 +3209,7 @@ angular.module('ui.grid')
       debouncedVertical();
     };
   
-    /**
+   /*
      * @ngdoc function
      * @name flagScrollingHorizontally
      * @methodOf ui.grid.class:Grid
@@ -3234,7 +3234,7 @@ angular.module('ui.grid')
   
     self.api = new GridApi(self);
   
-    /**
+   /*
      * @ngdoc function
      * @name refresh
      * @methodOf ui.grid.core.api:PublicApi
@@ -3243,7 +3243,7 @@ angular.module('ui.grid')
      */
     self.api.registerMethod( 'core', 'refresh', this.refresh );
   
-    /**
+   /*
      * @ngdoc function
      * @name refreshRows
      * @methodOf ui.grid.core.api:PublicApi
@@ -3253,7 +3253,7 @@ angular.module('ui.grid')
      */
     self.api.registerMethod( 'core', 'refreshRows', this.refreshRows );
   
-    /**
+   /*
      * @ngdoc function
      * @name handleWindowResize
      * @methodOf ui.grid.core.api:PublicApi
@@ -3266,7 +3266,7 @@ angular.module('ui.grid')
     self.api.registerMethod( 'core', 'handleWindowResize', this.handleWindowResize );
   
   
-    /**
+   /*
      * @ngdoc function
      * @name addRowHeaderColumn
      * @methodOf ui.grid.core.api:PublicApi
@@ -3277,7 +3277,7 @@ angular.module('ui.grid')
     self.api.registerMethod( 'core', 'addRowHeaderColumn', this.addRowHeaderColumn );
   
   
-    /**
+   /*
      * @ngdoc function
      * @name sortHandleNulls
      * @methodOf ui.grid.core.api:PublicApi
@@ -3302,7 +3302,7 @@ angular.module('ui.grid')
     self.api.registerMethod( 'core', 'sortHandleNulls', rowSorter.handleNulls );
   
   
-    /**
+   /*
      * @ngdoc function
      * @name sortChanged
      * @methodOf  ui.grid.core.api:PublicApi
@@ -3322,7 +3322,7 @@ angular.module('ui.grid')
      */
     self.api.registerEvent( 'core', 'sortChanged' );
   
-      /**
+     /*
      * @ngdoc function
      * @name columnVisibilityChanged
      * @methodOf  ui.grid.core.api:PublicApi
@@ -3340,7 +3340,7 @@ angular.module('ui.grid')
      */
     self.api.registerEvent( 'core', 'columnVisibilityChanged' );
   
-    /**
+   /*
      * @ngdoc method
      * @name notifyDataChange
      * @methodOf ui.grid.core.api:PublicApi
@@ -3392,7 +3392,7 @@ angular.module('ui.grid')
    return this.options.showGridFooter || this.options.showColumnFooter;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name isRTL
    * @methodOf ui.grid.class:Grid
@@ -3403,7 +3403,7 @@ angular.module('ui.grid')
   };
 
 
-  /**
+ /*
    * @ngdoc function
    * @name registerColumnBuilder
    * @methodOf ui.grid.class:Grid
@@ -3415,7 +3415,7 @@ angular.module('ui.grid')
     this.columnBuilders.push(columnBuilder);
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name buildColumnDefsFromData
    * @methodOf ui.grid.class:Grid
@@ -3426,7 +3426,7 @@ angular.module('ui.grid')
     this.options.columnDefs =  gridUtil.getColumnsFromData(dataRows, this.options.excludeProperties);
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name registerRowBuilder
    * @methodOf ui.grid.class:Grid
@@ -3439,7 +3439,7 @@ angular.module('ui.grid')
   };
 
 
-  /**
+ /*
    * @ngdoc function
    * @name registerDataChangeCallback
    * @methodOf ui.grid.class:Grid
@@ -3483,7 +3483,7 @@ angular.module('ui.grid')
     return deregisterFunction;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name callDataChangeCallbacks
    * @methodOf ui.grid.class:Grid
@@ -3508,7 +3508,7 @@ angular.module('ui.grid')
     }, this);
   };
   
-  /**
+ /*
    * @ngdoc function
    * @name notifyDataChange
    * @methodOf ui.grid.class:Grid
@@ -3532,7 +3532,7 @@ angular.module('ui.grid')
   };
   
   
-  /**
+ /*
    * @ngdoc function
    * @name columnRefreshCallback
    * @methodOf ui.grid.class:Grid
@@ -3548,7 +3548,7 @@ angular.module('ui.grid')
   };
 
 
-  /**
+ /*
    * @ngdoc function
    * @name processRowsCallback
    * @methodOf ui.grid.class:Grid
@@ -3562,7 +3562,7 @@ angular.module('ui.grid')
   };
     
 
-  /**
+ /*
    * @ngdoc function
    * @name getColumn
    * @methodOf ui.grid.class:Grid
@@ -3576,7 +3576,7 @@ angular.module('ui.grid')
     return columns.length > 0 ? columns[0] : null;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name getColDef
    * @methodOf ui.grid.class:Grid
@@ -3590,13 +3590,13 @@ angular.module('ui.grid')
     return colDefs.length > 0 ? colDefs[0] : null;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name assignTypes
    * @methodOf ui.grid.class:Grid
    * @description uses the first row of data to assign colDef.type for any types not defined.
    */
-  /**
+ /*
    * @ngdoc property
    * @name type
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -3625,7 +3625,7 @@ angular.module('ui.grid')
     });
   };
 
-  /**
+ /*
   * @ngdoc function
   * @name addRowHeaderColumn
   * @methodOf ui.grid.class:Grid
@@ -3662,7 +3662,7 @@ angular.module('ui.grid')
       });
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name buildColumns
    * @methodOf ui.grid.class:Grid
@@ -3723,7 +3723,7 @@ angular.module('ui.grid')
       });
     });
 
-    /*** Reorder columns if necessary ***/
+   /** Reorder columns if necessary ***/
     if (!!options.orderByColumnDefs) {
       // Create a shallow copy of the columns as a cache
       var columnCache = self.columns.slice(0);
@@ -3780,7 +3780,7 @@ angular.module('ui.grid')
     });
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name getGridQualifiedColField
    * @methodOf ui.grid.class:Grid
@@ -3791,7 +3791,7 @@ angular.module('ui.grid')
     return 'row.entity.' + gridUtil.preEval(col.field);
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name createLeftContainer
    * @methodOf ui.grid.class:Grid
@@ -3803,7 +3803,7 @@ angular.module('ui.grid')
     }
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name createRightContainer
    * @methodOf ui.grid.class:Grid
@@ -3815,7 +3815,7 @@ angular.module('ui.grid')
     }
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name hasLeftContainer
    * @methodOf ui.grid.class:Grid
@@ -3825,7 +3825,7 @@ angular.module('ui.grid')
     return this.renderContainers.left !== undefined;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name hasLeftContainer
    * @methodOf ui.grid.class:Grid
@@ -3836,7 +3836,7 @@ angular.module('ui.grid')
   };
 
 
-      /**
+     /*
    * undocumented function
    * @name preprocessColDef
    * @methodOf ui.grid.class:Grid
@@ -3925,7 +3925,7 @@ angular.module('ui.grid')
     return t;
   };
 
-    /**
+   /*
      * @ngdoc function
      * @name getRow
      * @methodOf ui.grid.class:Grid
@@ -3941,7 +3941,7 @@ angular.module('ui.grid')
     };
 
 
-      /**
+     /*
    * @ngdoc function
    * @name modifyRows
    * @methodOf ui.grid.class:Grid
@@ -4130,7 +4130,7 @@ angular.module('ui.grid')
     return olds;
   };
 
-  /**
+ /*
    * Private Undocumented Method
    * @name addRows
    * @methodOf ui.grid.class:Grid
@@ -4155,7 +4155,7 @@ angular.module('ui.grid')
     }
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name processRowBuilders
    * @methodOf ui.grid.class:Grid
@@ -4173,7 +4173,7 @@ angular.module('ui.grid')
     return gridRow;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name registerStyleComputation
    * @methodOf ui.grid.class:Grid
@@ -4210,7 +4210,7 @@ angular.module('ui.grid')
   // };
 
 
-  /**
+ /*
    * @ngdoc function
    * @name registerRowsProcessor
    * @methodOf ui.grid.class:Grid
@@ -4231,7 +4231,7 @@ angular.module('ui.grid')
     this.rowsProcessors.push(processor);
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name removeRowsProcessor
    * @methodOf ui.grid.class:Grid
@@ -4246,7 +4246,7 @@ angular.module('ui.grid')
     }
   };
   
-  /**
+ /*
    * Private Undocumented Method
    * @name processRowsProcessors
    * @methodOf ui.grid.class:Grid
@@ -4369,7 +4369,7 @@ angular.module('ui.grid')
     self.api.core.raise.rowsRendered(this.api);
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name registerColumnsProcessor
    * @methodOf ui.grid.class:Grid
@@ -4486,7 +4486,7 @@ angular.module('ui.grid')
     }
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name handleWindowResize
    * @methodOf ui.grid.class:Grid
@@ -4501,7 +4501,7 @@ angular.module('ui.grid')
     self.queueRefresh();
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name queueRefresh
    * @methodOf ui.grid.class:Grid
@@ -4525,7 +4525,7 @@ angular.module('ui.grid')
     return self.refreshCanceller;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name updateCanvasHeight
    * @methodOf ui.grid.class:Grid
@@ -4542,7 +4542,7 @@ angular.module('ui.grid')
     }
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name buildStyles
    * @methodOf ui.grid.class:Grid
@@ -4724,7 +4724,7 @@ angular.module('ui.grid')
     return rowSorter.sort(this, renderableRows, this.columns);
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name getCellValue
    * @methodOf ui.grid.class:Grid
@@ -4756,7 +4756,7 @@ angular.module('ui.grid')
     return p + 1;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name resetColumnSorting
    * @methodOf ui.grid.class:Grid
@@ -4773,7 +4773,7 @@ angular.module('ui.grid')
     });
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name getColumnSorting
    * @methodOf ui.grid.class:Grid
@@ -4798,7 +4798,7 @@ angular.module('ui.grid')
     return sortedCols;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name sortColumn
    * @methodOf ui.grid.class:Grid
@@ -4862,7 +4862,7 @@ angular.module('ui.grid')
     return $q.when(column);
   };
   
-  /**
+ /*
    * communicate to outside world that we are done with initial rendering
    */
   Grid.prototype.renderingComplete = function(){
@@ -4882,7 +4882,7 @@ angular.module('ui.grid')
   };
   
   
-  /**
+ /*
    * @ngdoc function
    * @name refresh
    * @methodOf ui.grid.class:Grid
@@ -4909,7 +4909,7 @@ angular.module('ui.grid')
     });
   };  
   
-  /**
+ /*
    * @ngdoc function
    * @name refreshRows
    * @methodOf ui.grid.class:Grid
@@ -4930,7 +4930,7 @@ angular.module('ui.grid')
       });
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name redrawCanvas
    * @methodOf ui.grid.class:Grid
@@ -5041,7 +5041,7 @@ angular.module('ui.grid')
   };
 
 
-  /**
+ /*
    * @ngdoc function
    * @name redrawCanvas
    * @methodOf ui.grid.class:Grid
@@ -5063,7 +5063,7 @@ angular.module('ui.grid')
     }
   };
 
-    /**
+   /*
      * @ngdoc function
      * @name hasLeftContainerColumns
      * @methodOf ui.grid.class:Grid
@@ -5073,7 +5073,7 @@ angular.module('ui.grid')
       return this.hasLeftContainer() && this.renderContainers.left.renderedColumns.length > 0;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name hasRightContainerColumns
      * @methodOf ui.grid.class:Grid
@@ -5090,7 +5090,7 @@ angular.module('ui.grid')
   function RowHashMap() {}
 
   RowHashMap.prototype = {
-    /**
+   /*
      * Store key value pair
      * @param key key to store can be any type
      * @param value value to store can be any type
@@ -5099,7 +5099,7 @@ angular.module('ui.grid')
       this[this.grid.options.rowIdentity(key)] = value;
     },
 
-    /**
+   /*
      * @param key
      * @returns {Object} the value for the key
      */
@@ -5107,7 +5107,7 @@ angular.module('ui.grid')
       return this[this.grid.options.rowIdentity(key)];
     },
 
-    /**
+   /*
      * Remove the key/value pair
      * @param key
      */
@@ -5131,7 +5131,7 @@ angular.module('ui.grid')
   angular.module('ui.grid')
     .factory('GridApi', ['$q', '$rootScope', 'gridUtil', 'uiGridConstants', 'GridRow', 'uiGridGridMenuService',
       function ($q, $rootScope, gridUtil, uiGridConstants, GridRow, uiGridGridMenuService) {
-        /**
+       /*
          * @ngdoc function
          * @name ui.grid.class:GridApi
          * @description GridApi provides the ability to register public methods events inside the grid and allow
@@ -5151,7 +5151,7 @@ angular.module('ui.grid')
           this.grid = grid;
           this.listeners = [];
           
-          /**
+         /*
            * @ngdoc function
            * @name renderingComplete
            * @methodOf  ui.grid.core.api:PublicApi
@@ -5174,7 +5174,7 @@ angular.module('ui.grid')
            */
           this.registerEvent( 'core', 'renderingComplete' );
 
-          /**
+         /*
            * @ngdoc event
            * @name filterChanged
            * @eventOf  ui.grid.core.api:PublicApi
@@ -5186,7 +5186,7 @@ angular.module('ui.grid')
            */
           this.registerEvent( 'core', 'filterChanged' );
 
-          /**
+         /*
            * @ngdoc function
            * @name setRowInvisible
            * @methodOf  ui.grid.core.api:PublicApi
@@ -5198,7 +5198,7 @@ angular.module('ui.grid')
            */
           this.registerMethod( 'core', 'setRowInvisible', GridRow.prototype.setRowInvisible );
       
-          /**
+         /*
            * @ngdoc function
            * @name clearRowInvisible
            * @methodOf  ui.grid.core.api:PublicApi
@@ -5211,7 +5211,7 @@ angular.module('ui.grid')
            */
           this.registerMethod( 'core', 'clearRowInvisible', GridRow.prototype.clearRowInvisible );
       
-          /**
+         /*
            * @ngdoc function
            * @name getVisibleRows
            * @methodOf  ui.grid.core.api:PublicApi
@@ -5221,7 +5221,7 @@ angular.module('ui.grid')
            */
           this.registerMethod( 'core', 'getVisibleRows', this.grid.getVisibleRows );
           
-          /**
+         /*
            * @ngdoc event
            * @name rowsVisibleChanged
            * @eventOf  ui.grid.core.api:PublicApi
@@ -5236,7 +5236,7 @@ angular.module('ui.grid')
            */
           this.registerEvent( 'core', 'rowsVisibleChanged' );
 
-          /**
+         /*
            * @ngdoc event
            * @name rowsRendered
            * @eventOf  ui.grid.core.api:PublicApi
@@ -5245,7 +5245,7 @@ angular.module('ui.grid')
           this.registerEvent( 'core', 'rowsRendered' );
 
 
-          /**
+         /*
            * @ngdoc event
            * @name scrollEvent
            * @eventOf  ui.grid.core.api:PublicApi
@@ -5253,7 +5253,7 @@ angular.module('ui.grid')
            */
           this.registerEvent( 'core', 'scrollEvent' );
 
-          /**
+         /*
            * @ngdoc event
            * @name canvasHeightChanged
            * @eventOf  ui.grid.core.api:PublicApi
@@ -5264,7 +5264,7 @@ angular.module('ui.grid')
           this.registerEvent( 'core', 'canvasHeightChanged');
         };
 
-        /**
+       /*
          * @ngdoc function
          * @name ui.grid.class:suppressEvents
          * @methodOf ui.grid.class:GridApi
@@ -5317,7 +5317,7 @@ angular.module('ui.grid')
 
         };
 
-        /**
+       /*
          * @ngdoc function
          * @name registerEvent
          * @methodOf ui.grid.class:GridApi
@@ -5390,7 +5390,7 @@ angular.module('ui.grid')
           });
         }
 
-        /**
+       /*
          * @ngdoc function
          * @name registerEventsFromObject
          * @methodOf ui.grid.class:GridApi
@@ -5425,7 +5425,7 @@ angular.module('ui.grid')
 
         };
 
-        /**
+       /*
          * @ngdoc function
          * @name registerMethod
          * @methodOf ui.grid.class:GridApi
@@ -5445,7 +5445,7 @@ angular.module('ui.grid')
           feature[methodName] = gridUtil.createBoundedWrapper(_this || this.grid, callBackFn);
         };
 
-        /**
+       /*
          * @ngdoc function
          * @name registerMethodsFromObject
          * @methodOf ui.grid.class:GridApi
@@ -5490,7 +5490,7 @@ angular.module('ui.grid')
 angular.module('ui.grid')
 .factory('GridColumn', ['gridUtil', 'uiGridConstants', 'i18nService', function(gridUtil, uiGridConstants, i18nService) {
 
-  /**
+ /*
    * @ngdoc function
    * @name ui.grid.class:GridColumn
    * @description Represents the viewModel for each column.  Any state or methods needed for a Grid Column
@@ -5500,7 +5500,7 @@ angular.module('ui.grid')
    * @param {Grid} grid reference to the grid
    */
    
-  /**
+ /*
    * ******************************************************************************************
    * PaulL1: Ugly hack here in documentation.  These properties are clearly properties of GridColumn, 
    * and need to be noted as such for those extending and building ui-grid itself.
@@ -5511,7 +5511,7 @@ angular.module('ui.grid')
    * 
    */
 
-  /** 
+ /* 
    * @ngdoc property
    * @name name
    * @propertyOf ui.grid.class:GridColumn
@@ -5520,7 +5520,7 @@ angular.module('ui.grid')
    *
    */
 
-  /** 
+ /* 
    * @ngdoc property
    * @name name
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5529,7 +5529,7 @@ angular.module('ui.grid')
    *
    */
     
-  /** 
+ /* 
    * @ngdoc property
    * @name displayName
    * @propertyOf ui.grid.class:GridColumn
@@ -5538,7 +5538,7 @@ angular.module('ui.grid')
    *
    */
 
-  /** 
+ /* 
    * @ngdoc property
    * @name displayName
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5547,7 +5547,7 @@ angular.module('ui.grid')
    *
    */
        
-  /** 
+ /* 
    * @ngdoc property
    * @name field
    * @propertyOf ui.grid.class:GridColumn
@@ -5558,7 +5558,7 @@ angular.module('ui.grid')
    *
    */
     
-  /** 
+ /* 
    * @ngdoc property
    * @name field
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5567,7 +5567,7 @@ angular.module('ui.grid')
    * array element.  Can be a complex expression: <code>employee.address.city</code>, or can be a function: <code>employee.getFullAddress()</code>.    * See the angular docs on binding expressions.    *
    */
     
-  /** 
+ /* 
    * @ngdoc property
    * @name filter
    * @propertyOf ui.grid.class:GridColumn
@@ -5577,7 +5577,7 @@ angular.module('ui.grid')
    *
    */
     
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:GridColumn
    * @name GridColumn
@@ -5596,7 +5596,7 @@ angular.module('ui.grid')
   }
 
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:GridColumn
    * @name setPropertyOrDefault
@@ -5625,7 +5625,7 @@ angular.module('ui.grid')
 
   
   
-  /** 
+ /* 
    * @ngdoc property
    * @name width
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5638,7 +5638,7 @@ angular.module('ui.grid')
    *
    */
 
-  /** 
+ /* 
    * @ngdoc property
    * @name minWidth
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5648,7 +5648,7 @@ angular.module('ui.grid')
    *
    */
 
-  /** 
+ /* 
    * @ngdoc property
    * @name maxWidth
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5658,7 +5658,7 @@ angular.module('ui.grid')
    *
    */
 
-  /** 
+ /* 
    * @ngdoc property
    * @name visible
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5672,7 +5672,7 @@ angular.module('ui.grid')
    *
    */
    
-  /**
+ /*
    * @ngdoc property
    * @name sort
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5683,7 +5683,7 @@ angular.module('ui.grid')
    */
   
 
-  /** 
+ /* 
    * @ngdoc property
    * @name sortingAlgorithm
    * @propertyOf ui.grid.class:GridColumn
@@ -5692,7 +5692,7 @@ angular.module('ui.grid')
    *
    */
 
-  /** 
+ /* 
    * @ngdoc property
    * @name sortingAlgorithm
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5701,7 +5701,7 @@ angular.module('ui.grid')
    *
    */
       
-  /** 
+ /* 
    * @ngdoc array
    * @name filters
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5727,7 +5727,7 @@ angular.module('ui.grid')
    * 
    */ 
    
-  /** 
+ /* 
    * @ngdoc array
    * @name filters
    * @propertyOf ui.grid.class:GridColumn
@@ -5750,7 +5750,7 @@ angular.module('ui.grid')
    * 
    */   
 
-  /** 
+ /* 
    * @ngdoc array
    * @name menuItems
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5786,7 +5786,7 @@ angular.module('ui.grid')
    *
    */   
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:GridColumn
    * @name updateColumnDef
@@ -5868,7 +5868,7 @@ angular.module('ui.grid')
     self.aggregationType = angular.isDefined(colDef.aggregationType) ? colDef.aggregationType : null;
     self.footerCellTemplate = angular.isDefined(colDef.footerCellTemplate) ? colDef.footerCellTemplate : null;
 
-    /**
+   /*
      * @ngdoc property
      * @name footerCellClass
      * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5878,7 +5878,7 @@ angular.module('ui.grid')
      */
     self.footerCellClass = colDef.footerCellClass;
 
-    /**
+   /*
      * @ngdoc property
      * @name cellClass
      * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5888,7 +5888,7 @@ angular.module('ui.grid')
      */
     self.cellClass = colDef.cellClass;
 
-    /**
+   /*
      * @ngdoc property
      * @name headerCellClass
      * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5898,7 +5898,7 @@ angular.module('ui.grid')
      */
     self.headerCellClass = colDef.headerCellClass;
 
-    /**
+   /*
      * @ngdoc property
      * @name cellFilter
      * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5910,7 +5910,7 @@ angular.module('ui.grid')
      */
     self.cellFilter = colDef.cellFilter ? colDef.cellFilter : "";
 
-    /**
+   /*
      * @ngdoc property
      * @name headerCellFilter
      * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5922,7 +5922,7 @@ angular.module('ui.grid')
      */
     self.headerCellFilter = colDef.headerCellFilter ? colDef.headerCellFilter : "";
 
-    /**
+   /*
      * @ngdoc property
      * @name footerCellFilter
      * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5943,7 +5943,7 @@ angular.module('ui.grid')
     self.enableSorting = typeof(colDef.enableSorting) !== 'undefined' ? colDef.enableSorting : true;
     self.sortingAlgorithm = colDef.sortingAlgorithm;
 
-    /**
+   /*
      * @ngdoc property
      * @name enableFiltering
      * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -5985,7 +5985,7 @@ angular.module('ui.grid')
       defaultFilters.push({});
     }
 
-    /** 
+   /* 
      * @ngdoc property
      * @name filter
      * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -6052,7 +6052,7 @@ angular.module('ui.grid')
   };
 
 
-  /**
+ /*
    * @ngdoc function
    * @name getColClass
    * @methodOf ui.grid.class:GridColumn
@@ -6065,7 +6065,7 @@ angular.module('ui.grid')
     return prefixDot ? '.' + cls : cls;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name getColClassDefinition
    * @methodOf ui.grid.class:GridColumn
@@ -6075,7 +6075,7 @@ angular.module('ui.grid')
     return ' .grid' + this.grid.id + ' ' + this.getColClass(true) + ' { width: ' + this.drawnWidth + 'px; }';
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name getRenderContainer
    * @methodOf ui.grid.class:GridColumn
@@ -6095,7 +6095,7 @@ angular.module('ui.grid')
     return self.grid.renderContainers[containerId];
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name showColumn
    * @methodOf ui.grid.class:GridColumn
@@ -6105,7 +6105,7 @@ angular.module('ui.grid')
       this.colDef.visible = true;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name hideColumn
    * @methodOf ui.grid.class:GridColumn
@@ -6115,7 +6115,7 @@ angular.module('ui.grid')
       this.colDef.visible = false;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name getAggregationValue
    * @methodOf ui.grid.class:GridColumn
@@ -6167,7 +6167,7 @@ angular.module('ui.grid')
     }
   };
     
-  /** 
+ /* 
    * @ngdoc property
    * @name aggregationHideLabel
    * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -6175,7 +6175,7 @@ angular.module('ui.grid')
    * in the aggregation footer, so only the value is displayed.
    *
    */
-  /**
+ /*
    * @ngdoc function
    * @name getAggregationText
    * @methodOf ui.grid.class:GridColumn
@@ -6234,7 +6234,7 @@ angular.module('ui.grid')
 angular.module('ui.grid')
 .factory('GridOptions', ['gridUtil','uiGridConstants', function(gridUtil,uiGridConstants) {
 
-  /**
+ /*
    * @ngdoc function
    * @name ui.grid.class:GridOptions
    * @description Default GridOptions class.  GridOptions are defined by the application developer and overlaid
@@ -6273,7 +6273,7 @@ angular.module('ui.grid')
    */
   return {
     initialize: function( baseOptions ){
-      /**
+     /*
        * @ngdoc function
        * @name onRegisterApi
        * @propertyOf ui.grid.class:GridOptions
@@ -6295,7 +6295,7 @@ angular.module('ui.grid')
        */
       baseOptions.onRegisterApi = baseOptions.onRegisterApi || angular.noop();
   
-      /**
+     /*
        * @ngdoc object
        * @name data
        * @propertyOf ui.grid.class:GridOptions
@@ -6307,7 +6307,7 @@ angular.module('ui.grid')
        */
       baseOptions.data = baseOptions.data || [];
   
-      /**
+     /*
        * @ngdoc array
        * @name columnDefs
        * @propertyOf  ui.grid.class:GridOptions
@@ -6322,7 +6322,7 @@ angular.module('ui.grid')
        */
       baseOptions.columnDefs = baseOptions.columnDefs || [];
   
-      /**
+     /*
        * @ngdoc object
        * @name ui.grid.class:GridOptions.columnDef
        * @description Definition / configuration of an individual column, which would typically be
@@ -6333,7 +6333,7 @@ angular.module('ui.grid')
        */
   
           
-      /**
+     /*
        * @ngdoc array
        * @name excludeProperties
        * @propertyOf  ui.grid.class:GridOptions
@@ -6348,7 +6348,7 @@ angular.module('ui.grid')
       
       baseOptions.excludeProperties = baseOptions.excludeProperties || ['$$hashKey'];
   
-      /**
+     /*
        * @ngdoc boolean
        * @name enableRowHashing
        * @propertyOf ui.grid.class:GridOptions
@@ -6362,7 +6362,7 @@ angular.module('ui.grid')
        */
       baseOptions.enableRowHashing = baseOptions.enableRowHashing !== false;
   
-      /**
+     /*
        * @ngdoc function
        * @name rowIdentity
        * @methodOf ui.grid.class:GridOptions
@@ -6374,7 +6374,7 @@ angular.module('ui.grid')
         return gridUtil.hashKey(row);
       };
   
-      /**
+     /*
        * @ngdoc function
        * @name getRowIdentity
        * @methodOf ui.grid.class:GridOptions
@@ -6386,7 +6386,7 @@ angular.module('ui.grid')
         return row.$$hashKey;
       };
 
-      /**
+     /*
        * @ngdoc property
        * @name showHeader
        * @propertyOf ui.grid.class:GridOptions
@@ -6397,7 +6397,7 @@ angular.module('ui.grid')
        */
       baseOptions.showHeader = typeof(baseOptions.showHeader) !== "undefined" ? baseOptions.showHeader : true;
 
-      /**
+     /*
        * @ngdoc property
        * @name headerRowHeight
        * @propertyOf ui.grid.class:GridOptions
@@ -6411,7 +6411,7 @@ angular.module('ui.grid')
         baseOptions.headerRowHeight = typeof(baseOptions.headerRowHeight) !== "undefined" ? baseOptions.headerRowHeight : 30;
       }
 
-      /**
+     /*
        * @ngdoc property
        * @name rowHeight
        * @propertyOf ui.grid.class:GridOptions
@@ -6420,7 +6420,7 @@ angular.module('ui.grid')
        */
       baseOptions.rowHeight = baseOptions.rowHeight || 30;
   
-      /**
+     /*
        * @ngdoc integer
        * @name minRowsToShow
        * @propertyOf ui.grid.class:GridOptions
@@ -6428,7 +6428,7 @@ angular.module('ui.grid')
        */
       baseOptions.minRowsToShow = typeof(baseOptions.minRowsToShow) !== "undefined" ? baseOptions.minRowsToShow : 10;
   
-      /**
+     /*
        * @ngdoc property
        * @name showGridFooter
        * @propertyOf ui.grid.class:GridOptions
@@ -6437,7 +6437,7 @@ angular.module('ui.grid')
        */
       baseOptions.showGridFooter = baseOptions.showGridFooter === true;
 
-      /**
+     /*
        * @ngdoc property
        * @name showColumnFooter
        * @propertyOf ui.grid.class:GridOptions
@@ -6446,7 +6446,7 @@ angular.module('ui.grid')
        */
       baseOptions.showColumnFooter = baseOptions.showColumnFooter === true;
 
-      /**
+     /*
        * @ngdoc property
        * @name columnFooterHeight
        * @propertyOf ui.grid.class:GridOptions
@@ -6458,7 +6458,7 @@ angular.module('ui.grid')
 
       baseOptions.columnWidth = typeof(baseOptions.columnWidth) !== "undefined" ? baseOptions.columnWidth : 50;
 
-      /**
+     /*
        * @ngdoc property
        * @name maxVisibleColumnCount
        * @propertyOf ui.grid.class:GridOptions
@@ -6467,7 +6467,7 @@ angular.module('ui.grid')
        */
       baseOptions.maxVisibleColumnCount = typeof(baseOptions.maxVisibleColumnCount) !== "undefined" ? baseOptions.maxVisibleColumnCount : 200;
   
-      /**
+     /*
        * @ngdoc property
        * @name virtualizationThreshold
        * @propertyOf ui.grid.class:GridOptions
@@ -6475,7 +6475,7 @@ angular.module('ui.grid')
        */
       baseOptions.virtualizationThreshold = typeof(baseOptions.virtualizationThreshold) !== "undefined" ? baseOptions.virtualizationThreshold : 20;
   
-      /**
+     /*
        * @ngdoc property
        * @name columnVirtualizationThreshold
        * @propertyOf ui.grid.class:GridOptions
@@ -6483,7 +6483,7 @@ angular.module('ui.grid')
        */
       baseOptions.columnVirtualizationThreshold = typeof(baseOptions.columnVirtualizationThreshold) !== "undefined" ? baseOptions.columnVirtualizationThreshold : 10;
   
-      /**
+     /*
        * @ngdoc property
        * @name excessRows
        * @propertyOf ui.grid.class:GridOptions
@@ -6491,7 +6491,7 @@ angular.module('ui.grid')
        * Defaults to 4
        */
       baseOptions.excessRows = typeof(baseOptions.excessRows) !== "undefined" ? baseOptions.excessRows : 4;
-      /**
+     /*
        * @ngdoc property
        * @name scrollThreshold
        * @propertyOf ui.grid.class:GridOptions
@@ -6499,7 +6499,7 @@ angular.module('ui.grid')
        */
       baseOptions.scrollThreshold = typeof(baseOptions.scrollThreshold) !== "undefined" ? baseOptions.scrollThreshold : 4;
   
-      /**
+     /*
        * @ngdoc property
        * @name excessColumns
        * @propertyOf ui.grid.class:GridOptions
@@ -6507,7 +6507,7 @@ angular.module('ui.grid')
        * Defaults to 4
        */
       baseOptions.excessColumns = typeof(baseOptions.excessColumns) !== "undefined" ? baseOptions.excessColumns : 4;
-      /**
+     /*
        * @ngdoc property
        * @name horizontalScrollThreshold
        * @propertyOf ui.grid.class:GridOptions
@@ -6515,7 +6515,7 @@ angular.module('ui.grid')
        */
       baseOptions.horizontalScrollThreshold = typeof(baseOptions.horizontalScrollThreshold) !== "undefined" ? baseOptions.horizontalScrollThreshold : 2;
   
-      /**
+     /*
        * @ngdoc property
        * @name scrollThrottle
        * @propertyOf ui.grid.class:GridOptions
@@ -6523,7 +6523,7 @@ angular.module('ui.grid')
        */
       baseOptions.scrollThrottle = typeof(baseOptions.scrollThrottle) !== "undefined" ? baseOptions.scrollThrottle : 70;
   
-      /**
+     /*
        * @ngdoc boolean
        * @name enableSorting
        * @propertyOf ui.grid.class:GridOptions
@@ -6533,7 +6533,7 @@ angular.module('ui.grid')
        */
       baseOptions.enableSorting = baseOptions.enableSorting !== false;
   
-      /**
+     /*
        * @ngdoc boolean
        * @name enableFiltering
        * @propertyOf ui.grid.class:GridOptions
@@ -6543,7 +6543,7 @@ angular.module('ui.grid')
        */
       baseOptions.enableFiltering = baseOptions.enableFiltering === true;
   
-      /**
+     /*
        * @ngdoc boolean
        * @name enableColumnMenus
        * @propertyOf ui.grid.class:GridOptions
@@ -6552,7 +6552,7 @@ angular.module('ui.grid')
        */
       baseOptions.enableColumnMenus = baseOptions.enableColumnMenus !== false;
   
-      /**
+     /*
        * @ngdoc boolean
        * @name enableVerticalScrollbar
        * @propertyOf ui.grid.class:GridOptions
@@ -6561,7 +6561,7 @@ angular.module('ui.grid')
        */
       baseOptions.enableVerticalScrollbar = typeof(baseOptions.enableVerticalScrollbar) !== "undefined" ? baseOptions.enableVerticalScrollbar : uiGridConstants.scrollbars.ALWAYS;
       
-      /**
+     /*
        * @ngdoc boolean
        * @name enableHorizontalScrollbar
        * @propertyOf ui.grid.class:GridOptions
@@ -6570,7 +6570,7 @@ angular.module('ui.grid')
        */
       baseOptions.enableHorizontalScrollbar = typeof(baseOptions.enableHorizontalScrollbar) !== "undefined" ? baseOptions.enableHorizontalScrollbar : uiGridConstants.scrollbars.ALWAYS;
   
-      /**
+     /*
        * @ngdoc boolean
        * @name minimumColumnSize
        * @propertyOf ui.grid.class:GridOptions
@@ -6578,7 +6578,7 @@ angular.module('ui.grid')
        */
       baseOptions.minimumColumnSize = typeof(baseOptions.minimumColumnSize) !== "undefined" ? baseOptions.minimumColumnSize : 10;
   
-      /**
+     /*
        * @ngdoc function
        * @name rowEquality
        * @methodOf ui.grid.class:GridOptions
@@ -6591,7 +6591,7 @@ angular.module('ui.grid')
         return entityA === entityB;
       };
   
-      /**
+     /*
        * @ngdoc string
        * @name headerTemplate
        * @propertyOf ui.grid.class:GridOptions
@@ -6612,7 +6612,7 @@ angular.module('ui.grid')
        */
       baseOptions.headerTemplate = baseOptions.headerTemplate || null;
   
-      /**
+     /*
        * @ngdoc string
        * @name footerTemplate
        * @propertyOf ui.grid.class:GridOptions
@@ -6623,7 +6623,7 @@ angular.module('ui.grid')
        */
       baseOptions.footerTemplate = baseOptions.footerTemplate || null;
   
-      /**
+     /*
        * @ngdoc string
        * @name rowTemplate
        * @propertyOf ui.grid.class:GridOptions
@@ -6637,7 +6637,7 @@ angular.module('ui.grid')
        */
       baseOptions.rowTemplate = baseOptions.rowTemplate || 'ui-grid/ui-grid-row';
 
-      /**
+     /*
        * @ngdoc object
        * @name appScopeProvider
        * @propertyOf ui.grid.class:GridOptions
@@ -6659,7 +6659,7 @@ angular.module('ui.grid')
 
 angular.module('ui.grid')
   
-  /**
+ /*
    * @ngdoc function
    * @name ui.grid.class:GridRenderContainer
    * @description The grid has render containers, allowing the ability to have pinned columns.  If the grid
@@ -6702,7 +6702,7 @@ angular.module('ui.grid')
 
     self.viewportAdjusters = [];
 
-    /**
+   /*
      *  @ngdoc boolean
      *  @name canvasHeightShouldUpdate
      *  @propertyOf  ui.grid.class:GridRenderContainer
@@ -6710,7 +6710,7 @@ angular.module('ui.grid')
      */
     self.canvasHeightShouldUpdate = true;
 
-    /**
+   /*
      *  @ngdoc boolean
      *  @name canvasHeight
      *  @propertyOf  ui.grid.class:GridRenderContainer
@@ -6791,7 +6791,7 @@ angular.module('ui.grid')
     return this.visibleRowCache.length;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name registerViewportAdjuster
    * @methodOf ui.grid.class:GridRenderContainer
@@ -6805,7 +6805,7 @@ angular.module('ui.grid')
     this.viewportAdjusters.push(func);
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name removeViewportAdjuster
    * @methodOf ui.grid.class:GridRenderContainer
@@ -6820,7 +6820,7 @@ angular.module('ui.grid')
     }
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name getViewportAdjustment
    * @methodOf ui.grid.class:GridRenderContainer
@@ -6886,7 +6886,7 @@ angular.module('ui.grid')
   };
 
 
-  /**
+ /*
    * @ngdoc function
    * @name getCanvasHeight
    * @methodOf ui.grid.class:GridRenderContainer
@@ -7451,7 +7451,7 @@ angular.module('ui.grid')
 angular.module('ui.grid')
 .factory('GridRow', ['gridUtil', function(gridUtil) {
 
-   /**
+  /*
    * @ngdoc function
    * @name ui.grid.class:GridRow
    * @description GridRow is the viewModel for one logical row on the grid.  A grid Row is not necessarily a one-to-one
@@ -7462,7 +7462,7 @@ angular.module('ui.grid')
    */
   function GridRow(entity, index, grid) {
 
-     /**
+    /*
       *  @ngdoc object
       *  @name grid
       *  @propertyOf  ui.grid.class:GridRow
@@ -7470,7 +7470,7 @@ angular.module('ui.grid')
       */
      this.grid = grid;
 
-     /**
+    /*
       *  @ngdoc object
       *  @name entity
       *  @propertyOf  ui.grid.class:GridRow
@@ -7478,7 +7478,7 @@ angular.module('ui.grid')
       */
     this.entity = entity;
 
-     /**
+    /*
       *  @ngdoc object
       *  @name uid
       *  @propertyOf  ui.grid.class:GridRow
@@ -7486,7 +7486,7 @@ angular.module('ui.grid')
       */
      this.uid = gridUtil.nextUid();
 
-     /**
+    /*
       *  @ngdoc object
       *  @name visible
       *  @propertyOf  ui.grid.class:GridRow
@@ -7500,7 +7500,7 @@ angular.module('ui.grid')
 
   }
 
-    /**
+   /*
      *  @ngdoc object
      *  @name height
      *  @propertyOf  ui.grid.class:GridRow
@@ -7519,7 +7519,7 @@ angular.module('ui.grid')
       }
     });
 
-  /**
+ /*
    * @ngdoc function
    * @name getQualifiedColField
    * @methodOf ui.grid.class:GridRow
@@ -7532,7 +7532,7 @@ angular.module('ui.grid')
       return 'row.' + this.getEntityQualifiedColField(col);
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name getEntityQualifiedColField
      * @methodOf ui.grid.class:GridRow
@@ -7546,7 +7546,7 @@ angular.module('ui.grid')
   };
   
   
-  /**
+ /*
    * @ngdoc function
    * @name setRowInvisible
    * @methodOf  ui.grid.class:GridRow
@@ -7569,7 +7569,7 @@ angular.module('ui.grid')
     }        
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name clearRowInvisible
    * @methodOf ui.grid.class:GridRow
@@ -7601,7 +7601,7 @@ angular.module('ui.grid')
   angular.module('ui.grid')
     .factory('ScrollEvent', ['gridUtil', function (gridUtil) {
 
-      /**
+     /*
        * @ngdoc function
        * @name ui.grid.class:ScrollEvent
        * @description Model for all scrollEvents
@@ -7616,7 +7616,7 @@ angular.module('ui.grid')
           throw new Error("grid argument is required");
         }
 
-        /**
+       /*
          *  @ngdoc object
          *  @name grid
          *  @propertyOf  ui.grid.class:ScrollEvent
@@ -7626,7 +7626,7 @@ angular.module('ui.grid')
 
 
 
-        /**
+       /*
          *  @ngdoc object
          *  @name entity
          *  @propertyOf  ui.grid.class:ScrollEvent
@@ -7643,7 +7643,7 @@ angular.module('ui.grid')
         self.y = null;
 
 
-        /**
+       /*
          *  @ngdoc function
          *  @name fireThrottledScrollingEvent
          *  @methodOf  ui.grid.class:ScrollEvent
@@ -7655,7 +7655,7 @@ angular.module('ui.grid')
 
       }
 
-      /**
+     /*
        *  @ngdoc function
        *  @name fireScrollingEvent
        *  @methodOf  ui.grid.class:ScrollEvent
@@ -7666,7 +7666,7 @@ angular.module('ui.grid')
       };
 
 
-      /**
+     /*
        *  @ngdoc function
        *  @name getNewScrollLeft
        *  @methodOf  ui.grid.class:ScrollEvent
@@ -7698,7 +7698,7 @@ angular.module('ui.grid')
       };
 
 
-      /**
+     /*
        *  @ngdoc function
        *  @name getNewScrollTop
        *  @methodOf  ui.grid.class:ScrollEvent
@@ -7746,7 +7746,7 @@ angular.module('ui.grid')
 })();
 (function () {
   'use strict';
-  /**
+ /*
    *  @ngdoc object
    *  @name ui.grid.service:gridClassFactory
    *
@@ -7757,7 +7757,7 @@ angular.module('ui.grid')
     function (gridUtil, $q, $compile, $templateCache, uiGridConstants, Grid, GridColumn, GridRow) {
 
       var service = {
-        /**
+       /*
          * @ngdoc method
          * @name createGrid
          * @methodOf ui.grid.service:gridClassFactory
@@ -7836,7 +7836,7 @@ angular.module('ui.grid')
           return grid;
         },
 
-        /**
+       /*
          * @ngdoc function
          * @name defaultColumnBuilder
          * @methodOf ui.grid.service:gridClassFactory
@@ -7850,7 +7850,7 @@ angular.module('ui.grid')
 
           var templateGetPromises = [];
 
-          /**
+         /*
            * @ngdoc property
            * @name headerCellTemplate
            * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -7864,7 +7864,7 @@ angular.module('ui.grid')
             col.providedHeaderCellTemplate = colDef.headerCellTemplate;
           }
 
-          /**
+         /*
            * @ngdoc property
            * @name cellTemplate
            * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -7879,7 +7879,7 @@ angular.module('ui.grid')
             col.providedCellTemplate = colDef.cellTemplate;
           }
 
-          /**
+         /*
            * @ngdoc property
            * @name footerCellTemplate
            * @propertyOf ui.grid.class:GridOptions.columnDef
@@ -7992,7 +7992,7 @@ module.service('rowSearcher', ['gridUtil', 'uiGridConstants', function (gridUtil
 
   var rowSearcher = {};
 
-  /**
+ /*
    * @ngdoc function
    * @name getTerm
    * @methodOf ui.grid.service:rowSearcher
@@ -8014,7 +8014,7 @@ module.service('rowSearcher', ['gridUtil', 'uiGridConstants', function (gridUtil
     return term;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name stripTerm
    * @methodOf ui.grid.service:rowSearcher
@@ -8034,7 +8034,7 @@ module.service('rowSearcher', ['gridUtil', 'uiGridConstants', function (gridUtil
   };
   
 
-  /**
+ /*
    * @ngdoc function
    * @name guessCondition
    * @methodOf ui.grid.service:rowSearcher
@@ -8068,7 +8068,7 @@ module.service('rowSearcher', ['gridUtil', 'uiGridConstants', function (gridUtil
   };
   
   
-  /**
+ /*
    * @ngdoc function
    * @name setupFilters
    * @methodOf ui.grid.service:rowSearcher
@@ -8133,7 +8133,7 @@ module.service('rowSearcher', ['gridUtil', 'uiGridConstants', function (gridUtil
   };
   
 
-  /**
+ /*
    * @ngdoc function
    * @name runColumnFilter
    * @methodOf ui.grid.service:rowSearcher
@@ -8215,7 +8215,7 @@ module.service('rowSearcher', ['gridUtil', 'uiGridConstants', function (gridUtil
   };
 
 
-  /**
+ /*
    * @ngdoc boolean
    * @name useExternalFiltering
    * @propertyOf ui.grid.class:GridOptions
@@ -8225,7 +8225,7 @@ module.service('rowSearcher', ['gridUtil', 'uiGridConstants', function (gridUtil
    * The external filter logic can listen for the `filterChange` event, which fires whenever
    * a filter has been adjusted.
    */
-  /**
+ /*
    * @ngdoc function
    * @name searchColumn
    * @methodOf ui.grid.service:rowSearcher
@@ -8256,7 +8256,7 @@ module.service('rowSearcher', ['gridUtil', 'uiGridConstants', function (gridUtil
   };
 
 
-  /**
+ /*
    * @ngdoc function
    * @name search
    * @methodOf ui.grid.service:rowSearcher
@@ -8358,7 +8358,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:RowSorter
    * @name guessSortFn
@@ -8385,7 +8385,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:RowSorter
    * @name handleNulls
@@ -8416,7 +8416,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:RowSorter
    * @name basicSort
@@ -8442,7 +8442,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:RowSorter
    * @name sortNumber
@@ -8461,7 +8461,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:RowSorter
    * @name sortNumberStr
@@ -8515,7 +8515,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:RowSorter
    * @name sortAlpha
@@ -8537,7 +8537,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:RowSorter
    * @name sortDate
@@ -8559,7 +8559,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:RowSorter
    * @name sortBool
@@ -8588,7 +8588,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:RowSorter
    * @name getSortFn
@@ -8643,7 +8643,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
 
 
 
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:RowSorter
    * @name prioritySort
@@ -8686,7 +8686,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
   };
 
 
-  /**
+ /*
    * @ngdoc object
    * @name useExternalSorting
    * @propertyOf ui.grid.class:GridOptions
@@ -8696,7 +8696,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
    * server sorting) to be implemented.  Defaults to false. 
    * 
    */
-  /**
+ /*
    * @ngdoc method
    * @methodOf ui.grid.class:RowSorter
    * @name sort
@@ -8939,7 +8939,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
 
     getStyles: getStyles,
 
-    /**
+   /*
      * @ngdoc method
      * @name createBoundedWrapper
      * @methodOf ui.grid.service:GridUtil
@@ -8965,7 +8965,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
     },
 
 
-    /**
+   /*
      * @ngdoc method
      * @name readableColumnName
      * @methodOf ui.grid.service:GridUtil
@@ -9017,7 +9017,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
         .replace(/(\w+?(?=[A-Z]))/g, '$1 ');
     },
 
-    /**
+   /*
      * @ngdoc method
      * @name getColumnsFromData
      * @methodOf ui.grid.service:GridUtil
@@ -9066,7 +9066,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
       return columnDefs;
     },
 
-    /**
+   /*
      * @ngdoc method
      * @name newId
      * @methodOf ui.grid.service:GridUtil
@@ -9089,7 +9089,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
     })(),
 
 
-    /**
+   /*
      * @ngdoc method
      * @name getTemplate
      * @methodOf ui.grid.service:GridUtil
@@ -9159,7 +9159,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
       return $q.when(template);
     },
 
-    /**
+   /*
      * @ngdoc method
      * @name guessType
      * @methodOf ui.grid.service:GridUtil
@@ -9191,7 +9191,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
     },
 
 
-  /**
+ /*
     * @ngdoc method
     * @name elementWidth
     * @methodOf ui.grid.service:GridUtil
@@ -9205,7 +9205,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
       
     },
 
-    /**
+   /*
     * @ngdoc method
     * @name elementHeight
     * @methodOf ui.grid.service:GridUtil
@@ -9282,7 +9282,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
       return ret;
     },
 
-    /**
+   /*
     * @ngdoc method
     * @name normalizeWheelEvent
     * @methodOf ui.grid.service:GridUtil
@@ -9490,7 +9490,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
       uid = ['0', '0', '0'];
     },
     
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:GridUtil
      * @name logError
@@ -9506,7 +9506,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
       }
     },
 
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:GridUtil
      * @name logWarn
@@ -9522,7 +9522,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
       }
     },
 
-    /**
+   /*
      * @ngdoc method
      * @methodOf ui.grid.service:GridUtil
      * @name logDebug
@@ -9643,7 +9643,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
     return 'unknown';
   };
 
-  /**
+ /*
     * @ngdoc method
     * @name normalizeScrollLeft
     * @methodOf ui.grid.service:GridUtil
@@ -9693,7 +9693,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
     }
   };
 
-  /**
+ /*
   * @ngdoc method
   * @name normalizeScrollLeft
   * @methodOf ui.grid.service:GridUtil
@@ -9747,7 +9747,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
     }
   };
 
-    /**
+   /*
      * @ngdoc method
      * @name preEval
      * @methodOf ui.grid.service:GridUtil
@@ -9779,7 +9779,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
     }
   };
 
-  /**
+ /*
    * @ngdoc method
    * @name debounce
    * @methodOf ui.grid.service:GridUtil
@@ -9830,7 +9830,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
     return debounce;
   };
 
-  /**
+ /*
    * @ngdoc method
    * @name throttle
    * @methodOf ui.grid.service:GridUtil
@@ -10885,7 +10885,7 @@ module.filter('px', function() {
   var module = angular.module('ui.grid.i18n');
 
 
-  /**
+ /*
    *  @ngdoc object
    *  @name ui.grid.i18n.constant:i18nConstants
    *
@@ -10903,7 +10903,7 @@ module.filter('px', function() {
 //    module.config(['$provide', function($provide) {
 //        $provide.decorator('i18nService', ['$delegate', function($delegate) {}])}]);
 
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.i18n.service:i18nService
    *
@@ -10947,7 +10947,7 @@ module.filter('px', function() {
 
       var service = {
 
-        /**
+       /*
          * @ngdoc service
          * @name add
          * @methodOf ui.grid.i18n.service:i18nService
@@ -10981,7 +10981,7 @@ module.filter('px', function() {
           }
         },
 
-        /**
+       /*
          * @ngdoc service
          * @name getAllLangs
          * @methodOf ui.grid.i18n.service:i18nService
@@ -10992,7 +10992,7 @@ module.filter('px', function() {
           return langCache.getAllLangs();
         },
 
-        /**
+       /*
          * @ngdoc service
          * @name get
          * @methodOf ui.grid.i18n.service:i18nService
@@ -11005,7 +11005,7 @@ module.filter('px', function() {
           return langCache.get(language);
         },
 
-        /**
+       /*
          * @ngdoc service
          * @name getSafeText
          * @methodOf ui.grid.i18n.service:i18nService
@@ -11041,7 +11041,7 @@ module.filter('px', function() {
 
         },
 
-        /**
+       /*
          * @ngdoc service
          * @name setCurrentLang
          * @methodOf ui.grid.i18n.service:i18nService
@@ -11061,7 +11061,7 @@ module.filter('px', function() {
           }
         },
 
-        /**
+       /*
          * @ngdoc service
          * @name getCurrentLang
          * @methodOf ui.grid.i18n.service:i18nService
@@ -11308,7 +11308,7 @@ module.filter('px', function() {
 
 (function() {
   'use strict';
-  /**
+ /*
    *  @ngdoc overview
    *  @name ui.grid.autoResize
    *
@@ -11381,7 +11381,7 @@ module.filter('px', function() {
     this.col = col;
   }
 
-  /**
+ /*
    *  @ngdoc object
    *  @name ui.grid.cellNav.constant:uiGridCellNavConstants
    *
@@ -11400,7 +11400,7 @@ module.filter('px', function() {
 
   module.factory('uiGridCellNavFactory', ['gridUtil', 'uiGridConstants', 'uiGridCellNavConstants', '$q',
     function (gridUtil, uiGridConstants, uiGridCellNavConstants, $q) {
-      /**
+     /*
        *  @ngdoc object
        *  @name ui.grid.cellNav.object:CellNav
        *  @description returns a CellNav prototype function
@@ -11417,7 +11417,7 @@ module.filter('px', function() {
         this.bodyContainer = rowContainer;
       };
 
-      /** returns focusable columns of all containers */
+     /* returns focusable columns of all containers */
       UiGridCellNav.prototype.getFocusableCols = function () {
         var allColumns = this.leftColumns.concat(this.columns, this.rightColumns);
 
@@ -11426,7 +11426,7 @@ module.filter('px', function() {
         });
       };
 
-      /**
+     /*
        *  @ngdoc object
        *  @name ui.grid.cellNav.api:GridRow
        *
@@ -11434,7 +11434,7 @@ module.filter('px', function() {
        *  set only internally (for example, by other features)
        */
 
-      /**
+     /*
        *  @ngdoc object
        *  @name allowCellFocus
        *  @propertyOf  ui.grid.cellNav.api:GridRow
@@ -11442,7 +11442,7 @@ module.filter('px', function() {
        *  in this row can be focused - group header rows as an example would set this to false.
        *  <br/>Defaults to true
        */
-      /** returns focusable rows */
+     /* returns focusable rows */
       UiGridCellNav.prototype.getFocusableRows = function () {
         return this.rows.filter(function(row) {
           return row.allowCellFocus !== false;
@@ -11605,7 +11605,7 @@ module.filter('px', function() {
       return UiGridCellNav;
     }]);
 
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.cellNav.service:uiGridCellNavService
    *
@@ -11627,7 +11627,7 @@ module.filter('px', function() {
 
           service.defaultGridOptions(grid.options);
 
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.cellNav.api:PublicApi
            *
@@ -11636,7 +11636,7 @@ module.filter('px', function() {
           var publicApi = {
             events: {
               cellNav: {
-                /**
+               /*
                  * @ngdoc event
                  * @name navigate
                  * @eventOf  ui.grid.cellNav.api:PublicApi
@@ -11653,7 +11653,7 @@ module.filter('px', function() {
             },
             methods: {
               cellNav: {
-                /**
+               /*
                  * @ngdoc function
                  * @name scrollTo
                  * @methodOf  ui.grid.cellNav.api:PublicApi
@@ -11665,7 +11665,7 @@ module.filter('px', function() {
                   service.scrollTo(grid, rowEntity, colDef);
                 },
 
-                /**
+               /*
                  * @ngdoc function
                  * @name scrollToFocus
                  * @methodOf  ui.grid.cellNav.api:PublicApi
@@ -11678,7 +11678,7 @@ module.filter('px', function() {
                   service.scrollToFocus(grid, rowEntity, colDef);
                 },
 
-                /**
+               /*
                  * @ngdoc function
                  * @name scrollToFocus
                  * @methodOf  ui.grid.cellNav.api:PublicApi
@@ -11690,7 +11690,7 @@ module.filter('px', function() {
                   service.scrollToIfNecessary(grid, row, col);
                 },
 
-                /**
+               /*
                  * @ngdoc function
                  * @name getFocusedCell
                  * @methodOf  ui.grid.cellNav.api:PublicApi
@@ -11701,7 +11701,7 @@ module.filter('px', function() {
                   return grid.cellNav.lastRowCol;
                 },
 
-                /**
+               /*
                  * @ngdoc function
                  * @name getCurrentSelection
                  * @methodOf  ui.grid.cellNav.api:PublicApi
@@ -11712,7 +11712,7 @@ module.filter('px', function() {
                   return grid.cellNav.focusedCells;
                 },
 
-                /**
+               /*
                  * @ngdoc function
                  * @name rowColSelectIndex
                  * @methodOf  ui.grid.cellNav.api:PublicApi
@@ -11743,7 +11743,7 @@ module.filter('px', function() {
         },
 
         defaultGridOptions: function (gridOptions) {
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.cellNav.api:GridOptions
            *
@@ -11751,7 +11751,7 @@ module.filter('px', function() {
            *  set using the ui-grid {@link ui.grid.class:GridOptions gridOptions}
            */
 
-          /**
+         /*
            *  @ngdoc object
            *  @name modifierKeysToMultiSelectCells
            *  @propertyOf  ui.grid.cellNav.api:GridOptions
@@ -11762,7 +11762,7 @@ module.filter('px', function() {
 
         },
 
-        /**
+       /*
          * @ngdoc service
          * @name decorateRenderContainers
          * @methodOf ui.grid.cellNav.service:uiGridCellNavService
@@ -11783,7 +11783,7 @@ module.filter('px', function() {
           grid.renderContainers.body.cellNav = new UiGridCellNav(grid.renderContainers.body, grid.renderContainers.body, leftContainer, rightContainer);
         },
 
-        /**
+       /*
          * @ngdoc service
          * @name getDirection
          * @methodOf ui.grid.cellNav.service:uiGridCellNavService
@@ -11821,7 +11821,7 @@ module.filter('px', function() {
           return null;
         },
 
-        /**
+       /*
          * @ngdoc service
          * @name cellNavColumnBuilder
          * @methodOf ui.grid.cellNav.service:uiGridCellNavService
@@ -11831,7 +11831,7 @@ module.filter('px', function() {
         cellNavColumnBuilder: function (colDef, col, gridOptions) {
           var promises = [];
 
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.cellNav.api:ColumnDef
            *
@@ -11839,7 +11839,7 @@ module.filter('px', function() {
            *  set using the ui-grid {@link ui.grid.class:GridOptions.columnDef gridOptions.columnDefs}
            */
 
-          /**
+         /*
            *  @ngdoc object
            *  @name allowCellFocus
            *  @propertyOf  ui.grid.cellNav.api:ColumnDef
@@ -11851,7 +11851,7 @@ module.filter('px', function() {
           return $q.all(promises);
         },
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.cellNav.service:uiGridCellNavService
          * @name scrollTo
@@ -11875,7 +11875,7 @@ module.filter('px', function() {
           this.scrollToInternal(grid, gridRow, gridCol);
         },
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.cellNav.service:uiGridCellNavService
          * @name scrollToFocus
@@ -11905,7 +11905,7 @@ module.filter('px', function() {
 
         },
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.cellNav.service:uiGridCellNavService
          * @name scrollToInternal
@@ -11954,7 +11954,7 @@ module.filter('px', function() {
           }
         },
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.cellNav.service:uiGridCellNavService
          * @name scrollToIfNecessary
@@ -12101,7 +12101,7 @@ module.filter('px', function() {
           }
         },
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.cellNav.service:uiGridCellNavService
          * @name getLeftWidth
@@ -12142,7 +12142,7 @@ module.filter('px', function() {
       return service;
     }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.cellNav.directive:uiCellNav
    *  @element div
@@ -12388,7 +12388,7 @@ module.filter('px', function() {
       };
     }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.cellNav.directive:uiGridCell
    *  @element div
@@ -12466,7 +12466,7 @@ module.filter('px', function() {
 (function () {
   'use strict';
 
-  /**
+ /*
    * @ngdoc overview
    * @name ui.grid.edit
    * @description
@@ -12484,7 +12484,7 @@ module.filter('px', function() {
 
   var module = angular.module('ui.grid.edit', ['ui.grid']);
 
-  /**
+ /*
    *  @ngdoc object
    *  @name ui.grid.edit.constant:uiGridEditConstants
    *
@@ -12501,7 +12501,7 @@ module.filter('px', function() {
     }
   });
 
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.edit.service:uiGridEditService
    *
@@ -12518,7 +12518,7 @@ module.filter('px', function() {
 
           grid.registerColumnBuilder(service.editColumnBuilder);
 
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.edit.api:PublicApi
            *
@@ -12527,7 +12527,7 @@ module.filter('px', function() {
           var publicApi = {
             events: {
               edit: {
-                /**
+               /*
                  * @ngdoc event
                  * @name afterCellEdit
                  * @eventOf  ui.grid.edit.api:PublicApi
@@ -12542,7 +12542,7 @@ module.filter('px', function() {
                  */
                 afterCellEdit: function (rowEntity, colDef, newValue, oldValue) {
                 },
-                /**
+               /*
                  * @ngdoc event
                  * @name beginCellEdit
                  * @eventOf  ui.grid.edit.api:PublicApi
@@ -12555,7 +12555,7 @@ module.filter('px', function() {
                  */
                 beginCellEdit: function (rowEntity, colDef) {
                 },
-                /**
+               /*
                  * @ngdoc event
                  * @name cancelCellEdit
                  * @eventOf  ui.grid.edit.api:PublicApi
@@ -12582,7 +12582,7 @@ module.filter('px', function() {
 
         defaultGridOptions: function (gridOptions) {
 
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.edit.api:GridOptions
            *
@@ -12590,7 +12590,7 @@ module.filter('px', function() {
            *  set using the ui-grid {@link ui.grid.class:GridOptions gridOptions}
            */
 
-          /**
+         /*
            *  @ngdoc object
            *  @name enableCellEdit
            *  @propertyOf  ui.grid.edit.api:GridOptions
@@ -12598,7 +12598,7 @@ module.filter('px', function() {
            *  if their individual enableCellEdit configuration is not defined. Defaults to undefined.
            */
 
-          /**
+         /*
            *  @ngdoc object
            *  @name cellEditableCondition
            *  @propertyOf  ui.grid.edit.api:GridOptions
@@ -12614,7 +12614,7 @@ module.filter('px', function() {
            */
           gridOptions.cellEditableCondition = gridOptions.cellEditableCondition === undefined ? true : gridOptions.cellEditableCondition;
 
-          /**
+         /*
            *  @ngdoc object
            *  @name editableCellTemplate
            *  @propertyOf  ui.grid.edit.api:GridOptions
@@ -12622,7 +12622,7 @@ module.filter('px', function() {
            *  <br/> defaults to 'ui-grid/cellTextEditor'
            */
 
-          /**
+         /*
            *  @ngdoc object
            *  @name enableCellEditOnFocus
            *  @propertyOf  ui.grid.edit.api:GridOptions
@@ -12633,7 +12633,7 @@ module.filter('px', function() {
           gridOptions.enableCellEditOnFocus = gridOptions.enableCellEditOnFocus === undefined ? false : gridOptions.enableCellEditOnFocus;
         },
 
-        /**
+       /*
          * @ngdoc service
          * @name editColumnBuilder
          * @methodOf ui.grid.edit.service:uiGridEditService
@@ -12644,7 +12644,7 @@ module.filter('px', function() {
 
           var promises = [];
 
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.edit.api:ColumnDef
            *
@@ -12652,7 +12652,7 @@ module.filter('px', function() {
            *  set using the ui-grid {@link ui.grid.class:GridOptions.columnDef gridOptions.columnDefs}
            */
 
-          /**
+         /*
            *  @ngdoc object
            *  @name enableCellEdit
            *  @propertyOf  ui.grid.edit.api:ColumnDef
@@ -12661,7 +12661,7 @@ module.filter('px', function() {
           colDef.enableCellEdit = colDef.enableCellEdit === undefined ? (gridOptions.enableCellEdit === undefined ?
             (colDef.type !== 'object') : gridOptions.enableCellEdit) : colDef.enableCellEdit;
 
-          /**
+         /*
            *  @ngdoc object
            *  @name cellEditableCondition
            *  @propertyOf  ui.grid.edit.api:ColumnDef
@@ -12676,7 +12676,7 @@ module.filter('px', function() {
            */
           colDef.cellEditableCondition = colDef.cellEditableCondition === undefined ? gridOptions.cellEditableCondition :  colDef.cellEditableCondition;
 
-          /**
+         /*
            *  @ngdoc object
            *  @name editableCellTemplate
            *  @propertyOf  ui.grid.edit.api:ColumnDef
@@ -12697,7 +12697,7 @@ module.filter('px', function() {
               }));
           }
 
-          /**
+         /*
            *  @ngdoc object
            *  @name enableCellEditOnFocus
            *  @propertyOf  ui.grid.edit.api:ColumnDef
@@ -12711,7 +12711,7 @@ module.filter('px', function() {
           return $q.all(promises);
         },
 
-        /**
+       /*
          * @ngdoc service
          * @name isStartEditKey
          * @methodOf ui.grid.edit.service:uiGridEditService
@@ -12745,7 +12745,7 @@ module.filter('px', function() {
 
     }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.edit.directive:uiGridEdit
    *  @element div
@@ -12795,7 +12795,7 @@ module.filter('px', function() {
     };
   }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.edit.directive:uiGridCell
    *  @element div
@@ -12834,7 +12834,7 @@ module.filter('px', function() {
    *
    */
 
-  /**
+ /*
    *  @ngdoc object
    *  @name ui.grid.edit.api:GridRow
    *
@@ -12842,7 +12842,7 @@ module.filter('px', function() {
    *  set internally only, by other features
    */
 
-  /**
+ /*
    *  @ngdoc object
    *  @name enableCellEdit
    *  @propertyOf  ui.grid.edit.api:GridRow
@@ -12967,7 +12967,7 @@ module.filter('px', function() {
             }
 
 
-            /**
+           /*
              *  @ngdoc property
              *  @name editDropdownOptionsArray
              *  @propertyOf ui.grid.edit.api:ColumnDef
@@ -12976,7 +12976,7 @@ module.filter('px', function() {
              *  into the edit dropdown
              *
              */
-            /**
+           /*
              *  @ngdoc property
              *  @name editDropdownIdLabel
              *  @propertyOf ui.grid.edit.api:ColumnDef
@@ -12994,7 +12994,7 @@ module.filter('px', function() {
              *  </pre>
              *
              */
-            /**
+           /*
              *  @ngdoc property
              *  @name editDropdownRowEntityOptionsArrayPath
              *  @propertyOf ui.grid.edit.api:ColumnDef
@@ -13015,7 +13015,7 @@ module.filter('px', function() {
              *  </pre>
              *
              */
-            /**
+           /*
              *  @ngdoc property
              *  @name editDropdownValueLabel
              *  @propertyOf ui.grid.edit.api:ColumnDef
@@ -13033,7 +13033,7 @@ module.filter('px', function() {
              *  </pre>
              *
              */
-            /**
+           /*
              *  @ngdoc property
              *  @name editDropdownFilter
              *  @propertyOf ui.grid.edit.api:ColumnDef
@@ -13194,7 +13194,7 @@ module.filter('px', function() {
         };
       }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.edit.directive:uiGridEditor
    *  @element div
@@ -13297,7 +13297,7 @@ module.filter('px', function() {
         };
       }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.edit.directive:input
    *  @element input
@@ -13358,7 +13358,7 @@ module.filter('px', function() {
     }]);
 
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.edit.directive:uiGridEditDropdown
    *  @element div
@@ -13440,7 +13440,7 @@ module.filter('px', function() {
 (function () {
   'use strict';
 
-  /**
+ /*
    * @ngdoc overview
    * @name ui.grid.expandable
    * @description
@@ -13453,7 +13453,7 @@ module.filter('px', function() {
    */
   var module = angular.module('ui.grid.expandable', ['ui.grid']);
 
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.expandable.service:uiGridExpandableService
    *
@@ -13466,7 +13466,7 @@ module.filter('px', function() {
         grid.expandable = {};
         grid.expandable.expandedAll = false;
 
-        /**
+       /*
          *  @ngdoc object
          *  @name enableExpandable
          *  @propertyOf  ui.grid.expandable.api:GridOptions
@@ -13481,7 +13481,7 @@ module.filter('px', function() {
          */
         grid.options.enableExpandable = grid.options.enableExpandable !== false;
         
-        /**
+       /*
          *  @ngdoc object
          *  @name expandableRowHeight
          *  @propertyOf  ui.grid.expandable.api:GridOptions
@@ -13496,7 +13496,7 @@ module.filter('px', function() {
          */
         grid.options.expandableRowHeight = grid.options.expandableRowHeight || 150;
 
-        /**
+       /*
          *  @ngdoc object
          *  @name 
          *  @propertyOf  ui.grid.expandable.api:GridOptions
@@ -13510,7 +13510,7 @@ module.filter('px', function() {
          */
         grid.options.expandableRowHeaderWidth = grid.options.expandableRowHeaderWidth || 40;
 
-        /**
+       /*
          *  @ngdoc object
          *  @name expandableRowTemplate
          *  @propertyOf  ui.grid.expandable.api:GridOptions
@@ -13527,13 +13527,13 @@ module.filter('px', function() {
           grid.options.enableExpandable = false;
         }
 
-        /**
+       /*
          *  @ngdoc object
          *  @name ui.grid.expandable.api:PublicApi
          *
          *  @description Public Api for expandable feature
          */
-        /**
+       /*
          *  @ngdoc object
          *  @name ui.grid.expandable.api:GridOptions
          *
@@ -13543,7 +13543,7 @@ module.filter('px', function() {
         var publicApi = {
           events: {
             expandable: {
-              /**
+             /*
                * @ngdoc event
                * @name rowExpandedStateChanged
                * @eventOf  ui.grid.expandable.api:PublicApi
@@ -13560,7 +13560,7 @@ module.filter('px', function() {
           
           methods: {
             expandable: {
-              /**
+             /*
                * @ngdoc method
                * @name toggleRowExpansion
                * @methodOf  ui.grid.expandable.api:PublicApi
@@ -13577,7 +13577,7 @@ module.filter('px', function() {
                 }
               },
 
-              /**
+             /*
                * @ngdoc method
                * @name expandAllRows
                * @methodOf  ui.grid.expandable.api:PublicApi
@@ -13590,7 +13590,7 @@ module.filter('px', function() {
                 service.expandAllRows(grid);
               },
 
-              /**
+             /*
                * @ngdoc method
                * @name collapseAllRows
                * @methodOf  ui.grid.expandable.api:PublicApi
@@ -13603,7 +13603,7 @@ module.filter('px', function() {
                 service.collapseAllRows(grid);
               },
 
-              /**
+             /*
                * @ngdoc method
                * @name toggleAllRows
                * @methodOf  ui.grid.expandable.api:PublicApi
@@ -13666,7 +13666,7 @@ module.filter('px', function() {
     return service;
   }]);
 
-  /**
+ /*
    *  @ngdoc object
    *  @name enableExpandableRowHeader
    *  @propertyOf  ui.grid.expandable.api:GridOptions
@@ -13711,7 +13711,7 @@ module.filter('px', function() {
       };
     }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.expandable.directive:uiGrid
    *  @description stacks on the uiGrid directive to register child grid with parent row when child is created
@@ -13731,13 +13731,13 @@ module.filter('px', function() {
                 //if a parent grid row is on the scope, then add the parentRow property to this childGrid
                 if ($scope.row && $scope.row.grid && $scope.row.grid.options && $scope.row.grid.options.enableExpandable) {
 
-                  /**
+                 /*
                    *  @ngdoc directive
                    *  @name ui.grid.expandable.class:Grid
                    *  @description Additional Grid properties added by expandable module
                    */
 
-                  /**
+                 /*
                    *  @ngdoc object
                    *  @name parentRow
                    *  @propertyOf ui.grid.expandable.class:Grid
@@ -13761,7 +13761,7 @@ module.filter('px', function() {
       };
     }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.expandable.directive:uiGridExpandableRow
    *  @description directive to render the expandable row template
@@ -13804,7 +13804,7 @@ module.filter('px', function() {
       };
     }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.expandable.directive:uiGridRow
    *  @description stacks on the uiGridRow directive to add support for expandable rows
@@ -13860,7 +13860,7 @@ module.filter('px', function() {
         };
       }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.expandable.directive:uiGridViewport
    *  @description stacks on the uiGridViewport directive to append the expandable row html elements to the
@@ -13895,7 +13895,7 @@ module.filter('px', function() {
 (function () {
   'use strict';
 
-  /**
+ /*
    * @ngdoc overview
    * @name ui.grid.exporter
    * @description
@@ -13918,27 +13918,27 @@ module.filter('px', function() {
 
   var module = angular.module('ui.grid.exporter', ['ui.grid']);
 
-  /**
+ /*
    *  @ngdoc object
    *  @name ui.grid.exporter.constant:uiGridExporterConstants
    *
    *  @description constants available in exporter module
    */
-  /**
+ /*
    * @ngdoc property
    * @propertyOf ui.grid.exporter.constant:uiGridExporterConstants
    * @name ALL
    * @description export all data, including data not visible.  Can
    * be set for either rowTypes or colTypes
    */
-  /**
+ /*
    * @ngdoc property
    * @propertyOf ui.grid.exporter.constant:uiGridExporterConstants
    * @name VISIBLE
    * @description export only visible data, including data not visible.  Can
    * be set for either rowTypes or colTypes
    */
-  /**
+ /*
    * @ngdoc property
    * @propertyOf ui.grid.exporter.constant:uiGridExporterConstants
    * @name SELECTED
@@ -13956,7 +13956,7 @@ module.filter('px', function() {
     FILE_NAME: 'FILE_NAME'
   });
 
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.exporter.service:uiGridExporterService
    *
@@ -13973,7 +13973,7 @@ module.filter('px', function() {
           grid.exporter = {};
           this.defaultGridOptions(grid.options);
 
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.exporter.api:PublicApi
            *
@@ -13986,7 +13986,7 @@ module.filter('px', function() {
             },
             methods: {
               exporter: {
-                /**
+               /*
                  * @ngdoc function
                  * @name csvExport
                  * @methodOf  ui.grid.exporter.api:PublicApi
@@ -14001,7 +14001,7 @@ module.filter('px', function() {
                 csvExport: function (rowTypes, colTypes) {
                   service.csvExport(grid, rowTypes, colTypes);
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name pdfExport
                  * @methodOf  ui.grid.exporter.api:PublicApi
@@ -14042,19 +14042,19 @@ module.filter('px', function() {
 
         defaultGridOptions: function (gridOptions) {
           //default option to true unless it was explicitly set to false
-          /**
+         /*
            * @ngdoc object
            * @name ui.grid.exporter.api:GridOptions
            *
            * @description GridOptions for exporter feature, these are available to be  
            * set using the ui-grid {@link ui.grid.class:GridOptions gridOptions}
            */
-          /**
+         /*
            * @ngdoc object
            * @name ui.grid.exporter.api:ColumnDef
            * @description ColumnDef settings for exporter
            */
-          /**
+         /*
            * @ngdoc object
            * @name exporterSuppressMenu
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14063,7 +14063,7 @@ module.filter('px', function() {
            * <br/>Defaults to false
            */
           gridOptions.exporterSuppressMenu = gridOptions.exporterSuppressMenu === true;
-          /**
+         /*
            * @ngdoc object
            * @name exporterMenuLabel
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14072,7 +14072,7 @@ module.filter('px', function() {
            * <br/>Defaults to 'Export'
            */
           gridOptions.exporterMenuLabel = gridOptions.exporterMenuLabel ? gridOptions.exporterMenuLabel : 'Export';
-          /**
+         /*
            * @ngdoc object
            * @name exporterSuppressColumns
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14085,7 +14085,7 @@ module.filter('px', function() {
            * </pre>
            */
           gridOptions.exporterSuppressColumns = gridOptions.exporterSuppressColumns ? gridOptions.exporterSuppressColumns : [];
-          /**
+         /*
            * @ngdoc object
            * @name exporterCsvColumnSeparator
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14094,7 +14094,7 @@ module.filter('px', function() {
            * <br/>Defaults to ','
            */
           gridOptions.exporterCsvColumnSeparator = gridOptions.exporterCsvColumnSeparator ? gridOptions.exporterCsvColumnSeparator : ',';
-          /**
+         /*
            * @ngdoc object
            * @name exporterCsvFilename
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14103,7 +14103,7 @@ module.filter('px', function() {
            * <br/>Defaults to 'download.csv'
            */
           gridOptions.exporterCsvFilename = gridOptions.exporterCsvFilename ? gridOptions.exporterCsvFilename : 'download.csv';
-          /**
+         /*
            * @ngdoc object
            * @name exporterPdfDefaultStyle
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14116,7 +14116,7 @@ module.filter('px', function() {
            * </pre>
            */
           gridOptions.exporterPdfDefaultStyle = gridOptions.exporterPdfDefaultStyle ? gridOptions.exporterPdfDefaultStyle : { fontSize: 11 };
-          /**
+         /*
            * @ngdoc object
            * @name exporterPdfTableStyle
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14129,7 +14129,7 @@ module.filter('px', function() {
            * </pre>
            */
           gridOptions.exporterPdfTableStyle = gridOptions.exporterPdfTableStyle ? gridOptions.exporterPdfTableStyle : { margin: [0, 5, 0, 15] };
-          /**
+         /*
            * @ngdoc object
            * @name exporterPdfTableHeaderStyle
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14144,7 +14144,7 @@ module.filter('px', function() {
            * </pre>
            */
           gridOptions.exporterPdfTableHeaderStyle = gridOptions.exporterPdfTableHeaderStyle ? gridOptions.exporterPdfTableHeaderStyle : { bold: true, fontSize: 12, color: 'black' };
-          /**
+         /*
            * @ngdoc object
            * @name exporterPdfHeader
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14168,7 +14168,7 @@ module.filter('px', function() {
            * </pre>
            */
           gridOptions.exporterPdfHeader = gridOptions.exporterPdfHeader ? gridOptions.exporterPdfHeader : null;
-          /**
+         /*
            * @ngdoc object
            * @name exporterPdfFooter
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14192,7 +14192,7 @@ module.filter('px', function() {
            * </pre>
            */
           gridOptions.exporterPdfFooter = gridOptions.exporterPdfFooter ? gridOptions.exporterPdfFooter : null;
-          /**
+         /*
            * @ngdoc object
            * @name exporterPdfOrientation
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14201,7 +14201,7 @@ module.filter('px', function() {
            * <br/>Defaults to landscape
            */
           gridOptions.exporterPdfOrientation = gridOptions.exporterPdfOrientation ? gridOptions.exporterPdfOrientation : 'landscape';
-          /**
+         /*
            * @ngdoc object
            * @name exporterPdfPageSize
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14211,7 +14211,7 @@ module.filter('px', function() {
            * <br/>Defaults to A4
            */
           gridOptions.exporterPdfPageSize = gridOptions.exporterPdfPageSize ? gridOptions.exporterPdfPageSize : 'A4';
-          /**
+         /*
            * @ngdoc object
            * @name exporterPdfMaxGridWidth
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14221,7 +14221,7 @@ module.filter('px', function() {
            * <br/>Defaults to 720 (for A4 landscape), use 670 for LETTER 
            */
           gridOptions.exporterPdfMaxGridWidth = gridOptions.exporterPdfMaxGridWidth ? gridOptions.exporterPdfMaxGridWidth : 720;
-          /**
+         /*
            * @ngdoc object
            * @name exporterPdfTableLayout
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14231,7 +14231,7 @@ module.filter('px', function() {
            * <br/>Defaults to null, which means no layout 
            */
 
-          /**
+         /*
            * @ngdoc object
            * @name exporterMenuCsv
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14239,7 +14239,7 @@ module.filter('px', function() {
            */
           gridOptions.exporterMenuCsv = gridOptions.exporterMenuCsv !== undefined ? gridOptions.exporterMenuCsv : true;
 
-          /**
+         /*
            * @ngdoc object
            * @name exporterMenuPdf
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14247,7 +14247,7 @@ module.filter('px', function() {
            */
           gridOptions.exporterMenuPdf = gridOptions.exporterMenuPdf !== undefined ? gridOptions.exporterMenuPdf : true;
           
-          /**
+         /*
            * @ngdoc object
            * @name exporterPdfCustomFormatter
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14268,7 +14268,7 @@ module.filter('px', function() {
            */
           gridOptions.exporterPdfCustomFormatter = ( gridOptions.exporterPdfCustomFormatter && typeof( gridOptions.exporterPdfCustomFormatter ) === 'function' ) ? gridOptions.exporterPdfCustomFormatter : function ( docDef ) { return docDef; };
           
-          /**
+         /*
            * @ngdoc object
            * @name exporterHeaderFilterUseName
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14283,7 +14283,7 @@ module.filter('px', function() {
            */
           gridOptions.exporterHeaderFilterUseName = gridOptions.exporterHeaderFilterUseName === true;          
 
-          /**
+         /*
            * @ngdoc object
            * @name exporterHeaderFilter
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14303,7 +14303,7 @@ module.filter('px', function() {
            * </pre>
            */
           
-          /**
+         /*
            * @ngdoc function
            * @name exporterFieldCallback
            * @propertyOf  ui.grid.exporter.api:GridOptions
@@ -14335,7 +14335,7 @@ module.filter('px', function() {
         },
 
 
-        /**
+       /*
          * @ngdoc function
          * @name addToMenu
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14405,7 +14405,7 @@ module.filter('px', function() {
         },
         
 
-        /**
+       /*
          * @ngdoc function
          * @name csvExport
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14428,14 +14428,14 @@ module.filter('px', function() {
         },
         
         
-        /** 
+       /* 
          * @ngdoc property
          * @propertyOf ui.grid.exporter.api:ColumnDef
          * @name exporterSuppressExport
          * @description Suppresses export for this column.  Used by selection and expandable.
          */
 
-        /**
+       /*
          * @ngdoc function
          * @name getColumnHeaders
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14471,7 +14471,7 @@ module.filter('px', function() {
         },
         
         
-        /** 
+       /* 
          * @ngdoc property
          * @propertyOf ui.grid.exporter.api:ColumnDef
          * @name exporterPdfAlign
@@ -14481,12 +14481,12 @@ module.filter('px', function() {
          */
 
 
-        /**
+       /*
          * @ngdoc object
          * @name ui.grid.exporter.api:GridRow
          * @description GridRow settings for exporter
          */
-        /**
+       /*
          * @ngdoc object
          * @name exporterEnableExporting
          * @propertyOf  ui.grid.exporter.api:GridRow
@@ -14495,7 +14495,7 @@ module.filter('px', function() {
          * <br/>Defaults to true
          */
 
-        /**
+       /*
          * @ngdoc function
          * @name getData
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14555,7 +14555,7 @@ module.filter('px', function() {
         },
 
 
-        /**
+       /*
          * @ngdoc function
          * @name formatAsCSV
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14579,7 +14579,7 @@ module.filter('px', function() {
           return csv;
         },
 
-        /**
+       /*
          * @ngdoc function
          * @name formatRowAsCsv
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14595,7 +14595,7 @@ module.filter('px', function() {
           };
         },
         
-        /**
+       /*
          * @ngdoc function
          * @name formatFieldAsCsv
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14623,7 +14623,7 @@ module.filter('px', function() {
         },
 
 
-        /**
+       /*
          * @ngdoc function
          * @name downloadFile
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14676,7 +14676,7 @@ module.filter('px', function() {
           }, 100);
         },
 
-        /**
+       /*
          * @ngdoc function
          * @name pdfExport
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14702,7 +14702,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name renderAsPdf
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14765,7 +14765,7 @@ module.filter('px', function() {
         },
         
                 
-        /**
+       /*
          * @ngdoc function
          * @name calculatePdfHeaderWidths
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14815,7 +14815,7 @@ module.filter('px', function() {
           
         },
         
-        /**
+       /*
          * @ngdoc function
          * @name formatRowAsPdf
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14832,7 +14832,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name formatFieldAsCsv
          * @methodOf  ui.grid.exporter.service:uiGridExporterService
@@ -14870,7 +14870,7 @@ module.filter('px', function() {
     }
   ]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.exporter.directive:uiGridExporter
    *  @element div
@@ -14926,7 +14926,7 @@ module.filter('px', function() {
 (function () {
   'use strict';
 
-  /**
+ /*
    * @ngdoc overview
    * @name ui.grid.importer
    * @description
@@ -14960,7 +14960,7 @@ module.filter('px', function() {
 
   var module = angular.module('ui.grid.importer', ['ui.grid']);
 
-  /**
+ /*
    *  @ngdoc object
    *  @name ui.grid.importer.constant:uiGridImporterConstants
    *
@@ -14971,7 +14971,7 @@ module.filter('px', function() {
     featureName: 'importer'
   });
 
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.importer.service:uiGridImporterService
    *
@@ -14991,7 +14991,7 @@ module.filter('px', function() {
           
           this.defaultGridOptions(grid.options);
 
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.importer.api:PublicApi
            *
@@ -15004,7 +15004,7 @@ module.filter('px', function() {
             },
             methods: {
               importer: {
-                /**
+               /*
                  * @ngdoc function
                  * @name importFile
                  * @methodOf  ui.grid.importer.api:PublicApi
@@ -15041,7 +15041,7 @@ module.filter('px', function() {
 
         defaultGridOptions: function (gridOptions) {
           //default option to true unless it was explicitly set to false
-          /**
+         /*
            * @ngdoc object
            * @name ui.grid.importer.api:GridOptions
            *
@@ -15049,7 +15049,7 @@ module.filter('px', function() {
            * set using the ui-grid {@link ui.grid.class:GridOptions gridOptions}
            */
 
-          /**
+         /*
            * @ngdoc property
            * @propertyOf ui.grid.importer.api:GridOptions
            * @name enableImporter
@@ -15069,7 +15069,7 @@ module.filter('px', function() {
             gridOptions.enableImporter = false;
           }
           
-          /**
+         /*
            * @ngdoc method
            * @name importerProcessHeaders
            * @methodOf ui.grid.importer.api:GridOptions
@@ -15106,7 +15106,7 @@ module.filter('px', function() {
            */
           gridOptions.importerProcessHeaders = gridOptions.importerProcessHeaders || service.processHeaders;
 
-          /**
+         /*
            * @ngdoc method
            * @name importerHeaderFilter
            * @methodOf ui.grid.importer.api:GridOptions
@@ -15131,7 +15131,7 @@ module.filter('px', function() {
            */
           gridOptions.importerHeaderFilter = gridOptions.importerHeaderFilter || function( displayName ) { return displayName; };
 
-          /**
+         /*
            * @ngdoc method
            * @name importerErrorCallback
            * @methodOf ui.grid.importer.api:GridOptions
@@ -15159,7 +15159,7 @@ module.filter('px', function() {
             delete gridOptions.importerErrorCallback;  
           }
 
-          /**
+         /*
            * @ngdoc method
            * @name importerDataAddCallback
            * @methodOf ui.grid.importer.api:GridOptions
@@ -15181,7 +15181,7 @@ module.filter('px', function() {
             gridOptions.enableImporter = false;
           }
                     
-          /**
+         /*
            * @ngdoc object
            * @name importerNewObject
            * @propertyOf  ui.grid.importer.api:GridOptions
@@ -15198,7 +15198,7 @@ module.filter('px', function() {
            * 
            */
 
-          /**
+         /*
            * @ngdoc property
            * @propertyOf ui.grid.importer.api:GridOptions
            * @name importerShowMenu
@@ -15207,7 +15207,7 @@ module.filter('px', function() {
            */
           gridOptions.importerShowMenu = gridOptions.importerShowMenu !== false;
           
-          /**
+         /*
            * @ngdoc method
            * @methodOf ui.grid.importer.api:GridOptions
            * @name importerObjectCallback
@@ -15237,7 +15237,7 @@ module.filter('px', function() {
         },
 
 
-        /**
+       /*
          * @ngdoc function
          * @name addToMenu
          * @methodOf  ui.grid.importer.service:uiGridImporterService
@@ -15260,7 +15260,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name importThisFile
          * @methodOf ui.grid.importer.service:uiGridImporterService
@@ -15291,7 +15291,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name importJson
          * @methodOf ui.grid.importer.service:uiGridImporterService
@@ -15320,7 +15320,7 @@ module.filter('px', function() {
         },
 
 
-        /**
+       /*
          * @ngdoc function
          * @name parseJson
          * @methodOf ui.grid.importer.service:uiGridImporterService
@@ -15350,7 +15350,7 @@ module.filter('px', function() {
         
         
         
-        /**
+       /*
          * @ngdoc function
          * @name importCsvClosure
          * @methodOf ui.grid.importer.service:uiGridImporterService
@@ -15379,7 +15379,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name parseCsv
          * @methodOf ui.grid.importer.service:uiGridImporterService
@@ -15399,7 +15399,7 @@ module.filter('px', function() {
         },
         
 
-        /**
+       /*
          * @ngdoc function
          * @name createCsvObjects
          * @methodOf ui.grid.importer.service:uiGridImporterService
@@ -15439,7 +15439,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name processHeaders
          * @methodOf ui.grid.importer.service:uiGridImporterService
@@ -15477,7 +15477,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @name flattenColumnDefs
          * @methodOf ui.grid.importer.service:uiGridImporterService
          * @description Runs through the column defs and creates a hash of
@@ -15518,7 +15518,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name addObjects
          * @methodOf ui.grid.importer.service:uiGridImporterService
@@ -15552,7 +15552,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name newObject
          * @methodOf ui.grid.importer.service:uiGridImporterService
@@ -15570,7 +15570,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name alertError
          * @methodOf ui.grid.importer.service:uiGridImporterService
@@ -15597,7 +15597,7 @@ module.filter('px', function() {
     }
   ]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.importer.directive:uiGridImporter
    *  @element div
@@ -15620,7 +15620,7 @@ module.filter('px', function() {
     }
   ]);
   
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.importer.directive:uiGridImporterMenuItem
    *  @element div
@@ -15664,7 +15664,7 @@ module.filter('px', function() {
 })();
 (function() {
   'use strict';
-  /**
+ /*
    *  @ngdoc overview
    *  @name ui.grid.infiniteScroll
    *
@@ -15675,7 +15675,7 @@ module.filter('px', function() {
    *
    */
   var module = angular.module('ui.grid.infiniteScroll', ['ui.grid']);
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.infiniteScroll.service:uiGridInfiniteScrollService
    *
@@ -15685,7 +15685,7 @@ module.filter('px', function() {
 
     var service = {
 
-      /**
+     /*
        * @ngdoc function
        * @name initializeGrid
        * @methodOf ui.grid.infiniteScroll.service:uiGridInfiniteScrollService
@@ -15695,7 +15695,7 @@ module.filter('px', function() {
       initializeGrid: function(grid) {
         service.defaultGridOptions(grid.options);
 
-        /**
+       /*
          *  @ngdoc object
          *  @name ui.grid.infiniteScroll.api:PublicAPI
          *
@@ -15705,7 +15705,7 @@ module.filter('px', function() {
           events: {
             infiniteScroll: {
 
-              /**
+             /*
                * @ngdoc event
                * @name needLoadMoreData
                * @eventOf ui.grid.infiniteScroll.api:PublicAPI
@@ -15716,7 +15716,7 @@ module.filter('px', function() {
               needLoadMoreData: function ($scope, fn) {
               },
 
-              /**
+             /*
                * @ngdoc event
                * @name needLoadMoreDataTop
                * @eventOf ui.grid.infiniteScroll.api:PublicAPI
@@ -15731,7 +15731,7 @@ module.filter('px', function() {
           methods: {
             infiniteScroll: {
 
-              /**
+             /*
                * @ngdoc function
                * @name dataLoaded
                * @methodOf ui.grid.infiniteScroll.api:PublicAPI
@@ -15751,7 +15751,7 @@ module.filter('px', function() {
       },
       defaultGridOptions: function (gridOptions) {
         //default option to true unless it was explicitly set to false
-        /**
+       /*
          *  @ngdoc object
          *  @name ui.grid.infiniteScroll.api:GridOptions
          *
@@ -15759,7 +15759,7 @@ module.filter('px', function() {
          *  set using the ui-grid {@link ui.grid.class:GridOptions gridOptions}
          */
 
-        /**
+       /*
          *  @ngdoc object
          *  @name enableInfiniteScroll
          *  @propertyOf  ui.grid.infiniteScroll.api:GridOptions
@@ -15770,7 +15770,7 @@ module.filter('px', function() {
       },
 
 
-      /**
+     /*
        * @ngdoc function
        * @name loadData
        * @methodOf ui.grid.infiniteScroll.service:uiGridInfiniteScrollService
@@ -15786,7 +15786,7 @@ module.filter('px', function() {
         grid.api.infiniteScroll.raise.needLoadMoreData();
       },
 
-      /**
+     /*
        * @ngdoc function
        * @name checkScroll
        * @methodOf ui.grid.infiniteScroll.service:uiGridInfiniteScrollService
@@ -15805,7 +15805,7 @@ module.filter('px', function() {
         }
         return false;
       }
-      /**
+     /*
        * @ngdoc property
        * @name infiniteScrollPercentage
        * @propertyOf ui.grid.class:GridOptions
@@ -15815,7 +15815,7 @@ module.filter('px', function() {
     };
     return service;
   }]);
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.infiniteScroll.directive:uiGridInfiniteScroll
    *  @element div
@@ -15892,7 +15892,7 @@ module.filter('px', function() {
 (function () {
   'use strict';
 
-  /**
+ /*
    * @ngdoc overview
    * @name ui.grid.moveColumns
    * @description
@@ -15902,7 +15902,7 @@ module.filter('px', function() {
    */
   var module = angular.module('ui.grid.moveColumns', ['ui.grid']);
 
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.moveColumns.service:uiGridMoveColumnService
    *  @description Service for column moving feature.
@@ -15918,14 +15918,14 @@ module.filter('px', function() {
       },
       registerPublicApi: function (grid) {
         var self = this;
-        /**
+       /*
          *  @ngdoc object
          *  @name ui.grid.moveColumns.api:PublicApi
          *  @description Public Api for column moving feature.
          */
         var publicApi = {
           events: {
-            /**
+           /*
              * @ngdoc event
              * @name columnPositionChanged
              * @eventOf  ui.grid.moveColumns.api:PublicApi
@@ -15943,7 +15943,7 @@ module.filter('px', function() {
             }
           },
           methods: {
-            /**
+           /*
              * @ngdoc method
              * @name moveColumn
              * @methodOf  ui.grid.moveColumns.api:PublicApi
@@ -15989,14 +15989,14 @@ module.filter('px', function() {
         grid.api.registerMethodsFromObject(publicApi.methods);
       },
       defaultGridOptions: function (gridOptions) {
-        /**
+       /*
          *  @ngdoc object
          *  @name ui.grid.moveColumns.api:GridOptions
          *
          *  @description Options for configuring the move column feature, these are available to be
          *  set using the ui-grid {@link ui.grid.class:GridOptions gridOptions}
          */
-        /**
+       /*
          *  @ngdoc object
          *  @name enableColumnMoving
          *  @propertyOf  ui.grid.moveColumns.api:GridOptions
@@ -16007,14 +16007,14 @@ module.filter('px', function() {
       },
       movableColumnBuilder: function (colDef, col, gridOptions) {
         var promises = [];
-        /**
+       /*
          *  @ngdoc object
          *  @name ui.grid.moveColumns.api:ColumnDef
          *
          *  @description Column Definition for move column feature, these are available to be
          *  set using the ui-grid {@link ui.grid.class:GridOptions.columnDef gridOptions.columnDefs}
          */
-        /**
+       /*
          *  @ngdoc object
          *  @name enableColumnMoving
          *  @propertyOf  ui.grid.moveColumns.api:ColumnDef
@@ -16052,7 +16052,7 @@ module.filter('px', function() {
     return service;
   }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.moveColumns.directive:uiGridMoveColumns
    *  @element div
@@ -16106,7 +16106,7 @@ module.filter('px', function() {
     };
   }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.moveColumns.directive:uiGridHeaderCell
    *  @element div
@@ -16363,7 +16363,7 @@ module.filter('px', function() {
 (function() {
   'use strict';
 
-  /**
+ /*
    * @ngdoc overview
    * @name ui.grid.pagination
    *
@@ -16374,7 +16374,7 @@ module.filter('px', function() {
    */
   var module = angular.module('ui.grid.pagination', ['ng', 'ui.grid']);
 
-  /**
+ /*
    * @ngdoc service
    * @name ui.grid.pagination.service:uiGridPaginationService
    *
@@ -16383,7 +16383,7 @@ module.filter('px', function() {
   module.service('uiGridPaginationService', ['gridUtil',
     function (gridUtil) {
       var service = {
-        /**
+       /*
          * @ngdoc method
          * @name initializeGrid
          * @methodOf ui.grid.pagination.service:uiGridPaginationService
@@ -16393,7 +16393,7 @@ module.filter('px', function() {
         initializeGrid: function (grid) {
           service.defaultGridOptions(grid.options);
 
-          /**
+         /*
           * @ngdoc object
           * @name ui.grid.pagination.api:PublicAPI
           *
@@ -16402,7 +16402,7 @@ module.filter('px', function() {
           var publicApi = {
             events: {
               pagination: {
-              /**
+             /*
                * @ngdoc event
                * @name paginationChanged
                * @eventOf ui.grid.pagination.api:PublicAPI
@@ -16415,7 +16415,7 @@ module.filter('px', function() {
             },
             methods: {
               pagination: {
-                /**
+               /*
                  * @ngdoc method
                  * @name getPage
                  * @methodOf ui.grid.pagination.api:PublicAPI
@@ -16424,7 +16424,7 @@ module.filter('px', function() {
                 getPage: function () {
                   return grid.options.enablePagination ? grid.options.paginationCurrentPage : null;
                 },
-                /**
+               /*
                  * @ngdoc method
                  * @name getTotalPages
                  * @methodOf ui.grid.pagination.api:PublicAPI
@@ -16437,7 +16437,7 @@ module.filter('px', function() {
 
                   return (grid.options.totalItems === 0) ? 1 : Math.ceil(grid.options.totalItems / grid.options.paginationPageSize);
                 },
-                /**
+               /*
                  * @ngdoc method
                  * @name nextPage
                  * @methodOf ui.grid.pagination.api:PublicAPI
@@ -16457,7 +16457,7 @@ module.filter('px', function() {
                     grid.options.paginationCurrentPage++;
                   }
                 },
-                /**
+               /*
                  * @ngdoc method
                  * @name previousPage
                  * @methodOf ui.grid.pagination.api:PublicAPI
@@ -16470,7 +16470,7 @@ module.filter('px', function() {
 
                   grid.options.paginationCurrentPage = Math.max(grid.options.paginationCurrentPage - 1, 1);
                 },
-                /**
+               /*
                  * @ngdoc method
                  * @name seek
                  * @methodOf ui.grid.pagination.api:PublicAPI
@@ -16514,7 +16514,7 @@ module.filter('px', function() {
 
         },
         defaultGridOptions: function (gridOptions) {
-          /**
+         /*
            * @ngdoc object
            * @name ui.grid.pagination.api:GridOptions
            *
@@ -16522,14 +16522,14 @@ module.filter('px', function() {
            * set using the ui-grid {@link ui.grid.class:GridOptions gridOptions}
            */
 
-          /**
+         /*
            * @ngdoc property
            * @name enablePagination
            * @propertyOf ui.grid.pagination.api:GridOptions
            * @description Enables pagination, defaults to true
            */
           gridOptions.enablePagination = gridOptions.enablePagination !== false;
-          /**
+         /*
            * @ngdoc property
            * @name enablePaginationControls
            * @propertyOf ui.grid.pagination.api:GridOptions
@@ -16537,7 +16537,7 @@ module.filter('px', function() {
            *              own controls outside the grid.
            */
           gridOptions.enablePaginationControls = gridOptions.enablePaginationControls !== false;
-          /**
+         /*
            * @ngdoc property
            * @name useExternalPagination
            * @propertyOf ui.grid.pagination.api:GridOptions
@@ -16545,7 +16545,7 @@ module.filter('px', function() {
            *              and totalItems, defaults to `false`
            */
           gridOptions.useExternalPagination = gridOptions.useExternalPagination === true;
-          /**
+         /*
            * @ngdoc property
            * @name totalItems
            * @propertyOf ui.grid.pagination.api:GridOptions
@@ -16555,7 +16555,7 @@ module.filter('px', function() {
           if (gridUtil.isNullOrUndefined(gridOptions.totalItems)) {
             gridOptions.totalItems = 0;
           }
-          /**
+         /*
            * @ngdoc property
            * @name paginationPageSizes
            * @propertyOf ui.grid.pagination.api:GridOptions
@@ -16564,7 +16564,7 @@ module.filter('px', function() {
           if (gridUtil.isNullOrUndefined(gridOptions.paginationPageSizes)) {
             gridOptions.paginationPageSizes = [250, 500, 1000];
           }
-          /**
+         /*
            * @ngdoc property
            * @name paginationPageSize
            * @propertyOf ui.grid.pagination.api:GridOptions
@@ -16577,7 +16577,7 @@ module.filter('px', function() {
               gridOptions.paginationPageSize = 0;
             }
           }
-          /**
+         /*
            * @ngdoc property
            * @name paginationCurrentPage
            * @propertyOf ui.grid.pagination.api:GridOptions
@@ -16587,7 +16587,7 @@ module.filter('px', function() {
             gridOptions.paginationCurrentPage = 1;
           }
 
-          /**
+         /*
            * @ngdoc property
            * @name paginationTemplate
            * @propertyOf ui.grid.pagination.api:GridOptions
@@ -16597,7 +16597,7 @@ module.filter('px', function() {
             gridOptions.paginationTemplate = 'ui-grid/pagination';
           }
         },
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.pagination.service:uiGridPaginationService
          * @name uiGridPaginationService
@@ -16617,7 +16617,7 @@ module.filter('px', function() {
       return service;
     }
   ]);
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.pagination.directive:uiGridPagination
    *  @element div
@@ -16685,7 +16685,7 @@ module.filter('px', function() {
     }
   ]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.pagination.directive:uiGridPager
    *  @element div
@@ -16778,7 +16778,7 @@ module.filter('px', function() {
 (function () {
   'use strict';
 
-  /**
+ /*
    * @ngdoc overview
    * @name ui.grid.pinning
    * @description
@@ -16805,7 +16805,7 @@ module.filter('px', function() {
 
       defaultGridOptions: function (gridOptions) {
         //default option to true unless it was explicitly set to false
-        /**
+       /*
          *  @ngdoc object
          *  @name ui.grid.pinning.api:GridOptions
          *
@@ -16813,7 +16813,7 @@ module.filter('px', function() {
            *  set using the ui-grid {@link ui.grid.class:GridOptions gridOptions}
          */
 
-        /**
+       /*
          *  @ngdoc object
          *  @name enablePinning
          *  @propertyOf  ui.grid.pinning.api:GridOptions
@@ -16827,7 +16827,7 @@ module.filter('px', function() {
       pinningColumnBuilder: function (colDef, col, gridOptions) {
         //default to true unless gridOptions or colDef is explicitly false
 
-        /**
+       /*
          *  @ngdoc object
          *  @name ui.grid.pinning.api:ColumnDef
          *
@@ -16835,7 +16835,7 @@ module.filter('px', function() {
          *  set using the ui-grid {@link ui.grid.class:GridOptions.columnDef gridOptions.columnDefs}
          */
 
-        /**
+       /*
          *  @ngdoc object
          *  @name enablePinning
          *  @propertyOf  ui.grid.pinning.api:ColumnDef
@@ -16845,7 +16845,7 @@ module.filter('px', function() {
         colDef.enablePinning = colDef.enablePinning === undefined ? gridOptions.enablePinning : colDef.enablePinning;
 
 
-        /**
+       /*
          *  @ngdoc object
          *  @name pinnedLeft
          *  @propertyOf  ui.grid.pinning.api:ColumnDef
@@ -16853,7 +16853,7 @@ module.filter('px', function() {
          *  <br/>Defaults to false
          */
 
-        /**
+       /*
          *  @ngdoc object
          *  @name pinnedRight
          *  @propertyOf  ui.grid.pinning.api:ColumnDef
@@ -17007,7 +17007,7 @@ module.filter('px', function() {
       var service = {
         defaultGridOptions: function(gridOptions){
           //default option to true unless it was explicitly set to false
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.resizeColumns.api:GridOptions
            *
@@ -17015,7 +17015,7 @@ module.filter('px', function() {
            *  set using the ui-grid {@link ui.grid.class:GridOptions gridOptions}
            */
 
-          /**
+         /*
            *  @ngdoc object
            *  @name enableColumnResizing
            *  @propertyOf  ui.grid.resizeColumns.api:GridOptions
@@ -17034,7 +17034,7 @@ module.filter('px', function() {
         colResizerColumnBuilder: function (colDef, col, gridOptions) {
 
           var promises = [];
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.resizeColumns.api:ColumnDef
            *
@@ -17042,7 +17042,7 @@ module.filter('px', function() {
            *  set using the ui-grid {@link ui.grid.class:GridOptions.columnDef gridOptions.columnDefs}
            */
 
-          /**
+         /*
            *  @ngdoc object
            *  @name enableColumnResizing
            *  @propertyOf  ui.grid.resizeColumns.api:ColumnDef
@@ -17062,14 +17062,14 @@ module.filter('px', function() {
         },
         
         registerPublicApi: function (grid) {
-            /**
+           /*
              *  @ngdoc object
              *  @name ui.grid.resizeColumns.api:PublicApi
              *  @description Public Api for column resize feature.
              */
             var publicApi = {
               events: {
-                /**
+               /*
                  * @ngdoc event
                  * @name columnSizeChanged
                  * @eventOf  ui.grid.resizeColumns.api:PublicApi
@@ -17116,7 +17116,7 @@ module.filter('px', function() {
     }]);
 
 
-  /**
+ /*
    * @ngdoc directive
    * @name ui.grid.resizeColumns.directive:uiGridResizeColumns
    * @element div
@@ -17243,7 +17243,7 @@ module.filter('px', function() {
 
 
   
-  /**
+ /*
    * @ngdoc directive
    * @name ui.grid.resizeColumns.directive:uiGridColumnResizer
    * @element div
@@ -17549,7 +17549,7 @@ module.filter('px', function() {
 (function () {
   'use strict';
 
-  /**
+ /*
    * @ngdoc overview
    * @name ui.grid.rowEdit
    * @description
@@ -17567,7 +17567,7 @@ module.filter('px', function() {
 
   var module = angular.module('ui.grid.rowEdit', ['ui.grid', 'ui.grid.edit', 'ui.grid.cellNav']);
 
-  /**
+ /*
    *  @ngdoc object
    *  @name ui.grid.rowEdit.constant:uiGridRowEditConstants
    *
@@ -17576,7 +17576,7 @@ module.filter('px', function() {
   module.constant('uiGridRowEditConstants', {
   });
 
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.rowEdit.service:uiGridRowEditService
    *
@@ -17588,7 +17588,7 @@ module.filter('px', function() {
       var service = {
 
         initializeGrid: function (scope, grid) {
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.rowEdit.api:PublicApi
            *
@@ -17600,7 +17600,7 @@ module.filter('px', function() {
           var publicApi = {
             events: {
               rowEdit: {
-                /**
+               /*
                  * @ngdoc event
                  * @eventOf ui.grid.rowEdit.api:PublicApi
                  * @name saveRow
@@ -17632,7 +17632,7 @@ module.filter('px', function() {
             },
             methods: {
               rowEdit: {
-                /**
+               /*
                  * @ngdoc method
                  * @methodOf ui.grid.rowEdit.api:PublicApi
                  * @name setSavePromise
@@ -17650,7 +17650,7 @@ module.filter('px', function() {
                 setSavePromise: function ( rowEntity, savePromise) {
                   service.setSavePromise(grid, rowEntity, savePromise);
                 },
-                /**
+               /*
                  * @ngdoc method
                  * @methodOf ui.grid.rowEdit.api:PublicApi
                  * @name getDirtyRows
@@ -17664,7 +17664,7 @@ module.filter('px', function() {
                 getDirtyRows: function () {
                   return grid.rowEdit.dirtyRows ? grid.rowEdit.dirtyRows : [];
                 },
-                /**
+               /*
                  * @ngdoc method
                  * @methodOf ui.grid.rowEdit.api:PublicApi
                  * @name getErrorRows
@@ -17678,7 +17678,7 @@ module.filter('px', function() {
                 getErrorRows: function () {
                   return grid.rowEdit.errorRows ? grid.rowEdit.errorRows : [];
                 },
-                /**
+               /*
                  * @ngdoc method
                  * @methodOf ui.grid.rowEdit.api:PublicApi
                  * @name flushDirtyRows
@@ -17696,7 +17696,7 @@ module.filter('px', function() {
                   return service.flushDirtyRows(grid);
                 },
                 
-                /**
+               /*
                  * @ngdoc method
                  * @methodOf ui.grid.rowEdit.api:PublicApi
                  * @name setRowsDirty
@@ -17738,7 +17738,7 @@ module.filter('px', function() {
 
         defaultGridOptions: function (gridOptions) {
 
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.rowEdit.api:GridOptions
            *
@@ -17749,7 +17749,7 @@ module.filter('px', function() {
         },
 
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name saveRow
@@ -17778,7 +17778,7 @@ module.filter('px', function() {
         },
         
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf  ui.grid.rowEdit.service:uiGridRowEditService
          * @name setSavePromise
@@ -17800,7 +17800,7 @@ module.filter('px', function() {
         },
 
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name processSuccessPromise
@@ -17824,7 +17824,7 @@ module.filter('px', function() {
         },
         
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name processErrorPromise
@@ -17851,7 +17851,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name removeRow
@@ -17870,7 +17870,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name isRowPresent
@@ -17890,7 +17890,7 @@ module.filter('px', function() {
         },
 
         
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name flushDirtyRows
@@ -17916,7 +17916,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name endEditCell
@@ -17949,7 +17949,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name beginEditCell
@@ -17970,7 +17970,7 @@ module.filter('px', function() {
         },
 
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name cancelEditCell
@@ -17994,7 +17994,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name navigate
@@ -18018,7 +18018,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc property
          * @propertyOf ui.grid.rowEdit.api:GridOptions
          * @name rowEditWaitInterval
@@ -18034,7 +18034,7 @@ module.filter('px', function() {
          * </pre>
          * 
          */
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name considerSetTimer
@@ -18057,7 +18057,7 @@ module.filter('px', function() {
         },
         
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name cancelTimer
@@ -18075,7 +18075,7 @@ module.filter('px', function() {
         },
 
 
-        /**
+       /*
          * @ngdoc method
          * @methodOf ui.grid.rowEdit.service:uiGridRowEditService
          * @name setRowsDirty
@@ -18124,7 +18124,7 @@ module.filter('px', function() {
 
     }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.rowEdit.directive:uiGridEdit
    *  @element div
@@ -18153,7 +18153,7 @@ module.filter('px', function() {
   }]);
 
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.rowEdit.directive:uiGridViewport
    *  @element div
@@ -18195,7 +18195,7 @@ module.filter('px', function() {
 (function () {
   'use strict';
 
-  /**
+ /*
    * @ngdoc overview
    * @name ui.grid.saveState
    * @description
@@ -18216,7 +18216,7 @@ module.filter('px', function() {
 
   var module = angular.module('ui.grid.saveState', ['ui.grid', 'ui.grid.selection', 'ui.grid.cellNav']);
 
-  /**
+ /*
    *  @ngdoc object
    *  @name ui.grid.saveState.constant:uiGridSaveStateConstants
    *
@@ -18227,7 +18227,7 @@ module.filter('px', function() {
     featureName: 'saveState'
   });
 
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.saveState.service:uiGridSaveStateService
    *
@@ -18244,7 +18244,7 @@ module.filter('px', function() {
           grid.saveState = {};
           this.defaultGridOptions(grid.options);
 
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.saveState.api:PublicApi
            *
@@ -18257,7 +18257,7 @@ module.filter('px', function() {
             },
             methods: {
               saveState: {
-                /**
+               /*
                  * @ngdoc function
                  * @name save
                  * @methodOf  ui.grid.saveState.api:PublicApi
@@ -18268,7 +18268,7 @@ module.filter('px', function() {
                 save: function () {
                   return service.save(grid);
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name restore
                  * @methodOf  ui.grid.saveState.api:PublicApi
@@ -18291,14 +18291,14 @@ module.filter('px', function() {
 
         defaultGridOptions: function (gridOptions) {
           //default option to true unless it was explicitly set to false
-          /**
+         /*
            * @ngdoc object
            * @name ui.grid.saveState.api:GridOptions
            *
            * @description GridOptions for saveState feature, these are available to be  
            * set using the ui-grid {@link ui.grid.class:GridOptions gridOptions}
            */
-          /**
+         /*
            * @ngdoc object
            * @name saveWidths
            * @propertyOf  ui.grid.saveState.api:GridOptions
@@ -18308,7 +18308,7 @@ module.filter('px', function() {
            * <br/>Defaults to true
            */
           gridOptions.saveWidths = gridOptions.saveWidths !== false;
-          /**
+         /*
            * @ngdoc object
            * @name saveOrder
            * @propertyOf  ui.grid.saveState.api:GridOptions
@@ -18318,7 +18318,7 @@ module.filter('px', function() {
            * <br/>Defaults to true
            */
           gridOptions.saveOrder = gridOptions.saveOrder !== false;
-          /**
+         /*
            * @ngdoc object
            * @name saveScroll
            * @propertyOf  ui.grid.saveState.api:GridOptions
@@ -18335,7 +18335,7 @@ module.filter('px', function() {
            * <br/>Defaults to false
            */
           gridOptions.saveScroll = gridOptions.saveScroll === true;
-          /**
+         /*
            * @ngdoc object
            * @name saveFocus
            * @propertyOf  ui.grid.saveState.api:GridOptions
@@ -18359,7 +18359,7 @@ module.filter('px', function() {
            * <br/>Defaults to true (unless saveScroll is true)
            */
           gridOptions.saveFocus = gridOptions.saveScroll !== true && gridOptions.saveFocus !== false;
-          /**
+         /*
            * @ngdoc object
            * @name saveRowIdentity
            * @propertyOf  ui.grid.saveState.api:GridOptions
@@ -18373,7 +18373,7 @@ module.filter('px', function() {
            * 
            * <br/>Defaults to undefined
            */
-          /**
+         /*
            * @ngdoc object
            * @name saveVisible
            * @propertyOf  ui.grid.saveState.api:GridOptions
@@ -18382,7 +18382,7 @@ module.filter('px', function() {
            * <br/>Defaults to true
            */
           gridOptions.saveVisible = gridOptions.saveVisible !== false;          
-          /**
+         /*
            * @ngdoc object
            * @name saveSort
            * @propertyOf  ui.grid.saveState.api:GridOptions
@@ -18391,7 +18391,7 @@ module.filter('px', function() {
            * <br/>Defaults to true
            */
           gridOptions.saveSort = gridOptions.saveSort !== false;         
-          /**
+         /*
            * @ngdoc object
            * @name saveFilter
            * @propertyOf  ui.grid.saveState.api:GridOptions
@@ -18400,7 +18400,7 @@ module.filter('px', function() {
            * <br/>Defaults to true
            */
           gridOptions.saveFilter = gridOptions.saveFilter !== false;
-          /**
+         /*
            * @ngdoc object
            * @name saveSelection
            * @propertyOf  ui.grid.saveState.api:GridOptions
@@ -18419,7 +18419,7 @@ module.filter('px', function() {
 
 
 
-        /**
+       /*
          * @ngdoc function
          * @name save
          * @methodOf  ui.grid.saveState.service:uiGridSaveStateService
@@ -18439,7 +18439,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name restore
          * @methodOf  ui.grid.saveState.service:uiGridSaveStateService
@@ -18466,7 +18466,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name saveColumns
          * @methodOf  ui.grid.saveState.service:uiGridSaveStateService
@@ -18497,7 +18497,7 @@ module.filter('px', function() {
         },
         
 
-        /**
+       /*
          * @ngdoc function
          * @name saveScrollFocus
          * @methodOf  ui.grid.saveState.service:uiGridSaveStateService
@@ -18544,7 +18544,7 @@ module.filter('px', function() {
         },
         
 
-        /**
+       /*
          * @ngdoc function
          * @name saveSelection
          * @methodOf  ui.grid.saveState.service:uiGridSaveStateService
@@ -18565,7 +18565,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name getRowVal
          * @methodOf  ui.grid.saveState.service:uiGridSaveStateService
@@ -18593,7 +18593,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name restoreColumns
          * @methodOf  ui.grid.saveState.service:uiGridSaveStateService
@@ -18641,7 +18641,7 @@ module.filter('px', function() {
         },
         
 
-        /**
+       /*
          * @ngdoc function
          * @name restoreScrollFocus
          * @methodOf  ui.grid.saveState.service:uiGridSaveStateService
@@ -18686,7 +18686,7 @@ module.filter('px', function() {
         },
         
 
-        /**
+       /*
          * @ngdoc function
          * @name restoreSelection
          * @methodOf  ui.grid.saveState.service:uiGridSaveStateService
@@ -18718,7 +18718,7 @@ module.filter('px', function() {
         },
         
         
-        /**
+       /*
          * @ngdoc function
          * @name findRowByIdentity
          * @methodOf  ui.grid.saveState.service:uiGridSaveStateService
@@ -18754,7 +18754,7 @@ module.filter('px', function() {
     }
   ]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.saveState.directive:uiGridSaveState
    *  @element div
@@ -18807,7 +18807,7 @@ module.filter('px', function() {
 (function () {
   'use strict';
 
-  /**
+ /*
    * @ngdoc overview
    * @name ui.grid.selection
    * @description
@@ -18822,7 +18822,7 @@ module.filter('px', function() {
 
   var module = angular.module('ui.grid.selection', ['ui.grid']);
 
-  /**
+ /*
    *  @ngdoc object
    *  @name ui.grid.selection.constant:uiGridSelectionConstants
    *
@@ -18837,14 +18837,14 @@ module.filter('px', function() {
   angular.module('ui.grid').config(['$provide', function($provide) {
     $provide.decorator('GridRow', ['$delegate', function($delegate) {
 
-      /**
+     /*
        *  @ngdoc object
        *  @name ui.grid.selection.api:GridRow
        *
        *  @description GridRow prototype functions added for selection
        */
 
-      /**
+     /*
        *  @ngdoc object
        *  @name enableSelection
        *  @propertyOf  ui.grid.selection.api:GridRow
@@ -18854,7 +18854,7 @@ module.filter('px', function() {
        *  <br/>Defaults to true
        */
 
-      /**
+     /*
        *  @ngdoc object
        *  @name isSelected
        *  @propertyOf  ui.grid.selection.api:GridRow
@@ -18863,7 +18863,7 @@ module.filter('px', function() {
        */
 
 
-        /**
+       /*
          * @ngdoc function
          * @name setSelected
          * @methodOf ui.grid.selection.api:GridRow
@@ -18885,7 +18885,7 @@ module.filter('px', function() {
     }]);
   }]);
 
-  /**
+ /*
    *  @ngdoc service
    *  @name ui.grid.selection.service:uiGridSelectionService
    *
@@ -18899,7 +18899,7 @@ module.filter('px', function() {
         initializeGrid: function (grid) {
 
           //add feature namespace and any properties to grid for needed
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.selection.grid:selection
            *
@@ -18910,7 +18910,7 @@ module.filter('px', function() {
           grid.selection.selectAll = false;
 
 
-          /**
+         /*
            *  @ngdoc object
            *  @name selectedCount
            *  @propertyOf  ui.grid.selection.grid:selection
@@ -18922,7 +18922,7 @@ module.filter('px', function() {
 
           service.defaultGridOptions(grid.options);
 
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.selection.api:PublicApi
            *
@@ -18931,7 +18931,7 @@ module.filter('px', function() {
           var publicApi = {
             events: {
               selection: {
-                /**
+               /*
                  * @ngdoc event
                  * @name rowSelectionChanged
                  * @eventOf  ui.grid.selection.api:PublicApi
@@ -18941,7 +18941,7 @@ module.filter('px', function() {
                  */
                 rowSelectionChanged: function (scope, row, evt) {
                 },
-                /**
+               /*
                  * @ngdoc event
                  * @name rowSelectionChangedBatch
                  * @eventOf  ui.grid.selection.api:PublicApi
@@ -18958,7 +18958,7 @@ module.filter('px', function() {
             },
             methods: {
               selection: {
-                /**
+               /*
                  * @ngdoc function
                  * @name toggleRowSelection
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -18972,7 +18972,7 @@ module.filter('px', function() {
                     service.toggleRowSelection(grid, row, evt, grid.options.multiSelect, grid.options.noUnselect);
                   }
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name selectRow
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -18986,7 +18986,7 @@ module.filter('px', function() {
                     service.toggleRowSelection(grid, row, evt, grid.options.multiSelect, grid.options.noUnselect);
                   }
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name selectRowByVisibleIndex
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -19003,7 +19003,7 @@ module.filter('px', function() {
                     service.toggleRowSelection(grid, row, evt, grid.options.multiSelect, grid.options.noUnselect);
                   }
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name unSelectRow
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -19017,7 +19017,7 @@ module.filter('px', function() {
                     service.toggleRowSelection(grid, row, evt, grid.options.multiSelect, grid.options.noUnselect);
                   }
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name selectAllRows
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -19039,7 +19039,7 @@ module.filter('px', function() {
                   service.decideRaiseSelectionBatchEvent( grid, changedRows, evt );
                   grid.selection.selectAll = true;
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name selectAllVisibleRows
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -19068,7 +19068,7 @@ module.filter('px', function() {
                   service.decideRaiseSelectionBatchEvent( grid, changedRows, evt );
                   grid.selection.selectAll = true;
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name clearSelectedRows
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -19078,7 +19078,7 @@ module.filter('px', function() {
                 clearSelectedRows: function (evt) {
                   service.clearSelectedRows(grid, evt);
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name getSelectedRows
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -19089,7 +19089,7 @@ module.filter('px', function() {
                     return gridRow.entity;
                   });
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name getSelectedGridRows
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -19098,7 +19098,7 @@ module.filter('px', function() {
                 getSelectedGridRows: function () {
                   return service.getSelectedRows(grid);
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name setMultiSelect
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -19108,7 +19108,7 @@ module.filter('px', function() {
                 setMultiSelect: function (multiSelect) {
                   grid.options.multiSelect = multiSelect;
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name setModifierKeysToMultiSelect
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -19118,7 +19118,7 @@ module.filter('px', function() {
                 setModifierKeysToMultiSelect: function (modifierKeysToMultiSelect) {
                   grid.options.modifierKeysToMultiSelect = modifierKeysToMultiSelect;
                 },
-                /**
+               /*
                  * @ngdoc function
                  * @name getSelectAllState
                  * @methodOf  ui.grid.selection.api:PublicApi
@@ -19143,7 +19143,7 @@ module.filter('px', function() {
 
         defaultGridOptions: function (gridOptions) {
           //default option to true unless it was explicitly set to false
-          /**
+         /*
            *  @ngdoc object
            *  @name ui.grid.selection.api:GridOptions
            *
@@ -19151,7 +19151,7 @@ module.filter('px', function() {
            *  set using the ui-grid {@link ui.grid.class:GridOptions gridOptions}
            */
 
-          /**
+         /*
            *  @ngdoc object
            *  @name enableRowSelection
            *  @propertyOf  ui.grid.selection.api:GridOptions
@@ -19159,7 +19159,7 @@ module.filter('px', function() {
            *  <br/>Defaults to true
            */
           gridOptions.enableRowSelection = gridOptions.enableRowSelection !== false;
-          /**
+         /*
            *  @ngdoc object
            *  @name multiSelect
            *  @propertyOf  ui.grid.selection.api:GridOptions
@@ -19167,7 +19167,7 @@ module.filter('px', function() {
            *  <br/>Defaults to true
            */
           gridOptions.multiSelect = gridOptions.multiSelect !== false;
-          /**
+         /*
            *  @ngdoc object
            *  @name noUnselect
            *  @propertyOf  ui.grid.selection.api:GridOptions
@@ -19178,7 +19178,7 @@ module.filter('px', function() {
            *  <br/>Defaults to false
            */
           gridOptions.noUnselect = gridOptions.noUnselect === true;
-          /**
+         /*
            *  @ngdoc object
            *  @name modifierKeysToMultiSelect
            *  @propertyOf  ui.grid.selection.api:GridOptions
@@ -19186,7 +19186,7 @@ module.filter('px', function() {
            *  <br/>Defaults to false
            */
           gridOptions.modifierKeysToMultiSelect = gridOptions.modifierKeysToMultiSelect === true;
-          /**
+         /*
            *  @ngdoc object
            *  @name enableRowHeaderSelection
            *  @propertyOf  ui.grid.selection.api:GridOptions
@@ -19194,7 +19194,7 @@ module.filter('px', function() {
            *  <br/>Defaults to true
            */
           gridOptions.enableRowHeaderSelection = gridOptions.enableRowHeaderSelection !== false;
-          /**
+         /*
            *  @ngdoc object
            *  @name enableSelectAll
            *  @propertyOf  ui.grid.selection.api:GridOptions
@@ -19202,7 +19202,7 @@ module.filter('px', function() {
            *  <br/>Defaults to true
            */
           gridOptions.enableSelectAll = gridOptions.enableSelectAll !== false;
-          /**
+         /*
            *  @ngdoc object
            *  @name enableSelectionBatchEvent
            *  @propertyOf  ui.grid.selection.api:GridOptions
@@ -19213,7 +19213,7 @@ module.filter('px', function() {
            *  <br/>Defaults to true
            */
           gridOptions.enableSelectionBatchEvent = gridOptions.enableSelectionBatchEvent !== false;
-          /**
+         /*
            *  @ngdoc object
            *  @name selectionRowHeaderWidth
            *  @propertyOf  ui.grid.selection.api:GridOptions
@@ -19222,7 +19222,7 @@ module.filter('px', function() {
            */
           gridOptions.selectionRowHeaderWidth = angular.isDefined(gridOptions.selectionRowHeaderWidth) ? gridOptions.selectionRowHeaderWidth : 30;
 
-          /**
+         /*
            *  @ngdoc object
            *  @name enableFooterTotalSelected
            *  @propertyOf  ui.grid.selection.api:GridOptions
@@ -19232,7 +19232,7 @@ module.filter('px', function() {
            */
           gridOptions.enableFooterTotalSelected = gridOptions.enableFooterTotalSelected !== false;
 
-          /**
+         /*
            *  @ngdoc object
            *  @name isRowSelectable
            *  @propertyOf  ui.grid.selection.api:GridOptions
@@ -19242,7 +19242,7 @@ module.filter('px', function() {
           gridOptions.isRowSelectable = angular.isDefined(gridOptions.isRowSelectable) ? gridOptions.isRowSelectable : angular.noop;
         },
 
-        /**
+       /*
          * @ngdoc function
          * @name toggleRowSelection
          * @methodOf  ui.grid.selection.service:uiGridSelectionService
@@ -19278,7 +19278,7 @@ module.filter('px', function() {
             grid.api.selection.raise.rowSelectionChanged(row, evt);
           }
         },
-        /**
+       /*
          * @ngdoc function
          * @name shiftSelect
          * @methodOf  ui.grid.selection.service:uiGridSelectionService
@@ -19315,7 +19315,7 @@ module.filter('px', function() {
           }
           service.decideRaiseSelectionBatchEvent( grid, changedRows, evt );
         },
-        /**
+       /*
          * @ngdoc function
          * @name getSelectedRows
          * @methodOf  ui.grid.selection.service:uiGridSelectionService
@@ -19328,7 +19328,7 @@ module.filter('px', function() {
           });
         },
 
-        /**
+       /*
          * @ngdoc function
          * @name clearSelectedRows
          * @methodOf  ui.grid.selection.service:uiGridSelectionService
@@ -19348,7 +19348,7 @@ module.filter('px', function() {
           grid.selection.selectAll = false;
         },
 
-        /**
+       /*
          * @ngdoc function
          * @name decideRaiseSelectionEvent
          * @methodOf  ui.grid.selection.service:uiGridSelectionService
@@ -19367,7 +19367,7 @@ module.filter('px', function() {
           }
         },
 
-        /**
+       /*
          * @ngdoc function
          * @name raiseSelectionEvent
          * @methodOf  ui.grid.selection.service:uiGridSelectionService
@@ -19389,7 +19389,7 @@ module.filter('px', function() {
 
     }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.selection.directive:uiGridSelection
    *  @element div
@@ -19515,7 +19515,7 @@ module.filter('px', function() {
       };
     }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.selection.directive:uiGridViewport
    *  @element div
@@ -19552,7 +19552,7 @@ module.filter('px', function() {
         };
       }]);
 
-  /**
+ /*
    *  @ngdoc directive
    *  @name ui.grid.selection.directive:uiGridCell
    *  @element div

@@ -8,20 +8,13 @@ import java.nio.charset.Charset;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * Created with antnest-platform
- * User: chenyuan
- * Date: 12/24/14
- * Time: 10:39 AM
- */
 public class HttpHelper {
 
-    /**
-     * 获取请求Body
-     *
-     * @param request
-     * @return
-     */
+	/**
+	 * 获取请求Body
+	 * @param request 解析的请求
+	 * @return 返回请求体转换后的字符串
+	 */
     public static String getBodyString(ServletRequest request) {
         StringBuilder sb = new StringBuilder();
         InputStream inputStream = null;

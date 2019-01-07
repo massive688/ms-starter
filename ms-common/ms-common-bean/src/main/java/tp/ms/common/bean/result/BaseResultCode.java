@@ -148,7 +148,8 @@ public enum BaseResultCode implements ResultCode {
     }
 
 
-    public static ResultCode parseForCode(String code) {
+    @SuppressWarnings("unlikely-arg-type")
+	public static ResultCode parseForCode(String code) {
         return Arrays.asList(BaseResultCode.values()).stream().filter(v -> v.code.equals(code)).findFirst().get();
     }
     

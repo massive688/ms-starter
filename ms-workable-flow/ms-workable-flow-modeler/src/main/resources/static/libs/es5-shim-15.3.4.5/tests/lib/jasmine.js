@@ -241,20 +241,20 @@ jasmine.any = function(clazz) {
  * @param {String} name
  */
 jasmine.Spy = function(name) {
-  /**
+ /*
    * The name of the spy, if provided.
    */
   this.identity = name || 'unknown';
-  /**
+ /*
    *  Is this Object a spy?
    */
   this.isSpy = true;
-  /**
+ /*
    * The actual function this spy stubs.
    */
   this.plan = function() {
   };
-  /**
+ /*
    * Tracking of the most recent call to the spy.
    * @example
    * var mySpy = jasmine.createSpy('foo');
@@ -263,7 +263,7 @@ jasmine.Spy = function(name) {
    */
   this.mostRecentCall = {};
 
-  /**
+ /*
    * Holds arguments for each call to the spy, indexed by call count
    * @example
    * var mySpy = jasmine.createSpy('foo');
@@ -628,7 +628,7 @@ jasmine.util = {};
  * @param {Function} parentClass
  */
 jasmine.util.inherit = function(childClass, parentClass) {
-  /**
+ /*
    * @private
    */
   var subclass = function() {
@@ -1518,23 +1518,23 @@ jasmine.MultiReporter.prototype.addReporter = function(reporter) {
  * @constructor
  */
 jasmine.NestedResults = function() {
-  /**
+ /*
    * The total count of results
    */
   this.totalCount = 0;
-  /**
+ /*
    * Number of passed results
    */
   this.passedCount = 0;
-  /**
+ /*
    * Number of failed results
    */
   this.failedCount = 0;
-  /**
+ /*
    * Was this suite/spec skipped?
    */
   this.skipped = false;
-  /**
+ /*
    * @ignore
    */
   this.items_ = [];

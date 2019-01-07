@@ -10,26 +10,21 @@ import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 
-/**
- * shiro工具类
- *
- * @author dafei, Chill Zhuang
- */
 public class ShiroKit {
 
     private static final String NAMES_DELIMETER = ",";
 
-    /**
+   /*
      * 加盐参数
      */
     public final static String hashAlgorithmName = "MD5";
 
-    /**
+   /*
      * 循环次数
      */
     public final static int hashIterations = 1024;
 
-    /**
+   /*
      * shiro密码加密工具类
      *
      * @param credentials 密码
@@ -41,7 +36,7 @@ public class ShiroKit {
         return new SimpleHash(hashAlgorithmName, credentials, salt, hashIterations).toString();
     }
 
-    /**
+   /*
      * 获取随机盐值
      * @param length
      * @return
@@ -50,7 +45,7 @@ public class ShiroKit {
         return ToolUtil.getRandomString(length);
     }
 
-    /**
+   /*
      * 获取当前 Subject
      *
      * @return Subject
@@ -59,7 +54,7 @@ public class ShiroKit {
         return SecurityUtils.getSubject();
     }
 
-    /**
+   /*
      * 获取封装的 ShiroUser
      *
      * @return ShiroUser
@@ -72,7 +67,7 @@ public class ShiroKit {
         }
     }
 
-    /**
+   /*
      * 从shiro获取session
      *
      */
@@ -80,7 +75,7 @@ public class ShiroKit {
         return getSubject().getSession();
     }
 
-    /**
+   /*
      * 获取shiro指定的sessionKey
      *
      */
@@ -90,7 +85,7 @@ public class ShiroKit {
         return session != null ? (T) session.getAttribute(key) : null;
     }
 
-    /**
+   /*
      * 设置shiro指定的sessionKey
      *
      */
@@ -99,7 +94,7 @@ public class ShiroKit {
         session.setAttribute(key, value);
     }
 
-    /**
+   /*
      * 移除shiro指定的sessionKey
      */
     public static void removeSessionAttr(String key) {
@@ -108,7 +103,7 @@ public class ShiroKit {
             session.removeAttribute(key);
     }
 
-    /**
+   /*
      * 验证当前用户是否属于该角色？,使用时与lacksRole 搭配使用
      *
      * @param roleName
@@ -120,7 +115,7 @@ public class ShiroKit {
                 && roleName.length() > 0 && getSubject().hasRole(roleName);
     }
 
-    /**
+   /*
      * 与hasRole标签逻辑相反，当用户不属于该角色时验证通过。
      *
      * @param roleName
@@ -131,7 +126,7 @@ public class ShiroKit {
         return !hasRole(roleName);
     }
 
-    /**
+   /*
      * 验证当前用户是否属于以下任意一个角色。
      *
      * @param roleNames
@@ -152,7 +147,7 @@ public class ShiroKit {
         return hasAnyRole;
     }
 
-    /**
+   /*
      * 验证当前用户是否属于以下所有角色。
      *
      * @param roleNames
@@ -173,7 +168,7 @@ public class ShiroKit {
         return hasAllRole;
     }
 
-    /**
+   /*
      * 验证当前用户是否拥有指定权限,使用时与lacksPermission 搭配使用
      *
      * @param permission
@@ -186,7 +181,7 @@ public class ShiroKit {
                 && getSubject().isPermitted(permission);
     }
 
-    /**
+   /*
      * 与hasPermission标签逻辑相反，当前用户没有制定权限时，验证通过。
      *
      * @param permission
@@ -197,7 +192,7 @@ public class ShiroKit {
         return !hasPermission(permission);
     }
 
-    /**
+   /*
      * 已认证通过的用户。不包含已记住的用户，这是与user标签的区别所在。与notAuthenticated搭配使用
      *
      * @return 通过身份验证：true，否则false
@@ -206,7 +201,7 @@ public class ShiroKit {
         return getSubject() != null && getSubject().isAuthenticated();
     }
 
-    /**
+   /*
      * 未认证通过用户，与authenticated标签相对应。与guest标签的区别是，该标签包含已记住用户。。
      *
      * @return 没有通过身份验证：true，否则false
@@ -215,7 +210,7 @@ public class ShiroKit {
         return !isAuthenticated();
     }
 
-    /**
+   /*
      * 认证通过或已记住的用户。与guset搭配使用。
      *
      * @return 用户：true，否则 false
@@ -224,7 +219,7 @@ public class ShiroKit {
         return getSubject() != null && getSubject().getPrincipal() != null;
     }
 
-    /**
+   /*
      * 验证当前用户是否为“访客”，即未认证（包含未记住）的用户。用user搭配使用
      *
      * @return 访客：true，否则false
@@ -233,7 +228,7 @@ public class ShiroKit {
         return !isUser();
     }
 
-    /**
+   /*
      * 输出当前用户信息，通常为登录帐号信息。
      *
      * @return 当前用户信息
@@ -246,7 +241,7 @@ public class ShiroKit {
         return "";
     }
 
-    /**
+   /*
      * 获取当前用户的部门数据范围的集合
      */
     public static List<Integer> getDeptDataScope() {
@@ -256,7 +251,7 @@ public class ShiroKit {
         return subDeptIds;
     }
 
-    /**
+   /*
      * 判断当前用户是否是超级管理员
      */
     public static boolean isAdmin() {

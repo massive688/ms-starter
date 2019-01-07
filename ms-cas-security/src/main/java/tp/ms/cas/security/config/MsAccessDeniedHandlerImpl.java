@@ -32,9 +32,7 @@ public class MsAccessDeniedHandlerImpl implements AccessDeniedHandler {
 	}
 
 	/**
-	 * 初始化访问无效跳转的地址
-	 * 
-	 * @param accessDeniedUrl
+	 * @param accessDeniedUrl  初始化访问无效跳转的地址
 	 */
 	public void setAccessDeniedUrl(String accessDeniedUrl) {
 		this.accessDeniedUrl = accessDeniedUrl;
@@ -70,7 +68,7 @@ public class MsAccessDeniedHandlerImpl implements AccessDeniedHandler {
 			}
 		}
 
-		/**
+		/*
 		 * Map<String, Object> jsonObject = new HashMap<String, Object>();
 		 * 
 		 * 验证报错
@@ -102,7 +100,7 @@ public class MsAccessDeniedHandlerImpl implements AccessDeniedHandler {
 		 */
 	}
 
-	/**
+	/*
 	 * The error page to use. Must begin with a "/" and is interpreted relative to
 	 * the current context root.
 	 *

@@ -8,7 +8,7 @@ import tp.ms.common.bean.exception.ADBusinessException;
  * 新增操作
  * @author ms
  *
- * @param <T>
+ * @param <T> 指定泛型的类型
  */
 public class CommonOperatorTemplate<T> {
 	
@@ -24,11 +24,9 @@ public class CommonOperatorTemplate<T> {
 	 */
 	private CommonAroundProcesser<T> processer;
 
-	/**
+	/*
 	 * 业务处理的模板类构造函数
 	 * 
-	 * @param point
-	 *            业务处理插入点
 	 */
 	public CommonOperatorTemplate() {
 		this.processer = new CommonAroundProcesser<T>();

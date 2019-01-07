@@ -107,7 +107,7 @@ public abstract class MajorBaseVO extends BaseVO implements IMajorVO{
         this.pkOrg = pkOrg == null ? null : pkOrg.trim();
     }
     
-    /**
+   /*
      * 以下五个方法
      * 可以由子类间接实现，根据实际情况需求
      */

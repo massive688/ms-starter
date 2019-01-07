@@ -34,17 +34,17 @@ import lombok.extern.slf4j.Slf4j;
 public class MsDynamicDataSourceRegister_Temp implements ImportBeanDefinitionRegistrar, EnvironmentAware {
 
 
-    /**
+   /*
      * 配置上下文（也可以理解为配置文件的获取工具）
      */
     private Environment evn;
 
-    /**
+   /*
      * 别名
      */
     private final static ConfigurationPropertyNameAliases aliases = new ConfigurationPropertyNameAliases();
 
-    /**
+   /*
      * 由于部分数据源配置不同，所以在此处添加别名，避免切换数据源出现某些参数无法注入的情况
      */
     static {
@@ -52,17 +52,17 @@ public class MsDynamicDataSourceRegister_Temp implements ImportBeanDefinitionReg
         aliases.addAliases("username", new String[]{"user"});
     }
 
-    /**
+   /*
      * 存储我们注册的数据源
      */
     private Map<String, DataSource> customDataSources = new HashMap<String, DataSource>();
 
-    /**
+   /*
      * 参数绑定工具 springboot2.0新推出
      */
     private Binder binder;
 
-    /**
+   /*
      * ImportBeanDefinitionRegistrar接口的实现方法，通过该方法可以按照自己的方式注册bean
      *
      * @param annotationMetadata
@@ -74,7 +74,7 @@ public class MsDynamicDataSourceRegister_Temp implements ImportBeanDefinitionReg
         // 获取所有数据源配置
         Map config, defauleDataSourceProperties;
         defauleDataSourceProperties = binder.bind("ms.dyn.myb.master", Map.class).get();
-        /***NEW ADD 获取数据源配置*****/
+       /**NEW ADD 获取数据源配置*****/
 //        MsMybatisProperties mmp = 
 //        		binder.bind("spring.dyn.myb", MsMybatisProperties.class).get();
         // 获取数据源类型
@@ -116,7 +116,7 @@ public class MsDynamicDataSourceRegister_Temp implements ImportBeanDefinitionReg
         log.info("注册数据源成功，一共注册{}个数据源", customDataSources.keySet().size() + 1);
     }
 
-    /**
+   /*
      * 通过字符串获取数据源class对象
      *
      * @param typeStr
@@ -139,7 +139,7 @@ public class MsDynamicDataSourceRegister_Temp implements ImportBeanDefinitionReg
         }
     }
 
-    /**
+   /*
      * 绑定参数，以下三个方法都是参考DataSourceBuilder的bind方法实现的，目的是尽量保证我们自己添加的数据源构造过程与springboot保持一致
      *
      * @param result
@@ -161,7 +161,7 @@ public class MsDynamicDataSourceRegister_Temp implements ImportBeanDefinitionReg
         return binder.bind(ConfigurationPropertyName.EMPTY, Bindable.of(clazz)).get();
     }
 
-    /**
+   /*
      * @param clazz
      * @param sourcePath 参数路径，对应配置文件中的值，如: spring.datasource
      * @param <T>
@@ -173,7 +173,7 @@ public class MsDynamicDataSourceRegister_Temp implements ImportBeanDefinitionReg
         return bind(clazz, properties);
     }
 
-    /**
+   /*
      * EnvironmentAware接口的实现方法，通过aware的方式注入，此处是environment对象
      *
      * @param environment
@@ -187,7 +187,7 @@ public class MsDynamicDataSourceRegister_Temp implements ImportBeanDefinitionReg
     }
     
     
-    /***NEW ADD 遍历数据源 默认都用 DruidDataSource连接池 ****
+   /**NEW ADD 遍历数据源 默认都用 DruidDataSource连接池 ****
     for (int i = 0; i < dsproperties.getDs().size(); i++) {
     	val ds = dsproperties.getDs().get(i);
 		val datasource = DataSourceBuilder.create().type(DruidDataSource.class).build();

@@ -3,21 +3,13 @@ package com.ms.workable.flow.modeler.test.core;
 import org.apache.catalina.Wrapper;
 import org.apache.commons.lang3.StringUtils;
 
-/**
- * <p>
- * Entity 瀵硅薄灏佽鎿嶄綔绫伙紝瀹氫箟T-SQL璇硶
- * </p>
- *
- * @author hubin , yanghu , Dyang , Caratacus
- * @Date 2016-11-7
- */
-@SuppressWarnings("serial")
 public class EntityWrapper<T> {
 
-    /**
+   /*
      * 鏁版嵁搴撹〃鏄犲皠瀹炰綋绫�
      */
     protected T entity = null;
+	@SuppressWarnings("unused")
 	private String sqlSelect;
 
     public EntityWrapper() {
@@ -41,7 +33,7 @@ public class EntityWrapper<T> {
         this.entity = entity;
     }
 
-    /**
+   /*
      * SQL 鐗囨
      */
     public String getSqlSegment() {

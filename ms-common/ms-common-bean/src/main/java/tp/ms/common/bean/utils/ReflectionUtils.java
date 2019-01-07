@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
   
 public class ReflectionUtils {  
   
-    /** 
+   /* 
      * 循环向上转型, 获取对象的 DeclaredMethod 
      * @param object : 子类对象 
      * @param methodName : 父类中的方法名 
@@ -38,7 +38,7 @@ public class ReflectionUtils {
         return null;  
     }  
       
-    /** 
+   /* 
      * 直接调用对象方法, 而忽略修饰符(private, protected, default) 
      * @param object : 子类对象 
      * @param methodName : 父类中的方法名 
@@ -72,7 +72,7 @@ public class ReflectionUtils {
         return null;  
     }  
   
-    /** 
+   /* 
      * 循环向上转型, 获取对象的 DeclaredField 
      * @param object : 子类对象 
      * @param fieldName : 父类中的属性名 
@@ -98,7 +98,7 @@ public class ReflectionUtils {
         return null;  
     }     
       
-    /** 
+   /* 
      * 直接设置对象属性值, 忽略 private/protected 修饰符, 也不经过 setter 
      * @param object : 子类对象 
      * @param fieldName : 父类中的属性名 
@@ -124,7 +124,7 @@ public class ReflectionUtils {
           
     }  
       
-    /** 
+   /* 
      * 直接读取对象的属性值, 忽略 private/protected 修饰符, 也不经过 getter 
      * @param object : 子类对象 
      * @param fieldName : 父类中的属性名 

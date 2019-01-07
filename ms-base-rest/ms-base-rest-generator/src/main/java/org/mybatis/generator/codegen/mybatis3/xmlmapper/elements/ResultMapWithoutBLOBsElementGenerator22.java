@@ -1,4 +1,9 @@
-///**
+package org.mybatis.generator.codegen.mybatis3.xmlmapper.elements;
+
+public class ResultMapWithoutBLOBsElementGenerator22 {
+	
+}
+///*
 // *    Copyright 2006-2016 the original author or authors.
 // *
 // *    Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,7 +29,7 @@
 //import org.mybatis.generator.api.dom.xml.XmlElement;
 //import org.mybatis.generator.codegen.mybatis3.MyBatis3FormattingUtilities;
 //
-///**
+///*
 // * 
 // * @author Jeff Butler
 // * 
@@ -112,12 +117,12 @@
 //                    introspectedColumn.getJdbcTypeName()));
 //
 //            //改动了 添加了此段
-//            /*****start*****/
+//           /*start*****/
 //            if (stringHasValue(introspectedColumn.getFullyQualifiedJavaType().getFullyQualifiedName())) {
 //                resultElement.addAttribute(new Attribute("javaType", //$NON-NLS-1$
 //                		introspectedColumn.getFullyQualifiedJavaType().getFullyQualifiedName()));
 //            }
-//            /*****end*****/
+//           /*end*****/
 //			
 //            if (stringHasValue(introspectedColumn.getTypeHandler())) {
 //                resultElement.addAttribute(new Attribute(

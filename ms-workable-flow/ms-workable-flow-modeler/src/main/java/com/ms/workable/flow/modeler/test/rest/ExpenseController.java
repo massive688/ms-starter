@@ -18,11 +18,9 @@ import com.ms.workable.flow.modeler.test.core.ExpenseWarpper;
 import com.ms.workable.flow.modeler.test.core.IExpenseService;
 import com.ms.workable.flow.modeler.test.core.ShiroKit;
 
-/**
+/*
  * 报销管理控制器
  *
- * @author fengshuonan
- * @Date 2017-12-04 21:11:36
  */
 @Controller
 @RequestMapping("/expense")
@@ -33,7 +31,7 @@ public class ExpenseController extends BaseController {
     @Autowired
     private IExpenseService expenseService;
 
-    /**
+   /*
      * 跳转到报销管理首页
      */
     @RequestMapping("")
@@ -41,7 +39,7 @@ public class ExpenseController extends BaseController {
         return PREFIX + "expense.html";
     }
 
-    /**
+   /*
      * 跳转到添加报销管理
      */
     @RequestMapping("/expense_add")
@@ -49,7 +47,7 @@ public class ExpenseController extends BaseController {
         return PREFIX + "expense_add.html";
     }
 
-    /**
+   /*
      * 查看当前流程图
      */
     @RequestMapping("/expense_update/{expenseId}")
@@ -61,7 +59,7 @@ public class ExpenseController extends BaseController {
         }
     }
 
-    /**
+   /*
      * 获取报销管理列表
      */
     @RequestMapping(value = "/list")
@@ -73,7 +71,7 @@ public class ExpenseController extends BaseController {
         return super.warpObject(new ExpenseWarpper(stringObjectMap));
     }
 
-    /**
+   /*
      * 新增报销管理
      */
     @RequestMapping(value = "/add")
@@ -83,7 +81,7 @@ public class ExpenseController extends BaseController {
         return super.SUCCESS_TIP;
     }
 
-    /**
+   /*
      * 删除报销管理
      */
     @RequestMapping(value = "/delete")
@@ -93,7 +91,7 @@ public class ExpenseController extends BaseController {
         return SUCCESS_TIP;
     }
 
-    /**
+   /*
      * 修改报销管理
      */
     @RequestMapping(value = "/update")
@@ -103,7 +101,7 @@ public class ExpenseController extends BaseController {
         return super.SUCCESS_TIP;
     }
 
-    /**
+   /*
      * 报销管理详情
      */
     @RequestMapping(value = "/detail/{expenseId}")

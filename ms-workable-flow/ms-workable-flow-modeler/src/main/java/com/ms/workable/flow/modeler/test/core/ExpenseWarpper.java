@@ -2,12 +2,6 @@ package com.ms.workable.flow.modeler.test.core;
 
 import java.util.Map;
 
-/**
- * 报销列表的包装
- *
- * @author fengshuonan
- * @date 2017年12月4日21:56:06
- */
 public class ExpenseWarpper extends BaseControllerWarpper {
 
     public ExpenseWarpper(Object list) {

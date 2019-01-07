@@ -29,7 +29,6 @@ import javax.servlet.http.HttpServletResponseWrapper;
  * the {@link javax.servlet.http.HttpServletResponse} is committed.
  *
  * @since 4.0.2
- * @author Rob Winch
  */
 public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWrapper {
 
@@ -74,7 +73,7 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		checkContentLength(0);
 	}
 
-	/**
+	/*
 	 * Invoke this method to disable invoking
 	 * {@link OnCommittedResponseWrapper#onResponseCommitted()} when the
 	 * {@link javax.servlet.http.HttpServletResponse} is committed. This can be useful in
@@ -84,7 +83,7 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		this.disableOnCommitted = true;
 	}
 
-	/**
+	/*
 	 * Returns true if {@link #onResponseCommitted()} will be invoked when the response is
 	 * committed, else false.
 	 * @return if {@link #onResponseCommitted()} is enabled
@@ -93,13 +92,13 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		return this.disableOnCommitted;
 	}
 
-	/**
+	/*
 	 * Implement the logic for handling the {@link javax.servlet.http.HttpServletResponse}
 	 * being committed
 	 */
 	protected abstract void onResponseCommitted();
 
-	/**
+	/*
 	 * Makes sure {@link OnCommittedResponseWrapper#onResponseCommitted()} is invoked
 	 * before calling the superclass <code>sendError()</code>
 	 */
@@ -109,7 +108,7 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		super.sendError(sc);
 	}
 
-	/**
+	/*
 	 * Makes sure {@link OnCommittedResponseWrapper#onResponseCommitted()} is invoked
 	 * before calling the superclass <code>sendError()</code>
 	 */
@@ -119,7 +118,7 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		super.sendError(sc, msg);
 	}
 
-	/**
+	/*
 	 * Makes sure {@link OnCommittedResponseWrapper#onResponseCommitted()} is invoked
 	 * before calling the superclass <code>sendRedirect()</code>
 	 */
@@ -129,7 +128,7 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		super.sendRedirect(location);
 	}
 
-	/**
+	/*
 	 * Makes sure {@link OnCommittedResponseWrapper#onResponseCommitted()} is invoked
 	 * before calling the calling <code>getOutputStream().close()</code> or
 	 * <code>getOutputStream().flush()</code>
@@ -139,7 +138,7 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		return new SaveContextServletOutputStream(super.getOutputStream());
 	}
 
-	/**
+	/*
 	 * Makes sure {@link OnCommittedResponseWrapper#onResponseCommitted()} is invoked
 	 * before calling the <code>getWriter().close()</code> or
 	 * <code>getWriter().flush()</code>
@@ -149,7 +148,7 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		return new SaveContextPrintWriter(super.getWriter());
 	}
 
-	/**
+	/*
 	 * Makes sure {@link OnCommittedResponseWrapper#onResponseCommitted()} is invoked
 	 * before calling the superclass <code>flushBuffer()</code>
 	 */
@@ -220,7 +219,7 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		}
 	}
 
-	/**
+	/*
 	 * Adds the contentLengthToWrite to the total contentWritten size and checks to see if
 	 * the response should be written.
 	 *
@@ -237,7 +236,7 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		}
 	}
 
-	/**
+	/*
 	 * Calls <code>onResponseCommmitted()</code> with the current contents as long as
 	 * {@link #disableOnResponseCommitted()} was not invoked.
 	 */
@@ -248,7 +247,7 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		}
 	}
 
-	/**
+	/*
 	 * Ensures {@link OnCommittedResponseWrapper#onResponseCommitted()} is invoked before
 	 * calling the prior to methods that commit the response. We delegate all methods to
 	 * the original {@link java.io.PrintWriter} to ensure that the behavior is as close to
@@ -487,7 +486,7 @@ public abstract class MsOnCommittedResponseWrapper extends HttpServletResponseWr
 		}
 	}
 
-	/**
+	/*
 	 * Ensures{@link OnCommittedResponseWrapper#onResponseCommitted()} is invoked before
 	 * calling methods that commit the response. We delegate all methods to the original
 	 * {@link javax.servlet.ServletOutputStream} to ensure that the behavior is as close

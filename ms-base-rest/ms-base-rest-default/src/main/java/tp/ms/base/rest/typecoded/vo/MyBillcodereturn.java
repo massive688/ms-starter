@@ -3,7 +3,7 @@ package tp.ms.base.rest.typecoded.vo;
 import tp.ms.base.rest.resource.vo.ChildBaseVO;
 
 public class MyBillcodereturn extends ChildBaseVO {
-    /**
+   /*
 	 * 
 	 */
 	private static final long serialVersionUID = -3663633612827610786L;

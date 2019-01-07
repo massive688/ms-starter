@@ -14,7 +14,7 @@ import java.util.Date;
 public class DateUtil {
 
 
-	/**
+	/*
 	 * 获取YYYY格式
 	 *
 	 * @return
@@ -23,7 +23,7 @@ public class DateUtil {
 		return formatDate(new Date(), "yyyy");
 	}
 
-	/**
+	/*
 	 * 获取YYYY格式
 	 *
 	 * @return
@@ -32,7 +32,7 @@ public class DateUtil {
 		return formatDate(date, "yyyy");
 	}
 
-	/**
+	/*
 	 * 获取YYYY-MM-DD格式
 	 *
 	 * @return
@@ -41,7 +41,7 @@ public class DateUtil {
 		return formatDate(new Date(), "yyyy-MM-dd");
 	}
 
-	/**
+	/*
 	 * 获取YYYY-MM-DD格式
 	 *
 	 * @return
@@ -50,7 +50,7 @@ public class DateUtil {
 		return formatDate(date, "yyyy-MM-dd");
 	}
 
-	/**
+	/*
 	 * 获取YYYYMMDD格式
 	 *
 	 * @return
@@ -59,7 +59,7 @@ public class DateUtil {
 		return formatDate(new Date(), "yyyyMMdd");
 	}
 
-	/**
+	/*
 	 * 获取YYYYMMDD格式
 	 *
 	 * @return
@@ -68,7 +68,7 @@ public class DateUtil {
 		return formatDate(date, "yyyyMMdd");
 	}
 
-	/**
+	/*
 	 * 获取YYYY-MM-DD HH:mm:ss格式
 	 *
 	 * @return
@@ -77,7 +77,7 @@ public class DateUtil {
 		return formatDate(new Date(), "yyyy-MM-dd HH:mm:ss");
 	}
 
-	/**
+	/*
 	 * 获取YYYY-MM-DD HH:mm:ss.SSS格式
 	 *
 	 * @return
@@ -86,7 +86,7 @@ public class DateUtil {
 		return formatDate(new Date(), "yyyy-MM-dd HH:mm:ss.SSS");
 	}
 
-	/**
+	/*
 	 * 获取YYYYMMDDHHmmss格式
 	 *
 	 * @return
@@ -95,7 +95,7 @@ public class DateUtil {
 		return formatDate(new Date(), "yyyyMMddHHmmss");
 	}
 
-	/**
+	/*
 	 * 获取YYYY-MM-DD HH:mm:ss格式
 	 *
 	 * @return
@@ -114,7 +114,7 @@ public class DateUtil {
 		return formatDate;
 	}
 
-	/**
+	/*
 	 * @Title: compareDate
 	 * @Description:(日期比较，如果s>=e 返回true 否则返回false)
 	 * @param s
@@ -130,7 +130,7 @@ public class DateUtil {
 		return parseDate(s).getTime() >= parseDate(e).getTime();
 	}
 
-	/**
+	/*
 	 * 格式化日期
 	 *
 	 * @return
@@ -139,7 +139,7 @@ public class DateUtil {
 		return parse(date,"yyyy-MM-dd");
 	}
 
-	/**
+	/*
 	 * 格式化日期
 	 *
 	 * @return
@@ -148,7 +148,7 @@ public class DateUtil {
 		return parse(date,"yyyy-MM-dd HH:mm:ss");
 	}
 
-	/**
+	/*
 	 * 格式化日期
 	 *
 	 * @return
@@ -162,7 +162,7 @@ public class DateUtil {
 		}
 	}
 
-	/**
+	/*
 	 * 格式化日期
 	 *
 	 * @return
@@ -171,7 +171,7 @@ public class DateUtil {
 		return DateFormatUtils.format(date, pattern);
 	}
 
-	/**
+	/*
 	 * 把日期转换为Timestamp
 	 *
 	 * @param date
@@ -181,7 +181,7 @@ public class DateUtil {
 		return new Timestamp(date.getTime());
 	}
 
-	/**
+	/*
 	 * 校验日期是否合法
 	 *
 	 * @return
@@ -190,7 +190,7 @@ public class DateUtil {
 		return parse(s, "yyyy-MM-dd HH:mm:ss") != null;
 	}
 
-	/**
+	/*
 	 * 校验日期是否合法
 	 *
 	 * @return
@@ -211,7 +211,7 @@ public class DateUtil {
 		}
 	}
 
-	/**
+	/*
 	 * <li>功能描述：时间相减得到天数
 	 *
 	 * @param beginDateStr
@@ -238,7 +238,7 @@ public class DateUtil {
 		return day;
 	}
 
-	/**
+	/*
 	 * 得到n天之后的日期
 	 *
 	 * @param days
@@ -257,7 +257,7 @@ public class DateUtil {
 		return dateStr;
 	}
 
-	/**
+	/*
 	 * 得到n天之后是周几
 	 *
 	 * @param days
@@ -276,7 +276,7 @@ public class DateUtil {
 		return dateStr;
 	}
 
-	/**
+	/*
 	 * 格式化Oracle Date
 	 * @param value
 	 * @return

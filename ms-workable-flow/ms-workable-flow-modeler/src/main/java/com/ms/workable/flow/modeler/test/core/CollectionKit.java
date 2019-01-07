@@ -18,10 +18,8 @@ import java.util.Set;
 import java.util.Stack;
 import java.util.TreeSet;
 
-/**
+/*
  * 集合相关工具类，包括数组
- * 
- * @author xiaoleilu
  * 
  */
 public class CollectionKit {
@@ -30,7 +28,7 @@ public class CollectionKit {
 		// 静态类不可实例化
 	}
 	
-	/**
+	/*
 	 * 以 conjunction 为分隔符将集合转换为字符串
 	 * 
 	 * @param <T> 被处理的集合
@@ -52,7 +50,7 @@ public class CollectionKit {
 		return sb.toString();
 	}
 	
-	/**
+	/*
 	 * 以 conjunction 为分隔符将数组转换为字符串
 	 * 
 	 * @param <T> 被处理的集合
@@ -74,7 +72,7 @@ public class CollectionKit {
 		return sb.toString();
 	}
 	
-	/**
+	/*
 	 * 将多个集合排序并显示不同的段落（分页）
 	 * @param pageNo 页码
 	 * @param numPerPage 每页的条目数
@@ -101,7 +99,7 @@ public class CollectionKit {
 		return null;
 	}
 
-	/**
+	/*
 	 * 将多个集合排序并显示不同的段落（分页）
 	 * @param pageNo 页码
 	 * @param numPerPage 每页的条目数
@@ -125,7 +123,7 @@ public class CollectionKit {
 //		return queue.toList().subList(startEnd[0], startEnd[1]);
 //	}
 
-	/**
+	/*
 	 * 将Set排序（根据Entry的值）
 	 *
 	 * @param set 被排序的Set
@@ -149,7 +147,7 @@ public class CollectionKit {
 		return list;
 	}
 
-	/**
+	/*
 	 * 切取部分数据
 	 *
 	 * @param <T> 集合元素类型
@@ -177,7 +175,7 @@ public class CollectionKit {
 		return currentAlaDatas;
 	}
 
-	/**
+	/*
 	 * 切取部分数据
 	 *
 	 * @param <T> 集合元素类型
@@ -205,7 +203,7 @@ public class CollectionKit {
 		return currentAlaDatas;
 	}
 
-	/**
+	/*
 	 * 新建一个HashMap
 	 *
 	 * @return HashMap对象
@@ -214,7 +212,7 @@ public class CollectionKit {
 		return new HashMap<T, K>();
 	}
 
-	/**
+	/*
 	 * 新建一个HashMap
 	 * @param size 初始大小，由于默认负载因子0.75，传入的size会实际初始大小为size / 0.75
 	 * @return HashMap对象
@@ -223,7 +221,7 @@ public class CollectionKit {
 		return new HashMap<T, K>((int)(size / 0.75));
 	}
 
-	/**
+	/*
 	 * 新建一个HashSet
 	 *
 	 * @return HashSet对象
@@ -232,7 +230,7 @@ public class CollectionKit {
 		return new HashSet<T>();
 	}
 
-	/**
+	/*
 	 * 新建一个HashSet
 	 *
 	 * @return HashSet对象
@@ -246,7 +244,7 @@ public class CollectionKit {
 		return set;
 	}
 
-	/**
+	/*
 	 * 新建一个ArrayList
 	 *
 	 * @return ArrayList对象
@@ -255,7 +253,7 @@ public class CollectionKit {
 		return new ArrayList<T>();
 	}
 
-	/**
+	/*
 	 * 新建一个ArrayList
 	 *
 	 * @return ArrayList对象
@@ -265,7 +263,7 @@ public class CollectionKit {
 		return new ArrayList<T>(Arrays.asList(values));
 	}
 
-	/**
+	/*
 	 * 将新元素添加到已有数组中<br/>
 	 * 添加新元素会生成一个新的数组，不影响原数组
 	 *
@@ -279,7 +277,7 @@ public class CollectionKit {
 		return t;
 	}
 
-	/**
+	/*
 	 * 生成一个新的重新设置大小的数组
 	 *
 	 * @param buffer 原数组
@@ -293,7 +291,7 @@ public class CollectionKit {
 		return newArray;
 	}
 
-	/**
+	/*
 	 * 新建一个空数组
 	 * @param componentType 元素类型
 	 * @param newSize 大小
@@ -304,7 +302,7 @@ public class CollectionKit {
 		return (T[]) Array.newInstance(componentType, newSize);
 	}
 
-	/**
+	/*
 	 * 生成一个新的重新设置大小的数组<br/>
 	 * 新数组的类型为原数组的类型
 	 *
@@ -316,7 +314,7 @@ public class CollectionKit {
 		return resize(buffer, newSize, buffer.getClass().getComponentType());
 	}
 
-	/**
+	/*
 	 * 将多个数组合并在一起<br>
 	 * 忽略null的数组
 	 *
@@ -349,7 +347,7 @@ public class CollectionKit {
 		return result;
 	}
 
-	/**
+	/*
 	 * 克隆数组
 	 * @param array 被克隆的数组
 	 * @return 新数组
@@ -361,7 +359,7 @@ public class CollectionKit {
 		return array.clone();
 	}
 
-	/**
+	/*
 	 * 生成一个数字列表<br>
 	 * 自动判定正序反序
 	 * @param excludedEnd 结束的数字（不包含）
@@ -371,7 +369,7 @@ public class CollectionKit {
 		return range(0, excludedEnd, 1);
 	}
 
-	/**
+	/*
 	 * 生成一个数字列表<br>
 	 * 自动判定正序反序
 	 * @param includedStart 开始的数字（包含）
@@ -382,7 +380,7 @@ public class CollectionKit {
 		return range(includedStart, excludedEnd, 1);
 	}
 
-	/**
+	/*
 	 * 生成一个数字列表<br>
 	 * 自动判定正序反序
 	 * @param includedStart 开始的数字（包含）
@@ -414,7 +412,7 @@ public class CollectionKit {
 		return range;
 	}
 
-	/**
+	/*
 	 * 截取数组的部分
 	 * @param list 被截取的数组
 	 * @param start 开始位置（包含）
@@ -450,7 +448,7 @@ public class CollectionKit {
 		return list.subList(start, end);
 	}
 
-	/**
+	/*
 	 * 截取集合的部分
 	 * @param list 被截取的数组
 	 * @param start 开始位置（包含）
@@ -465,7 +463,7 @@ public class CollectionKit {
 		return sub(new ArrayList<T>(list), start, end);
 	}
 
-	/**
+	/*
 	 * 数组是否为空
 	 * @param array 数组
 	 * @return 是否为空
@@ -474,7 +472,7 @@ public class CollectionKit {
 		return array == null || array.length == 0;
 	}
 
-	/**
+	/*
 	 * 数组是否为非空
 	 * @param array 数组
 	 * @return 是否为非空
@@ -483,7 +481,7 @@ public class CollectionKit {
 		return false == isEmpty(array);
 	}
 
-	/**
+	/*
 	 * 集合是否为空
 	 * @param collection 集合
 	 * @return 是否为空
@@ -492,7 +490,7 @@ public class CollectionKit {
 		return collection == null || collection.isEmpty();
 	}
 
-	/**
+	/*
 	 * 集合是否为非空
 	 * @param collection 集合
 	 * @return 是否为非空
@@ -501,7 +499,7 @@ public class CollectionKit {
 		return false == isEmpty(collection);
 	}
 
-	/**
+	/*
 	 * Map是否为空
 	 * @param map 集合
 	 * @return 是否为空
@@ -510,7 +508,7 @@ public class CollectionKit {
 		return map == null || map.isEmpty();
 	}
 
-	/**
+	/*
 	 * Map是否为非空
 	 * @param map 集合
 	 * @return 是否为非空
@@ -519,7 +517,7 @@ public class CollectionKit {
 		return false == isEmpty(map);
 	}
 
-	/**
+	/*
 	 * 映射键值（参考Python的zip()函数）<br>
 	 * 例如：<br>
 	 * 		keys =    [a,b,c,d]<br>
@@ -544,7 +542,7 @@ public class CollectionKit {
 		return map;
 	}
 
-	/**
+	/*
 	 * 映射键值（参考Python的zip()函数）<br>
 	 * 例如：<br>
 	 * 		keys =    a,b,c,d<br>
@@ -560,7 +558,7 @@ public class CollectionKit {
 		return zip(StrKit.split(keys, delimiter), StrKit.split(values, delimiter));
 	}
 	
-	/**
+	/*
 	 * 映射键值（参考Python的zip()函数）<br>
 	 * 例如：<br>
 	 * 		keys =    [a,b,c,d]<br>
@@ -588,7 +586,7 @@ public class CollectionKit {
 		return map;
 	}
 	
-	/**
+	/*
 	 * 数组中是否包含元素
 	 * @param array 数组
 	 * @param value 被检查的元素
@@ -610,7 +608,7 @@ public class CollectionKit {
 		return false;
 	}
 	
-	/**
+	/*
 	 * 将Entry集合转换为HashMap
 	 * @param entryCollection entry集合
 	 * @return Map
@@ -623,7 +621,7 @@ public class CollectionKit {
 		return map;
 	}
 	
-	/**
+	/*
 	 * 将集合转换为排序后的TreeSet
 	 * @param collection 集合
 	 * @param comparator 比较器
@@ -637,7 +635,7 @@ public class CollectionKit {
 		return treeSet;
 	}
 	
-	/**
+	/*
 	 * 排序集合
 	 * @param collection 集合
 	 * @param comparator 比较器
@@ -650,7 +648,7 @@ public class CollectionKit {
 	}
 	
 	//------------------------------------------------------------------- 基本类型的数组转换为包装类型数组
-	/**
+	/*
 	 * 将基本类型数组包装为包装类型
 	 * @param values 基本类型数组
 	 * @return 包装类型数组
@@ -664,7 +662,7 @@ public class CollectionKit {
 		return array;
 	}
 	
-	/**
+	/*
 	 * 将基本类型数组包装为包装类型
 	 * @param values 基本类型数组
 	 * @return 包装类型数组
@@ -678,7 +676,7 @@ public class CollectionKit {
 		return array;
 	}
 	
-	/**
+	/*
 	 * 将基本类型数组包装为包装类型
 	 * @param values 基本类型数组
 	 * @return 包装类型数组
@@ -692,7 +690,7 @@ public class CollectionKit {
 		return array;
 	}
 	
-	/**
+	/*
 	 * 将基本类型数组包装为包装类型
 	 * @param values 基本类型数组
 	 * @return 包装类型数组
@@ -706,7 +704,7 @@ public class CollectionKit {
 		return array;
 	}
 	
-	/**
+	/*
 	 * 将基本类型数组包装为包装类型
 	 * @param values 基本类型数组
 	 * @return 包装类型数组
@@ -720,7 +718,7 @@ public class CollectionKit {
 		return array;
 	}
 	
-	/**
+	/*
 	 * 将基本类型数组包装为包装类型
 	 * @param values 基本类型数组
 	 * @return 包装类型数组
@@ -734,7 +732,7 @@ public class CollectionKit {
 		return array;
 	}
 	
-	/**
+	/*
 	 * 将基本类型数组包装为包装类型
 	 * @param values 基本类型数组
 	 * @return 包装类型数组
@@ -748,7 +746,7 @@ public class CollectionKit {
 		return array;
 	}
 	
-	/**
+	/*
 	 * 将基本类型数组包装为包装类型
 	 * @param values 基本类型数组
 	 * @return 包装类型数组
@@ -762,7 +760,7 @@ public class CollectionKit {
 		return array;
 	}
 	
-	/**
+	/*
 	 * 判定给定对象是否为数组类型
 	 * @param obj 对象
 	 * @return 是否为数组类型
@@ -771,7 +769,7 @@ public class CollectionKit {
 		return obj.getClass().isArray();
 	}
 	
-	/**
+	/*
 	 * 数组或集合转String
 	 * 
 	 * @param obj 集合或数组对象

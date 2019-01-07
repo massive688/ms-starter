@@ -703,7 +703,7 @@ angular.module('flowableModeler')
 
         };
 
-        /**
+       /*
          * Helper method that searches a group for an item with the given id.
          * If not found, will return undefined.
          */
@@ -732,7 +732,7 @@ angular.module('flowableModeler')
             return undefined;
         };
 
-        /**
+       /*
          * Helper method to find a stencil item.
          */
         $scope.getStencilItemById = function (stencilItemId) {

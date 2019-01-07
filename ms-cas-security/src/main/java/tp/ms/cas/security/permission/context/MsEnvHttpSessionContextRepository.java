@@ -33,14 +33,14 @@ import tp.ms.common.bean.vo.User;
 @Slf4j
 @SuppressWarnings("unused")
 public class MsEnvHttpSessionContextRepository {
-	/**
+	/*
 	 * The default key under which the security context will be stored in the session.
 	 */
 	public static final String MS_ENV_SPRING_CONTEXT_KEY = "MS_ENV_SPRING_CONTEXT";
 
 	protected final Log logger = LogFactory.getLog(this.getClass());
 
-	/**
+	/*
 	 * SecurityContext instance used to check for equality with default (unauthenticated)
 	 * content
 	 */
@@ -52,7 +52,7 @@ public class MsEnvHttpSessionContextRepository {
 
 	private AuthenticationTrustResolver trustResolver = new AuthenticationTrustResolverImpl();
 
-	/**
+	/*
 	 * Gets the security context for the current request (if available) and returns it.
 	 * <p>
 	 * If the session is null, the context object is null or the context object stored in
@@ -183,7 +183,7 @@ public class MsEnvHttpSessionContextRepository {
 		return MsEnvContextHolder.createEmptyContext();
 	}
 
-	/**
+	/*
 	 * If set to true (the default), a session will be created (if required) to store the
 	 * security context if it is determined that its contents are different from the
 	 * default empty context value.
@@ -198,7 +198,7 @@ public class MsEnvHttpSessionContextRepository {
 		this.allowSessionCreation = allowSessionCreation;
 	}
 
-	/**
+	/*
 	 * Allows the use of session identifiers in URLs to be disabled. Off by default.
 	 *
 	 * @param disableUrlRewriting set to <tt>true</tt> to disable URL encoding methods in
@@ -208,7 +208,7 @@ public class MsEnvHttpSessionContextRepository {
 		this.disableUrlRewriting = disableUrlRewriting;
 	}
 
-	/**
+	/*
 	 * Allows the session attribute name to be customized for this repository instance.
 	 *
 	 * @param msEnvSpringContextKey the key under which the security context will be
@@ -248,7 +248,7 @@ public class MsEnvHttpSessionContextRepository {
 		}
 	}
 
-	/**
+	/*
 	 * Wrapper that is applied to every request/response to update the
 	 * <code>HttpSession<code> with
 	 * the <code>SecurityContext</code> when a <code>sendError()</code> or
@@ -264,7 +264,7 @@ public class MsEnvHttpSessionContextRepository {
 		private MsContext contextBeforeExecution;
 		private Authentication authBeforeExecution;
 
-		/**
+		/*
 		 * Takes the parameters required to call <code>saveContext()</code> successfully
 		 * in addition to the request and the response object we are wrapping.
 		 *
@@ -286,7 +286,7 @@ public class MsEnvHttpSessionContextRepository {
 		}
 
 
-		/**
+		/*
 		 * Stores the supplied security context in the session (if available) and if it
 		 * has changed since it was set at the start of the request. If the
 		 * AuthenticationTrustResolver identifies the current user as anonymous, then the
@@ -302,7 +302,7 @@ public class MsEnvHttpSessionContextRepository {
 			final User authentication = context.user();
 			HttpSession httpSession = request.getSession(false);
 
-			/**
+			/*
 			 * 保存MsContext到Session
 			 * 
 			 * 去掉不需要的
@@ -401,7 +401,7 @@ public class MsEnvHttpSessionContextRepository {
 
 	}
 
-	/**
+	/*
 	 * Sets the {@link AuthenticationTrustResolver} to be used. The default is
 	 * {@link AuthenticationTrustResolverImpl}.
 	 *
@@ -415,7 +415,7 @@ public class MsEnvHttpSessionContextRepository {
 	
 
 
-	/**
+	/*
 	 * 设置 没有 登录的用户 获取登录前，也就是当前访问的地址
 	 * ===及请求参数
 	 *

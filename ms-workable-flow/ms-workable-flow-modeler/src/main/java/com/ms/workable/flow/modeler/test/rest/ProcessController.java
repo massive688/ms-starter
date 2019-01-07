@@ -14,8 +14,6 @@ import com.ms.workable.flow.modeler.test.core.IExpenseService;
 /**
  * 审批管理控制器
  *
- * @author fengshuonan
- * @Date 2017-12-04 21:11:36
  */
 @Controller
 @RequestMapping("/process")
@@ -35,7 +33,7 @@ public class ProcessController extends BaseController {
     @Autowired
     HistoryService historyService;
 
-    /**
+   /*
      * 跳转到审批管理首页
      */
     @RequestMapping("")
@@ -44,7 +42,7 @@ public class ProcessController extends BaseController {
     }
 
 
-    /**
+   /*
      * 获取审批管理列表
      */
     @RequestMapping(value = "/list")
@@ -53,7 +51,7 @@ public class ProcessController extends BaseController {
         return expenseService.getProcessList();
     }
 
-    /**
+   /*
      * 审核通过
      */
     @RequestMapping(value = "/pass")
@@ -63,7 +61,7 @@ public class ProcessController extends BaseController {
         return super.SUCCESS_TIP;
     }
 
-    /**
+   /*
      * 审核不通过
      */
     @RequestMapping(value = "/unPass")

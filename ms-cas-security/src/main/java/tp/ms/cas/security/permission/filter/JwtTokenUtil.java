@@ -26,7 +26,7 @@ public class JwtTokenUtil implements Serializable {
 
     @Value("${jwt.expiration}")
     private Long expiration;
-    /**
+   /*
      * 从令牌中获取用户名
      *
      * @param token 令牌
@@ -64,7 +64,7 @@ public class JwtTokenUtil implements Serializable {
         }
         return expiration;
     }
-    /**
+   /*
      * 从令牌中获取数据声明
      *
      * @param token 令牌
@@ -86,7 +86,7 @@ public class JwtTokenUtil implements Serializable {
     private Date generateExpirationDate() {
         return new Date(System.currentTimeMillis() + expiration * 1000);
     }
-    /**
+   /*
      * 判断令牌是否过期
      *
      * @param token 令牌
@@ -100,7 +100,7 @@ public class JwtTokenUtil implements Serializable {
     private Boolean isCreatedBeforeLastPasswordReset(Date created, Date lastPasswordReset) {
         return (lastPasswordReset != null && created.before(lastPasswordReset));
     }
-    /**
+   /*
      * 生成令牌
      *
      * @param userDetails 用户
@@ -112,7 +112,7 @@ public class JwtTokenUtil implements Serializable {
         claims.put(CLAIM_KEY_CREATED, new Date());
         return generateToken(claims);
     }
-    /**
+   /*
      * 从数据声明生成令牌
      *
      * @param claims 数据声明
@@ -131,7 +131,7 @@ public class JwtTokenUtil implements Serializable {
         return !isCreatedBeforeLastPasswordReset(created, lastPasswordReset)
                 && !isTokenExpired(token);
     }
-    /**
+   /*
      * 刷新令牌
      *
      * @param token 原令牌
@@ -148,7 +148,7 @@ public class JwtTokenUtil implements Serializable {
         }
         return refreshedToken;
     }
-    /**
+   /*
      * 验证令牌
      *
      * @param token       令牌

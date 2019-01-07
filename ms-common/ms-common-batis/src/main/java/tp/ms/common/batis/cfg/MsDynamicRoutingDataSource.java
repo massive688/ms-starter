@@ -4,11 +4,7 @@ import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * @Auther: yukong
- * @Date: 2018/8/15 10:47
- * @Description: 动态数据源路由配置
- */
+
 @Slf4j
 public class MsDynamicRoutingDataSource extends AbstractRoutingDataSource {
 

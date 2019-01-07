@@ -11,17 +11,17 @@ import tp.ms.common.bean.exception.AExceptionUtils;
  */
 public enum EventType {
   
-  /**
+ /*
    * 前事件类型
    */
   After("after"),
 
-  /**
+ /*
    * 后事件类型
    */
   Before("before");
 
-  /**
+ /*
    * 规则扩展事件类型对应的XML标签名
    */
   private String name;
@@ -30,7 +30,7 @@ public enum EventType {
     this.name = name;
   }
 
-  /**
+ /*
    * 获取规则扩展事件类型对应的XML标签名
    * 
    * @return 对应的XML标签名
@@ -39,7 +39,7 @@ public enum EventType {
     return this.name;
   }
   
-  /**
+ /*
    * 根据XML标签名得到对应的枚举类型
    * 
    * @param name XML标签名

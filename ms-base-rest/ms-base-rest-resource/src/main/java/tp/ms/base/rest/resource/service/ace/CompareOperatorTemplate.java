@@ -9,7 +9,7 @@ import tp.ms.common.bean.exception.ADBusinessException;
  * 更新操作
  * @author ms
  *
- * @param <T>
+ * @param <T> 指定泛型的类型
  */
 public class CompareOperatorTemplate<T> {
 
@@ -25,11 +25,8 @@ public class CompareOperatorTemplate<T> {
 	 */
 	private CompareAroundProcesser<T> processer;
 
-	/**
+	/*
 	 * 业务处理的模板类构造函数
-	 * 
-	 * @param point
-	 *            业务处理插入点
 	 */
 	public CompareOperatorTemplate() {
 		this.processer = new CompareAroundProcesser<T>();

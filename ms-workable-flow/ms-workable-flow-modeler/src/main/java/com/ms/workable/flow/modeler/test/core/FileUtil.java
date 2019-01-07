@@ -13,7 +13,7 @@ public class FileUtil {
 
     private static Logger log = LoggerFactory.getLogger(FileUtil.class);
 
-    /**
+   /*
      * NIO way
      */
     public static byte[] toByteArray(String filename) {
@@ -50,7 +50,7 @@ public class FileUtil {
         }
     }
 
-    /**
+   /*
      * 删除目录
      *
      * @author fengshuonan

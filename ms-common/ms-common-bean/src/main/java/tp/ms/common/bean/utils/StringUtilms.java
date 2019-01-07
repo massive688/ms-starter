@@ -49,8 +49,8 @@ public class StringUtilms {
 
 	/**
 	 * 是否是数字
-	 * 
-	 * @param value
+	 * @param value 需要判断的值
+	 * @return 是否bool值
 	 */
 	@SuppressWarnings("static-access")
 	public static boolean isNum(String value) {
@@ -64,10 +64,11 @@ public class StringUtilms {
 	}
 
 	/**
-	 * regex
+	 * 截取字符串
 	 * 
-	 * @param pattern
-	 * @return
+	 * @param regex 判断的正则表达式
+	 * @param resource 字符串资源
+	 * @return 返回处理后的结果
 	 */
 	public static String substr(String regex, String resource) {
 		Pattern pattern = Pattern.compile(regex);

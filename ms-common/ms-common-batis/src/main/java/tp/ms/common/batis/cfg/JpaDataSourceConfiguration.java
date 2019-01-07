@@ -34,7 +34,7 @@ public class JpaDataSourceConfiguration {
 	@Autowired
     private JpaProperties jpaProperties;
 
-    /**===========================================================================*/
+   /*===========================================================================*/
 	@Resource
 //    @Qualifier("primaryDataSource")
     private DataSource primaryDataSource;
@@ -48,7 +48,7 @@ public class JpaDataSourceConfiguration {
         return jpaProperties.getHibernateProperties(new HibernateSettings());
     }
  
-    /**
+   /*
      * 设置实体类所在位置
      */
     @Bean(name = "entityManagerFactoryPrimary")
@@ -66,7 +66,7 @@ public class JpaDataSourceConfiguration {
         return new JpaTransactionManager(entityManagerFactoryPrimary(builder).getObject());
     }
     
-    /**===========================================================================*/
+   /*===========================================================================*/
     
     @Primary
     @Bean(name = "amsflowEntityManagerFactory") 

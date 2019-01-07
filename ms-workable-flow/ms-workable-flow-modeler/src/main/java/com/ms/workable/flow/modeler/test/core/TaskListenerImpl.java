@@ -13,7 +13,7 @@ import org.flowable.task.service.delegate.DelegateTask;
 @SuppressWarnings("serial")
 public class TaskListenerImpl implements TaskListener {
  
-	/**用来指定任务的办理人*/
+	/*用来指定任务的办理人*/
 	@Override
 	public void notify(DelegateTask delegateTask) {
 		//指定个人任务的办理人，也可以指定组任务的办理人

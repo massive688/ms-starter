@@ -33,7 +33,7 @@ angular.module('flowableModeler').service('FormBuilderService', ['$http', '$q', 
             return fields;
         }
 
-        /**
+       /*
          * Remove the given step from the given container.
          */
         this.saveForm = function (data, name, formKey, description, saveCallback, errorCallback) {
@@ -107,7 +107,7 @@ angular.module('flowableModeler').service('FormBuilderService', ['$http', '$q', 
             }
         };
 
-        /**
+       /*
          * Updates the form cache for a specific step
          * @param {String} stepId
          * @param {Object} formDefinition
@@ -122,7 +122,7 @@ angular.module('flowableModeler').service('FormBuilderService', ['$http', '$q', 
             }
         };
 
-        /**
+       /*
          * Fetches forms from cache up to the given step (and not after)
          * @param {Array} steps all steps in sequential order
          * @param {String} stepId the current step
@@ -166,7 +166,7 @@ angular.module('flowableModeler').service('FormBuilderService', ['$http', '$q', 
             return uniqueForms;
         };
 
-        /**
+       /*
          * Fetches form outcomes from cache for specific form
          * @param {String} formId
          * @return {Array} flattened list of all form outcomes
@@ -184,7 +184,7 @@ angular.module('flowableModeler').service('FormBuilderService', ['$http', '$q', 
             return outcomes;
         };
 
-        /**
+       /*
          * Fetches form fields from cache for specific form
          * @param {String} formId
          * @return {Array} flattened list of all form form fields

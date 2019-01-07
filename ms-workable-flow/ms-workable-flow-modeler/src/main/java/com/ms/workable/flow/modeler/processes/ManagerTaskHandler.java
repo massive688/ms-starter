@@ -4,7 +4,7 @@ import org.flowable.task.service.delegate.DelegateTask;
  
 public class ManagerTaskHandler implements TaskListener {
  
-    /**
+   /*
 	 * 
 	 */
 	private static final long serialVersionUID = -6564372800548594301L;

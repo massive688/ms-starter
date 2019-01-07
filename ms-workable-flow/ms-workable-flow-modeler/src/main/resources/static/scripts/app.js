@@ -261,7 +261,7 @@ flowableModeler
                 }
             };
 
-            /**
+           /*
              * A 'safer' apply that avoids concurrent updates (which $apply allows).
              */
             $rootScope.safeApply = function(fn) {

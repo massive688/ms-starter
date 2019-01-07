@@ -30,7 +30,7 @@ public class TemplateServiceImpl implements TemplateService {
 	@Autowired
 	private BilltypeService billtypeService;
 
-	/**
+	/*
 	 * 创建主子表的sql语句
 	 * 
 	 * 1、检索表及所有表所需的字段 2、解析组装结构 3、创建表 4、生成mybatis配置文件 5、生成mybatis Mapper接口 xml文件

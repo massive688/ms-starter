@@ -38,19 +38,6 @@ import org.springframework.util.Assert;
 import lombok.val;
 import tp.ms.common.bean.support.context.MsEnvContextHolder;
 
-/**
- * <tt>AuthenticationFailureHandler</tt> which performs a redirect to the value of the
- * {@link #setDefaultFailureUrl defaultFailureUrl} property when the
- * <tt>onAuthenticationFailure</tt> method is called. If the property has not been set it
- * will send a 401 response to the client, with the error message from the
- * <tt>AuthenticationException</tt> which caused the failure.
- * <p>
- * If the {@code useForward} property is set, a {@code RequestDispatcher.forward} call
- * will be made to the destination instead of a redirect.
- *
- * @author Luke Taylor
- * @since 3.0
- */
 public class UrlAuthenticationFailureHandler implements
 		AuthenticationFailureHandler {
 	protected final Log logger = LogFactory.getLog(getClass());
@@ -74,7 +61,7 @@ public class UrlAuthenticationFailureHandler implements
 		this.serviceUrl = serviceUrl;
 	}
 
-	/**
+	/*
 	 * Performs the redirect or forward to the {@code defaultFailureUrl} if set, otherwise
 	 * returns a 401 error code.
 	 * <p>
@@ -120,7 +107,7 @@ public class UrlAuthenticationFailureHandler implements
 		}
 	}
 
-	/**
+	/*
 	 * Caches the {@code AuthenticationException} for use in view rendering.
 	 * <p>
 	 * If {@code forwardToDestination} is set to true, request scope will be used,
@@ -142,8 +129,7 @@ public class UrlAuthenticationFailureHandler implements
 			}
 		}
 	}
-
-	/**
+	/*
 	 * The URL which will be used as the failure destination.
 	 *
 	 * @param defaultFailureUrl the failure URL, for example "/loginFailed.jsp".
@@ -158,7 +144,7 @@ public class UrlAuthenticationFailureHandler implements
 		return forwardToDestination;
 	}
 
-	/**
+	/*
 	 * If set to <tt>true</tt>, performs a forward to the failure destination URL instead
 	 * of a redirect. Defaults to <tt>false</tt>.
 	 */
@@ -166,7 +152,7 @@ public class UrlAuthenticationFailureHandler implements
 		this.forwardToDestination = forwardToDestination;
 	}
 
-	/**
+	/*
 	 * Allows overriding of the behaviour when redirecting to a target URL.
 	 */
 	public void setRedirectStrategy(RedirectStrategy redirectStrategy) {

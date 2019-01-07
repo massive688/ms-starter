@@ -19,9 +19,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Import;
 
-/**
- * @author Filip Hrisafov
- */
+
 @Import({
     ApplicationConfiguration.class,
     AppDispatcherServletConfiguration.class
@@ -33,7 +31,7 @@ public class SpringFlowableIdmApplication extends SpringBootServletInitializer {
         SpringApplication.run(SpringFlowableIdmApplication.class, args);
     }
     
-    /**
+   /*
 com.ms.workable.flow.idm.conf
 com.ms.workable.flow.idm
      */

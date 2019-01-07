@@ -64,7 +64,7 @@ function $translateCookieStorageFactory($injector) {
 
   var $translateCookieStorage = {
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translateCookieStorage#get
      * @methodOf pascalprecht.translate.$translateCookieStorage
@@ -79,7 +79,7 @@ function $translateCookieStorageFactory($injector) {
       return delegate.get(name);
     },
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translateCookieStorage#set
      * @methodOf pascalprecht.translate.$translateCookieStorage
@@ -96,7 +96,7 @@ function $translateCookieStorageFactory($injector) {
       delegate.put(name, value);
     },
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translateCookieStorage#put
      * @methodOf pascalprecht.translate.$translateCookieStorage

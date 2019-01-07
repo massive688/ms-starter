@@ -28,14 +28,9 @@ import org.springframework.util.Assert;
 
 import tp.ms.common.data.mybatis.config.MsSessionTemplateHolder;
 
-/**
+/*
  * <b>function:</b> 继承SqlSessionTemplate 重写相关方法
  * 
- * @file MsSqlSessionTemplate.java
- * 
- * @blog http://blog.csdn.net/IBM_hoojo
- * @email  
- * @version 1.0
  */
 public class MsSqlSessionTemplate extends SqlSessionTemplate {
 
@@ -118,63 +113,63 @@ public class MsSqlSessionTemplate extends SqlSessionTemplate {
         return this.exceptionTranslator;
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public <T> T selectOne(String statement) {
         return this.sqlSessionProxy.<T> selectOne(statement);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public <T> T selectOne(String statement, Object parameter) {
         return this.sqlSessionProxy.<T> selectOne(statement, parameter);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public <K, V> Map<K, V> selectMap(String statement, String mapKey) {
         return this.sqlSessionProxy.<K, V> selectMap(statement, mapKey);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public <K, V> Map<K, V> selectMap(String statement, Object parameter, String mapKey) {
         return this.sqlSessionProxy.<K, V> selectMap(statement, parameter, mapKey);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public <K, V> Map<K, V> selectMap(String statement, Object parameter, String mapKey, RowBounds rowBounds) {
         return this.sqlSessionProxy.<K, V> selectMap(statement, parameter, mapKey, rowBounds);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public <E> List<E> selectList(String statement) {
         return this.sqlSessionProxy.<E> selectList(statement);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public <E> List<E> selectList(String statement, Object parameter) {
         return this.sqlSessionProxy.<E> selectList(statement, parameter);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public <E> List<E> selectList(String statement, Object parameter, RowBounds rowBounds) {
         return this.sqlSessionProxy.<E> selectList(statement, parameter, rowBounds);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     @SuppressWarnings("rawtypes")
@@ -182,7 +177,7 @@ public class MsSqlSessionTemplate extends SqlSessionTemplate {
         this.sqlSessionProxy.select(statement, handler);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     @SuppressWarnings("rawtypes")
@@ -190,7 +185,7 @@ public class MsSqlSessionTemplate extends SqlSessionTemplate {
         this.sqlSessionProxy.select(statement, parameter, handler);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     @SuppressWarnings("rawtypes")
@@ -198,105 +193,105 @@ public class MsSqlSessionTemplate extends SqlSessionTemplate {
         this.sqlSessionProxy.select(statement, parameter, rowBounds, handler);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public int insert(String statement) {
         return this.sqlSessionProxy.insert(statement);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public int insert(String statement, Object parameter) {
         return this.sqlSessionProxy.insert(statement, parameter);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public int update(String statement) {
         return this.sqlSessionProxy.update(statement);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public int update(String statement, Object parameter) {
         return this.sqlSessionProxy.update(statement, parameter);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public int delete(String statement) {
         return this.sqlSessionProxy.delete(statement);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public int delete(String statement, Object parameter) {
         return this.sqlSessionProxy.delete(statement, parameter);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public <T> T getMapper(Class<T> type) {
         return getConfiguration().getMapper(type, this);
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public void commit() {
         throw new UnsupportedOperationException("Manual commit is not allowed over a Spring managed SqlSession");
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public void commit(boolean force) {
         throw new UnsupportedOperationException("Manual commit is not allowed over a Spring managed SqlSession");
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public void rollback() {
         throw new UnsupportedOperationException("Manual rollback is not allowed over a Spring managed SqlSession");
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public void rollback(boolean force) {
         throw new UnsupportedOperationException("Manual rollback is not allowed over a Spring managed SqlSession");
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public void close() {
         throw new UnsupportedOperationException("Manual close is not allowed over a Spring managed SqlSession");
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public void clearCache() {
         this.sqlSessionProxy.clearCache();
     }
 
-    /**
+   /*
      * {@inheritDoc}
      */
     public Connection getConnection() {
         return this.sqlSessionProxy.getConnection();
     }
 
-    /**
+   /*
      * {@inheritDoc}
      * @since 1.0.2
      */
@@ -304,7 +299,7 @@ public class MsSqlSessionTemplate extends SqlSessionTemplate {
         return this.sqlSessionProxy.flushStatements();
     }
 
-    /**
+   /*
      * Proxy needed to route MyBatis method calls to the proper SqlSession got from Spring's Transaction Manager It also
      * unwraps exceptions thrown by {@code Method#invoke(Object, Object...)} to pass a {@code PersistenceException} to
      * the {@code PersistenceExceptionTranslator}.

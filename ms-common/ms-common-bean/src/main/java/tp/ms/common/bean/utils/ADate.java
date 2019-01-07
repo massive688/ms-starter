@@ -22,7 +22,6 @@ public class ADate {
 	/**
 	 * 用yyyy-MM-dd形式的字符串构造日期类型，所使用的时区为本地时间所处时区
 	 * 
-	 * @param date
 	 */
 	public ADate(){
 		this(System.currentTimeMillis());
@@ -37,9 +36,7 @@ public class ADate {
 	}
 	
 	/**
-	 * 根据本地时区，以yyyy-MM-dd的标准格式转化字符串
-	 * 
-	 * @return
+	 * @return 根据本地时区，以yyyy-MM-dd的标准格式转化字符串
 	 */
 	private String toLocalString() {
 		GregorianCalendar localCalendar = localCalendar();
@@ -48,12 +45,12 @@ public class ADate {
 	public String toStdString(){
 		return toLocalString();
 	}
-	/**
-	 * 根据基准时区，当标准格式yyyy-MM-dd HH:mm:ss返回字符串
-	 * 
-	 * @return
-	 */
+	
 	public static final TimeZone BASE_TIMEZONE = TimeZone.getTimeZone("GMT+08:00");
+
+	/**
+	 * @return 根据基准时区，当标准格式yyyy-MM-dd HH:mm:ss返回字符串
+	 */
 	private String toPersisted() {
 		GregorianCalendar cal = new GregorianCalendar(BASE_TIMEZONE);
 		cal.setTimeInMillis(utcTime);
@@ -176,17 +173,13 @@ public class ADate {
 	}
 	
 	/**
-	 * 返回MM格式月字符串
-	 * 
-	 * @return
+	 * @return 返回MM格式月字符串
 	 */
 	public String getStrMonth() {
 		return toString().substring(5, 7);
 	}
 	/**
-	 * 返回dd格式日期字符串
-	 * 
-	 * @return
+	 * @return 返回dd格式日期字符串
 	 */
 	public String getStrDay() {
 		return toString().substring(8, 10);

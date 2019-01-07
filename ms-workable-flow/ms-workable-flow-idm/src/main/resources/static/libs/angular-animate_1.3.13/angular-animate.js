@@ -397,7 +397,7 @@
 
 angular.module('ngAnimate', ['ng'])
 
-  /**
+ /*
    * @ngdoc provider
    * @name $animateProvider
    * @description
@@ -794,7 +794,7 @@ angular.module('ngAnimate', ['ng'])
         };
       }
 
-      /**
+     /*
        * @ngdoc service
        * @name $animate
        * @kind object
@@ -855,7 +855,7 @@ angular.module('ngAnimate', ['ng'])
        *
        */
       return {
-        /**
+       /*
          * @ngdoc method
          * @name $animate#animate
          * @kind function
@@ -914,7 +914,7 @@ angular.module('ngAnimate', ['ng'])
           });
         },
 
-        /**
+       /*
          * @ngdoc method
          * @name $animate#enter
          * @kind function
@@ -960,7 +960,7 @@ angular.module('ngAnimate', ['ng'])
           });
         },
 
-        /**
+       /*
          * @ngdoc method
          * @name $animate#leave
          * @kind function
@@ -1004,7 +1004,7 @@ angular.module('ngAnimate', ['ng'])
           });
         },
 
-        /**
+       /*
          * @ngdoc method
          * @name $animate#move
          * @kind function
@@ -1052,7 +1052,7 @@ angular.module('ngAnimate', ['ng'])
           });
         },
 
-        /**
+       /*
          * @ngdoc method
          * @name $animate#addClass
          *
@@ -1086,7 +1086,7 @@ angular.module('ngAnimate', ['ng'])
           return this.setClass(element, className, [], options);
         },
 
-        /**
+       /*
          * @ngdoc method
          * @name $animate#removeClass
          *
@@ -1120,7 +1120,7 @@ angular.module('ngAnimate', ['ng'])
           return this.setClass(element, [], className, options);
         },
 
-        /**
+       /*
          *
          * @ngdoc method
          * @name $animate#setClass
@@ -1221,7 +1221,7 @@ angular.module('ngAnimate', ['ng'])
           });
         },
 
-        /**
+       /*
          * @ngdoc method
          * @name $animate#cancel
          * @kind function
@@ -1235,7 +1235,7 @@ angular.module('ngAnimate', ['ng'])
           promise.$$cancelFn();
         },
 
-        /**
+       /*
          * @ngdoc method
          * @name $animate#enabled
          * @kind function

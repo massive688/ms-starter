@@ -41,7 +41,7 @@ public class MsJpaRepositorieConfiguration {
 //        return entityManagerFactory().getObject().createEntityManager();
 //    }
 	
-    /**
+   /*
      * 设置实体类所在位置
      */
     @Bean
@@ -66,7 +66,7 @@ public class MsJpaRepositorieConfiguration {
 //	@Autowired
 //    DataSourceTransactionManager mapperTransactionManager;
 	
-    /**
+   /*
      * 继承 TransactionManagementConfigurer
 	 * Transaction 相关配置
 	 * 因为有两个数据源，所有使用ChainedTransactionManager把两个DataSourceTransactionManager包括在一起。

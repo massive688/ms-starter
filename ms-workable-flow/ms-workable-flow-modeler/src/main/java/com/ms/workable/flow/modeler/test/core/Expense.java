@@ -19,24 +19,24 @@ public class Expense {
     private static final long serialVersionUID = 1L;
 
 	private Integer id;
-    /**
+   /*
      * 报销金额
      */
 	private BigDecimal money;
-    /**
+   /*
      * 描述
      */
 	private String desc;
 	private Date createtime;
-    /**
+   /*
      * 状态: 1.待提交  2:待审核   3.审核通过
      */
 	private Integer state;
-    /**
+   /*
      * 用户id
      */
 	private Integer userid;
-    /**
+   /*
      * 流程定义id
      */
 	private String processId;

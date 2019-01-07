@@ -73,7 +73,7 @@ public class VOConcurrentTool {
     this.lock(vo.getClass(), id);
   }
 
-  /**
+ /*
    * 抛出并发异常
    */
   public void throwUnSynchronizedException() {
@@ -81,7 +81,7 @@ public class VOConcurrentTool {
     AExceptionUtils.wrappException(ex);
   }
 
-  /**
+ /*
    * 抛出并发异常
    * 
    * @param item 发生并发异常的实体

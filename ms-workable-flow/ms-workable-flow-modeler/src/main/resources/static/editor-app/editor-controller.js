@@ -29,7 +29,7 @@ angular.module('flowableModeler')
 
     $rootScope.staticIncludeVersion = Date.now();
 
-    /**
+   /*
      * Initialize the event bus: couple all Oryx events with a dispatch of the
      * event of the event bus. This way, it gets much easier to attach custom logic
      * to any event.
@@ -119,7 +119,7 @@ angular.module('flowableModeler')
         });
     }
 
-    /**
+   /*
      * Initialize the Oryx Editor when the content has been loaded
      */
     if (!$rootScope.editorInitialized) {
@@ -141,7 +141,7 @@ angular.module('flowableModeler')
 			paletteSectionOpen.addClass('hidden');
 		});
 
-        /**
+       /*
          * A 'safer' apply that avoids concurrent updates (which $apply allows).
          */
         $rootScope.safeApply = function(fn) {
@@ -187,7 +187,7 @@ angular.module('flowableModeler')
             }
         };
 
-        /**
+       /*
          * Initialize the event bus: couple all Oryx events with a dispatch of the
          * event of the event bus. This way, it gets much easier to attach custom logic
          * to any event.

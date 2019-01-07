@@ -46,7 +46,7 @@ function $RouteProvider() {
 
   var routes = {};
 
-  /**
+ /*
    * @ngdoc method
    * @name $routeProvider#when
    *
@@ -174,7 +174,7 @@ function $RouteProvider() {
     return this;
   };
 
-  /**
+ /*
    * @ngdoc property
    * @name $routeProvider#caseInsensitiveMatch
    * @description
@@ -185,7 +185,7 @@ function $RouteProvider() {
    */
   this.caseInsensitiveMatch = false;
 
-   /**
+  /*
     * @param path {string} path
     * @param opts {Object} options
     * @return {?Object}
@@ -226,7 +226,7 @@ function $RouteProvider() {
     return ret;
   }
 
-  /**
+ /*
    * @ngdoc method
    * @name $routeProvider#otherwise
    *
@@ -256,7 +256,7 @@ function $RouteProvider() {
                '$sce',
       function($rootScope, $location, $routeParams, $q, $injector, $templateRequest, $sce) {
 
-    /**
+   /*
      * @ngdoc service
      * @name $route
      * @requires $location
@@ -387,7 +387,7 @@ function $RouteProvider() {
      * </example>
      */
 
-    /**
+   /*
      * @ngdoc event
      * @name $route#$routeChangeStart
      * @eventType broadcast on root scope
@@ -407,7 +407,7 @@ function $RouteProvider() {
      * @param {Route} current Current route information.
      */
 
-    /**
+   /*
      * @ngdoc event
      * @name $route#$routeChangeSuccess
      * @eventType broadcast on root scope
@@ -422,7 +422,7 @@ function $RouteProvider() {
      * first route entered.
      */
 
-    /**
+   /*
      * @ngdoc event
      * @name $route#$routeChangeError
      * @eventType broadcast on root scope
@@ -435,7 +435,7 @@ function $RouteProvider() {
      * @param {Route} rejection Rejection of the promise. Usually the error of the failed promise.
      */
 
-    /**
+   /*
      * @ngdoc event
      * @name $route#$routeUpdate
      * @eventType broadcast on root scope
@@ -451,7 +451,7 @@ function $RouteProvider() {
         $route = {
           routes: routes,
 
-          /**
+         /*
            * @ngdoc method
            * @name $route#reload
            *
@@ -471,7 +471,7 @@ function $RouteProvider() {
             });
           },
 
-          /**
+         /*
            * @ngdoc method
            * @name $route#updateParams
            *
@@ -503,7 +503,7 @@ function $RouteProvider() {
 
     /////////////////////////////////////////////////////
 
-    /**
+   /*
      * @param on {string} current url
      * @param route {Object} route regexp to match the url against
      * @return {?Object}
@@ -624,7 +624,7 @@ function $RouteProvider() {
     }
 
 
-    /**
+   /*
      * @returns {Object} the current active route, by matching it against the URL
      */
     function parseRoute() {
@@ -642,7 +642,7 @@ function $RouteProvider() {
       return match || routes[null] && inherit(routes[null], {params: {}, pathParams:{}});
     }
 
-    /**
+   /*
      * @returns {string} interpolation of the redirect path with the parameters
      */
     function interpolate(string, params) {

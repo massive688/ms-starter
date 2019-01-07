@@ -11,7 +11,7 @@ import tp.ms.common.data.mybatis.annotation.TargetSqlSession;
 @Repository
 @TargetSqlSession(SqlSessionKey.CS6304)
 public interface TemplateMapper {
-	/**
+	/*
 	 * 找到要插入的列
 	 * 
 	 * @param list

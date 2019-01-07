@@ -35,7 +35,7 @@ public class GeneratorMajorResource {
 		this.ttenum = ttenum;
 	}
 
-	/**
+	/*
 	 * 
 	 * @return 类缩写后缀
 	 * @throws ADBusinessException

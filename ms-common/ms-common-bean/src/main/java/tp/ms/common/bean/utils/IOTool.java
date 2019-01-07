@@ -1,6 +1,3 @@
-/*
- *    Copyright 2012-2013 The Haohui Network Corporation
- */
 package tp.ms.common.bean.utils;
 
 import java.io.ByteArrayInputStream;
@@ -10,22 +7,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * <pre>
- * Java 常用流处理工具
- * </pre>
- * 
- * @project baidamei
- * @author cevencheng <cevencheng@gmail.com>
- * @create 2012-11-29 下午5:17:32
- */
 public class IOTool {
 	
 	/**
 	 * 将流另存为文件
 	 * 
-	 * @param is
-	 * @param outfile
+	 * @param is 传入的文件输入流
+	 * @param outfile 输出的文件
 	 */
 	public void streamSaveAsFile(InputStream is, File outfile) {
 		FileOutputStream fos = null;
@@ -53,9 +41,9 @@ public class IOTool {
 	}
 	/**
 	 * Read an input stream into a string
-	 * @param in
-	 * @return
-	 * @throws IOException
+	 * @param in 需要输出字符串的流
+	 * @return 返回流转出的字符串
+	 * @throws IOException 抛出的流处理异常
 	 */
 	static public String streamToString(InputStream in) throws IOException {
 		StringBuffer out = new StringBuffer();
@@ -75,12 +63,13 @@ public class IOTool {
 		byte[] buffer =  baos.toByteArray();
 		return buffer;
 	}
-	/** 
-     * @方法功能 InputStream 转为 byte 
-     * @param InputStream 
-     * @return 字节数组 
-     * @throws Exception 
-     */  
+
+	/**
+	 * 方法功能 InputStream 转为 byte 
+	 * @param inStream 需要转换的流
+	 * @return 字节数组 
+	 * @throws Exception 处理的流异常
+	 */
     public static byte[] inputStream2Byte(InputStream inStream)  
             throws Exception {  
         // ByteArrayOutputStream outSteam = new ByteArrayOutputStream();  
@@ -101,22 +90,22 @@ public class IOTool {
         return b;  
     }  
   
-    /** 
-     * @方法功能 byte 转为 InputStream 
-     * @param 字节数组 
-     * @return InputStream 
-     * @throws Exception 
-     */  
+   /*
+     *  方法功能 byte 转为 InputStream 
+     * @param b 字节数组 
+     * @return 转换的流
+     * @throws Exception 处理的流异常
+     */
     public static InputStream byte2InputStream(byte[] b) throws Exception {  
         InputStream is = new ByteArrayInputStream(b);  
         return is;  
     }  
   
-    /** 
-     * @功能 短整型与字节的转换 
-     * @param 短整型 
+   /*
+     *	功能 短整型与字节的转换 
+     * @param number 短整型
      * @return 两位的字节数组 
-     */  
+     */
     public static byte[] shortToByte(short number) {  
         int temp = number;  
         byte[] b = new byte[2];  
@@ -127,11 +116,11 @@ public class IOTool {
         return b;  
     }  
   
-    /** 
-     * @功能 字节的转换与短整型 
-     * @param 两位的字节数组 
+   /*
+     *  功能 字节的转换与短整型
+     * @param b 两位的字节数组
      * @return 短整型 
-     */  
+     */
     public static short byteToShort(byte[] b) {  
         short s = 0;  
         short s0 = (short) (b[0] & 0xff);// 最低位  
@@ -141,11 +130,11 @@ public class IOTool {
         return s;  
     }  
   
-    /** 
-     * @方法功能 整型与字节数组的转换 
-     * @param 整型 
+   /*
+     * 方法功能 整型与字节数组的转换 
+     * @param i 整型
      * @return 四位的字节数组 
-     */  
+     */
     public static byte[] intToByte(int i) {  
         byte[] bt = new byte[4];  
         bt[0] = (byte) (0xff & i);  
@@ -155,11 +144,11 @@ public class IOTool {
         return bt;  
     }  
   
-    /** 
-     * @方法功能 字节数组和整型的转换 
-     * @param 字节数组 
-     * @return 整型 
-     */  
+   /*
+     *  方法功能 字节数组和整型的转
+     * @param bytes 字节数组
+     * @return 整型
+     */
     public static int bytesToInt(byte[] bytes) {  
         int num = bytes[0] & 0xFF;  
         num |= ((bytes[1] << 8) & 0xFF00);  
@@ -168,11 +157,11 @@ public class IOTool {
         return num;  
     }  
   
-    /** 
-     * @方法功能 字节数组和长整型的转换 
-     * @param 字节数组 
-     * @return 长整型 
-     */  
+   /*
+     *  方法功能 字节数组和长整型的转换 
+     * @param number 字节数组 
+     * @return 长整型
+     */
     public static byte[] longToByte(long number) {  
         long temp = number;  
         byte[] b = new byte[8];  
@@ -185,11 +174,11 @@ public class IOTool {
         return b;  
     }  
   
-    /** 
-     * @方法功能 字节数组和长整型的转换 
-     * @param 字节数组 
-     * @return 长整型 
-     */  
+   /*
+     *   方法功能 字节数组和长整型的转换 
+     * @param b 字节数组
+     * @return 长整型
+     */
     public static long byteToLong(byte[] b) {  
         long s = 0;  
         long s0 = b[0] & 0xff;// 最低位  

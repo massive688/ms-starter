@@ -893,7 +893,7 @@
         return spect;
     }
 
-    /**
+   /*
     * checkOffset - get the offset below/above and left/right element depending on screen position
     * Thanks https://github.com/jquery/jquery-ui/blob/master/ui/jquery.ui.datepicker.js
     */
@@ -920,21 +920,21 @@
         return offset;
     }
 
-    /**
+   /*
     * noop - do nothing
     */
     function noop() {
 
     }
 
-    /**
+   /*
     * stopPropagation - makes the code only doing this a little easier to read in line
     */
     function stopPropagation(e) {
         e.stopPropagation();
     }
 
-    /**
+   /*
     * Create a function bound to a given object
     * Thanks to underscore.js
     */
@@ -946,7 +946,7 @@
         };
     }
 
-    /**
+   /*
     * Lightweight drag helper.  Handles containment within the element, so that
     * when dragging, the x is within [0,element.width] and y is within [0,element.height]
     */
@@ -1050,7 +1050,7 @@
 
     function log(){/* jshint -W021 */if(window.console){if(Function.prototype.bind)log=Function.prototype.bind.call(console.log,console);else log=function(){Function.prototype.apply.call(console.log,console,arguments);};log.apply(this,arguments);}}
 
-    /**
+   /*
     * Define a jQuery plugin
     */
     var dataID = "spectrum.id";

@@ -1,4 +1,9 @@
-///**
+package org.mybatis.generator.codegen.mybatis3.model;
+
+public class ExampleGenerator22 {
+	
+}
+///*
 // *    Copyright 2006-2017 the original author or authors.
 // *
 // *    Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,7 +43,7 @@
 //import org.mybatis.generator.codegen.AbstractJavaGenerator;
 //import org.mybatis.generator.codegen.mybatis3.MyBatis3FormattingUtilities;
 //
-///**
+///*
 // * 
 // * @author Jeff Butler
 // * 
@@ -788,7 +793,7 @@
 //        sb.append("\", "); //$NON-NLS-1$
 //
 //        //改动了 添加了此段
-//        /*****start*****/
+//       /*start*****/
 //        if (stringHasValue(introspectedColumn.getFullyQualifiedJavaType().getFullyQualifiedName()) &&
 //        		"com.ms.core.service.rest.common.vo.status.ApproveStatus".
 //        		equals(introspectedColumn.getFullyQualifiedJavaType().getFullyQualifiedName())) {
@@ -796,7 +801,7 @@
 //        }else {
 //            sb.append("value"); //$NON-NLS-1$
 //        }
-//        /*****end*****/
+//       /*end*****/
 //        
 //        sb.append(", \""); //$NON-NLS-1$
 //        sb.append(introspectedColumn.getJavaProperty());
@@ -807,7 +812,7 @@
 //        return method;
 //    }
 //
-//    /**
+//   /*
 //     * Generates methods that set between and not between conditions
 //     * 
 //     * @param introspectedColumn the introspected column
@@ -868,7 +873,7 @@
 //        return method;
 //    }
 //
-//    /**
+//   /*
 //     * Generates an In or NotIn method.
 //     * 
 //     * @param introspectedColumn the introspected column
@@ -960,7 +965,7 @@
 //        return method;
 //    }
 //
-//    /**
+//   /*
 //     * This method adds all the extra methods and fields required to support a
 //     * user defined type handler on some column.
 //     * 

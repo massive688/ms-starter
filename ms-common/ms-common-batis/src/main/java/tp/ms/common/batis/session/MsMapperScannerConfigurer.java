@@ -37,7 +37,7 @@ public class MsMapperScannerConfigurer extends MapperScannerConfigurer {
         this.sqlSessionTemplateBeanName = sqlSessionTemplateBeanName;
       }
 
-    /**
+   /*
      * 属性注入
      *
      * @param properties

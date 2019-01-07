@@ -26,7 +26,7 @@ public class MsDynamicSqlSessionAspect {
 	protected static final ThreadLocal<String> preDatasourceHolder = new ThreadLocal<>();
 
 
-    /**
+    /*
      * 		args			参数
      *	 	@within 		拦截接口或者类带有TargetSqlSession注解，执行方法是在拦截的类或者接口里面的方法
      *		@annotation		拦截所有带有TargetSqlSession注解的方法
@@ -41,7 +41,7 @@ public class MsDynamicSqlSessionAspect {
 	@Pointcut("target(tp.ms.base.rest.resource.service.IBaseService) "
 			+ "&& @target(tp.ms.common.data.mybatis.annotation.TargetSqlSession)")
 	protected void sourceServiceAspect() {}
-	/**
+	/*
 	 * 怎么都拦截不了注解
 	 */
 //	@Pointcut("target(tp.ms.common.data.mybatis.mapper.SuperDaoMapper) "
@@ -53,7 +53,7 @@ public class MsDynamicSqlSessionAspect {
 
 
 
-	/**
+	/*
 	 * 根据@TargetSqlSession的属性值设置不同的dataSourceKey,以供DynamicDataSource
 	 */
 	@Before("sourceAspect() || sourceServiceAspect()")
@@ -61,7 +61,7 @@ public class MsDynamicSqlSessionAspect {
 		log.info("current exec method : {}", jp.getSignature().toString());
 		determineServiceSource(jp);
 	}
-	/**
+	/*
 	 * 留着方法备用吧，懒了
 	 * @param jp
 	 */
@@ -89,7 +89,7 @@ public class MsDynamicSqlSessionAspect {
 		preDatasourceHolder.remove();
 	}
 
-	/**
+	/*
 	 * 通过拦截service层的注解确定数据源
 	 * @param jp
 	 */
@@ -109,7 +109,7 @@ public class MsDynamicSqlSessionAspect {
 		}
 	}
 
-	/**
+	/*
 	 * 通过拦截mapper接口解析出的注解确定数据源
 	 * @param jp
 	 */
@@ -133,7 +133,7 @@ public class MsDynamicSqlSessionAspect {
 		return result;
 	}
 	
-	/**
+	/*
 	 * 注解重置数据源
 	 * @param annotation
 	 */
@@ -149,7 +149,7 @@ public class MsDynamicSqlSessionAspect {
 		}
 		MsSessionTemplateHolder.setSessionKey(targetSource);
 	}
-	/**
+	/*
 	 * 通过类找注解
 	 * @param clazz
 	 * @return
@@ -164,8 +164,8 @@ public class MsDynamicSqlSessionAspect {
 		}
 		return null;
     }
-    /**
-     * 通过类及方法名找出该方法的注解
+    /*
+     * 	通过类及方法名找出该方法的注解
      * @param clazz
      * @param methodName
      * @return

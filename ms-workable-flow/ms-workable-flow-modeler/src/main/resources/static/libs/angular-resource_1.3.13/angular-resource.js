@@ -375,7 +375,7 @@ angular.module('ngResource', ['ng']).
         copy = angular.copy,
         isFunction = angular.isFunction;
 
-      /**
+     /*
        * We need our custom method because encodeURIComponent is too aggressive and doesn't follow
        * http://www.ietf.org/rfc/rfc3986.txt with regards to the character set
        * (pchar) allowed in path segments:
@@ -394,7 +394,7 @@ angular.module('ngResource', ['ng']).
       }
 
 
-      /**
+     /*
        * This method is intended for encoding *key* or *value* parts of query component. We need a
        * custom method because encodeURIComponent is too aggressive and encodes stuff that doesn't
        * have to be encoded per http://tools.ietf.org/html/rfc3986:

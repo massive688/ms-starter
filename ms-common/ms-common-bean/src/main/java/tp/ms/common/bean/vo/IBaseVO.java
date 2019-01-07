@@ -23,7 +23,7 @@ public interface IBaseVO extends Serializable, Cloneable {
 	/**
 	 * 设置VO的状态
 	 * 
-	 * @param status
+	 * @param status 转入要设置的状态
 	 */
 	public void setStatus(byte status);
 

@@ -11,10 +11,8 @@ import tp.ms.common.bean.vo.BaseVO;
 
 @Repository
 public interface SuperDaoMapper<T extends BaseVO, E extends BaseExample> {
-	/**
+	/*
 	 * 下面是生成的部分
-	 * @param example
-	 * @return
 	 */
 	long countByExample(E example);
 

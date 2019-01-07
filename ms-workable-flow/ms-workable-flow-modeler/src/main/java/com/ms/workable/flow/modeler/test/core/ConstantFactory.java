@@ -42,7 +42,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        return SpringContextHolder.getBean("constantFactory");
 //    }
 //
-//    /**
+//   /*
 //     * 根据用户id获取用户名称
 //     *
 //     * @author stylefeng
@@ -58,7 +58,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        }
 //    }
 //
-//    /**
+//   /*
 //     * 根据用户id获取用户账号
 //     *
 //     * @author stylefeng
@@ -74,7 +74,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        }
 //    }
 //
-//    /**
+//   /*
 //     * 通过角色ids获取角色名称
 //     */
 //    @Override
@@ -91,7 +91,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        return StrKit.removeSuffix(sb.toString(), ",");
 //    }
 //
-//    /**
+//   /*
 //     * 通过角色id获取角色名称
 //     */
 //    @Override
@@ -107,7 +107,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        return "";
 //    }
 //
-//    /**
+//   /*
 //     * 通过角色id获取角色英文名称
 //     */
 //    @Override
@@ -123,7 +123,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        return "";
 //    }
 //
-//    /**
+//   /*
 //     * 获取部门名称
 //     */
 //    @Override
@@ -136,7 +136,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        return "";
 //    }
 //
-//    /**
+//   /*
 //     * 获取菜单的名称们(多个)
 //     */
 //    @Override
@@ -152,7 +152,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        return StrKit.removeSuffix(sb.toString(), ",");
 //    }
 //
-//    /**
+//   /*
 //     * 获取菜单名称
 //     */
 //    @Override
@@ -169,7 +169,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        }
 //    }
 //
-//    /**
+//   /*
 //     * 获取菜单名称通过编号
 //     */
 //    @Override
@@ -188,7 +188,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        }
 //    }
 //
-//    /**
+//   /*
 //     * 获取字典名称
 //     */
 //    @Override
@@ -205,7 +205,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        }
 //    }
 //
-//    /**
+//   /*
 //     * 获取通知标题
 //     */
 //    @Override
@@ -222,7 +222,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        }
 //    }
 //
-//    /**
+//   /*
 //     * 根据字典名称和字典中的值获取对应的名称
 //     */
 //    @Override
@@ -245,7 +245,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        }
 //    }
 //
-//    /**
+//   /*
 //     * 获取性别名称
 //     */
 //    @Override
@@ -253,7 +253,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        return getDictsByName("性别", sex);
 //    }
 //
-//    /**
+//   /*
 //     * 获取用户登录状态
 //     */
 //    @Override
@@ -261,7 +261,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        return ManagerStatus.valueOf(status);
 //    }
 //
-//    /**
+//   /*
 //     * 获取菜单状态
 //     */
 //    @Override
@@ -269,7 +269,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        return MenuStatus.valueOf(status);
 //    }
 //
-//    /**
+//   /*
 //     * 查询字典
 //     */
 //    @Override
@@ -287,7 +287,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        }
 //    }
 //
-//    /**
+//   /*
 //     * 获取被缓存的对象(用户删除业务)
 //     */
 //    @Override
@@ -295,7 +295,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        return LogObjectHolder.me().get().toString();
 //    }
 //
-//    /**
+//   /*
 //     * 获取子部门id
 //     */
 //    @Override
@@ -315,7 +315,7 @@ package com.ms.workable.flow.modeler.test.core;
 //        return deptids;
 //    }
 //
-//    /**
+//   /*
 //     * 获取所有父部门id
 //     */
 //    @Override

@@ -31,9 +31,8 @@ import tp.ms.cas.security.permission.filter.UrlLogoutSuccessHandler;
 @Configuration
 @EnableConfigurationProperties(MsCasSecurityProperties.class)
 public class MsCasCoreSecurityConfig {
-	/**
+	/*
 	 * https://blog.csdn.net/u010475041/article/details/79592661
-	 * @return
 	 */
 //    @Bean
 //    public FilterRegistrationBean<HttpParamsFilter> httpParamsFilter() {

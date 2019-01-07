@@ -2064,7 +2064,7 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', [])
     var jqLite = angular.element;
     var fn = {};
 
-    /**
+   /*
      * Test the element nodeName
      * @param element
      * @param name
@@ -2073,7 +2073,7 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', [])
       return element.nodeName && element.nodeName.toLowerCase() === name.toLowerCase();
     };
 
-    /**
+   /*
      * Returns the element computed style
      * @param element
      * @param prop
@@ -2091,7 +2091,7 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', [])
       return extra === true ? parseFloat(value) || 0 : value;
     };
 
-    /**
+   /*
      * Provides read-only equivalent of jQuery's offset function:
      * @required-by bootstrap-tooltip, bootstrap-affix
      * @url http://api.jquery.com/offset/
@@ -2108,7 +2108,7 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', [])
       };
     };
 
-    /**
+   /*
      * Provides read-only equivalent of jQuery's position function
      * @required-by bootstrap-tooltip, bootstrap-affix
      * @url http://api.jquery.com/offset/
@@ -2152,7 +2152,7 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', [])
 
     };
 
-    /**
+   /*
      * Returns the closest, non-statically positioned offsetParent of a given element
      * @required-by fn.position
      * @param element
@@ -2167,7 +2167,7 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', [])
       return offsetParent || docElement.documentElement;
     };
 
-    /**
+   /*
      * Provides equivalent of jQuery's height function
      * @required-by bootstrap-affix
      * @url http://api.jquery.com/height/
@@ -2184,7 +2184,7 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', [])
       return value;
     };
 
-    /**
+   /*
      * Provides equivalent of jQuery's width function
      * @required-by bootstrap-affix
      * @url http://api.jquery.com/width/

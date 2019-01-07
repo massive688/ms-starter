@@ -3,25 +3,21 @@ package tp.ms.common.batis.cfg;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @Auther: yukong
- * @Date: 2018/8/15 10:49
- * @Description: 数据源上下文
- */
+
 public class MsDynamicDataSourceContextHolder {
 
-    /**
+   /*
      * 存储已经注册的数据源的key
      */
     public static List<String> dataSourceKeys =new ArrayList<>();
 
-    /**
+   /*
      * 线程级别的私有变量
      */
     private static final ThreadLocal<String> contextHolder = new ThreadLocal<>();
 
 
-    /**
+   /*
      * 取得当前数据源。
      *
      * @return
@@ -31,7 +27,7 @@ public class MsDynamicDataSourceContextHolder {
         return str;
     }
 
-    /**
+   /*
      * 设置当前数据库。
      *
      * @param dbType
@@ -40,7 +36,7 @@ public class MsDynamicDataSourceContextHolder {
         contextHolder.set(dataSourceRouterKey);
     }
 
-    /**
+   /*
      * 设置数据源之前一定要先移除
      * 清除上下文数据
      */
@@ -48,7 +44,7 @@ public class MsDynamicDataSourceContextHolder {
     	contextHolder.remove();
     }
 
-    /**
+   /*
      *
      * @param dataSourceId
      * @return

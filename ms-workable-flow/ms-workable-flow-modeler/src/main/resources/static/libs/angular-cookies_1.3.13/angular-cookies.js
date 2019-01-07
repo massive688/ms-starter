@@ -23,7 +23,7 @@
 
 
 angular.module('ngCookies', ['ng']).
-  /**
+ /*
    * @ngdoc service
    * @name $cookies
    *
@@ -77,7 +77,7 @@ angular.module('ngCookies', ['ng']).
       return cookies;
 
 
-      /**
+     /*
        * Pushes all the cookies from the service to the browser and verifies if all cookies were
        * stored.
        */
@@ -128,7 +128,7 @@ angular.module('ngCookies', ['ng']).
     }]).
 
 
-  /**
+ /*
    * @ngdoc service
    * @name $cookieStore
    * @requires $cookies
@@ -157,7 +157,7 @@ angular.module('ngCookies', ['ng']).
    factory('$cookieStore', ['$cookies', function($cookies) {
 
       return {
-        /**
+       /*
          * @ngdoc method
          * @name $cookieStore#get
          *
@@ -172,7 +172,7 @@ angular.module('ngCookies', ['ng']).
           return value ? angular.fromJson(value) : value;
         },
 
-        /**
+       /*
          * @ngdoc method
          * @name $cookieStore#put
          *
@@ -186,7 +186,7 @@ angular.module('ngCookies', ['ng']).
           $cookies[key] = angular.toJson(value);
         },
 
-        /**
+       /*
          * @ngdoc method
          * @name $cookieStore#remove
          *

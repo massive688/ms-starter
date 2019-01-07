@@ -12,8 +12,6 @@ import tp.ms.common.bean.vo.IBaseVO;
  * VO操作工具类
  * 
  * @since 6.0
- * @version 2009-6-15 上午08:50:44
- * @author 钟鸣
  */
 public class VOTool {
 	/**
@@ -46,7 +44,7 @@ public class VOTool {
 	 * 
 	 * @param vo        比较DB VO1
 	 * @param anotherVO 比较Client VO2
-	 * @return Set<String> 两个VO值不同的字段
+	 * @return 两个VO值不同的字段
 	 */
 	public Map<String, Field> getDifferentField(IBaseVO vo, IBaseVO anotherVO) {
 		if (vo.getClass() != anotherVO.getClass()) {

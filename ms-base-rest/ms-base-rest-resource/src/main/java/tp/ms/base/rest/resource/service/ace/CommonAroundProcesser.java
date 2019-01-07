@@ -21,7 +21,7 @@ public class CommonAroundProcesser<E> {
 		this.before.add(rule);
 	}
 
-	/**
+	/*
 	 * 添加处理后业务规则
 	 * 
 	 * @param rule
@@ -34,10 +34,9 @@ public class CommonAroundProcesser<E> {
 	/**
 	 * 执行处理前业务规则
 	 * 
-	 * @param vos
-	 *            要处理的业务对象
+	 * @param vos 要处理的业务对象
 	 * @return 业务处理后的业务对象。有过滤规则的，可能返回的业务对象有增有减
-	 * @throws ADBusinessException 
+	 * @throws ADBusinessException 抛出业务处理异常
 	 */
 	@SuppressWarnings("unchecked")
 	public E before(E vos) throws ADBusinessException {
@@ -67,10 +66,9 @@ public class CommonAroundProcesser<E> {
 	/**
 	 * 执行处理后业务规则
 	 * 
-	 * @param vos
-	 *            要处理的业务对象
+	 * @param vos 要处理的业务对象
 	 * @return 业务处理后的业务对象。有过滤规则的，可能返回的业务对象有增有减
-	 * @throws ADBusinessException 
+	 * @throws ADBusinessException  抛出业务处理异常
 	 */
 	@SuppressWarnings("unchecked")
 	public E after(E vos) throws ADBusinessException {

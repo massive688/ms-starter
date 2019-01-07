@@ -91,7 +91,7 @@ function $translateSanitizationProvider () {
       hasShownNoStrategyConfiguredWarning = false,
       strategies;
 
-  /**
+ /*
    * Definition of a sanitization strategy function
    * @callback StrategyFunction
    * @param {string|object} value - value to be sanitized (either a string or an interpolated value map)
@@ -99,7 +99,7 @@ function $translateSanitizationProvider () {
    * @return {string|object}
    */
 
-  /**
+ /*
    * @ngdoc property
    * @name strategies
    * @propertyOf pascalprecht.translate.$translateSanitizationProvider
@@ -168,7 +168,7 @@ function $translateSanitizationProvider () {
   // TODO should be removed in 3.0
   strategies.escaped = strategies.escapeParameters;
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateSanitizationProvider#addStrategy
    * @methodOf pascalprecht.translate.$translateSanitizationProvider
@@ -185,7 +185,7 @@ function $translateSanitizationProvider () {
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateSanitizationProvider#removeStrategy
    * @methodOf pascalprecht.translate.$translateSanitizationProvider
@@ -201,7 +201,7 @@ function $translateSanitizationProvider () {
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateSanitizationProvider#useStrategy
    * @methodOf pascalprecht.translate.$translateSanitizationProvider
@@ -218,7 +218,7 @@ function $translateSanitizationProvider () {
     return this;
   };
 
-  /**
+ /*
    * @ngdoc object
    * @name pascalprecht.translate.$translateSanitization
    * @requires $injector
@@ -271,7 +271,7 @@ function $translateSanitizationProvider () {
     }
 
     return {
-      /**
+     /*
        * @ngdoc function
        * @name pascalprecht.translate.$translateSanitization#useStrategy
        * @methodOf pascalprecht.translate.$translateSanitization
@@ -287,7 +287,7 @@ function $translateSanitizationProvider () {
         };
       })(this),
 
-      /**
+     /*
        * @ngdoc function
        * @name pascalprecht.translate.$translateSanitization#sanitize
        * @methodOf pascalprecht.translate.$translateSanitization
@@ -495,7 +495,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
   };
   getLocale.displayName = 'angular-translate/service: getLocale';
 
-  /**
+ /*
    * @name indexOf
    * @private
    *
@@ -516,7 +516,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return -1;
   };
 
-  /**
+ /*
    * @name trim
    * @private
    *
@@ -580,7 +580,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#translations
    * @methodOf pascalprecht.translate.$translateProvider
@@ -637,7 +637,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
 
   this.translations = translations;
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#cloakClassName
    * @methodOf pascalprecht.translate.$translateProvider
@@ -657,7 +657,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#nestedObjectDelimeter
    * @methodOf pascalprecht.translate.$translateProvider
@@ -677,7 +677,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @name flatObject
    * @private
    *
@@ -716,7 +716,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
   };
   flatObject.displayName = 'flatObject';
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#addInterpolation
    * @methodOf pascalprecht.translate.$translateProvider
@@ -731,7 +731,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useMessageFormatInterpolation
    * @methodOf pascalprecht.translate.$translateProvider
@@ -744,7 +744,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this.useInterpolation('$translateMessageFormatInterpolation');
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useInterpolation
    * @methodOf pascalprecht.translate.$translateProvider
@@ -761,7 +761,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useSanitizeStrategy
    * @methodOf pascalprecht.translate.$translateProvider
@@ -776,7 +776,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#preferredLanguage
    * @methodOf pascalprecht.translate.$translateProvider
@@ -801,7 +801,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     }
     return $preferredLanguage;
   };
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#translationNotFoundIndicator
    * @methodOf pascalprecht.translate.$translateProvider
@@ -826,7 +826,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * ngdoc function
    * @name pascalprecht.translate.$translateProvider#translationNotFoundIndicatorLeft
    * @methodOf pascalprecht.translate.$translateProvider
@@ -845,7 +845,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * ngdoc function
    * @name pascalprecht.translate.$translateProvider#translationNotFoundIndicatorLeft
    * @methodOf pascalprecht.translate.$translateProvider
@@ -864,7 +864,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#fallbackLanguage
    * @methodOf pascalprecht.translate.$translateProvider
@@ -905,7 +905,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     }
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#use
    * @methodOf pascalprecht.translate.$translateProvider
@@ -931,7 +931,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return $uses;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#resolveClientLocale
    * @methodOf pascalprecht.translate.$translateProvider
@@ -945,7 +945,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return getLocale();
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#storageKey
    * @methodOf pascalprecht.translate.$translateProvider
@@ -968,7 +968,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
 
   this.storageKey = storageKey;
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useUrlLoader
    * @methodOf pascalprecht.translate.$translateProvider
@@ -983,7 +983,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this.useLoader('$translateUrlLoader', angular.extend({url : url}, options));
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useStaticFilesLoader
    * @methodOf pascalprecht.translate.$translateProvider
@@ -997,7 +997,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this.useLoader('$translateStaticFilesLoader', options);
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useLoader
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1014,7 +1014,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useLocalStorage
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1027,7 +1027,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this.useStorage('$translateLocalStorage');
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useCookieStorage
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1039,7 +1039,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this.useStorage('$translateCookieStorage');
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useStorage
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1052,7 +1052,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#storagePrefix
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1070,7 +1070,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useMissingTranslationHandlerLog
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1086,7 +1086,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this.useMissingTranslationHandler('$translateMissingTranslationHandlerLog');
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useMissingTranslationHandler
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1117,7 +1117,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#usePostCompiling
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1140,7 +1140,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#forceAsyncReload
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1164,7 +1164,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#uniformLanguageTag
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1220,7 +1220,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#determinePreferredLanguage
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1252,7 +1252,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#registerAvailableLanguageKeys
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1279,7 +1279,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return $availableLanguageKeys;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#useLoaderCache
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1310,7 +1310,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#directivePriority
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1332,7 +1332,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     }
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#statefulFilter
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1357,7 +1357,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     }
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#postProcess
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1376,7 +1376,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateProvider#keepContent
    * @methodOf pascalprecht.translate.$translateProvider
@@ -1399,7 +1399,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     return this;
   };
 
-  /**
+ /*
    * @ngdoc object
    * @name pascalprecht.translate.$translate
    * @requires $interpolate
@@ -1541,7 +1541,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return deferred.promise;
     };
 
-    /**
+   /*
      * @name applyNotFoundIndicators
      * @private
      *
@@ -1565,7 +1565,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return translationId;
     };
 
-    /**
+   /*
      * @name useLanguage
      * @private
      *
@@ -1599,7 +1599,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       $rootScope.$emit('$translateChangeEnd', {language : key});
     };
 
-    /**
+   /*
      * @name loadAsync
      * @private
      *
@@ -1690,7 +1690,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       angular.forEach($interpolatorFactories, eachInterpolationFactory);
     }
 
-    /**
+   /*
      * @name getTranslationTable
      * @private
      *
@@ -1718,7 +1718,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return deferred.promise;
     };
 
-    /**
+   /*
      * @name getFallbackTranslation
      * @private
      *
@@ -1763,7 +1763,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return deferred.promise;
     };
 
-    /**
+   /*
      * @name getFallbackTranslationInstant
      * @private
      *
@@ -1802,7 +1802,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
     };
 
 
-    /**
+   /*
      * @name translateByHandler
      * @private
      *
@@ -1826,7 +1826,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       }
     };
 
-    /**
+   /*
      * @name resolveForFallbackLanguage
      * @private
      *
@@ -1876,7 +1876,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return deferred.promise;
     };
 
-    /**
+   /*
      * @name resolveForFallbackLanguageInstant
      * @private
      *
@@ -1903,7 +1903,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return result;
     };
 
-    /**
+   /*
      * Translates with the usage of the fallback languages.
      *
      * @param translationId
@@ -1918,7 +1918,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return resolveForFallbackLanguage((startFallbackIteration > 0 ? startFallbackIteration : fallbackIndex), translationId, interpolateParams, Interpolator, defaultTranslationText, sanitizeStrategy);
     };
 
-    /**
+   /*
      * Translates with the usage of the fallback languages.
      *
      * @param translationId
@@ -2071,7 +2071,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       }
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#preferredLanguage
      * @methodOf pascalprecht.translate.$translate
@@ -2090,7 +2090,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return $preferredLanguage;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#cloakClassName
      * @methodOf pascalprecht.translate.$translate
@@ -2104,7 +2104,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return $cloakClassName;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#nestedObjectDelimeter
      * @methodOf pascalprecht.translate.$translate
@@ -2118,7 +2118,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return $nestedObjectDelimeter;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#fallbackLanguage
      * @methodOf pascalprecht.translate.$translate
@@ -2155,7 +2155,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
 
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#useFallbackLanguage
      * @methodOf pascalprecht.translate.$translate
@@ -2182,7 +2182,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
 
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#proposedLanguage
      * @methodOf pascalprecht.translate.$translate
@@ -2196,7 +2196,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return $nextLang;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#storage
      * @methodOf pascalprecht.translate.$translate
@@ -2210,7 +2210,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return Storage;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#negotiateLocale
      * @methodOf pascalprecht.translate.$translate
@@ -2226,7 +2226,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
      */
     $translate.negotiateLocale = negotiateLocale;
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#use
      * @methodOf pascalprecht.translate.$translate
@@ -2317,7 +2317,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return deferred.promise;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#resolveClientLocale
      * @methodOf pascalprecht.translate.$translate
@@ -2331,7 +2331,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return getLocale();
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#storageKey
      * @methodOf pascalprecht.translate.$translate
@@ -2345,7 +2345,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return storageKey();
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#isPostCompilingEnabled
      * @methodOf pascalprecht.translate.$translate
@@ -2359,7 +2359,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return $postCompilingEnabled;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#isForceAsyncReloadEnabled
      * @methodOf pascalprecht.translate.$translate
@@ -2373,7 +2373,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return $forceAsyncReloadEnabled;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#isKeepContent
      * @methodOf pascalprecht.translate.$translate
@@ -2387,7 +2387,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return $keepContent;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#refresh
      * @methodOf pascalprecht.translate.$translate
@@ -2486,7 +2486,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return deferred.promise;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#instant
      * @methodOf pascalprecht.translate.$translate
@@ -2590,7 +2590,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return result;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#versionInfo
      * @methodOf pascalprecht.translate.$translate
@@ -2604,7 +2604,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return version;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#loaderCache
      * @methodOf pascalprecht.translate.$translate
@@ -2628,7 +2628,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return statefulFilter;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#isReady
      * @methodOf pascalprecht.translate.$translate
@@ -2649,7 +2649,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       $isReady = true;
     });
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#onReady
      * @methodOf pascalprecht.translate.$translate
@@ -2675,7 +2675,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return deferred.promise;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#getAvailableLanguageKeys
      * @methodOf pascalprecht.translate.$translate
@@ -2694,7 +2694,7 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
       return null;
     };
 
-    /**
+   /*
      * @ngdoc function
      * @name pascalprecht.translate.$translate#getTranslationTable
      * @methodOf pascalprecht.translate.$translate
@@ -2790,7 +2790,7 @@ function $translateDefaultInterpolation ($interpolate, $translateSanitization) {
       $locale,
       $identifier = 'default';
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateDefaultInterpolation#setLocale
    * @methodOf pascalprecht.translate.$translateDefaultInterpolation
@@ -2804,7 +2804,7 @@ function $translateDefaultInterpolation ($interpolate, $translateSanitization) {
     $locale = locale;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateDefaultInterpolation#getInterpolationIdentifier
    * @methodOf pascalprecht.translate.$translateDefaultInterpolation
@@ -2818,7 +2818,7 @@ function $translateDefaultInterpolation ($interpolate, $translateSanitization) {
     return $identifier;
   };
 
-  /**
+ /*
    * @deprecated will be removed in 3.0
    * @see {@link pascalprecht.translate.$translateSanitization}
    */
@@ -2827,7 +2827,7 @@ function $translateDefaultInterpolation ($interpolate, $translateSanitization) {
     return this;
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name pascalprecht.translate.$translateDefaultInterpolation#interpolate
    * @methodOf pascalprecht.translate.$translateDefaultInterpolation
@@ -2973,7 +2973,7 @@ function translateDirective($translate, $interpolate, $compile, $parse, $rootSco
 
   'use strict';
 
-  /**
+ /*
    * @name trim
    * @private
    *

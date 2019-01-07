@@ -67,7 +67,7 @@ public class MsRedisConfig extends CachingConfigurerSupport {
 	}
  
 
-	/**
+	/*
 	 * RedisTemplate配置
 	 */
 	@Bean

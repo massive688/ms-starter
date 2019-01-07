@@ -36,7 +36,7 @@
 if(!ORYX) var ORYX = {};
 
 ORYX.Utils = {
-    /**
+   /*
      * General helper method for parsing a param out of current location url
      * @example
      * // Current url in Browser => "http://oryx.org?param=value"
@@ -6473,7 +6473,7 @@ if (!ORYX.Core.StencilSet) {
  */
 ORYX.Core.StencilSet.Property = Clazz.extend({
 
-    /**
+   /*
      * Constructor
      */
     construct: function(jsonProp, namespace, stencil){
@@ -6638,7 +6638,7 @@ ORYX.Core.StencilSet.Property = Clazz.extend({
 		}
 	},
     
-    /**
+   /*
      * @param {ORYX.Core.StencilSet.Property} property
      * @return {Boolean} True, if property has the same namespace and id.
      */
@@ -6707,7 +6707,7 @@ ORYX.Core.StencilSet.Property = Clazz.extend({
         return ORYX.Core.StencilSet.getTranslation(this._jsonProp, "description");
     },
 	
-    /**
+   /*
      * An optional link to a SVG element so that the property affects the
      * graphical representation of the stencil.
      */
@@ -6715,21 +6715,21 @@ ORYX.Core.StencilSet.Property = Clazz.extend({
         return this._jsonProp.refToView;
     },
     
-    /**
+   /*
      * If type is integer or float, min is the lower bounds of value.
      */
     min: function(){
         return this._jsonProp.min;
     },
     
-    /**
+   /*
      * If type ist integer or float, max is the upper bounds of value.
      */
     max: function(){
         return this._jsonProp.max;
     },
     
-    /**
+   /*
      * If type is float, this method returns if the fill-opacity property should
      *  be set.
      *  @return {Boolean}
@@ -6738,7 +6738,7 @@ ORYX.Core.StencilSet.Property = Clazz.extend({
         return this._jsonProp.fillOpacity;
     },
     
-    /**
+   /*
      * If type is float, this method returns if the stroke-opacity property should
      *  be set.
      *  @return {Boolean}
@@ -6747,7 +6747,7 @@ ORYX.Core.StencilSet.Property = Clazz.extend({
         return this._jsonProp.strokeOpacity;
     },
     
-    /**
+   /*
      * If type is string or richtext, length is the maximum length of the text.
      * TODO how long can a string be.
      */
@@ -6759,7 +6759,7 @@ ORYX.Core.StencilSet.Property = Clazz.extend({
         return this._jsonProp.wrapLines;
     },
     
-    /**
+   /*
      * If type is date, dateFormat specifies the format of the date. The format
      * specification of the ext library is used:
      *
@@ -6800,7 +6800,7 @@ ORYX.Core.StencilSet.Property = Clazz.extend({
         return this._jsonProp.dateFormat;
     },
     
-    /**
+   /*
      * If type is color, this method returns if the fill property should
      *  be set.
      *  @return {Boolean}
@@ -6819,7 +6819,7 @@ ORYX.Core.StencilSet.Property = Clazz.extend({
 		return this._jsonProp.lightness;
 	},
     
-    /**
+   /*
      * If type is color, this method returns if the stroke property should
      *  be set.
      *  @return {Boolean}
@@ -6828,7 +6828,7 @@ ORYX.Core.StencilSet.Property = Clazz.extend({
         return this._jsonProp.stroke;
     },
     
-    /**
+   /*
      * If type is choice, items is a hash map with all alternative values
      * (PropertyItem objects) with id as keys.
      */
@@ -8548,7 +8548,7 @@ if (!ORYX.Core.StencilSet) {
  */
 ORYX.Core.StencilSet.StencilSet = Clazz.extend({
 
-    /**
+   /*
      * Constructor
      * @param source {URL} A reference to the stencil set specification.
      *
@@ -8565,7 +8565,7 @@ ORYX.Core.StencilSet.StencilSet = Clazz.extend({
        	this._init(data);
     },
     
-    /**
+   /*
      * Finds a root stencil in this stencil set. There may be many of these. If
      * there are, the first one found will be used. In Firefox, this is the
      * topmost definition in the stencil set description file.
@@ -8587,7 +8587,7 @@ ORYX.Core.StencilSet.StencilSet = Clazz.extend({
         return rootStencil.id();
     },
     
-    /**
+   /*
      * @param {ORYX.Core.StencilSet.StencilSet} stencilSet
      * @return {Boolean} True, if stencil set has the same namespace.
      */
@@ -8876,7 +8876,7 @@ ORYX.Core.StencilSet.StencilSet = Clazz.extend({
         }
     },
     
-    /**
+   /*
      * This method is called when the HTTP request to get the requested stencil
      * set succeeds. The response is supposed to be a JSON representation
      * according to the stencil set specification.
@@ -10072,7 +10072,7 @@ ORYX.Core.AbstractShape = ORYX.Core.UIObject.extend(
 		return result;
 	},
     
-    /**
+   /*
      * @param {Object} shape
      * @return {boolean} true if any of shape's childs is given shape
      */
@@ -10337,7 +10337,7 @@ ORYX.Core.AbstractShape = ORYX.Core.UIObject.extend(
 	
 	toString: function() { return "ORYX.Core.AbstractShape " + this.id },
     
-    /**
+   /*
      * Converts the shape to a JSON representation.
      * @return {Object} A JSON object with included ORYX.Core.AbstractShape.JSONHelper and getShape() method.
      */
@@ -10422,7 +10422,7 @@ ORYX.Core.AbstractShape = ORYX.Core.UIObject.extend(
  * jQuery.extend(shapeAsJson, ORYX.Core.AbstractShape.JSONHelper);
  */
 ORYX.Core.AbstractShape.JSONHelper = {
-     /**
+    /*
       * Iterates over each child shape.
       * @param {Object} iterator Iterator function getting a child shape and his parent as arguments.
       * @param {boolean} [deep=false] Iterate recursively (childShapes of childShapes)
@@ -10470,7 +10470,7 @@ ORYX.Core.AbstractShape.JSONHelper = {
          return allShapes;
      },
      
-     /**
+    /*
       * @return {String} Serialized JSON object
       */
      serialize: function(){
@@ -10524,7 +10524,7 @@ if(!ORYX.Core) {ORYX.Core = {};}
  *
  */
 ORYX.Core.Canvas = ORYX.Core.AbstractShape.extend({
-    /** @lends ORYX.Core.Canvas.prototype */
+   /* @lends ORYX.Core.Canvas.prototype */
 
 	/**
 	 * Defines the current zoom level
@@ -10858,7 +10858,7 @@ ORYX.Core.Canvas = ORYX.Core.AbstractShape.extend({
 	    }
 	},
     
-    /**
+   /*
      * Creates shapes out of the given collection of shape objects and adds them to the canvas.
      * @example 
      * canvas.addShapeObjects({
@@ -10916,7 +10916,7 @@ ORYX.Core.Canvas = ORYX.Core.AbstractShape.extend({
             };
         }.bind(this);
         
-        /** Builds up recursively a flatted array of shapes, including a javascript object and json representation
+       /* Builds up recursively a flatted array of shapes, including a javascript object and json representation
          * @param {Object} shape Any object that has Object#childShapes
          */
         var addChildShapesRecursively = function(shape){
@@ -11029,7 +11029,7 @@ ORYX.Core.Canvas = ORYX.Core.AbstractShape.extend({
         return shapes.pluck("object");
     },
     
-    /**
+   /*
      * Updates the size of the canvas, regarding to the containg shapes.
      */
     updateSize: function(){
@@ -11253,7 +11253,7 @@ ORYX.Core.Canvas = ORYX.Core.AbstractShape.extend({
 	
 	toString: function() { return "Canvas " + this.id },
     
-    /**
+   /*
      * Calls {@link ORYX.Core.AbstractShape#toJSON} and adds some stencil set information.
      */
     toJSON: function() {
@@ -11348,7 +11348,7 @@ if(!ORYX) {var ORYX = {};}
  * @param {Object} config.properties Any properties applied to the canvas.
 */
 ORYX.Editor = {
-    /** @lends ORYX.Editor.prototype */
+   /* @lends ORYX.Editor.prototype */
 	// Defines the global dom event listener 
 	DOMEventListeners: new Hash(),
 
@@ -11810,7 +11810,7 @@ ORYX.Editor = {
 
 	},
 	
-    /**
+   /*
      * Returns JSON of underlying canvas (calls ORYX.Canvas#toJSON()).
      * @return {Object} Returns JSON representation as JSON object.
      */
@@ -11820,7 +11820,7 @@ ORYX.Editor = {
         return canvasJSON;
     },
     
-    /**
+   /*
      * Serializes a call to toJSON().
      * @return {String} Returns JSON representation as string.
      */
@@ -11937,7 +11937,7 @@ ORYX.Editor = {
 		}
 	},
     
-    /**
+   /*
      * This method renew all resource Ids and according references.
      * Warning: The implementation performs a substitution on the serialized object for
      * easier implementation. This results in a low performance which is acceptable if this
@@ -11979,7 +11979,7 @@ ORYX.Editor = {
         return JSON.parse(serJsonObject);
     },
 
-    /**
+   /*
      * Loads serialized model to the oryx.
      * @example
      * editor.loadSerialized({
@@ -12073,7 +12073,7 @@ ORYX.Editor = {
 		return extension ? extension.namespace || null : null;		
 	},
     
-    /**
+   /*
      * Calls ORYX.Editor.prototype.ss_extension_namespace for each element
      * @param {Array} ss_extension_namespaces An array of stencil set extension namespaces.
      */
@@ -14017,7 +14017,7 @@ ORYX.Core.Shape = {
 
    
     
-    /**
+   /*
      * Calculate if the point is inside the Shape
      * @param {PointX}
      * @param {PointY} 
@@ -14044,7 +14044,7 @@ ORYX.Core.Shape = {
 		return false
 	},
     
-    /**
+   /*
      * Calculate if the point is over an special offset area
      * @param {Point}
      */
@@ -14782,7 +14782,7 @@ if (!ORYX.Core) {
  */
 ORYX.Core.Node = {
 
-    /**
+   /*
      * Constructor
      * @param options {Object} A container for arguments.
      * @param stencil {Stencil}
@@ -14814,7 +14814,7 @@ ORYX.Core.Node = {
         this.forcedHeight = -1;
     },
         
-    /**
+   /*
      * This method checks whether the shape is resized correctly and calls the
      * super class update method.
      */
@@ -15062,14 +15062,14 @@ ORYX.Core.Node = {
 		}).bind(this)); */
     },
     
-    /**
+   /*
      * This method repositions and resizes the SVG representation
      * of the shape.
      */
     refresh: function(){
         arguments.callee.$.refresh.apply(this, arguments);
         
-        /** Movement */
+       /* Movement */
         var x = this.bounds.upperLeft().x;
         var y = this.bounds.upperLeft().y;
         
@@ -15078,7 +15078,7 @@ ORYX.Core.Node = {
 		// Move magnets
 		this.node.childNodes[1].childNodes[1].setAttributeNS(null, "transform", "translate(" + x + ", " + y + ")");
         
-        /** Resize */
+       /* Resize */
         
         //iterate over all relevant svg elements and update them
         this._svgShapes.each(function(svgShape){
@@ -15096,7 +15096,7 @@ ORYX.Core.Node = {
         //this._update(true);
     },
     
-    /**
+   /*
      * This method traverses a tree of SVGElements and returns
      * all SVGShape objects. For each basic shape or path element
      * a SVGShape object is initialized.
@@ -15123,7 +15123,7 @@ ORYX.Core.Node = {
         return svgShapes;
     },
     
-    /**
+   /*
      * Calculate if the point is inside the Shape
      * @param {PointX}
      * @param {PointY} 
@@ -15158,7 +15158,7 @@ ORYX.Core.Node = {
     },
  
     
-    /**
+   /*
      * Calculate if the point is over an special offset area
      * @param {Point}
      */
@@ -15296,7 +15296,7 @@ ORYX.Core.Node = {
         }
     },
     
-    /**
+   /*
      * This method excepts the SVGDoucment that is the SVG representation
      * of this shape.
      * The bounds of the shape are calculated, the SVG representation's upper left point
@@ -15324,7 +15324,7 @@ ORYX.Core.Node = {
         // Add to the EventHandler
         this.addEventHandlers(svgNode.parentNode);
         
-        /**set minimum and maximum size*/
+       /*set minimum and maximum size*/
         var minSizeAttr = svgNode.getAttributeNS(ORYX.CONFIG.NAMESPACE_ORYX, "minimumSize");
         if (minSizeAttr) {
             minSizeAttr = minSizeAttr.replace("/,/g", " ");
@@ -15368,7 +15368,7 @@ ORYX.Core.Node = {
             throw this + ": Minimum Size must be greater than maxiumSize.";
         }
         
-        /**get current bounds and adjust it to upperLeft == (0,0)*/
+       /*get current bounds and adjust it to upperLeft == (0,0)*/
         //initialize all SVGShape objects
         this._svgShapes = this._initSVGShapes(svgNode);
         
@@ -15388,7 +15388,7 @@ ORYX.Core.Node = {
             lowerRight.x = (lowerRight.x !== undefined) ? Math.max(lowerRight.x, svgShape.x + svgShape.width) : svgShape.x + svgShape.width;
             lowerRight.y = (lowerRight.y !== undefined) ? Math.max(lowerRight.y, svgShape.y + svgShape.height) : svgShape.y + svgShape.height;
             
-            /** set if resizing is enabled */
+           /* set if resizing is enabled */
             //TODO isResizable durch die beiden anderen booleans ersetzen?
             if (svgShape.isHorizontallyResizable) {
                 me.isHorizontallyResizable = true;
@@ -15436,7 +15436,7 @@ ORYX.Core.Node = {
         this._oldBounds.set(upperLeft, lowerRight);
         this.bounds.set(upperLeft, lowerRight);
         
-        /**initialize magnets */
+       /*initialize magnets */
         
         var magnets = svgDocument.getElementsByTagNameNS(ORYX.CONFIG.NAMESPACE_ORYX, "magnets");
         
@@ -15497,7 +15497,7 @@ ORYX.Core.Node = {
             this.add(magnet);
         }
         
-        /**initialize docker */
+       /*initialize docker */
         var dockerElem = svgDocument.getElementsByTagNameNS(ORYX.CONFIG.NAMESPACE_ORYX, "docker");
         
         if (dockerElem && dockerElem.length > 0) {
@@ -15535,7 +15535,7 @@ ORYX.Core.Node = {
             }
         }
         
-        /**initialize labels*/
+       /*initialize labels*/
         var textElems = svgNode.getElementsByTagNameNS(ORYX.CONFIG.NAMESPACE_SVG, 'text');
         $A(textElems).each((function(textElem){
             var label = new ORYX.Core.SVG.Label({
@@ -15676,7 +15676,7 @@ if (!ORYX.Core) {
  *
  */
 ORYX.Core.Edge = {
-    /**
+   /*
      * Constructor
      * @param {Object} options
      * @param {Stencil} stencil
@@ -16340,7 +16340,7 @@ ORYX.Core.Edge = {
 		
     },
     
-    /**
+   /*
      * Calculate the Border Intersection Point between two points
      * @param {PointA}
      * @param {PointB}
@@ -16368,7 +16368,7 @@ ORYX.Core.Edge = {
 		});
 	},
     
-    /**
+   /*
      * Calculate if the point is inside the Shape
      * @param {PointX}
      * @param {PointY} 
@@ -16405,7 +16405,7 @@ ORYX.Core.Edge = {
     },
   
     
-    /**
+   /*
      * Calculate if the point is over an special offset area
      * @param {Point}
      */
@@ -16874,7 +16874,7 @@ ORYX.Core.Edge = {
 		return marked;
 	},
     
-    /**
+   /*
      * Initializes the Edge after loading the SVG representation of the edge.
      * @param {SVGDocument} svgDocument
      */
@@ -17103,7 +17103,7 @@ ORYX.Core.Edge = {
           }
     },
     
-    /**
+   /*
      * Adds all necessary markers of this Edge to the SVG document.
      * Has to be called, while this.node is part of DOM.
      */
@@ -17115,7 +17115,7 @@ ORYX.Core.Edge = {
         });
     },
     
-    /**
+   /*
      * Removes all necessary markers of this Edge from the SVG document.
      * Has to be called, while this.node is part of DOM.
      */
@@ -17135,7 +17135,7 @@ ORYX.Core.Edge = {
         }
     },
     
-    /**
+   /*
      * Calls when a docker has changed
      */
     _dockerChanged: function(){
@@ -17400,7 +17400,7 @@ ORYX.Core.Edge = {
         return this.getStencil().title() + " " + this.id;
     },
     
-    /**
+   /*
      * @return {ORYX.Core.Shape} Returns last docked shape or null.
      */
     getTarget: function(){
@@ -17430,7 +17430,7 @@ ORYX.Core.Edge = {
 		return isDocked;
 	},
     
-    /**
+   /*
      * Calls {@link ORYX.Core.AbstractShape#toJSON} and add a some stencil set information.
      */
     toJSON: function() {
@@ -17498,7 +17498,7 @@ if(!ORYX.Plugins){ ORYX.Plugins = {} }
    @author Willi Tscheschner
 */
 ORYX.Plugins.AbstractPlugin = Clazz.extend({
-    /** 
+   /* 
      * The facade which offer editor-specific functionality
      * @type Facade
      * @memberOf ORYX.Plugins.AbstractPlugin.prototype
@@ -17511,19 +17511,19 @@ ORYX.Plugins.AbstractPlugin = Clazz.extend({
 		this.facade.registerOnEvent(ORYX.CONFIG.EVENT_LOADED, this.onLoaded.bind(this));
 	},
         
-    /**
+   /*
        Overwrite to handle load event. TODO: Document params!!!
        @methodOf ORYX.Plugins.AbstractPlugin.prototype
     */
 	onLoaded: function(){},
 	
-    /**
+   /*
        Overwrite to handle selection changed event. TODO: Document params!!!
        @methodOf ORYX.Plugins.AbstractPlugin.prototype
     */
 	onSelectionChanged: function(){},
 	
-    /**
+   /*
        Show overlay on given shape.
        @methodOf ORYX.Plugins.AbstractPlugin.prototype
        @example
@@ -17575,7 +17575,7 @@ ORYX.Plugins.AbstractPlugin = Clazz.extend({
 		
 	},
 	
-    /**
+   /*
        Hide current overlay.
        @methodOf ORYX.Plugins.AbstractPlugin.prototype
     */
@@ -17586,7 +17586,7 @@ ORYX.Plugins.AbstractPlugin = Clazz.extend({
 		});		
 	},
 	
-    /**
+   /*
        Does a transformation with the given xslt stylesheet.
        @methodOf ORYX.Plugins.AbstractPlugin.prototype
        @param {String} data The data (e.g. eRDF) which should be transformed
@@ -17648,7 +17648,7 @@ ORYX.Plugins.AbstractPlugin = Clazz.extend({
 		);
 	},
 	
-    /**
+   /*
      * Opens a download window for downloading the given content.
      * @methodOf ORYX.Plugins.AbstractPlugin.prototype
      * @param {String} filename The content's file name
@@ -17682,7 +17682,7 @@ ORYX.Plugins.AbstractPlugin = Clazz.extend({
 		}		
 	},
     
-    /**
+   /*
      * Serializes DOM.
      * @methodOf ORYX.Plugins.AbstractPlugin.prototype
      * @type {String} Serialized DOM
@@ -17714,7 +17714,7 @@ ORYX.Plugins.AbstractPlugin = Clazz.extend({
         return serializedDOM;
     },
     
-    /**
+   /*
      * Sets the editor in read only mode: Edges/ dockers cannot be moved anymore,
      * shapes cannot be selected anymore.
      * @methodOf ORYX.Plugins.AbstractPlugin.prototype
@@ -17731,7 +17731,7 @@ ORYX.Plugins.AbstractPlugin = Clazz.extend({
         };
         this.facade.registerOnEvent(ORYX.CONFIG.EVENT_SELECTION_CHANGED, this._stopSelectionChange.bind(this));
     },
-    /**
+   /*
      * Disables read only mode, see @see
      * @methodOf ORYX.Plugins.AbstractPlugin.prototype
      * @see ORYX.Plugins.AbstractPlugin.prototype.enableReadOnlyMode
@@ -17746,7 +17746,7 @@ ORYX.Plugins.AbstractPlugin = Clazz.extend({
         }
     },
     
-    /**
+   /*
      * Extracts RDF from DOM.
      * @methodOf ORYX.Plugins.AbstractPlugin.prototype
      * @type {String} Extracted RFD. Null if there are transformation errors.
@@ -17785,7 +17785,7 @@ ORYX.Plugins.AbstractPlugin = Clazz.extend({
 		
     },
     
-    /**
+   /*
 	 * Checks if a certain stencil set is loaded right now.
 	 * 
 	 */
@@ -18267,7 +18267,7 @@ ORYX.Plugins.Edit = Clazz.extend({
 		}
 	},
     
-    /**
+   /*
      * The key handler for this plugin. Every action from the set of cut, copy,
      * paste and delete should be accessible trough simple keyboard shortcuts.
      * This method checks whether any event triggers one of those actions.
@@ -18323,7 +18323,7 @@ ORYX.Plugins.Edit = Clazz.extend({
 //         }
 //    },
 	
-    /**
+   /*
      * Returns a list of shapes which should be considered while copying.
      * Besides the shapes of given ones, edges and attached nodes are added to the result set.
      * If one of the given shape is a child of another given shape, it is not put into the result. 
@@ -18369,7 +18369,7 @@ ORYX.Plugins.Edit = Clazz.extend({
         return shapesToConsider;
     },
     
-    /**
+   /*
      * Performs the cut operation by first copy-ing and then deleting the
      * current selection.
      */
@@ -18382,7 +18382,7 @@ ORYX.Plugins.Edit = Clazz.extend({
         return false;
     },
     
-    /**
+   /*
      * Performs the copy operation.
      * @param {Object} will_not_update ??
      */
@@ -18397,7 +18397,7 @@ ORYX.Plugins.Edit = Clazz.extend({
         if( will_update ) this.facade.updateSelection();
     },
     
-    /**
+   /*
      * Performs the paste operation.
      */
     editPaste: function(){
@@ -18538,7 +18538,7 @@ ORYX.Plugins.Edit = Clazz.extend({
         this.facade.importJSON(canvas);
     },
     
-    /**
+   /*
      * Performs the delete operation. No more asking.
      */
     editDelete: function(){
@@ -23767,7 +23767,7 @@ ORYX.Plugins.KeysMove = ORYX.Plugins.AbstractPlugin.extend({
 		return command;
 	},
 	
-//    /**
+//   /*
 //     * The key handler for this plugin. Every action from the set of cut, copy,
 //     * paste and delete should be accessible trough simple keyboard shortcuts.
 //     * This method checks whether any event triggers one of those actions.
@@ -24180,7 +24180,7 @@ new function(){
                 }.bind(this))
         },
        
-        /**
+       /*
          * If a pool is selected and contains no lane,
          * a lane is created automagically
          */
@@ -24609,7 +24609,7 @@ new function(){
                         pool.update();
                 }
                
-                /**
+               /*
                  * Set width/height depending on the pool
                  */
                 else if (pool == currentShape) {
@@ -24632,7 +24632,7 @@ new function(){
                         width = this.adjustWidth(lanes, pool.bounds.width());          
                 }
                
-                /**‚
+               /*‚
                  * Set width/height depending on containing lanes
                  */            
                 else {
@@ -24757,7 +24757,7 @@ new function(){
                 return childLanes.length > 1 || childLanes.any(function(lane){ return this.shouldScale(lane) }.bind(this))
         },
        
-        /**
+       /*
          * Lookup if some bounds has changed
          * @param {Object} lanes
          * @param {Object} changes
@@ -25176,7 +25176,7 @@ new function(){
                 return this.currentPool && this.hashedBounds[this.currentPool.id][shape.id] ? this.hashedBounds[this.currentPool.id][shape.id] : shape.absoluteBounds();
         },
        
-        /**
+       /*
          * Returns a set on all child lanes for the given Shape. If recursive is TRUE, also indirect children will be returned (default is FALSE)
          * The set is sorted with first child the lowest y-coordinate and the last one the highest.
          * @param {ORYX.Core.Shape} shape

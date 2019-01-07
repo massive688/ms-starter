@@ -48,17 +48,17 @@ import tp.ms.common.data.source.session.MsDynamicRoutingDataSource;
 public class MsDynamicSessionSourceRegister implements ImportBeanDefinitionRegistrar, EnvironmentAware {
 
 
-    /**
+   /*
      * 配置上下文（也可以理解为配置文件的获取工具）
      */
     private Environment evn;
 
-    /**
+   /*
      * 别名
      */
     private final static ConfigurationPropertyNameAliases aliases = new ConfigurationPropertyNameAliases();
 
-    /**
+   /*
      * 由于部分数据源配置不同，所以在此处添加别名，避免切换数据源出现某些参数无法注入的情况
      */
     static {
@@ -66,16 +66,16 @@ public class MsDynamicSessionSourceRegister implements ImportBeanDefinitionRegis
         aliases.addAliases("username", new String[]{"user"});
     }
 
-    /**
+   /*
      * 存储我们注册的SqlSessionFactory
      */
     private Map<String, SqlSessionFactory> customSqlSessionFactorys = new HashMap<String, SqlSessionFactory>();
-    /**
+   /*
      * 存储我们注册的数据源
      */
     private Map<String, DataSource> dataSources = new HashMap<String, DataSource>();
 
-    /**
+   /*
      * 参数绑定工具 springboot2.0新推出
      */
     private Binder binder;
@@ -84,11 +84,11 @@ public class MsDynamicSessionSourceRegister implements ImportBeanDefinitionRegis
 
 	private AtomikosDataSourceBean defaultDataSource;
 	
-    /**
+   /*
      * ImportBeanDefinitionRegistrar接口的实现方法，通过该方法可以按照自己的方式注册bean
      *
-     * @param annotationMetadata
-     * @param beanDefinitionRegistry
+     * @param annotationMetadata 实现继承的参数
+     * @param beanDefinitionRegistry bean工厂注册类
      */
     @Override
     public void registerBeanDefinitions(AnnotationMetadata annotationMetadata,
@@ -228,7 +228,7 @@ public class MsDynamicSessionSourceRegister implements ImportBeanDefinitionRegis
     		druidXA.setValidationQuery("SELECT 1");
     		dataSource = druidXA;
     	}
-		/**
+		/*
 		 * 设置分布式-- 主数据源
 		 * 
 		 */
@@ -300,10 +300,10 @@ public class MsDynamicSessionSourceRegister implements ImportBeanDefinitionRegis
 		return p;
 	}
 
-    /**
+   /*
      * EnvironmentAware接口的实现方法，通过aware的方式注入，此处是environment对象
      *
-     * @param environment
+     * @param environment 全局spring运行时对象
      */
     @Override
     public void setEnvironment(Environment environment) {

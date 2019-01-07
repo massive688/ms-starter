@@ -31,7 +31,7 @@ public class CustomFilterSecurityMetadataSource implements FilterInvocationSecur
         return FilterInvocation.class.isAssignableFrom(aClass);
     }
 
-    /**
+   /*
      * 获取当前路径所需要的角色
      * @param url 当前路径
      * @return 所需角色集合
@@ -43,7 +43,7 @@ public class CustomFilterSecurityMetadataSource implements FilterInvocationSecur
 //                .collect(Collectors.toList());
     }
 
-    /**
+   /*
      * 判断当前请求是否在允许请求的范围内
      * @param fi 当前请求
      * @return 是否在范围中
@@ -54,14 +54,14 @@ public class CustomFilterSecurityMetadataSource implements FilterInvocationSecur
                 .toArray().length > 0;
     }
 
-    /**
+   /*
      * @return 定义允许请求的列表
      */
     private List<String> allowedRequest(){
         return Arrays.asList("/login","/css/**","/fonts/**","/js/**","/scss/**","/img/**");
     }
 
-    /**
+   /*
      * @return 默认拒绝访问配置
      */
     private List<ConfigAttribute> deniedRequest(){

@@ -66,9 +66,10 @@ public class MsRedisConfig extends CachingConfigurerSupport {
 		return builder.build();
 	}
  
-
 	/**
-	 * RedisTemplate配置
+	 * 
+	 * @param lettuceConnectionFactory RedisTemplate配置
+	 * @return RedisTemplate模板bean对象实例
 	 */
 	@Bean
 	public RedisTemplate<String, Object> redisTemplate(LettuceConnectionFactory lettuceConnectionFactory) {

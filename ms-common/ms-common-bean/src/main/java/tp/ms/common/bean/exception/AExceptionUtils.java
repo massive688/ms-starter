@@ -14,7 +14,7 @@ public class AExceptionUtils {
 	}
 
 
-	  /**
+	 /*
 	   * 在EJB边界对所有的异常进行ADBusinessException包装
 	   * 
 	   * @param ex 要处理的异常
@@ -34,7 +34,7 @@ public class AExceptionUtils {
 	  }
 
 
-	  /**
+	 /*
 	   * 将最底层的异常解析出来
 	   * 
 	   * @param ex 要处理的异养
@@ -52,7 +52,7 @@ public class AExceptionUtils {
 	  }
 
 
-	  /**
+	 /*
 	   * 抛出业务异常
 	   * 
 	   * @param message 异常信息
@@ -65,7 +65,7 @@ public class AExceptionUtils {
 
 
 
-	  /**
+	 /*
 	   * 将异常装载到快速异常通道中向上传递
 	   * 
 	   * @param ex 要装载的异常

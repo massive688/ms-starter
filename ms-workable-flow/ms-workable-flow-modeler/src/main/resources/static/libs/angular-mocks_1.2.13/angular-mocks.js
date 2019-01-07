@@ -76,7 +76,7 @@ angular.mock.$Browser = function() {
   };
 
 
-  /**
+ /*
    * @name ngMock.$browser#defer.now
    * @propertyOf ngMock.$browser
    *
@@ -102,7 +102,7 @@ angular.mock.$Browser = function() {
   };
 
 
-  /**
+ /*
    * @name ngMock.$browser#defer.flush
    * @methodOf ngMock.$browser
    *
@@ -232,7 +232,7 @@ angular.mock.$Browser.prototype = {
 angular.mock.$ExceptionHandlerProvider = function() {
   var handler;
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$exceptionHandlerProvider#mode
    * @methodOf ngMock.$exceptionHandlerProvider
@@ -322,7 +322,7 @@ angular.mock.$LogProvider = function() {
       }
     };
 
-    /**
+   /*
      * @ngdoc method
      * @name ngMock.$log#reset
      * @methodOf ngMock.$log
@@ -331,7 +331,7 @@ angular.mock.$LogProvider = function() {
      * Reset all of the logging arrays to empty.
      */
     $log.reset = function () {
-      /**
+     /*
        * @ngdoc property
        * @name ngMock.$log#log.logs
        * @propertyOf ngMock.$log
@@ -346,7 +346,7 @@ angular.mock.$LogProvider = function() {
        * </pre>
        */
       $log.log.logs = [];
-      /**
+     /*
        * @ngdoc property
        * @name ngMock.$log#info.logs
        * @propertyOf ngMock.$log
@@ -361,7 +361,7 @@ angular.mock.$LogProvider = function() {
        * </pre>
        */
       $log.info.logs = [];
-      /**
+     /*
        * @ngdoc property
        * @name ngMock.$log#warn.logs
        * @propertyOf ngMock.$log
@@ -376,7 +376,7 @@ angular.mock.$LogProvider = function() {
        * </pre>
        */
       $log.warn.logs = [];
-      /**
+     /*
        * @ngdoc property
        * @name ngMock.$log#error.logs
        * @propertyOf ngMock.$log
@@ -391,7 +391,7 @@ angular.mock.$LogProvider = function() {
        * </pre>
        */
       $log.error.logs = [];
-        /**
+       /*
        * @ngdoc property
        * @name ngMock.$log#debug.logs
        * @propertyOf ngMock.$log
@@ -408,7 +408,7 @@ angular.mock.$LogProvider = function() {
       $log.debug.logs = [];
     };
 
-    /**
+   /*
      * @ngdoc method
      * @name ngMock.$log#assertEmpty
      * @methodOf ngMock.$log
@@ -527,7 +527,7 @@ angular.mock.$IntervalProvider = function() {
       return false;
     };
 
-    /**
+   /*
      * @ngdoc method
      * @name ngMock.$interval#flush
      * @methodOf ngMock.$interval
@@ -1179,7 +1179,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
                   (expectation ? 'Expected ' + expectation : 'No more request expected'));
   }
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#when
    * @methodOf ngMock.$httpBackend
@@ -1219,7 +1219,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
     return chain;
   };
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#whenGET
    * @methodOf ngMock.$httpBackend
@@ -1232,7 +1232,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
    * request is handled.
    */
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#whenHEAD
    * @methodOf ngMock.$httpBackend
@@ -1245,7 +1245,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
    * request is handled.
    */
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#whenDELETE
    * @methodOf ngMock.$httpBackend
@@ -1258,7 +1258,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
    * request is handled.
    */
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#whenPOST
    * @methodOf ngMock.$httpBackend
@@ -1273,7 +1273,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
    * request is handled.
    */
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#whenPUT
    * @methodOf ngMock.$httpBackend
@@ -1288,7 +1288,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
    * request is handled.
    */
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#whenJSONP
    * @methodOf ngMock.$httpBackend
@@ -1302,7 +1302,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
   createShortMethods('when');
 
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#expect
    * @methodOf ngMock.$httpBackend
@@ -1336,7 +1336,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#expectGET
    * @methodOf ngMock.$httpBackend
@@ -1349,7 +1349,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
    * request is handled. See #expect for more info.
    */
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#expectHEAD
    * @methodOf ngMock.$httpBackend
@@ -1362,7 +1362,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
    *   request is handled.
    */
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#expectDELETE
    * @methodOf ngMock.$httpBackend
@@ -1375,7 +1375,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
    *   request is handled.
    */
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#expectPOST
    * @methodOf ngMock.$httpBackend
@@ -1391,7 +1391,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
    *   request is handled.
    */
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#expectPUT
    * @methodOf ngMock.$httpBackend
@@ -1407,7 +1407,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
    *   request is handled.
    */
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#expectPATCH
    * @methodOf ngMock.$httpBackend
@@ -1423,7 +1423,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
    *   request is handled.
    */
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#expectJSONP
    * @methodOf ngMock.$httpBackend
@@ -1437,7 +1437,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
   createShortMethods('expect');
 
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#flush
    * @methodOf ngMock.$httpBackend
@@ -1466,7 +1466,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#verifyNoOutstandingExpectation
    * @methodOf ngMock.$httpBackend
@@ -1489,7 +1489,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#verifyNoOutstandingRequest
    * @methodOf ngMock.$httpBackend
@@ -1510,7 +1510,7 @@ function createHttpBackendMock($rootScope, $delegate, $browser) {
   };
 
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$httpBackend#resetExpectations
    * @methodOf ngMock.$httpBackend
@@ -1646,7 +1646,7 @@ function MockXhr() {
 
 angular.mock.$TimeoutDecorator = function($delegate, $browser) {
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$timeout#flush
    * @methodOf ngMock.$timeout
@@ -1660,7 +1660,7 @@ angular.mock.$TimeoutDecorator = function($delegate, $browser) {
     $browser.defer.flush(delay);
   };
 
-  /**
+ /*
    * @ngdoc method
    * @name ngMock.$timeout#verifyNoPendingTasks
    * @methodOf ngMock.$timeout
@@ -1960,7 +1960,7 @@ if(window.jasmine || window.mocha) {
     angular.callbacks.counter = 0;
   });
 
-  /**
+ /*
    * @ngdoc function
    * @name angular.mock.module
    * @description
@@ -2002,7 +2002,7 @@ if(window.jasmine || window.mocha) {
     }
   };
 
-  /**
+ /*
    * @ngdoc function
    * @name angular.mock.inject
    * @description

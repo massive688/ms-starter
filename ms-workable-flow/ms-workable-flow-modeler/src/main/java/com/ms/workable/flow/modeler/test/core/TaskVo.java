@@ -4,9 +4,6 @@ import java.util.Date;
 
 /**
  * 任务列表vo
- *
- * @author fengshuonan
- * @date 2017-12-04 23:18
  */
 public class TaskVo {
 

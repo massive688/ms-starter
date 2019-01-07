@@ -11,10 +11,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-/**
+/*
  * 字符串工具类
- * 
- * @author xiaoleilu
  *
  */
 public class StrKit {
@@ -38,7 +36,7 @@ public class StrKit {
 	public static final String EMPTY_JSON = "{}";
 
 
-	/**
+	/*
 	 * 首字母变小写
 	 */
 	public static String firstCharToLowerCase(String str) {
@@ -51,7 +49,7 @@ public class StrKit {
 		return str;
 	}
 	
-	/**
+	/*
 	 * 首字母变大写
 	 */
 	public static String firstCharToUpperCase(String str) {
@@ -65,7 +63,7 @@ public class StrKit {
 	}
 
 	// ------------------------------------------------------------------------ Blank
-	/**
+	/*
 	 * 字符串是否为空白 空白的定义如下： <br>
 	 * 1、为null <br>
 	 * 2、为不可见字符（如空格）<br>
@@ -88,7 +86,7 @@ public class StrKit {
 		return true;
 	}
 
-	/**
+	/*
 	 * 字符串是否为非空白 空白的定义如下： <br>
 	 * 1、不为null <br>
 	 * 2、不为不可见字符（如空格）<br>
@@ -101,7 +99,7 @@ public class StrKit {
 		return false == isBlank(str);
 	}
 
-	/**
+	/*
 	 * 是否包含空字符串
 	 * 
 	 * @param strs 字符串列表
@@ -119,7 +117,7 @@ public class StrKit {
 		return false;
 	}
 
-	/**
+	/*
 	 * 给定所有字符串是否为空白
 	 * 
 	 * @param strs 字符串
@@ -138,7 +136,7 @@ public class StrKit {
 	}
 
 	// ------------------------------------------------------------------------ Empty
-	/**
+	/*
 	 * 字符串是否为空，空的定义如下 1、为null <br>
 	 * 2、为""<br>
 	 * 
@@ -149,7 +147,7 @@ public class StrKit {
 		return str == null || str.length() == 0;
 	}
 
-	/**
+	/*
 	 * 字符串是否为非空白 空白的定义如下： <br>
 	 * 1、不为null <br>
 	 * 2、不为""<br>
@@ -161,7 +159,7 @@ public class StrKit {
 		return false == isEmpty(str);
 	}
 
-	/**
+	/*
 	 * 当给定字符串为null时，转换为Empty
 	 * 
 	 * @param str 被转换的字符串
@@ -171,7 +169,7 @@ public class StrKit {
 		return nullToDefault(str, EMPTY);
 	}
 
-	/**
+	/*
 	 * 如果字符串是<code>null</code>，则返回指定默认字符串，否则返回字符串本身。
 	 * 
 	 * <pre>
@@ -190,7 +188,7 @@ public class StrKit {
 		return (str == null) ? defaultStr : str;
 	}
 
-	/**
+	/*
 	 * 当给定字符串为空字符串时，转换为<code>null</code>
 	 * 
 	 * @param str 被转换的字符串
@@ -200,7 +198,7 @@ public class StrKit {
 		return isEmpty(str) ? null : str;
 	}
 
-	/**
+	/*
 	 * 是否包含空字符串
 	 * 
 	 * @param strs 字符串列表
@@ -219,7 +217,7 @@ public class StrKit {
 		return false;
 	}
 
-	/**
+	/*
 	 * 是否全部为空字符串
 	 * 
 	 * @param strs 字符串列表
@@ -239,7 +237,7 @@ public class StrKit {
 	}
 
 	// ------------------------------------------------------------------------ Trim
-	/**
+	/*
 	 * 除去字符串头尾部的空白，如果字符串是<code>null</code>，依然返回<code>null</code>。
 	 * 
 	 * <p>
@@ -263,7 +261,7 @@ public class StrKit {
 		return (null == str) ? null : trim(str, 0);
 	}
 
-	/**
+	/*
 	 * 给定字符串数组全部做去首尾空格
 	 * 
 	 * @param strs 字符串数组
@@ -281,7 +279,7 @@ public class StrKit {
 		}
 	}
 
-	/**
+	/*
 	 * 除去字符串头部的空白，如果字符串是<code>null</code>，则返回<code>null</code>。
 	 * 
 	 * <p>
@@ -306,7 +304,7 @@ public class StrKit {
 		return trim(str, -1);
 	}
 
-	/**
+	/*
 	 * 除去字符串尾部的空白，如果字符串是<code>null</code>，则返回<code>null</code>。
 	 * 
 	 * <p>
@@ -331,7 +329,7 @@ public class StrKit {
 		return trim(str, 1);
 	}
 
-	/**
+	/*
 	 * 除去字符串头尾部的空白符，如果字符串是<code>null</code>，依然返回<code>null</code>。
 	 * 
 	 * @param str 要处理的字符串
@@ -369,7 +367,7 @@ public class StrKit {
 		return str;
 	}
 	
-	/**
+	/*
 	 * 是否以指定字符串开头
 	 * @param str 被监测字符串
 	 * @param prefix 开头字符串
@@ -384,7 +382,7 @@ public class StrKit {
 		}
 	}
 	
-	/**
+	/*
 	 * 是否以指定字符串结尾
 	 * @param str 被监测字符串
 	 * @param suffix 结尾字符串
@@ -399,7 +397,7 @@ public class StrKit {
 		}
 	}
 	
-	/**
+	/*
 	 * 是否包含特定字符，忽略大小写，如果给定两个参数都为<code>null</code>，返回true
 	 * @param str 被检测字符串
 	 * @param testStr 被测试是否包含的字符串
@@ -413,7 +411,7 @@ public class StrKit {
 		return str.toLowerCase().contains(testStr.toLowerCase());
 	}
 
-	/**
+	/*
 	 * 获得set或get方法对应的标准属性名<br/>
 	 * 例如：setName 返回 name
 	 * 
@@ -427,7 +425,7 @@ public class StrKit {
 		return null;
 	}
 
-	/**
+	/*
 	 * 生成set方法名<br/>
 	 * 例如：name 返回 setName
 	 * 
@@ -438,7 +436,7 @@ public class StrKit {
 		return upperFirstAndAddPre(fieldName, "set");
 	}
 
-	/**
+	/*
 	 * 生成get方法名
 	 * 
 	 * @param fieldName 属性名
@@ -448,7 +446,7 @@ public class StrKit {
 		return upperFirstAndAddPre(fieldName, "get");
 	}
 
-	/**
+	/*
 	 * 去掉首部指定长度的字符串并将剩余字符串首字母小写<br/>
 	 * 例如：str=setName, preLength=3 -> return name
 	 * 
@@ -470,7 +468,7 @@ public class StrKit {
 		return null;
 	}
 
-	/**
+	/*
 	 * 原字符串首字母大写并在其首部添加指定字符串 例如：str=name, preString=get -> return getName
 	 * 
 	 * @param str 被处理的字符串
@@ -484,7 +482,7 @@ public class StrKit {
 		return preString + upperFirst(str);
 	}
 
-	/**
+	/*
 	 * 大写首字母<br>
 	 * 例如：str = name, return Name
 	 * 
@@ -495,7 +493,7 @@ public class StrKit {
 		return Character.toUpperCase(str.charAt(0)) + str.substring(1);
 	}
 
-	/**
+	/*
 	 * 小写首字母<br>
 	 * 例如：str = Name, return name
 	 * 
@@ -509,7 +507,7 @@ public class StrKit {
 		return Character.toLowerCase(str.charAt(0)) + str.substring(1);
 	}
 
-	/**
+	/*
 	 * 去掉指定前缀
 	 * 
 	 * @param str 字符串
@@ -527,7 +525,7 @@ public class StrKit {
 		return str;
 	}
 
-	/**
+	/*
 	 * 忽略大小写去掉指定前缀
 	 * 
 	 * @param str 字符串
@@ -545,7 +543,7 @@ public class StrKit {
 		return str;
 	}
 
-	/**
+	/*
 	 * 去掉指定后缀
 	 * 
 	 * @param str 字符串
@@ -563,7 +561,7 @@ public class StrKit {
 		return str;
 	}
 	
-	/**
+	/*
 	 * 获得字符串对应byte数组
 	 * @param str 字符串
 	 * @param charset 编码，如果为<code>null</code>使用系统默认编码
@@ -576,7 +574,7 @@ public class StrKit {
 		return null == charset ? str.getBytes() : str.getBytes(charset);
 	}
 
-	/**
+	/*
 	 * 忽略大小写去掉指定后缀
 	 * 
 	 * @param str 字符串
@@ -594,7 +592,7 @@ public class StrKit {
 		return str;
 	}
 	
-	/**
+	/*
 	 * 如果给定字符串不是以prefix开头的，在开头补充 prefix
 	 * @param str 字符串
 	 * @param prefix 前缀
@@ -610,7 +608,7 @@ public class StrKit {
 		return str;
 	}
 	
-	/**
+	/*
 	 * 如果给定字符串不是以suffix结尾的，在尾部补充 suffix
 	 * @param str 字符串
 	 * @param suffix 后缀
@@ -626,7 +624,7 @@ public class StrKit {
 		return str;
 	}
 
-	/**
+	/*
 	 * 清理空白字符
 	 * 
 	 * @param str 被清理的字符串
@@ -640,7 +638,7 @@ public class StrKit {
 		return str.replaceAll("\\s*", EMPTY);
 	}
 
-	/**
+	/*
 	 * 切分字符串<br>
 	 * a#b#c -> [a,b,c] <br>
 	 * a##b#c -> [a,"",b,c]
@@ -653,7 +651,7 @@ public class StrKit {
 		return split(str, separator, 0);
 	}
 
-	/**
+	/*
 	 * 切分字符串
 	 * 
 	 * @param str 被切分的字符串
@@ -693,7 +691,7 @@ public class StrKit {
 		return list;
 	}
 
-	/**
+	/*
 	 * 切分字符串<br>
 	 * from jodd
 	 * 
@@ -732,7 +730,7 @@ public class StrKit {
 		return result;
 	}
 
-	/**
+	/*
 	 * 改进JDK subString<br>
 	 * index从0开始计算，最后一个字符为-1<br>
 	 * 如果from和to位置一样，返回 "" <br>
@@ -778,7 +776,7 @@ public class StrKit {
 		return new String(newStrArray);
 	}
 
-	/**
+	/*
 	 * 切割前部分
 	 * 
 	 * @param string 字符串
@@ -789,7 +787,7 @@ public class StrKit {
 		return sub(string, 0, toIndex);
 	}
 
-	/**
+	/*
 	 * 切割后部分
 	 * 
 	 * @param string 字符串
@@ -803,7 +801,7 @@ public class StrKit {
 		return sub(string, fromIndex, string.length());
 	}
 
-	/**
+	/*
 	 * 给定字符串是否被字符包围
 	 * 
 	 * @param str 字符串
@@ -822,7 +820,7 @@ public class StrKit {
 		return str.startsWith(prefix) && str.endsWith(suffix);
 	}
 
-	/**
+	/*
 	 * 给定字符串是否被字符包围
 	 * 
 	 * @param str 字符串
@@ -841,7 +839,7 @@ public class StrKit {
 		return str.charAt(0) == prefix && str.charAt(str.length() - 1) == suffix;
 	}
 
-	/**
+	/*
 	 * 重复某个字符
 	 * 
 	 * @param c 被重复的字符
@@ -856,7 +854,7 @@ public class StrKit {
 		return new String(result);
 	}
 
-	/**
+	/*
 	 * 重复某个字符串
 	 * 
 	 * @param str 被重复的字符
@@ -883,7 +881,7 @@ public class StrKit {
 		return new String(array);
 	}
 
-	/**
+	/*
 	 * 比较两个字符串（大小写敏感）。
 	 * 
 	 * <pre>
@@ -907,7 +905,7 @@ public class StrKit {
 		return str1.equals(str2);
 	}
 
-	/**
+	/*
 	 * 比较两个字符串（大小写不敏感）。
 	 * 
 	 * <pre>
@@ -931,7 +929,7 @@ public class StrKit {
 		return str1.equalsIgnoreCase(str2);
 	}
 
-	/**
+	/*
 	 * 格式化文本, {} 表示占位符<br>
 	 * 例如：format("aaa {} ccc", "bbb")   ---->    aaa bbb ccc
 	 * 
@@ -972,7 +970,7 @@ public class StrKit {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * 格式化文本，使用 {varName} 占位<br>
 	 * map = {a: "aValue", b: "bValue"}
 	 * format("{a} and {b}", map)    ---->    aValue and bValue
@@ -992,7 +990,7 @@ public class StrKit {
 		return template;
 	}
 	
-	/**
+	/*
 	 * 编码字符串
 	 * 
 	 * @param str 字符串
@@ -1003,7 +1001,7 @@ public class StrKit {
 		return bytes(str, isBlank(charset) ? Charset.defaultCharset() : Charset.forName(charset));
 	}
 
-	/**
+	/*
 	 * 编码字符串
 	 * 
 	 * @param str 字符串
@@ -1021,7 +1019,7 @@ public class StrKit {
 		return str.getBytes(charset);
 	}
 	
-	/**
+	/*
 	 * 将byte数组转为字符串
 	 * 
 	 * @param bytes byte数组
@@ -1032,7 +1030,7 @@ public class StrKit {
 		return str(bytes, isBlank(charset) ? Charset.defaultCharset() : Charset.forName(charset));
 	}
 
-	/**
+	/*
 	 * 解码字节码
 	 * 
 	 * @param data 字符串
@@ -1050,7 +1048,7 @@ public class StrKit {
 		return new String(data, charset);
 	}
 	
-	/**
+	/*
 	 * 将编码的byteBuffer数据转换为字符串
 	 * @param data 数据
 	 * @param charset 字符集，如果为空使用当前系统字符集
@@ -1064,7 +1062,7 @@ public class StrKit {
 		return str(data, Charset.forName(charset));
 	}
 	
-	/**
+	/*
 	 * 将编码的byteBuffer数据转换为字符串
 	 * @param data 数据
 	 * @param charset 字符集，如果为空使用当前系统字符集
@@ -1077,7 +1075,7 @@ public class StrKit {
 		return charset.decode(data).toString();
 	}
 	
-	/**
+	/*
 	 * 字符串转换为byteBuffer
 	 * @param str 字符串
 	 * @param charset 编码
@@ -1087,7 +1085,7 @@ public class StrKit {
 		return ByteBuffer.wrap(StrKit.bytes(str, charset));
 	}
 
-	/**
+	/*
 	 * 以 conjunction 为分隔符将多个对象转换为字符串
 	 * 
 	 * @param conjunction 分隔符
@@ -1108,7 +1106,7 @@ public class StrKit {
 		return sb.toString();
 	}
 	
-	/**
+	/*
 	 * 将驼峰式命名的字符串转换为下划线方式。如果转换前的驼峰式命名的字符串为空，则返回空字符串。</br>
 	 * 例如：HelloWorld->hello_world
 	 *
@@ -1143,7 +1141,7 @@ public class StrKit {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * 将下划线方式命名的字符串转换为驼峰式。如果转换前的下划线大写方式命名的字符串为空，则返回空字符串。</br>
 	 * 例如：hello_world->HelloWorld
 	 *
@@ -1176,7 +1174,7 @@ public class StrKit {
 			return name;
 	}
 
-	/**
+	/*
 	 * 包装指定字符串
 	 * 
 	 * @param str 被包装的字符串
@@ -1188,7 +1186,7 @@ public class StrKit {
 		return format("{}{}{}", prefix, str, suffix);
 	}
 
-	/**
+	/*
 	 * 指定字符串是否被包装
 	 * 
 	 * @param str 字符串
@@ -1200,7 +1198,7 @@ public class StrKit {
 		return str.startsWith(prefix) && str.endsWith(suffix);
 	}
 
-	/**
+	/*
 	 * 指定字符串是否被同一字符包装（前后都有这些字符串）
 	 * 
 	 * @param str 字符串
@@ -1211,7 +1209,7 @@ public class StrKit {
 		return isWrap(str, wrapper, wrapper);
 	}
 
-	/**
+	/*
 	 * 指定字符串是否被同一字符包装（前后都有这些字符串）
 	 * 
 	 * @param str 字符串
@@ -1222,7 +1220,7 @@ public class StrKit {
 		return isWrap(str, wrapper, wrapper);
 	}
 
-	/**
+	/*
 	 * 指定字符串是否被包装
 	 * 
 	 * @param str 字符串
@@ -1234,7 +1232,7 @@ public class StrKit {
 		return str.charAt(0) == prefixChar && str.charAt(str.length() - 1) == suffixChar;
 	}
 
-	/**
+	/*
 	 * 补充字符串以满足最小长度 StrUtil.padPre("1", 3, '0');//"001"
 	 * 
 	 * @param str 字符串
@@ -1254,7 +1252,7 @@ public class StrKit {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * 补充字符串以满足最小长度 StrUtil.padEnd("1", 3, '0');//"100"
 	 * 
 	 * @param str 字符串
@@ -1274,7 +1272,7 @@ public class StrKit {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * 创建StringBuilder对象
 	 * 
 	 * @return StringBuilder对象
@@ -1283,7 +1281,7 @@ public class StrKit {
 		return new StringBuilder();
 	}
 
-	/**
+	/*
 	 * 创建StringBuilder对象
 	 * 
 	 * @return StringBuilder对象
@@ -1292,7 +1290,7 @@ public class StrKit {
 		return new StringBuilder(capacity);
 	}
 
-	/**
+	/*
 	 * 创建StringBuilder对象
 	 * 
 	 * @return StringBuilder对象
@@ -1305,7 +1303,7 @@ public class StrKit {
 		return sb;
 	}
 
-	/**
+	/*
 	 * 获得StringReader
 	 * 
 	 * @param str 字符串
@@ -1315,7 +1313,7 @@ public class StrKit {
 		return new StringReader(str);
 	}
 
-	/**
+	/*
 	 * 获得StringWriter
 	 * 
 	 * @return StringWriter
@@ -1324,7 +1322,7 @@ public class StrKit {
 		return new StringWriter();
 	}
 
-		/**
+		/*
 	 * 编码字符串
 	 * 
 	 * @param str 字符串
@@ -1346,7 +1344,7 @@ public class StrKit {
 		}
 	}
 
-	/**
+	/*
 	 * 解码字节码
 	 * 
 	 * @param data 字符串

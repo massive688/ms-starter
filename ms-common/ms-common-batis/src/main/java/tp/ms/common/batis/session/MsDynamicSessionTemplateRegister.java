@@ -38,17 +38,17 @@ import tp.ms.common.batis.properties.MsXAProperties;
 public class MsDynamicSessionTemplateRegister implements ImportBeanDefinitionRegistrar, EnvironmentAware {
 
 
-    /**
+   /*
      * 配置上下文（也可以理解为配置文件的获取工具）
      */
     private Environment evn;
 
-    /**
+   /*
      * 别名
      */
     private final static ConfigurationPropertyNameAliases aliases = new ConfigurationPropertyNameAliases();
 
-    /**
+   /*
      * 由于部分数据源配置不同，所以在此处添加别名，避免切换数据源出现某些参数无法注入的情况
      */
     static {
@@ -56,19 +56,19 @@ public class MsDynamicSessionTemplateRegister implements ImportBeanDefinitionReg
         aliases.addAliases("username", new String[]{"user"});
     }
 
-    /**
+   /*
      * 存储我们注册的数据源
      */
     private Map<String, SqlSessionFactory> customSqlSessionFactorys = new HashMap<String, SqlSessionFactory>();
 
-    /**
+   /*
      * 参数绑定工具 springboot2.0新推出
      */
     private Binder binder;
     
 	String sqlSessionFactoryKey = "Session";
 	
-    /**
+   /*
      * ImportBeanDefinitionRegistrar接口的实现方法，通过该方法可以按照自己的方式注册bean
      *
      * @param annotationMetadata
@@ -221,7 +221,7 @@ public class MsDynamicSessionTemplateRegister implements ImportBeanDefinitionReg
 		return p;
 	}
 
-    /**
+   /*
      * EnvironmentAware接口的实现方法，通过aware的方式注入，此处是environment对象
      *
      * @param environment

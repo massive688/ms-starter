@@ -31,14 +31,6 @@ import com.ms.workable.flow.modeler.test.core.IExpenseService;
 import com.ms.workable.flow.modeler.test.core.ShiroKit;
 import com.ms.workable.flow.modeler.test.core.TaskVo;
 
-/**
- * <p>
- * 报销表 服务实现类
- * </p>
- *
- * @author stylefeng
- * @since 2017-12-04
- */
 @Service
 public class ExpenseServiceImpl implements IExpenseService {
 

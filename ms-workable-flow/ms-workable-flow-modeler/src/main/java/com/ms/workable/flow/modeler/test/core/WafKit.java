@@ -2,15 +2,12 @@ package com.ms.workable.flow.modeler.test.core;
 
 import java.util.regex.Pattern;
 
-/**
+/*
  * Web防火墙工具类
- * <p>
- * @author   hubin
- * @Date	 2014-5-8 	 
  */
 public class WafKit {
 
-	/**
+	/*
 	 * @Description 过滤XSS脚本内容
 	 * @param value
 	 * 				待处理内容
@@ -76,7 +73,7 @@ public class WafKit {
 		return rlt;
 	}
 
-	/**
+	/*
 	 * @Description 过滤SQL注入内容
 	 * @param value
 	 * 				待处理内容
@@ -86,7 +83,7 @@ public class WafKit {
 		return (null == value) ? null : value.replaceAll("('.+--)|(--)|(%7C)", ""); //value.replaceAll("('.+--)|(--)|(\\|)|(%7C)", "");
 	}
 
-	/**
+	/*
 	 * @Description 过滤SQL/XSS注入内容
 	 * @param value
 	 * 				待处理内容

@@ -43,7 +43,7 @@
 
                 var gridster = this;
 
-                /**
+               /*
                  * Create options from gridsterConfig constant
                  */
                 angular.extend(this, gridsterConfig);
@@ -66,12 +66,12 @@
                     });
                 };
 
-                /**
+               /*
                  * A positional array of the items in the grid
                  */
                 this.grid = [];
 
-                /**
+               /*
                  * Clean up after yourself
                  */
                 this.destroy = function() {
@@ -81,7 +81,7 @@
                     }
                 };
 
-                /**
+               /*
                  * Overrides default options
                  *
                  * @param {object} options The options to override
@@ -117,7 +117,7 @@
                     }
                 };
 
-                /**
+               /*
                  * Check if item can occupy a specified position in the grid
                  *
                  * @param {object} item The item in question
@@ -129,7 +129,7 @@
                     return row > -1 && column > -1 && item.sizeX + column <= this.columns && item.sizeY + row <= this.maxRows;
                 };
 
-                /**
+               /*
                  * Set the item in the first suitable position
                  *
                  * @param {object} item The item to insert
@@ -149,7 +149,7 @@
                     throw new Error('Unable to place item!');
                 };
 
-                /**
+               /*
                  * Gets items at a specific coordinate
                  *
                  * @param {number} row
@@ -214,7 +214,7 @@
                 };
 
 
-                /**
+               /*
                  * Removes an item from the grid
                  *
                  * @param {object} item
@@ -234,7 +234,7 @@
                     this.layoutChanged();
                 };
 
-                /**
+               /*
                  * Returns the item at a specified coordinate
                  *
                  * @param {number} row
@@ -267,7 +267,7 @@
                     return null;
                 };
 
-                /**
+               /*
                  * Insert an array of items into the grid
                  *
                  * @param {array} items An array of items to insert
@@ -278,7 +278,7 @@
                     }
                 };
 
-                /**
+               /*
                  * Insert a single item into the grid
                  *
                  * @param {object} item The item to insert
@@ -332,7 +332,7 @@
                     this.layoutChanged();
                 };
 
-                /**
+               /*
                  * Trade row and column if item1 with item2
                  *
                  * @param {object} item1
@@ -350,7 +350,7 @@
                     item2.col = item1Col;
                 };
 
-                /**
+               /*
                  * Prevents items from being overlapped
                  *
                  * @param {object} item The item that should remain
@@ -375,7 +375,7 @@
                     this.moveItemsDown(overlappingItems, item.row + item.sizeY, ignoreItems);
                 };
 
-                /**
+               /*
                  * Moves an array of items to a specified row
                  *
                  * @param {array} items The items to move
@@ -420,7 +420,7 @@
                     this.putItem(item, item.row, item.col, ignoreItems);
                 };
 
-                /**
+               /*
                  * Moves all items up as much as possible
                  */
                 this.floatItemsUp = function() {
@@ -441,7 +441,7 @@
                     }
                 };
 
-                /**
+               /*
                  * Float an item up to the most suitable row
                  *
                  * @param {object} item The item to move
@@ -471,7 +471,7 @@
                     }
                 };
 
-                /**
+               /*
                  * Update gridsters height
                  *
                  * @param {number} plus (Optional) Additional height to add
@@ -493,7 +493,7 @@
                     this.gridHeight = this.maxRows - maxHeight > 0 ? Math.min(this.maxRows, maxHeight) : Math.max(this.maxRows, maxHeight);
                 };
 
-                /**
+               /*
                  * Returns the number of rows that will fit in given amount of pixels
                  *
                  * @param {number} pixels
@@ -509,7 +509,7 @@
                     return Math.round(pixels / this.curRowHeight);
                 };
 
-                /**
+               /*
                  * Returns the number of columns that will fit in a given amount of pixels
                  *
                  * @param {number} pixels
@@ -850,7 +850,7 @@
             }
         ])
 
-    /**
+   /*
      * The gridster directive
      *
      * @param {object} $parse
@@ -883,7 +883,7 @@
                                 };
                             };
 
-                            /**
+                           /*
                              * @returns {Object} style object for preview element
                              */
                             scope.previewStyle = function() {
@@ -1030,7 +1030,7 @@
 
                             // Custom code
 
-                            /**
+                           /*
                              * Callback called when starting to drag from palette to canvas.
                              */
                             $rootScope.startDragCallback = function (event, ui) {
@@ -1071,7 +1071,7 @@
                                 }, 0);
                             };
 
-                            /**
+                           /*
                              * Callback called when stopping to drag from palette to canvas.
                              */
                             $rootScope.dropCallback = function (event, ui) {
@@ -1088,7 +1088,7 @@
                                 }, 0);
                             };
 
-                            /**
+                           /*
                              * Callback called during dragging from palette to canvas.
                              */
                             $rootScope.dragCallback = function (event, ui) {
@@ -1164,7 +1164,7 @@
                 this.$element = null;
             };
 
-            /**
+           /*
              * Returns the items most important attributes
              */
             this.toJSON = function() {
@@ -1180,7 +1180,7 @@
                 return this.gridster.movingItem === this;
             };
 
-            /**
+           /*
              * Set the items position
              *
              * @param {number} row
@@ -1194,7 +1194,7 @@
                 }
             };
 
-            /**
+           /*
              * Sets a specified size property
              *
              * @param {string} key Can be either "x" or "y"
@@ -1248,7 +1248,7 @@
                 return changed;
             };
 
-            /**
+           /*
              * Sets the items sizeY property
              *
              * @param {number} rows
@@ -1257,7 +1257,7 @@
                 return this.setSize('Y', rows, preventMove);
             };
 
-            /**
+           /*
              * Sets the items sizeX property
              *
              * @param {number} rows
@@ -1266,7 +1266,7 @@
                 return this.setSize('X', columns, preventMove);
             };
 
-            /**
+           /*
              * Sets an elements position on the page
              *
              * @param {number} row
@@ -1291,7 +1291,7 @@
                 }
             };
 
-            /**
+           /*
              * Sets an elements height
              */
             this.setElementSizeY = function() {
@@ -1302,7 +1302,7 @@
                 }
             };
 
-            /**
+           /*
              * Sets an elements width
              */
             this.setElementSizeX = function() {
@@ -1313,14 +1313,14 @@
                 }
             };
 
-            /**
+           /*
              * Gets an element's width
              */
             this.getElementSizeX = function() {
                 return (this.sizeX * this.gridster.curColWidth - this.gridster.margins[1]);
             };
 
-            /**
+           /*
              * Gets an element's height
              */
             this.getElementSizeY = function() {
@@ -1932,7 +1932,7 @@
             }
         ])
 
-    /**
+   /*
      * GridsterItem directive
      */
         .directive('gridsterItem', ['$parse', 'GridsterDraggable', 'GridsterResizable',

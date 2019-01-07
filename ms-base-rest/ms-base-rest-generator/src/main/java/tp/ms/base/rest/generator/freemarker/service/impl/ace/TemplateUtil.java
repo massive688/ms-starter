@@ -109,7 +109,7 @@ public class TemplateUtil {
 		return result;
 	}
 
-	/**
+	/*
 	 * 保存给定的表数据到临时设定的表中
 	 * @param tableName
 	 * @param cols
@@ -119,7 +119,7 @@ public class TemplateUtil {
 		templatemapper.updateTableField(sql);
 	}
 
-	/**
+	/*
 	 * 执行删除给定的表
 	 * @param tableName
 	 * @return
@@ -129,7 +129,7 @@ public class TemplateUtil {
 		return excuteSqlTo(tableSql);
 	}
 
-	/**
+	/*
 	 * 构建新表的结构SQL
 	 * @param tableName
 	 * @param abbreviation

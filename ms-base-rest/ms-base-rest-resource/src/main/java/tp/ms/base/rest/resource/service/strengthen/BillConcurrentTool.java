@@ -14,7 +14,7 @@ import tp.ms.common.bean.vo.VoStatus;
  */
 public class BillConcurrentTool {
 
-  /**
+ /*
    * 通过比较两组单据实体的时间戳来判断是否存在并发
    *
    * @param bill 单据实体1
@@ -30,7 +30,7 @@ public class BillConcurrentTool {
 	    }
   }
 
-  /**
+ /*
    * 对一主多子单据进行中间件加锁
    *
    * @param bill 单据实体

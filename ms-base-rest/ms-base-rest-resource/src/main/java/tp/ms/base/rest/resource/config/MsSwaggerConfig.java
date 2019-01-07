@@ -45,9 +45,9 @@ public class MsSwaggerConfig implements WebMvcConfigurer {
 	private static final String AUTH_SERVER = "https://acc.m96.co:9443/";
 	private static final String CLIENT_ID = "rootid";
 
-	/***********************WEB MVC 配置部分开始***************************************/
+	/*WEB MVC 配置部分开始***************************************/
 
-	/**
+	/*
 	 * 配置消息转换器为fastjson
 	 * @return
 	 */
@@ -76,7 +76,7 @@ public class MsSwaggerConfig implements WebMvcConfigurer {
 //		return fastConverter;
 //	}
 	
-	/**
+	/*
 	 * 配置消息转换器为string
 	 * @return
 	 */
@@ -98,7 +98,7 @@ public class MsSwaggerConfig implements WebMvcConfigurer {
 		converters.add(new StringHttpMessageConverter(Charset.forName("UTF-8")));
 		WebMvcConfigurer.super.configureMessageConverters(converters);
 	}
-	/**
+	/*
 	 * 将Swagger2 的swagger-ui.html加入资源路径下,否则Swagger2静态页面不能访问。
 	 * 要想使资源能够访问，可以有两种方法
 	 * 一：需要配置类继承WebMvcConfigurationSupport 类，实现addResourceHandlers方法。
@@ -137,7 +137,7 @@ public class MsSwaggerConfig implements WebMvcConfigurer {
 				.maxAge(3600);// 跨域允许时间
 	}
 	
-	/***********************WEB MVC 配置部分结束**********************************/
+	/*WEB MVC 配置部分结束**********************************/
 
 	//https://blog.csdn.net/cl_andywin/article/details/53992353
 
@@ -192,9 +192,8 @@ public class MsSwaggerConfig implements WebMvcConfigurer {
 		;
 	}
 	
-	/**
-     * 设置token参数
-     * @return
+	/*
+     *  设置token参数
      */
     private List<Parameter> setToken(){
         ParameterBuilder tokenPar = new ParameterBuilder();
@@ -263,7 +262,7 @@ public class MsSwaggerConfig implements WebMvcConfigurer {
 	}
 }
 
-/**
+/*
  * 	|获取授权code
  * 	|https://acc.m96.co:9443/oauth2.0/authorize?client_id=1100660&redirect_uri=https://acc.m96.co:9443/qnit-base&response_type=code&code_verifier=opiod
  * 	|返回跳转路径并携带的授权code

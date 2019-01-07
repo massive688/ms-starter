@@ -90,7 +90,7 @@ angular.module("flowableModeler").factory("editorManager", ["$http", function ($
         updateSelection: function () {
             this.editor.updateSelection();
         },
-        /**
+       /*
          * @returns the modeldata as received from the server. This does not represent the current editor data.
          */
         getBaseModelData: function () {

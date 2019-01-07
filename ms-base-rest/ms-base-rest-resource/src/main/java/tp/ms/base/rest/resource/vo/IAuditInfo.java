@@ -21,32 +21,32 @@ public interface IAuditInfo {
 	  // 制单时间
 	//  public static final String BILLMAKERTIME = "billmakertime";
 	  
-	  /**
+	  /*
 	   * 制单时间
 	   */
 	//  UFDateTime getBillMakerTime();
 
-	  /**
+	  /*
 	   * 创建时间
 	   */
 	  String getCreationtime();
 
-	  /**
+	  /*
 	   * 创建人
 	   */
 	  String getCreator();
 
-	  /**
+	  /*
 	   * 最后修改时间
 	   */
 	  String getModifiedtime();
 
-	  /**
+	  /*
 	   * 最后修改人
 	   */
 	  String getModifier();
 
-	  /**
+	  /*
 	   * 制单人
 	   */
 	//  String getOperator();

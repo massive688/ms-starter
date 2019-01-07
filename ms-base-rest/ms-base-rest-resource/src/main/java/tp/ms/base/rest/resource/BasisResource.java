@@ -15,10 +15,11 @@ import tp.ms.common.bean.result.ResultSupport;
 @Slf4j
 public class BasisResource<T> {
 
-	/**    
-     * 用于处理异常的    
-     * @return    
-     */      
+	/**
+	 *  用于处理异常的    
+	 * @param e 待封装返回的异常
+	 * @return 返回封装异常信息
+	 */
     @ExceptionHandler({Exception.class})       
     public Result<String> exception(Exception e) { 
     	log.error(e.getMessage(), e);

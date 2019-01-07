@@ -1214,7 +1214,7 @@ if (
 // [bugfix, IE lt 9] IE < 9 substr() with negative value not working in IE
 if("".substr && "0b".substr(-1) !== "b") {
     var string_substr = String.prototype.substr;
-    /**
+   /*
      *  Get the substring of a string
      *  @param  {integer}  start   where to start the substring
      *  @param  {integer}  length  how many characters to return

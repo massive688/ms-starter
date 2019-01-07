@@ -24,8 +24,7 @@ public class CompareAroundProcesser<E> {
 	/**
 	 * 添加处理后业务规则
 	 * 
-	 * @param rule
-	 *            业务规则
+	 * @param rule 业务规则
 	 */
 	public void addAfterRule(IRule<E> rule) {
 		this.after.add(rule);
@@ -34,10 +33,13 @@ public class CompareAroundProcesser<E> {
 	/**
 	 * 执行处理前业务规则
 	 * 
-	 * @param vos
-	 *            要处理的业务对象
+	 */
+	/**
+	 * 
+	 * @param vos 要处理的业务对象
+	 * @param originVOs 早前原始的数据对象
 	 * @return 业务处理后的业务对象。有过滤规则的，可能返回的业务对象有增有减
-	 * @throws ADBusinessException 
+	 * @throws ADBusinessException  抛出业务处理异常
 	 */
 	@SuppressWarnings("unchecked")
 	public E before(E vos, E originVOs) throws ADBusinessException {
@@ -72,12 +74,10 @@ public class CompareAroundProcesser<E> {
 	/**
 	 * 执行处理后比较型业务规则
 	 * 
-	 * @param vos
-	 *            要处理的对象
-	 * @param originVOs
-	 *            要处理的对象的历史版本
+	 * @param vos 要处理的对象
+	 * @param originVOs 要处理的对象的历史版本
 	 * @return 业务处理后的业务对象。有过滤规则的，可能返回的业务对象有增有减
-	 * @throws ADBusinessException 
+	 * @throws ADBusinessException  抛出业务处理异常
 	 */
 	@SuppressWarnings("unchecked")
 	public E after(E vos, E originVOs) throws ADBusinessException {

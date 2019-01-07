@@ -19,7 +19,7 @@ angular.module('flowableModeler').controller('FlowableStringPropertyCtrl', [ '$s
 
 	$scope.shapeId = $scope.selectedShape.id;
 	$scope.valueFlushed = false;
-    /** Handler called when input field is blurred */
+   /* Handler called when input field is blurred */
     $scope.inputBlurred = function() {
     	$scope.valueFlushed = true;
     	if ($scope.property.value) {

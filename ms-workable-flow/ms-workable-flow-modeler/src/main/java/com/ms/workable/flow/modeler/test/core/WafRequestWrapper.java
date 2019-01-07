@@ -6,11 +6,8 @@ import javax.servlet.http.HttpServletRequestWrapper;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Request请求过滤包装
- * <p>
- * @author   hubin
- * @Date	 2014-5-8 	 
+/*
+ * Request请求过滤包装 
  */
 public class WafRequestWrapper extends HttpServletRequestWrapper {
 
@@ -31,7 +28,7 @@ public class WafRequestWrapper extends HttpServletRequestWrapper {
 	}
 
 
-	/**
+	/*
 	 * @Description 数组参数过滤
 	 * @param parameter
 	 * 				过滤参数
@@ -72,7 +69,7 @@ public class WafRequestWrapper extends HttpServletRequestWrapper {
 		return rawValue;
 	}
 
-	/**
+	/*
 	 * @Description 参数过滤
 	 * @param parameter
 	 * 				过滤参数
@@ -84,7 +81,7 @@ public class WafRequestWrapper extends HttpServletRequestWrapper {
 	}
 
 
-	/**
+	/*
 	 * @Description 请求头过滤 
 	 * @param name
 	 * 				过滤内容
@@ -96,7 +93,7 @@ public class WafRequestWrapper extends HttpServletRequestWrapper {
 	}
 
 
-	/**
+	/*
 	 * @Description Cookie内容过滤
 	 * @return
 	 */
@@ -112,7 +109,7 @@ public class WafRequestWrapper extends HttpServletRequestWrapper {
 		return existingCookies;
 	}
 
-	/**
+	/*
 	 * @Description 过滤字符串内容
 	 * @param rawValue
 	 * 				待处理内容

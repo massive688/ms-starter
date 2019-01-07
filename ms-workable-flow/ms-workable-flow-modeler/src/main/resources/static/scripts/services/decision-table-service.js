@@ -41,7 +41,7 @@ angular.module('flowableModeler').service('DecisionTableService', [ '$rootScope'
             );
         };
 
-        /**
+       /*
          * Fetches the details of a decision table.
          */
         this.fetchDecisionTableDetails = function(modelId, historyModelId) {

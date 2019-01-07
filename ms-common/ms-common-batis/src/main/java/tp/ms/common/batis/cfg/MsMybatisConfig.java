@@ -46,9 +46,9 @@ import tp.ms.common.batis.properties.MsProperties;
 //	})
 public class MsMybatisConfig implements EnvironmentAware {
 
-	static final String MAPPERLOCATION = "classpath*:mappers/**/*.xml";
+	static final String MAPPERLOCATION = "classpath*:mappers/*/*.xml";
 
-    /**
+   /*
      * 配置上下文（也可以理解为配置文件的获取工具）
      */
 	@Autowired
@@ -67,8 +67,6 @@ public class MsMybatisConfig implements EnvironmentAware {
 //		mapperScannerConfigurer.setAnnotationClass(TargetDataSource.class);
 		return mapperScannerConfigurer;
 	}
-	/********************************************************************************/
-
 	
 	@SuppressWarnings("unused")
 	@Bean
@@ -157,7 +155,7 @@ public class MsMybatisConfig implements EnvironmentAware {
 
 	
 	
-	/**
+	/*
 	 * - 设置SqlSessionFactory；
 	 * - 设置dao所在的package路径；
 	 * - 关联注解在dao类上的Annotation名字；
@@ -170,7 +168,7 @@ public class MsMybatisConfig implements EnvironmentAware {
 //		mapperScannerConfigurer.setAnnotationClass(Nc6302Repository.class);
 //		return mapperScannerConfigurer;
 //	}
-//	/**
+//	/*
 //	 * nc6302 数据源
 //	 * @return
 //	 */

@@ -44,11 +44,11 @@ public class MsJpaRepositorieConfiguration {
         return jpaProperties.getHibernateProperties(new HibernateSettings());
     }
  
-    /**
+   /*
      * 设置实体类所在位置
     *
-    * @param builder
-    * @return
+    * @param builder 实体类管理器
+    * @return 实体类管理器工厂
     */
    @Bean(name = "entityManagerFactory")
    @Primary
@@ -67,11 +67,11 @@ public class MsJpaRepositorieConfiguration {
                .build();
 
    }
-    /**
+   /*
      * 事物管理器
      *
-     * @param builder
-     * @return
+     * @param builder 实体类管理器
+     * @return jpa事务管理器
      */
     @Bean(name = "jpaTransactionManager")
     PlatformTransactionManager jpaTransactionManager(EntityManagerFactoryBuilder builder) {

@@ -103,7 +103,7 @@ public class MsWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling().accessDeniedHandler(msAccessDeniedHandler)   ;
 
 //                
-                /**
+               /*
                 
                 // 自定义accessDecisionManager 方式动态加载权限
                 .and()

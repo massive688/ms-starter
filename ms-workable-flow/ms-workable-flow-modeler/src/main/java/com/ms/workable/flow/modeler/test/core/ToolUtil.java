@@ -22,7 +22,7 @@ import java.util.Set;
  */
 public class ToolUtil {
 
-    /**
+   /*
      * 获取随机位数的字符串
      *
      * @author fengshuonan
@@ -39,7 +39,7 @@ public class ToolUtil {
         return sb.toString();
     }
 
-    /**
+   /*
      * 判断一个对象是否是时间类型
      *
      * @author stylefeng
@@ -53,7 +53,7 @@ public class ToolUtil {
         }
     }
 
-    /**
+   /*
      * 获取异常的具体信息
      *
      * @author fengshuonan
@@ -74,7 +74,7 @@ public class ToolUtil {
         return sw.getBuffer().toString().replaceAll("\\$", "T");
     }
 
-    /**
+   /*
      * 比较两个对象是否相等。<br>
      * 相同的条件有两个，满足其一即可：<br>
      * 1. obj1 == null && obj2 == null; 2. obj1.equals(obj2)
@@ -87,7 +87,7 @@ public class ToolUtil {
         return (obj1 != null) ? (obj1.equals(obj2)) : (obj2 == null);
     }
 
-    /**
+   /*
      * 计算对象长度，如果是字符串调用其length函数，集合类调用其size函数，数组调用其length属性，其他可遍历对象遍历计算长度
      *
      * @param obj 被计算长度的对象
@@ -132,7 +132,7 @@ public class ToolUtil {
         return -1;
     }
 
-    /**
+   /*
      * 对象中是否包含元素
      *
      * @param obj     对象
@@ -188,7 +188,7 @@ public class ToolUtil {
         return false;
     }
 
-    /**
+   /*
      * 对象是否不为空(新增)
      *
      * @param obj String,List,Map,Object[],int[],long[]
@@ -198,7 +198,7 @@ public class ToolUtil {
         return !isEmpty(o);
     }
 
-    /**
+   /*
      * 对象是否为空
      *
      * @param obj String,List,Map,Object[],int[],long[]
@@ -241,7 +241,7 @@ public class ToolUtil {
         return false;
     }
 
-    /**
+   /*
      * 对象组中是否存在 Empty Object
      *
      * @param os 对象组
@@ -256,7 +256,7 @@ public class ToolUtil {
         return false;
     }
 
-    /**
+   /*
      * 对象组中是否全是 Empty Object
      *
      * @param os
@@ -271,7 +271,7 @@ public class ToolUtil {
         return true;
     }
 
-    /**
+   /*
      * 是否为数字
      *
      * @param obj
@@ -286,7 +286,7 @@ public class ToolUtil {
         return true;
     }
 
-    /**
+   /*
      * 如果为空, 则调用默认值
      *
      * @param str
@@ -299,7 +299,7 @@ public class ToolUtil {
         return str;
     }
 
-    /**
+   /*
      * 格式化文本
      *
      * @param template 文本模板，被替换的部分用 {} 表示
@@ -310,7 +310,7 @@ public class ToolUtil {
         return StrKit.format(template, values);
     }
 
-    /**
+   /*
      * 格式化文本
      *
      * @param template 文本模板，被替换的部分用 {key} 表示
@@ -321,7 +321,7 @@ public class ToolUtil {
         return StrKit.format(template, map);
     }
 
-    /**
+   /*
      * 强转->string,并去掉多余空格
      *
      * @param str
@@ -331,7 +331,7 @@ public class ToolUtil {
         return toStr(str, "");
     }
 
-    /**
+   /*
      * 强转->string,并去掉多余空格
      *
      * @param str
@@ -345,7 +345,7 @@ public class ToolUtil {
         return str.toString().trim();
     }
 
-    /**
+   /*
      * 强转->int
      *
      * @param obj
@@ -355,7 +355,7 @@ public class ToolUtil {
 //		return toInt(value, -1);
 //	}
 
-    /**
+   /*
      * 强转->int
      *
      * @param obj
@@ -366,7 +366,7 @@ public class ToolUtil {
 //		return Convert.toInt(value, defaultValue);
 //	}
 
-    /**
+   /*
      * 强转->long
      *
      * @param obj
@@ -376,7 +376,7 @@ public class ToolUtil {
 //		return toLong(value, -1);
 //	}
 
-    /**
+   /*
      * 强转->long
      *
      * @param obj
@@ -395,7 +395,7 @@ public class ToolUtil {
 //		return URLKit.decode(url, CharsetKit.UTF_8);
 //	}
 
-    /**
+   /*
      * map的key转为小写
      *
      * @param map
@@ -409,7 +409,7 @@ public class ToolUtil {
         return tempMap;
     }
 
-    /**
+   /*
      * 获取map中第一个数据值
      *
      * @param <K> Key的类型
@@ -428,7 +428,7 @@ public class ToolUtil {
         return obj;
     }
 
-    /**
+   /*
      * 创建StringBuilder对象
      *
      * @return StringBuilder对象
@@ -441,7 +441,7 @@ public class ToolUtil {
         return sb;
     }
 
-    /**
+   /*
      * 创建StringBuilder对象
      *
      * @return StringBuilder对象
@@ -452,7 +452,7 @@ public class ToolUtil {
         }
     }
 
-    /**
+   /*
      * 去掉指定后缀
      *
      * @param str    字符串
@@ -470,7 +470,7 @@ public class ToolUtil {
         return str;
     }
 
-    /**
+   /*
      * 当前时间
      *
      * @author stylefeng
@@ -480,7 +480,7 @@ public class ToolUtil {
         return DateUtil.getTime();
     }
 
-    /**
+   /*
      * 首字母大写
      *
      * @author stylefeng
@@ -490,7 +490,7 @@ public class ToolUtil {
         return StrKit.firstCharToUpperCase(val);
     }
 
-    /**
+   /*
      * 首字母小写
      *
      * @author stylefeng
@@ -500,7 +500,7 @@ public class ToolUtil {
         return StrKit.firstCharToLowerCase(val);
     }
 
-    /**
+   /*
      * 判断是否是windows操作系统
      *
      * @author stylefeng
@@ -515,7 +515,7 @@ public class ToolUtil {
         }
     }
 
-    /**
+   /*
      * 获取临时目录
      *
      * @author stylefeng
@@ -525,7 +525,7 @@ public class ToolUtil {
         return System.getProperty("java.io.tmpdir");
     }
 
-    /**
+   /*
      * 把一个数转化为int
      *
      * @author fengshuonan
@@ -541,7 +541,7 @@ public class ToolUtil {
 
     }
 
-    /**
+   /*
      * 获取项目路径
      */
     public static String getWebRootPath(String filePath) {

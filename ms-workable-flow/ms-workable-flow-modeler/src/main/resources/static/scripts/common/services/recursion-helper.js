@@ -15,7 +15,7 @@
 // Recursion Helper service, makes it possible to use nested directives of the same type
 flowableModule.factory('RecursionHelper', ['$compile', function($compile){
     return {
-        /**
+       /*
          * Manually compiles the element, fixing the recursion loop.
          * @param element
          * @param [link] A post-link function, or an object with function(s) registered via pre and post properties.
@@ -32,7 +32,7 @@ flowableModule.factory('RecursionHelper', ['$compile', function($compile){
             var compiledContents;
             return {
                 pre: (link && link.pre) ? link.pre : null,
-                /**
+               /*
                  * Compiles and re-adds the contents
                  */
                 post: function(scope, element){

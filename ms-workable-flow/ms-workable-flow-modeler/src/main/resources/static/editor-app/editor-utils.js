@@ -22,7 +22,7 @@ EDITOR.UTIL = {
         return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     },
 
-    /**
+   /*
      * Starts at the provided start element, and walks all preceding elements in the graph.
      * Each element is tested to have a certain property and, if it has, adds this property value
      * to the return result list.
@@ -34,7 +34,7 @@ EDITOR.UTIL = {
         return collectedProperties;
     },
 
-    /**
+   /*
      * Starts at the provided start element, and walks all preceding elements in the graph.
      * Each element is tested to be a specific stencil id and, if it has, adds the element
      * to the return result list.
@@ -209,7 +209,7 @@ EDITOR.UTIL = {
         }
     },
 
-    /**
+   /*
      * Goes up the chain of parents of the provided element.
      * When the property is encountered, its value is immediately returned.
      * If the chain of parents is completely walked through, undefined is returned.
@@ -236,7 +236,7 @@ EDITOR.UTIL = {
         }
     },
 
-    /**
+   /*
      * Finds last element of given shapes and traverses up the chain and returns elements of the given type
      *
      * @param allElements

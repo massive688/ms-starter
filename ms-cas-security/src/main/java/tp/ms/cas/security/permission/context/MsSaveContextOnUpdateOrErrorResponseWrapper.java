@@ -23,33 +23,15 @@ import org.springframework.security.web.context.SaveContextOnUpdateOrErrorRespon
 import tp.ms.common.bean.support.context.MsContext;
 import tp.ms.common.bean.support.context.MsEnvContextHolder;
 
-/**
- * Base class for response wrappers which encapsulate the logic for storing a security
- * context and which store the <code>SecurityContext</code> when a
- * <code>sendError()</code>, <code>sendRedirect</code>,
- * <code>getOutputStream().close()</code>, <code>getOutputStream().flush()</code>,
- * <code>getWriter().close()</code>, or <code>getWriter().flush()</code> happens on the
- * same thread that this {@link SaveContextOnUpdateOrErrorResponseWrapper} was created.
- * See issue SEC-398 and SEC-2005.
- * <p>
- * Sub-classes should implement the {@link #saveContext(SecurityContext context)} method.
- * <p>
- * Support is also provided for disabling URL rewriting
- *
- * @author Luke Taylor
- * @author Marten Algesten
- * @author Rob Winch
- * @since 3.0
- */
 public abstract class MsSaveContextOnUpdateOrErrorResponseWrapper
 		extends MsOnCommittedResponseWrapper {
 
 
 	private boolean contextSaved = false;
-	/* See SEC-1052 */
+	
 	private final boolean disableUrlRewriting;
 
-	/**
+	/*
 	 * @param response the response to be wrapped
 	 * @param disableUrlRewriting turns the URL encoding methods into null operations,
 	 * preventing the use of URL rewriting to add the session identifier as a URL
@@ -61,7 +43,7 @@ public abstract class MsSaveContextOnUpdateOrErrorResponseWrapper
 		this.disableUrlRewriting = disableUrlRewriting;
 	}
 
-	/**
+	/*
 	 * Invoke this method to disable automatic saving of the {@link SecurityContext} when
 	 * the {@link HttpServletResponse} is committed. This can be useful in the event that
 	 * Async Web Requests are made which may no longer contain the {@link SecurityContext}
@@ -71,14 +53,14 @@ public abstract class MsSaveContextOnUpdateOrErrorResponseWrapper
 		disableOnResponseCommitted();
 	}
 
-	/**
+	/*
 	 * Implements the logic for storing the security context.
 	 *
 	 * @param context the <tt>SecurityContext</tt> instance to store
 	 */
 	protected abstract void saveContext(MsContext context);
 
-	/**
+	/*
 	 * Calls <code>saveContext()</code> with the current contents of the
 	 * <tt>SecurityContextHolder</tt> as long as {@link #disableSaveOnResponseCommitted()
 	 * ()} was not invoked.
@@ -123,7 +105,7 @@ public abstract class MsSaveContextOnUpdateOrErrorResponseWrapper
 		return super.encodeURL(url);
 	}
 
-	/**
+	/*
 	 * Tells if the response wrapper has called <code>saveContext()</code> because of this
 	 * wrapper.
 	 */

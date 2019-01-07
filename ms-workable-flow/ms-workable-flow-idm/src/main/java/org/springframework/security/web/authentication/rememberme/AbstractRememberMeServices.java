@@ -1,18 +1,3 @@
-/*
- * Copyright 2002-2017 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.springframework.security.web.authentication.rememberme;
 
 import java.io.UnsupportedEncodingException;
@@ -49,14 +34,6 @@ import org.springframework.util.StringUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * Base class for RememberMeServices implementations.
- *
- * @author Luke Taylor
- * @author Rob Winch
- * @author Edd煤 Mel茅ndez
- * @since 2.0
- */
 @Slf4j
 public abstract class AbstractRememberMeServices implements RememberMeServices,
 		InitializingBean, LogoutHandler {
@@ -104,7 +81,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		Assert.notNull(userDetailsService, "A UserDetailsService is required");
 	}
 
-	/**
+	/*
 	 * Template implementation which locates the Spring Security cookie, decodes it into a
 	 * delimited array of tokens and submits it to subclasses for processing via the
 	 * <tt>processAutoLoginCookie</tt> method.
@@ -164,7 +141,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		return null;
 	}
 
-	/**
+	/*
 	 * Locates the Spring Security remember me cookie in the request and returns its
 	 * value. The cookie is searched for by name and also by matching the context path to
 	 * the cookie path.
@@ -188,7 +165,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		return null;
 	}
 
-	/**
+	/*
 	 * Creates the final <tt>Authentication</tt> object returned from the
 	 * <tt>autoLogin</tt> method.
 	 * <p>
@@ -210,7 +187,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		return auth;
 	}
 
-	/**
+	/*
 	 * Decodes the cookie and splits it into a set of token strings using the ":"
 	 * delimiter.
 	 *
@@ -252,7 +229,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		return tokens;
 	}
 
-	/**
+	/*
 	 * Inverse operation of decodeCookie.
 	 *
 	 * @param cookieTokens the tokens to be encoded.
@@ -296,7 +273,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 	protected void onLoginFail(HttpServletRequest request, HttpServletResponse response) {
 	}
 
-	/**
+	/*
 	 * {@inheritDoc}
 	 *
 	 * <p>
@@ -317,7 +294,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		onLoginSuccess(request, response, successfulAuthentication);
 	}
 
-	/**
+	/*
 	 * Called from loginSuccess when a remember-me login has been requested. Typically
 	 * implemented by subclasses to set a remember-me cookie and potentially store a
 	 * record of it if the implementation requires this.
@@ -325,7 +302,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 	protected abstract void onLoginSuccess(HttpServletRequest request,
 			HttpServletResponse response, Authentication successfulAuthentication);
 
-	/**
+	/*
 	 * Allows customization of whether a remember-me login has been requested. The default
 	 * is to return true if <tt>alwaysRemember</tt> is set or the configured parameter
 	 * name has been included in the request and is set to the value "true".
@@ -359,7 +336,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		return false;
 	}
 
-	/**
+	/*
 	 * Called from autoLogin to process the submitted persistent login cookie. Subclasses
 	 * should validate the cookie and perform any additional management required.
 	 *
@@ -378,7 +355,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 			HttpServletRequest request, HttpServletResponse response)
 			throws RememberMeAuthenticationException, UsernameNotFoundException;
 
-	/**
+	/*
 	 * Sets a "cancel cookie" (with maxAge = 0) on the response to disable persistent
 	 * logins.
 	 */
@@ -393,7 +370,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		response.addCookie(cookie);
 	}
 
-	/**
+	/*
 	 * Sets the cookie on the response.
 	 *
 	 * By default a secure cookie will be used if the connection is secure. You can set
@@ -441,7 +418,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		return contextPath.length() > 0 ? contextPath : "/";
 	}
 
-	/**
+	/*
 	 * Implementation of {@code LogoutHandler}. Default behaviour is to call
 	 * {@code cancelCookie()}.
 	 */
@@ -473,7 +450,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		this.alwaysRemember = alwaysRemember;
 	}
 
-	/**
+	/*
 	 * Sets the name of the parameter which should be checked for to see if a remember-me
 	 * has been requested during a login request. This should be the same name you assign
 	 * to the checkbox in your login form.
@@ -505,7 +482,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		return tokenValiditySeconds;
 	}
 
-	/**
+	/*
 	 * Whether the cookie should be flagged as secure or not. Secure cookies can only be
 	 * sent over an HTTPS connection and thus cannot be accidentally submitted over HTTP
 	 * where they could be intercepted.
@@ -532,7 +509,7 @@ public abstract class AbstractRememberMeServices implements RememberMeServices,
 		this.authenticationDetailsSource = authenticationDetailsSource;
 	}
 
-	/**
+	/*
 	 * Sets the strategy to be used to validate the {@code UserDetails} object obtained
 	 * for the user when processing a remember-me cookie to automatically log in a user.
 	 *

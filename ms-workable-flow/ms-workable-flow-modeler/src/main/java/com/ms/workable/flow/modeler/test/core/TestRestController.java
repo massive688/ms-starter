@@ -38,8 +38,8 @@ public class TestRestController {
     @Autowired
     private ProcessEngine processEngine;
  
-/***************此处为业务代码******************/
-    /**
+/*此处为业务代码******************/
+   /*
      * 添加报销
      *
      * @param userId    用户Id
@@ -58,7 +58,7 @@ public class TestRestController {
     }
     
     
-    /**
+   /*
      * 获取审批管理列表
      */
     @GetMapping(value = "/list")
@@ -71,7 +71,7 @@ public class TestRestController {
         return tasks.toArray().toString();
     }
     
-    /**
+   /*
      * 批准
      *
      * @param taskId 任务ID
@@ -89,7 +89,7 @@ public class TestRestController {
         taskService.complete(taskId, map);
         return "processed ok!";
     }
-    /**
+   /*
      * 拒绝
      */
     @PostMapping(value = "reject")
@@ -101,7 +101,7 @@ public class TestRestController {
         return "reject";
     } 
 
-    /**
+   /*
      * 生成流程图
      *
      * @param processId 任务ID

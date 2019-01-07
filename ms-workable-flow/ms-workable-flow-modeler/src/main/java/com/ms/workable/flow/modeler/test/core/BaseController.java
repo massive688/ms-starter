@@ -51,7 +51,7 @@ public class BaseController {
     
     }
 
-    /**
+   /*
      * 删除cookie
      */
     protected void deleteCookieByName(String cookieName) {
@@ -65,7 +65,7 @@ public class BaseController {
         }
     }
 
-    /**
+   /*
      * 返回前台文件流
      *
      * @author fengshuonan
@@ -76,7 +76,7 @@ public class BaseController {
         return renderFile(fileName, bytes);
     }
 
-    /**
+   /*
      * 返回前台文件流
      *
      * @author fengshuonan
@@ -96,7 +96,7 @@ public class BaseController {
     }
 
 
-    /**
+   /*
      * 包装一个list，让list增加额外属性
      */
     public Object warpObject(BaseControllerWarpper warpper) {
