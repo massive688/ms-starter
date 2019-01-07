@@ -1,0 +1,20 @@
+##### CAS 配置部分
+#cas:
+#   sec:
+#      authenticationUserDetailsService: com.ms.support.security.MsAuthenticationUserDetailsService
+#      userDetailsService: com.ms.support.security.MsUserDetailsService
+#      cas-server-url: https://acc.m96.co:9443
+#      app-service-url: http://localhost:${server.port}${server.servlet.context-path:}
+      
+# JWT
+jwt:
+  header: Authorization
+  secret: mySecret
+  expiration: 604800
+  tokenHead: "Bearer "
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+      register: "auth/register"
+      

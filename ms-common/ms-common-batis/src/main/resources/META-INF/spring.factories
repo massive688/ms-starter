@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+tp.ms.common.batis.session.MsMapperScannerConfiguration,\
+tp.ms.common.batis.cache.MsRedisConfig

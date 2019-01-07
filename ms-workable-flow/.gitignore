@@ -1,0 +1,17 @@
+/target/*
+
+.settings/*
+
+.classpath
+
+.project
+
+target/*
+
+/target/
+
+/catalina.home_IS_UNDEFINED/*
+
+.bpmn/*
+
+.idea/*

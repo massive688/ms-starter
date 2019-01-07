@@ -1,0 +1,13 @@
+#### Redis 配置
+spring:
+   profiles:
+#      include: dydsm,cache,casec
+      include: dydsm,cache,idm
+server:
+   #端口号
+   port: 8888
+   #项目名，如果不设定，默认是 /
+   servlet:
+     context-path:
+
+ 

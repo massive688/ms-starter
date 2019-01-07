@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tp.ms.base.rest.formula.mapper.FormulaValueDaoMapper">
+  
+  <cache type="tp.ms.common.data.cache.redis.MsMybatisRedisCache"/>
+  
+  <select 
+  	id="queryByFormula"
+	parameterType="tp.ms.base.rest.api.service.FormulaObject" 
+  	resultType="string" >
+  	SELECT ref_class FROM ms_base_ref_info WHERE dr=0 AND ref_code='500STAFF201'
+  	
+  </select>
+
+<!-- select ${fieldCode} from ${table} where ${where} -->
+</mapper>

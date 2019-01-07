@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tp.ms.base.rest.typecoded.mapper.MsBaseBillTemplateMapper">
+  <resultMap id="BaseResultMap" type="tp.ms.base.rest.typecoded.vo.MsBaseBillTemplate">
+    <id column="pk_base_bill_template" jdbcType="VARCHAR" property="pkBaseBillTemplate" />
+    <result column="pk_billtype" jdbcType="VARCHAR" property="pkBilltype" />
+    <result column="column_module_name" jdbcType="VARCHAR" property="columnModuleName" />
+    <result column="column_class_qualified_name" jdbcType="VARCHAR" property="columnClassQualifiedName" />
+    <result column="column_class_name_abbreviation" jdbcType="VARCHAR" property="columnClassNameAbbreviation" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="describe" jdbcType="VARCHAR" property="describe" />
+    <result column="placeholder" jdbcType="VARCHAR" property="placeholder" />
+    <result column="required" jdbcType="VARCHAR" property="required" />
+    <result column="empty_hint" jdbcType="VARCHAR" property="emptyHint" />
+    <result column="readonly" jdbcType="VARCHAR" property="readonly" />
+    <result column="min_length" jdbcType="INTEGER" property="minLength" />
+    <result column="max_length" jdbcType="INTEGER" property="maxLength" />
+    <result column="field_type" jdbcType="INTEGER" property="fieldType" />
+    <result column="ref_translate" jdbcType="VARCHAR" property="refTranslate" />
+    <result column="ref_show" jdbcType="INTEGER" property="refShow" />
+    <result column="reorder" jdbcType="INTEGER" property="reorder" />
+    <result column="ref_formula" jdbcType="VARCHAR" property="refFormula" />
+    <result column="ref_url" jdbcType="VARCHAR" property="refUrl" />
+    <result column="data_translate_name" jdbcType="VARCHAR" property="dataTranslateName" />
+    <result column="prev_generator_name" jdbcType="VARCHAR" property="prevGeneratorName" />
+    <result column="ref_query_condition" jdbcType="VARCHAR" property="refQueryCondition" />
+    <result column="table_name" jdbcType="VARCHAR" property="tableName" />
+    <result column="ts" jdbcType="CHAR" property="ts" />
+    <result column="dr" jdbcType="SMALLINT" property="dr" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    pk_base_bill_template, pk_billtype, column_module_name, column_class_qualified_name, 
+    column_class_name_abbreviation, name, type, describe, placeholder, required, empty_hint, 
+    readonly, min_length, max_length, field_type, ref_translate, ref_show, reorder, ref_formula, 
+    ref_url, data_translate_name, prev_generator_name, ref_query_condition, table_name, ts, dr
+  </sql>
+  <select id="selectByExample" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillTemplateExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ms_base_bill_template
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ms_base_bill_template
+    where pk_base_bill_template = #{pkBaseBillTemplate,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from ms_base_bill_template
+    where pk_base_bill_template = #{pkBaseBillTemplate,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillTemplateExample">
+    delete from ms_base_bill_template
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillTemplate">
+    insert into ms_base_bill_template (pk_base_bill_template, pk_billtype, column_module_name, 
+      column_class_qualified_name, column_class_name_abbreviation, 
+      name, type, describe, 
+      placeholder, required, empty_hint, 
+      readonly, min_length, max_length, 
+      field_type, ref_translate, ref_show, 
+      reorder, ref_formula, ref_url, 
+      data_translate_name, prev_generator_name, ref_query_condition, table_name, 
+      ts, dr)
+    values (#{pkBaseBillTemplate,jdbcType=VARCHAR}, #{pkBilltype,jdbcType=VARCHAR}, #{columnModuleName,jdbcType=VARCHAR}, 
+      #{columnClassQualifiedName,jdbcType=VARCHAR}, #{columnClassNameAbbreviation,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{describe,jdbcType=VARCHAR}, 
+      #{placeholder,jdbcType=VARCHAR}, #{required,jdbcType=VARCHAR}, #{emptyHint,jdbcType=VARCHAR}, 
+      #{readonly,jdbcType=VARCHAR}, #{minLength,jdbcType=INTEGER}, #{maxLength,jdbcType=INTEGER}, 
+      #{fieldType,jdbcType=INTEGER}, #{refTranslate,jdbcType=VARCHAR}, #{refShow,jdbcType=INTEGER}, 
+      #{reorder,jdbcType=INTEGER}, #{refFormula,jdbcType=VARCHAR}, #{refUrl,jdbcType=VARCHAR}, 
+      #{dataTranslateName,jdbcType=VARCHAR}, #{prevGeneratorName,jdbcType=VARCHAR}, #{refQueryCondition,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, 
+      #{ts,jdbcType=CHAR}, #{dr,jdbcType=SMALLINT})
+  </insert>
+  <insert id="insertSelective" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillTemplate">
+    insert into ms_base_bill_template
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="pkBaseBillTemplate != null">
+        pk_base_bill_template,
+      </if>
+      <if test="pkBilltype != null">
+        pk_billtype,
+      </if>
+      <if test="columnModuleName != null">
+        column_module_name,
+      </if>
+      <if test="columnClassQualifiedName != null">
+        column_class_qualified_name,
+      </if>
+      <if test="columnClassNameAbbreviation != null">
+        column_class_name_abbreviation,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="describe != null">
+        describe,
+      </if>
+      <if test="placeholder != null">
+        placeholder,
+      </if>
+      <if test="required != null">
+        required,
+      </if>
+      <if test="emptyHint != null">
+        empty_hint,
+      </if>
+      <if test="readonly != null">
+        readonly,
+      </if>
+      <if test="minLength != null">
+        min_length,
+      </if>
+      <if test="maxLength != null">
+        max_length,
+      </if>
+      <if test="fieldType != null">
+        field_type,
+      </if>
+      <if test="refTranslate != null">
+        ref_translate,
+      </if>
+      <if test="refShow != null">
+        ref_show,
+      </if>
+      <if test="reorder != null">
+        reorder,
+      </if>
+      <if test="refFormula != null">
+        ref_formula,
+      </if>
+      <if test="refUrl != null">
+        ref_url,
+      </if>
+      <if test="dataTranslateName != null">
+        data_translate_name,
+      </if>
+      <if test="prevGeneratorName != null">
+        prev_generator_name,
+      </if>
+      <if test="refQueryCondition != null">
+        ref_query_condition,
+      </if>
+      <if test="tableName != null">
+        table_name,
+      </if>
+      <if test="ts != null">
+        ts,
+      </if>
+      <if test="dr != null">
+        dr,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="pkBaseBillTemplate != null">
+        #{pkBaseBillTemplate,jdbcType=VARCHAR},
+      </if>
+      <if test="pkBilltype != null">
+        #{pkBilltype,jdbcType=VARCHAR},
+      </if>
+      <if test="columnModuleName != null">
+        #{columnModuleName,jdbcType=VARCHAR},
+      </if>
+      <if test="columnClassQualifiedName != null">
+        #{columnClassQualifiedName,jdbcType=VARCHAR},
+      </if>
+      <if test="columnClassNameAbbreviation != null">
+        #{columnClassNameAbbreviation,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="describe != null">
+        #{describe,jdbcType=VARCHAR},
+      </if>
+      <if test="placeholder != null">
+        #{placeholder,jdbcType=VARCHAR},
+      </if>
+      <if test="required != null">
+        #{required,jdbcType=VARCHAR},
+      </if>
+      <if test="emptyHint != null">
+        #{emptyHint,jdbcType=VARCHAR},
+      </if>
+      <if test="readonly != null">
+        #{readonly,jdbcType=VARCHAR},
+      </if>
+      <if test="minLength != null">
+        #{minLength,jdbcType=INTEGER},
+      </if>
+      <if test="maxLength != null">
+        #{maxLength,jdbcType=INTEGER},
+      </if>
+      <if test="fieldType != null">
+        #{fieldType,jdbcType=INTEGER},
+      </if>
+      <if test="refTranslate != null">
+        #{refTranslate,jdbcType=VARCHAR},
+      </if>
+      <if test="refShow != null">
+        #{refShow,jdbcType=INTEGER},
+      </if>
+      <if test="reorder != null">
+        #{reorder,jdbcType=INTEGER},
+      </if>
+      <if test="refFormula != null">
+        #{refFormula,jdbcType=VARCHAR},
+      </if>
+      <if test="refUrl != null">
+        #{refUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="dataTranslateName != null">
+        #{dataTranslateName,jdbcType=VARCHAR},
+      </if>
+      <if test="prevGeneratorName != null">
+        #{prevGeneratorName,jdbcType=VARCHAR},
+      </if>
+      <if test="refQueryCondition != null">
+        #{refQueryCondition,jdbcType=VARCHAR},
+      </if>
+      <if test="tableName != null">
+        #{tableName,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null">
+        #{ts,jdbcType=CHAR},
+      </if>
+      <if test="dr != null">
+        #{dr,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillTemplateExample" resultType="java.lang.Long">
+    select count(*) from ms_base_bill_template
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update ms_base_bill_template
+    <set>
+      <if test="record.pkBaseBillTemplate != null">
+        pk_base_bill_template = #{record.pkBaseBillTemplate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkBilltype != null">
+        pk_billtype = #{record.pkBilltype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.columnModuleName != null">
+        column_module_name = #{record.columnModuleName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.columnClassQualifiedName != null">
+        column_class_qualified_name = #{record.columnClassQualifiedName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.columnClassNameAbbreviation != null">
+        column_class_name_abbreviation = #{record.columnClassNameAbbreviation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.describe != null">
+        describe = #{record.describe,jdbcType=VARCHAR},
+      </if>
+      <if test="record.placeholder != null">
+        placeholder = #{record.placeholder,jdbcType=VARCHAR},
+      </if>
+      <if test="record.required != null">
+        required = #{record.required,jdbcType=VARCHAR},
+      </if>
+      <if test="record.emptyHint != null">
+        empty_hint = #{record.emptyHint,jdbcType=VARCHAR},
+      </if>
+      <if test="record.readonly != null">
+        readonly = #{record.readonly,jdbcType=VARCHAR},
+      </if>
+      <if test="record.minLength != null">
+        min_length = #{record.minLength,jdbcType=INTEGER},
+      </if>
+      <if test="record.maxLength != null">
+        max_length = #{record.maxLength,jdbcType=INTEGER},
+      </if>
+      <if test="record.fieldType != null">
+        field_type = #{record.fieldType,jdbcType=INTEGER},
+      </if>
+      <if test="record.refTranslate != null">
+        ref_translate = #{record.refTranslate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.refShow != null">
+        ref_show = #{record.refShow,jdbcType=INTEGER},
+      </if>
+      <if test="record.reorder != null">
+        reorder = #{record.reorder,jdbcType=INTEGER},
+      </if>
+      <if test="record.refFormula != null">
+        ref_formula = #{record.refFormula,jdbcType=VARCHAR},
+      </if>
+      <if test="record.refUrl != null">
+        ref_url = #{record.refUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dataTranslateName != null">
+        data_translate_name = #{record.dataTranslateName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.prevGeneratorName != null">
+        prev_generator_name = #{record.prevGeneratorName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.refQueryCondition != null">
+        ref_query_condition = #{record.refQueryCondition,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tableName != null">
+        table_name = #{record.tableName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ts != null">
+        ts = #{record.ts,jdbcType=CHAR},
+      </if>
+      <if test="record.dr != null">
+        dr = #{record.dr,jdbcType=SMALLINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update ms_base_bill_template
+    set pk_base_bill_template = #{record.pkBaseBillTemplate,jdbcType=VARCHAR},
+      pk_billtype = #{record.pkBilltype,jdbcType=VARCHAR},
+      column_module_name = #{record.columnModuleName,jdbcType=VARCHAR},
+      column_class_qualified_name = #{record.columnClassQualifiedName,jdbcType=VARCHAR},
+      column_class_name_abbreviation = #{record.columnClassNameAbbreviation,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      type = #{record.type,jdbcType=VARCHAR},
+      describe = #{record.describe,jdbcType=VARCHAR},
+      placeholder = #{record.placeholder,jdbcType=VARCHAR},
+      required = #{record.required,jdbcType=VARCHAR},
+      empty_hint = #{record.emptyHint,jdbcType=VARCHAR},
+      readonly = #{record.readonly,jdbcType=VARCHAR},
+      min_length = #{record.minLength,jdbcType=INTEGER},
+      max_length = #{record.maxLength,jdbcType=INTEGER},
+      field_type = #{record.fieldType,jdbcType=INTEGER},
+      ref_translate = #{record.refTranslate,jdbcType=VARCHAR},
+      ref_show = #{record.refShow,jdbcType=INTEGER},
+      reorder = #{record.reorder,jdbcType=INTEGER},
+      ref_formula = #{record.refFormula,jdbcType=VARCHAR},
+      ref_url = #{record.refUrl,jdbcType=VARCHAR},
+      data_translate_name = #{record.dataTranslateName,jdbcType=VARCHAR},
+      prev_generator_name = #{record.prevGeneratorName,jdbcType=VARCHAR},
+      ref_query_condition = #{record.refQueryCondition,jdbcType=VARCHAR},
+      table_name = #{record.tableName,jdbcType=VARCHAR},
+      ts = #{record.ts,jdbcType=CHAR},
+      dr = #{record.dr,jdbcType=SMALLINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillTemplate">
+    update ms_base_bill_template
+    <set>
+      <if test="pkBilltype != null">
+        pk_billtype = #{pkBilltype,jdbcType=VARCHAR},
+      </if>
+      <if test="columnModuleName != null">
+        column_module_name = #{columnModuleName,jdbcType=VARCHAR},
+      </if>
+      <if test="columnClassQualifiedName != null">
+        column_class_qualified_name = #{columnClassQualifiedName,jdbcType=VARCHAR},
+      </if>
+      <if test="columnClassNameAbbreviation != null">
+        column_class_name_abbreviation = #{columnClassNameAbbreviation,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="describe != null">
+        describe = #{describe,jdbcType=VARCHAR},
+      </if>
+      <if test="placeholder != null">
+        placeholder = #{placeholder,jdbcType=VARCHAR},
+      </if>
+      <if test="required != null">
+        required = #{required,jdbcType=VARCHAR},
+      </if>
+      <if test="emptyHint != null">
+        empty_hint = #{emptyHint,jdbcType=VARCHAR},
+      </if>
+      <if test="readonly != null">
+        readonly = #{readonly,jdbcType=VARCHAR},
+      </if>
+      <if test="minLength != null">
+        min_length = #{minLength,jdbcType=INTEGER},
+      </if>
+      <if test="maxLength != null">
+        max_length = #{maxLength,jdbcType=INTEGER},
+      </if>
+      <if test="fieldType != null">
+        field_type = #{fieldType,jdbcType=INTEGER},
+      </if>
+      <if test="refTranslate != null">
+        ref_translate = #{refTranslate,jdbcType=VARCHAR},
+      </if>
+      <if test="refShow != null">
+        ref_show = #{refShow,jdbcType=INTEGER},
+      </if>
+      <if test="reorder != null">
+        reorder = #{reorder,jdbcType=INTEGER},
+      </if>
+      <if test="refFormula != null">
+        ref_formula = #{refFormula,jdbcType=VARCHAR},
+      </if>
+      <if test="refUrl != null">
+        ref_url = #{refUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="dataTranslateName != null">
+        data_translate_name = #{dataTranslateName,jdbcType=VARCHAR},
+      </if>
+      <if test="prevGeneratorName != null">
+        prev_generator_name = #{prevGeneratorName,jdbcType=VARCHAR},
+      </if>
+      <if test="refQueryCondition != null">
+        ref_query_condition = #{refQueryCondition,jdbcType=VARCHAR},
+      </if>
+      <if test="tableName != null">
+        table_name = #{tableName,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null">
+        ts = #{ts,jdbcType=CHAR},
+      </if>
+      <if test="dr != null">
+        dr = #{dr,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where pk_base_bill_template = #{pkBaseBillTemplate,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillTemplate">
+    update ms_base_bill_template
+    set pk_billtype = #{pkBilltype,jdbcType=VARCHAR},
+      column_module_name = #{columnModuleName,jdbcType=VARCHAR},
+      column_class_qualified_name = #{columnClassQualifiedName,jdbcType=VARCHAR},
+      column_class_name_abbreviation = #{columnClassNameAbbreviation,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      describe = #{describe,jdbcType=VARCHAR},
+      placeholder = #{placeholder,jdbcType=VARCHAR},
+      required = #{required,jdbcType=VARCHAR},
+      empty_hint = #{emptyHint,jdbcType=VARCHAR},
+      readonly = #{readonly,jdbcType=VARCHAR},
+      min_length = #{minLength,jdbcType=INTEGER},
+      max_length = #{maxLength,jdbcType=INTEGER},
+      field_type = #{fieldType,jdbcType=INTEGER},
+      ref_translate = #{refTranslate,jdbcType=VARCHAR},
+      ref_show = #{refShow,jdbcType=INTEGER},
+      reorder = #{reorder,jdbcType=INTEGER},
+      ref_formula = #{refFormula,jdbcType=VARCHAR},
+      ref_url = #{refUrl,jdbcType=VARCHAR},
+      data_translate_name = #{dataTranslateName,jdbcType=VARCHAR},
+      prev_generator_name = #{prevGeneratorName,jdbcType=VARCHAR},
+      ref_query_condition = #{refQueryCondition,jdbcType=VARCHAR},
+      table_name = #{tableName,jdbcType=VARCHAR},
+      ts = #{ts,jdbcType=CHAR},
+      dr = #{dr,jdbcType=SMALLINT}
+    where pk_base_bill_template = #{pkBaseBillTemplate,jdbcType=VARCHAR}
+  </update>
+</mapper>

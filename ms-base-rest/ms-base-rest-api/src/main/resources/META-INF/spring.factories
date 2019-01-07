@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+tp.ms.base.rest.api.config.BaseApiConfiguration

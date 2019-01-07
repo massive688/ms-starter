@@ -1,0 +1,30 @@
+server:
+   tomcat:
+      uri-encoding: UTF-8
+   port: 8080
+
+spring:
+   profiles:
+      include: dyicache
+ms:
+   ds:
+      mapper-scan: com.mapper.*
+         
+
+
+##### http 转 https 配置部分
+#server:
+#   port: 443 
+#   ssl:
+#      key-store: classpath:keystore.p12 
+#      key-store-password: your-password 
+#      keyStoreType: PKCS12 
+#      keyAlias: your-cert-alias 
+#condition:
+#   http2https: true 
+#http:
+#   port: 80 
+ 
+ 
+
+ 

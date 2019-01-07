@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tp.ms.base.rest.process.mapper.MsWorkableFlowProcessInformationMapper">
+  <resultMap id="BaseResultMap" type="tp.ms.base.rest.process.vo.MsWorkableFlowProcessInformation">
+    <id column="pk_process_information" jdbcType="VARCHAR" property="pkProcessInformation" />
+    <result column="approve_time" jdbcType="VARCHAR" property="approveTime" />
+    <result column="node_name" jdbcType="VARCHAR" property="nodeName" />
+    <result column="operator" jdbcType="VARCHAR" property="operator" />
+    <result column="operation" jdbcType="VARCHAR" property="operation" />
+    <result column="handling_opinions" jdbcType="VARCHAR" property="handlingOpinions" />
+    <result column="process_id" jdbcType="VARCHAR" property="processId" />
+    <result column="is_current_node" jdbcType="VARCHAR" property="isCurrentNode" />
+    <result column="task_id" jdbcType="VARCHAR" property="taskId" />
+    <result column="operator_i_d" jdbcType="VARCHAR" property="operatorID" />
+    <result column="ts" jdbcType="CHAR" property="ts" />
+    <result column="dr" jdbcType="SMALLINT" property="dr" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    pk_process_information, approve_time, node_name, operator, operation, handling_opinions, 
+    process_id, is_current_node, task_id, operator_i_d, ts, dr
+  </sql>
+  <select id="selectByExample" parameterType="tp.ms.base.rest.process.vo.MsWorkableFlowProcessInformationExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ms_workable_flow_process_information
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ms_workable_flow_process_information
+    where pk_process_information = #{pkProcessInformation,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from ms_workable_flow_process_information
+    where pk_process_information = #{pkProcessInformation,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="tp.ms.base.rest.process.vo.MsWorkableFlowProcessInformationExample">
+    delete from ms_workable_flow_process_information
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="tp.ms.base.rest.process.vo.MsWorkableFlowProcessInformation">
+    insert into ms_workable_flow_process_information (pk_process_information, approve_time, 
+      node_name, operator, operation, 
+      handling_opinions, process_id, is_current_node, 
+      task_id, operator_i_d, ts, 
+      dr)
+    values (#{pkProcessInformation,jdbcType=VARCHAR}, #{approveTime,jdbcType=VARCHAR}, 
+      #{nodeName,jdbcType=VARCHAR}, #{operator,jdbcType=VARCHAR}, #{operation,jdbcType=VARCHAR}, 
+      #{handlingOpinions,jdbcType=VARCHAR}, #{processId,jdbcType=VARCHAR}, #{isCurrentNode,jdbcType=VARCHAR}, 
+      #{taskId,jdbcType=VARCHAR}, #{operatorID,jdbcType=VARCHAR}, #{ts,jdbcType=CHAR}, 
+      #{dr,jdbcType=SMALLINT})
+  </insert>
+  <insert id="insertSelective" parameterType="tp.ms.base.rest.process.vo.MsWorkableFlowProcessInformation">
+    insert into ms_workable_flow_process_information
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="pkProcessInformation != null">
+        pk_process_information,
+      </if>
+      <if test="approveTime != null">
+        approve_time,
+      </if>
+      <if test="nodeName != null">
+        node_name,
+      </if>
+      <if test="operator != null">
+        operator,
+      </if>
+      <if test="operation != null">
+        operation,
+      </if>
+      <if test="handlingOpinions != null">
+        handling_opinions,
+      </if>
+      <if test="processId != null">
+        process_id,
+      </if>
+      <if test="isCurrentNode != null">
+        is_current_node,
+      </if>
+      <if test="taskId != null">
+        task_id,
+      </if>
+      <if test="operatorID != null">
+        operator_i_d,
+      </if>
+      <if test="ts != null">
+        ts,
+      </if>
+      <if test="dr != null">
+        dr,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="pkProcessInformation != null">
+        #{pkProcessInformation,jdbcType=VARCHAR},
+      </if>
+      <if test="approveTime != null">
+        #{approveTime,jdbcType=VARCHAR},
+      </if>
+      <if test="nodeName != null">
+        #{nodeName,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null">
+        #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="operation != null">
+        #{operation,jdbcType=VARCHAR},
+      </if>
+      <if test="handlingOpinions != null">
+        #{handlingOpinions,jdbcType=VARCHAR},
+      </if>
+      <if test="processId != null">
+        #{processId,jdbcType=VARCHAR},
+      </if>
+      <if test="isCurrentNode != null">
+        #{isCurrentNode,jdbcType=VARCHAR},
+      </if>
+      <if test="taskId != null">
+        #{taskId,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorID != null">
+        #{operatorID,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null">
+        #{ts,jdbcType=CHAR},
+      </if>
+      <if test="dr != null">
+        #{dr,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="tp.ms.base.rest.process.vo.MsWorkableFlowProcessInformationExample" resultType="java.lang.Long">
+    select count(*) from ms_workable_flow_process_information
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update ms_workable_flow_process_information
+    <set>
+      <if test="record.pkProcessInformation != null">
+        pk_process_information = #{record.pkProcessInformation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.approveTime != null">
+        approve_time = #{record.approveTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nodeName != null">
+        node_name = #{record.nodeName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.operator != null">
+        operator = #{record.operator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.operation != null">
+        operation = #{record.operation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.handlingOpinions != null">
+        handling_opinions = #{record.handlingOpinions,jdbcType=VARCHAR},
+      </if>
+      <if test="record.processId != null">
+        process_id = #{record.processId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isCurrentNode != null">
+        is_current_node = #{record.isCurrentNode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.taskId != null">
+        task_id = #{record.taskId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.operatorID != null">
+        operator_i_d = #{record.operatorID,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ts != null">
+        ts = #{record.ts,jdbcType=CHAR},
+      </if>
+      <if test="record.dr != null">
+        dr = #{record.dr,jdbcType=SMALLINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update ms_workable_flow_process_information
+    set pk_process_information = #{record.pkProcessInformation,jdbcType=VARCHAR},
+      approve_time = #{record.approveTime,jdbcType=VARCHAR},
+      node_name = #{record.nodeName,jdbcType=VARCHAR},
+      operator = #{record.operator,jdbcType=VARCHAR},
+      operation = #{record.operation,jdbcType=VARCHAR},
+      handling_opinions = #{record.handlingOpinions,jdbcType=VARCHAR},
+      process_id = #{record.processId,jdbcType=VARCHAR},
+      is_current_node = #{record.isCurrentNode,jdbcType=VARCHAR},
+      task_id = #{record.taskId,jdbcType=VARCHAR},
+      operator_i_d = #{record.operatorID,jdbcType=VARCHAR},
+      ts = #{record.ts,jdbcType=CHAR},
+      dr = #{record.dr,jdbcType=SMALLINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="tp.ms.base.rest.process.vo.MsWorkableFlowProcessInformation">
+    update ms_workable_flow_process_information
+    <set>
+      <if test="approveTime != null">
+        approve_time = #{approveTime,jdbcType=VARCHAR},
+      </if>
+      <if test="nodeName != null">
+        node_name = #{nodeName,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null">
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="operation != null">
+        operation = #{operation,jdbcType=VARCHAR},
+      </if>
+      <if test="handlingOpinions != null">
+        handling_opinions = #{handlingOpinions,jdbcType=VARCHAR},
+      </if>
+      <if test="processId != null">
+        process_id = #{processId,jdbcType=VARCHAR},
+      </if>
+      <if test="isCurrentNode != null">
+        is_current_node = #{isCurrentNode,jdbcType=VARCHAR},
+      </if>
+      <if test="taskId != null">
+        task_id = #{taskId,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorID != null">
+        operator_i_d = #{operatorID,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null">
+        ts = #{ts,jdbcType=CHAR},
+      </if>
+      <if test="dr != null">
+        dr = #{dr,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where pk_process_information = #{pkProcessInformation,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="tp.ms.base.rest.process.vo.MsWorkableFlowProcessInformation">
+    update ms_workable_flow_process_information
+    set approve_time = #{approveTime,jdbcType=VARCHAR},
+      node_name = #{nodeName,jdbcType=VARCHAR},
+      operator = #{operator,jdbcType=VARCHAR},
+      operation = #{operation,jdbcType=VARCHAR},
+      handling_opinions = #{handlingOpinions,jdbcType=VARCHAR},
+      process_id = #{processId,jdbcType=VARCHAR},
+      is_current_node = #{isCurrentNode,jdbcType=VARCHAR},
+      task_id = #{taskId,jdbcType=VARCHAR},
+      operator_i_d = #{operatorID,jdbcType=VARCHAR},
+      ts = #{ts,jdbcType=CHAR},
+      dr = #{dr,jdbcType=SMALLINT}
+    where pk_process_information = #{pkProcessInformation,jdbcType=VARCHAR}
+  </update>
+</mapper>

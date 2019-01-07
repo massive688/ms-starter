@@ -1,0 +1,80 @@
+server:
+   tomcat:
+      uri-encoding: UTF-8
+   port: 8080
+
+spring:
+   profiles:
+      include: dyicache,casec
+   servlet:
+      multipart:
+         max-file-size: 51200kb
+         max-request-size: 1024000KB
+   mvc:
+      view:
+         prefix: /
+         suffix: .html
+   resources:
+      static-locations: classpath:static/
+   http:
+      encoding:
+         charset: utf-8
+         force: true
+         enabled: true
+      multipart:
+         enabled: true
+         max-file-size: -1
+ms:
+   dyn:
+      myb:
+         mapper-scan: com.*
+         
+pagehelper:
+    helperDialect: sqlserver
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+    
+file-manager:
+   thumbnail:
+      width: 80 # 缩略图宽
+   volumes:
+      - source: fileSystem # 暂时只支持本地文件系统
+        alias: AdreamCatalog # 目录别名
+        path: /CR # 映射目录
+        default-value: true # 是否默认打开
+        locale: 
+        constraint:
+           locked: false # 文件夹是否锁定
+           readable: true # 是否可读
+           writable: true # 是否可写
+
+##### http 转 https 配置部分
+#server:
+#   port: 443 
+#   ssl:
+#      key-store: classpath:keystore.p12 
+#      key-store-password: your-password 
+#      keyStoreType: PKCS12 
+#      keyAlias: your-cert-alias 
+#condition:
+#   http2https: true 
+#http:
+#   port: 80 
+ 
+##### CAS 配置部分
+cas:
+   sec:
+#      authenticationUserDetailsService: com.ms.support.security.MsAuthenticationUserDetailsService
+#      userDetailsService: com.ms.support.security.MsUserDetailsService
+       cas-server-url: https://accounttest.adream.org/cas
+#       cas-server-url: https://account.adream.org/cas
+       app-service-url: http://10.104.23.197:${server.port}
+#       app-service-url: http://192.168.1.102:${server.port}
+   ref:
+      url:
+         users: http://accounttest.adream.org/account/restful/queryUserListByUid
+
+ 
+
+ 

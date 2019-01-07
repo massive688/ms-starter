@@ -1,0 +1,15 @@
+#### Redis 配置
+spring:
+   profiles:
+#      include: dydsm,cache,casec
+      include: dydsm,cache,workflow
+mybatis:
+   mapper-locations: classpath*:modeler-mybatis-mappings/**/*.xml
+server:
+   #端口号
+   port: 8888
+   #项目名，如果不设定，默认是 /
+   servlet:
+     context-path:
+
+ 

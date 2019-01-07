@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tp.ms.base.rest.ots.staff.entity.MyAdreamStaffMapper">
+  <resultMap id="BaseResultMap" type="tp.ms.base.rest.ots.staff.entity.MyAdreamStaff">
+    <id column="pk_user" jdbcType="VARCHAR" property="pkUser" />
+    <result column="user_code" jdbcType="VARCHAR" property="userCode" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="head_photo" jdbcType="VARCHAR" property="headPhoto" />
+    <result column="userid" jdbcType="VARCHAR" property="userid" />
+    <result column="roles" jdbcType="VARCHAR" property="roles" />
+    <result column="pk_corp" jdbcType="VARCHAR" property="pkCorp" />
+    <result column="pk_group" jdbcType="VARCHAR" property="pkGroup" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="creationtime" jdbcType="VARCHAR" property="creationtime" />
+    <result column="modifier" jdbcType="VARCHAR" property="modifier" />
+    <result column="modifiedtime" jdbcType="VARCHAR" property="modifiedtime" />
+    <result column="billtype" jdbcType="VARCHAR" property="billtype" />
+    <result column="enabled" jdbcType="SMALLINT" property="enabled" />
+    <result column="ts" jdbcType="CHAR" property="ts" />
+    <result column="dr" jdbcType="SMALLINT" property="dr" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    pk_user, user_code, nickname, user_name, head_photo, userid, roles, pk_corp, pk_group, 
+    creator, creationtime, modifier, modifiedtime, billtype, enabled, ts, dr
+  </sql>
+  <select id="selectByExample" parameterType="tp.ms.base.rest.ots.staff.entity.MyAdreamStaffExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ms_base_staff
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ms_base_staff
+    where pk_user = #{pkUser,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from ms_base_staff
+    where pk_user = #{pkUser,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="tp.ms.base.rest.ots.staff.entity.MyAdreamStaffExample">
+    delete from ms_base_staff
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="tp.ms.base.rest.ots.staff.entity.MyAdreamStaff">
+    insert into ms_base_staff (pk_user, user_code, nickname, 
+      user_name, head_photo, userid, 
+      roles, pk_corp, pk_group, 
+      creator, creationtime, modifier, 
+      modifiedtime, billtype, enabled, 
+      ts, dr)
+    values (#{pkUser,jdbcType=VARCHAR}, #{userCode,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, 
+      #{userName,jdbcType=VARCHAR}, #{headPhoto,jdbcType=VARCHAR}, #{userid,jdbcType=VARCHAR}, 
+      #{roles,jdbcType=VARCHAR}, #{pkCorp,jdbcType=VARCHAR}, #{pkGroup,jdbcType=VARCHAR}, 
+      #{creator,jdbcType=VARCHAR}, #{creationtime,jdbcType=VARCHAR}, #{modifier,jdbcType=VARCHAR}, 
+      #{modifiedtime,jdbcType=VARCHAR}, #{billtype,jdbcType=VARCHAR}, #{enabled,jdbcType=SMALLINT}, 
+      #{ts,jdbcType=CHAR}, #{dr,jdbcType=SMALLINT})
+  </insert>
+  <insert id="insertSelective" parameterType="tp.ms.base.rest.ots.staff.entity.MyAdreamStaff">
+    insert into ms_base_staff
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="pkUser != null">
+        pk_user,
+      </if>
+      <if test="userCode != null">
+        user_code,
+      </if>
+      <if test="nickname != null">
+        nickname,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="headPhoto != null">
+        head_photo,
+      </if>
+      <if test="userid != null">
+        userid,
+      </if>
+      <if test="roles != null">
+        roles,
+      </if>
+      <if test="pkCorp != null">
+        pk_corp,
+      </if>
+      <if test="pkGroup != null">
+        pk_group,
+      </if>
+      <if test="creator != null">
+        creator,
+      </if>
+      <if test="creationtime != null">
+        creationtime,
+      </if>
+      <if test="modifier != null">
+        modifier,
+      </if>
+      <if test="modifiedtime != null">
+        modifiedtime,
+      </if>
+      <if test="billtype != null">
+        billtype,
+      </if>
+      <if test="enabled != null">
+        enabled,
+      </if>
+      <if test="ts != null">
+        ts,
+      </if>
+      <if test="dr != null">
+        dr,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="pkUser != null">
+        #{pkUser,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="headPhoto != null">
+        #{headPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="roles != null">
+        #{roles,jdbcType=VARCHAR},
+      </if>
+      <if test="pkCorp != null">
+        #{pkCorp,jdbcType=VARCHAR},
+      </if>
+      <if test="pkGroup != null">
+        #{pkGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="creator != null">
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null">
+        #{creationtime,jdbcType=VARCHAR},
+      </if>
+      <if test="modifier != null">
+        #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="modifiedtime != null">
+        #{modifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="billtype != null">
+        #{billtype,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null">
+        #{enabled,jdbcType=SMALLINT},
+      </if>
+      <if test="ts != null">
+        #{ts,jdbcType=CHAR},
+      </if>
+      <if test="dr != null">
+        #{dr,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="tp.ms.base.rest.ots.staff.entity.MyAdreamStaffExample" resultType="java.lang.Long">
+    select count(*) from ms_base_staff
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update ms_base_staff
+    <set>
+      <if test="record.pkUser != null">
+        pk_user = #{record.pkUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userCode != null">
+        user_code = #{record.userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nickname != null">
+        nickname = #{record.nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userName != null">
+        user_name = #{record.userName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.headPhoto != null">
+        head_photo = #{record.headPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userid != null">
+        userid = #{record.userid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roles != null">
+        roles = #{record.roles,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkCorp != null">
+        pk_corp = #{record.pkCorp,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkGroup != null">
+        pk_group = #{record.pkGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creator != null">
+        creator = #{record.creator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creationtime != null">
+        creationtime = #{record.creationtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifier != null">
+        modifier = #{record.modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifiedtime != null">
+        modifiedtime = #{record.modifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.billtype != null">
+        billtype = #{record.billtype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.enabled != null">
+        enabled = #{record.enabled,jdbcType=SMALLINT},
+      </if>
+      <if test="record.ts != null">
+        ts = #{record.ts,jdbcType=CHAR},
+      </if>
+      <if test="record.dr != null">
+        dr = #{record.dr,jdbcType=SMALLINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update ms_base_staff
+    set pk_user = #{record.pkUser,jdbcType=VARCHAR},
+      user_code = #{record.userCode,jdbcType=VARCHAR},
+      nickname = #{record.nickname,jdbcType=VARCHAR},
+      user_name = #{record.userName,jdbcType=VARCHAR},
+      head_photo = #{record.headPhoto,jdbcType=VARCHAR},
+      userid = #{record.userid,jdbcType=VARCHAR},
+      roles = #{record.roles,jdbcType=VARCHAR},
+      pk_corp = #{record.pkCorp,jdbcType=VARCHAR},
+      pk_group = #{record.pkGroup,jdbcType=VARCHAR},
+      creator = #{record.creator,jdbcType=VARCHAR},
+      creationtime = #{record.creationtime,jdbcType=VARCHAR},
+      modifier = #{record.modifier,jdbcType=VARCHAR},
+      modifiedtime = #{record.modifiedtime,jdbcType=VARCHAR},
+      billtype = #{record.billtype,jdbcType=VARCHAR},
+      enabled = #{record.enabled,jdbcType=SMALLINT},
+      ts = #{record.ts,jdbcType=CHAR},
+      dr = #{record.dr,jdbcType=SMALLINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="tp.ms.base.rest.ots.staff.entity.MyAdreamStaff">
+    update ms_base_staff
+    <set>
+      <if test="userCode != null">
+        user_code = #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="headPhoto != null">
+        head_photo = #{headPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        userid = #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="roles != null">
+        roles = #{roles,jdbcType=VARCHAR},
+      </if>
+      <if test="pkCorp != null">
+        pk_corp = #{pkCorp,jdbcType=VARCHAR},
+      </if>
+      <if test="pkGroup != null">
+        pk_group = #{pkGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="creator != null">
+        creator = #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null">
+        creationtime = #{creationtime,jdbcType=VARCHAR},
+      </if>
+      <if test="modifier != null">
+        modifier = #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="modifiedtime != null">
+        modifiedtime = #{modifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="billtype != null">
+        billtype = #{billtype,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null">
+        enabled = #{enabled,jdbcType=SMALLINT},
+      </if>
+      <if test="ts != null">
+        ts = #{ts,jdbcType=CHAR},
+      </if>
+      <if test="dr != null">
+        dr = #{dr,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where pk_user = #{pkUser,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="tp.ms.base.rest.ots.staff.entity.MyAdreamStaff">
+    update ms_base_staff
+    set user_code = #{userCode,jdbcType=VARCHAR},
+      nickname = #{nickname,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      head_photo = #{headPhoto,jdbcType=VARCHAR},
+      userid = #{userid,jdbcType=VARCHAR},
+      roles = #{roles,jdbcType=VARCHAR},
+      pk_corp = #{pkCorp,jdbcType=VARCHAR},
+      pk_group = #{pkGroup,jdbcType=VARCHAR},
+      creator = #{creator,jdbcType=VARCHAR},
+      creationtime = #{creationtime,jdbcType=VARCHAR},
+      modifier = #{modifier,jdbcType=VARCHAR},
+      modifiedtime = #{modifiedtime,jdbcType=VARCHAR},
+      billtype = #{billtype,jdbcType=VARCHAR},
+      enabled = #{enabled,jdbcType=SMALLINT},
+      ts = #{ts,jdbcType=CHAR},
+      dr = #{dr,jdbcType=SMALLINT}
+    where pk_user = #{pkUser,jdbcType=VARCHAR}
+  </update>
+</mapper>

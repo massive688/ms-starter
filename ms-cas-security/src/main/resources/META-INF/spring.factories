@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+tp.ms.cas.security.config.MsCasCoreSecurityConfig,\
+tp.ms.cas.security.config.MsWebSecurityConfig
+

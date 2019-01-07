@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tp.ms.base.rest.typecoded.mapper.MsBaseBillCodeRuleMapper">
+	<!-- <cache type="tp.ms.common.data.cache.redis.MsMybatisRedisCache"/> -->
+  <resultMap id="BaseResultMap" type="tp.ms.base.rest.typecoded.vo.MsBaseBillCodeRule">
+    <id column="pk_base_bill_code_rule" jdbcType="CHAR" property="pkBaseBillCodeRule" />
+    <result column="codelength" jdbcType="INTEGER" property="codelength" />
+    <result column="dr" jdbcType="SMALLINT" property="dr" />
+    <result column="elemtype" jdbcType="SMALLINT" property="elemtype" />
+    <result column="lastserialnumber" jdbcType="VARCHAR" property="lastserialnumber" />
+    <result column="isrefer" jdbcType="SMALLINT" property="isrefer" />
+    <result column="codePrefix" jdbcType="VARCHAR" property="codeprefix" />
+    <result column="constantfix" jdbcType="VARCHAR" property="constantfix" />
+    <result column="billtype" jdbcType="VARCHAR" property="billtype" />
+    <result column="pk_corp" jdbcType="VARCHAR" property="pkCorp" />
+    <result column="timeformat" jdbcType="VARCHAR" property="timeformat" />
+    <result column="ts" jdbcType="CHAR" property="ts" />
+    <result column="lasttimevalue" jdbcType="VARCHAR" property="lasttimevalue" />
+    <result column="isautofill" jdbcType="CHAR" property="isautofill" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    pk_base_bill_code_rule, codelength, dr, elemtype, lastserialnumber, isrefer, codePrefix, 
+    constantfix, billtype, pk_corp, timeformat, ts, lasttimevalue, isautofill
+  </sql>
+  <select id="selectByExample" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillCodeRuleExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ms_base_bill_code_rule
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ms_base_bill_code_rule
+    where pk_base_bill_code_rule = #{pkBaseBillCodeRule,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from ms_base_bill_code_rule
+    where pk_base_bill_code_rule = #{pkBaseBillCodeRule,jdbcType=CHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillCodeRuleExample">
+    delete from ms_base_bill_code_rule
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillCodeRule">
+    insert into ms_base_bill_code_rule (pk_base_bill_code_rule, codelength, dr, 
+      elemtype, lastserialnumber, isrefer, 
+      codePrefix, constantfix, billtype, 
+      pk_corp, timeformat, ts, 
+      lasttimevalue, isautofill)
+    values (#{pkBaseBillCodeRule,jdbcType=CHAR}, #{codelength,jdbcType=INTEGER}, #{dr,jdbcType=SMALLINT}, 
+      #{elemtype,jdbcType=SMALLINT}, #{lastserialnumber,jdbcType=VARCHAR}, #{isrefer,jdbcType=SMALLINT}, 
+      #{codeprefix,jdbcType=VARCHAR}, #{constantfix,jdbcType=VARCHAR}, #{billtype,jdbcType=VARCHAR}, 
+      #{pkCorp,jdbcType=VARCHAR}, #{timeformat,jdbcType=VARCHAR}, #{ts,jdbcType=CHAR}, 
+      #{lasttimevalue,jdbcType=VARCHAR}, #{isautofill,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillCodeRule">
+    insert into ms_base_bill_code_rule
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="pkBaseBillCodeRule != null">
+        pk_base_bill_code_rule,
+      </if>
+      <if test="codelength != null">
+        codelength,
+      </if>
+      <if test="dr != null">
+        dr,
+      </if>
+      <if test="elemtype != null">
+        elemtype,
+      </if>
+      <if test="lastserialnumber != null">
+        lastserialnumber,
+      </if>
+      <if test="isrefer != null">
+        isrefer,
+      </if>
+      <if test="codeprefix != null">
+        codePrefix,
+      </if>
+      <if test="constantfix != null">
+        constantfix,
+      </if>
+      <if test="billtype != null">
+        billtype,
+      </if>
+      <if test="pkCorp != null">
+        pk_corp,
+      </if>
+      <if test="timeformat != null">
+        timeformat,
+      </if>
+      <if test="ts != null">
+        ts,
+      </if>
+      <if test="lasttimevalue != null">
+        lasttimevalue,
+      </if>
+      <if test="isautofill != null">
+        isautofill,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="pkBaseBillCodeRule != null">
+        #{pkBaseBillCodeRule,jdbcType=CHAR},
+      </if>
+      <if test="codelength != null">
+        #{codelength,jdbcType=INTEGER},
+      </if>
+      <if test="dr != null">
+        #{dr,jdbcType=SMALLINT},
+      </if>
+      <if test="elemtype != null">
+        #{elemtype,jdbcType=SMALLINT},
+      </if>
+      <if test="lastserialnumber != null">
+        #{lastserialnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="isrefer != null">
+        #{isrefer,jdbcType=SMALLINT},
+      </if>
+      <if test="codeprefix != null">
+        #{codeprefix,jdbcType=VARCHAR},
+      </if>
+      <if test="constantfix != null">
+        #{constantfix,jdbcType=VARCHAR},
+      </if>
+      <if test="billtype != null">
+        #{billtype,jdbcType=VARCHAR},
+      </if>
+      <if test="pkCorp != null">
+        #{pkCorp,jdbcType=VARCHAR},
+      </if>
+      <if test="timeformat != null">
+        #{timeformat,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null">
+        #{ts,jdbcType=CHAR},
+      </if>
+      <if test="lasttimevalue != null">
+        #{lasttimevalue,jdbcType=VARCHAR},
+      </if>
+      <if test="isautofill != null">
+        #{isautofill,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillCodeRuleExample" resultType="java.lang.Long">
+    select count(*) from ms_base_bill_code_rule
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update ms_base_bill_code_rule
+    <set>
+      <if test="record.pkBaseBillCodeRule != null">
+        pk_base_bill_code_rule = #{record.pkBaseBillCodeRule,jdbcType=CHAR},
+      </if>
+      <if test="record.codelength != null">
+        codelength = #{record.codelength,jdbcType=INTEGER},
+      </if>
+      <if test="record.dr != null">
+        dr = #{record.dr,jdbcType=SMALLINT},
+      </if>
+      <if test="record.elemtype != null">
+        elemtype = #{record.elemtype,jdbcType=SMALLINT},
+      </if>
+      <if test="record.lastserialnumber != null">
+        lastserialnumber = #{record.lastserialnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isrefer != null">
+        isrefer = #{record.isrefer,jdbcType=SMALLINT},
+      </if>
+      <if test="record.codeprefix != null">
+        codePrefix = #{record.codeprefix,jdbcType=VARCHAR},
+      </if>
+      <if test="record.constantfix != null">
+        constantfix = #{record.constantfix,jdbcType=VARCHAR},
+      </if>
+      <if test="record.billtype != null">
+        billtype = #{record.billtype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkCorp != null">
+        pk_corp = #{record.pkCorp,jdbcType=VARCHAR},
+      </if>
+      <if test="record.timeformat != null">
+        timeformat = #{record.timeformat,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ts != null">
+        ts = #{record.ts,jdbcType=CHAR},
+      </if>
+      <if test="record.lasttimevalue != null">
+        lasttimevalue = #{record.lasttimevalue,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isautofill != null">
+        isautofill = #{record.isautofill,jdbcType=CHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update ms_base_bill_code_rule
+    set pk_base_bill_code_rule = #{record.pkBaseBillCodeRule,jdbcType=CHAR},
+      codelength = #{record.codelength,jdbcType=INTEGER},
+      dr = #{record.dr,jdbcType=SMALLINT},
+      elemtype = #{record.elemtype,jdbcType=SMALLINT},
+      lastserialnumber = #{record.lastserialnumber,jdbcType=VARCHAR},
+      isrefer = #{record.isrefer,jdbcType=SMALLINT},
+      codePrefix = #{record.codeprefix,jdbcType=VARCHAR},
+      constantfix = #{record.constantfix,jdbcType=VARCHAR},
+      billtype = #{record.billtype,jdbcType=VARCHAR},
+      pk_corp = #{record.pkCorp,jdbcType=VARCHAR},
+      timeformat = #{record.timeformat,jdbcType=VARCHAR},
+      ts = #{record.ts,jdbcType=CHAR},
+      lasttimevalue = #{record.lasttimevalue,jdbcType=VARCHAR},
+      isautofill = #{record.isautofill,jdbcType=CHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillCodeRule">
+    update ms_base_bill_code_rule
+    <set>
+      <if test="codelength != null">
+        codelength = #{codelength,jdbcType=INTEGER},
+      </if>
+      <if test="dr != null">
+        dr = #{dr,jdbcType=SMALLINT},
+      </if>
+      <if test="elemtype != null">
+        elemtype = #{elemtype,jdbcType=SMALLINT},
+      </if>
+      <if test="lastserialnumber != null">
+        lastserialnumber = #{lastserialnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="isrefer != null">
+        isrefer = #{isrefer,jdbcType=SMALLINT},
+      </if>
+      <if test="codeprefix != null">
+        codePrefix = #{codeprefix,jdbcType=VARCHAR},
+      </if>
+      <if test="constantfix != null">
+        constantfix = #{constantfix,jdbcType=VARCHAR},
+      </if>
+      <if test="billtype != null">
+        billtype = #{billtype,jdbcType=VARCHAR},
+      </if>
+      <if test="pkCorp != null">
+        pk_corp = #{pkCorp,jdbcType=VARCHAR},
+      </if>
+      <if test="timeformat != null">
+        timeformat = #{timeformat,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null">
+        ts = #{ts,jdbcType=CHAR},
+      </if>
+      <if test="lasttimevalue != null">
+        lasttimevalue = #{lasttimevalue,jdbcType=VARCHAR},
+      </if>
+      <if test="isautofill != null">
+        isautofill = #{isautofill,jdbcType=CHAR},
+      </if>
+    </set>
+    where pk_base_bill_code_rule = #{pkBaseBillCodeRule,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="tp.ms.base.rest.typecoded.vo.MsBaseBillCodeRule">
+    update ms_base_bill_code_rule
+    set codelength = #{codelength,jdbcType=INTEGER},
+      dr = #{dr,jdbcType=SMALLINT},
+      elemtype = #{elemtype,jdbcType=SMALLINT},
+      lastserialnumber = #{lastserialnumber,jdbcType=VARCHAR},
+      isrefer = #{isrefer,jdbcType=SMALLINT},
+      codePrefix = #{codeprefix,jdbcType=VARCHAR},
+      constantfix = #{constantfix,jdbcType=VARCHAR},
+      billtype = #{billtype,jdbcType=VARCHAR},
+      pk_corp = #{pkCorp,jdbcType=VARCHAR},
+      timeformat = #{timeformat,jdbcType=VARCHAR},
+      ts = #{ts,jdbcType=CHAR},
+      lasttimevalue = #{lasttimevalue,jdbcType=VARCHAR},
+      isautofill = #{isautofill,jdbcType=CHAR}
+    where pk_base_bill_code_rule = #{pkBaseBillCodeRule,jdbcType=CHAR}
+  </update>  
+</mapper>

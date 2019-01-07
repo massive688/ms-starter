@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+tp.ms.common.data.mybatis.config.DruidStatViewServletFilterConfiguration,\
+tp.ms.common.data.mybatis.config.MsMapperScannerConfiguration,\
+tp.ms.common.data.transaction.config.CustomProxyTransactionManagementConfiguration,\
+tp.ms.common.data.jpa.config.MsJpaRepositorieConfiguration
+

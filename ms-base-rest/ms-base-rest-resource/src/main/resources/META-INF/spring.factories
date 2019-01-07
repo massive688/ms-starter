@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+tp.ms.base.rest.resource.config.MsAppResourceConfig,\
+tp.ms.base.rest.resource.config.MsSwaggerConfig
+

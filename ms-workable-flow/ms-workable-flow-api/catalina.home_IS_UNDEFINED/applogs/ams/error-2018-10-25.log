@@ -1,0 +1,76 @@
+[WARN ][2018-10-25 13:38:36.740][restartedMain] org.mybatis.spring.mapper.ClassPathMapperScanner content: No MyBatis mapper was found in '[com.ms.workable.flow.api]' package. Please check your configuration.
+[WARN ][2018-10-25 13:38:38.039][restartedMain] org.mybatis.spring.mapper.ClassPathMapperScanner content: No MyBatis mapper was found in '[com.mapper.*]' package. Please check your configuration.
+[WARN ][2018-10-25 13:38:38.065][restartedMain] org.springframework.context.annotation.ConfigurationClassPostProcessor content: Cannot enhance @Configuration bean definition 'tp.ms.common.data.mybatis.config.MsMapperScannerConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[ERROR][2018-10-25 13:38:45.784][localhost-startStop-1] org.springframework.boot.web.embedded.tomcat.TomcatStarter content: Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'servletEndpointRegistrar' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar]: Factory method 'servletEndpointRegistrar' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'processEngineEndpoint' defined in class path resource [org/flowable/spring/boot/EndpointAutoConfiguration.class]: Unsatisfied dependency expressed through method 'processEngineEndpoint' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'processEngine' defined in class path resource [org/flowable/spring/boot/ProcessEngineServicesAutoConfiguration$AlreadyInitializedAppEngineConfiguration.class]: Unsatisfied dependency expressed through method 'processEngine' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.flowable.spring.boot.app.AppEngineServicesAutoConfiguration': Unsatisfied dependency expressed through method 'setEngineConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.flowable.spring.boot.ProcessEngineAutoConfiguration$ProcessEngineAppConfiguration': Unsatisfied dependency expressed through method 'setEngineConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jpaProcessEngineConfigurer' defined in class path resource [org/flowable/spring/boot/FlowableTransactionAutoConfiguration$JpaTransactionConfiguration.class]: Unsatisfied dependency expressed through method 'jpaProcessEngineConfigurer' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.persistence.EntityManagerFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[WARN ][2018-10-25 13:38:45.898][restartedMain] o.s.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext content: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+[ERROR][2018-10-25 13:38:46.419][restartedMain] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter content: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method jpaProcessEngineConfigurer in org.flowable.spring.boot.FlowableTransactionAutoConfiguration$JpaTransactionConfiguration required a bean of type 'javax.persistence.EntityManagerFactory' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'javax.persistence.EntityManagerFactory' in your configuration.
+
+[WARN ][2018-10-25 14:43:33.819][restartedMain] org.mybatis.spring.mapper.ClassPathMapperScanner content: No MyBatis mapper was found in '[com.ms.workable.flow.api]' package. Please check your configuration.
+[WARN ][2018-10-25 14:43:35.249][restartedMain] org.mybatis.spring.mapper.ClassPathMapperScanner content: No MyBatis mapper was found in '[com.mapper.*]' package. Please check your configuration.
+[WARN ][2018-10-25 14:43:35.277][restartedMain] org.springframework.context.annotation.ConfigurationClassPostProcessor content: Cannot enhance @Configuration bean definition 'tp.ms.common.data.mybatis.config.MsMapperScannerConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[ERROR][2018-10-25 14:43:42.813][localhost-startStop-1] org.springframework.boot.web.embedded.tomcat.TomcatStarter content: Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'servletEndpointRegistrar' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar]: Factory method 'servletEndpointRegistrar' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'processEngineEndpoint' defined in class path resource [org/flowable/spring/boot/EndpointAutoConfiguration.class]: Unsatisfied dependency expressed through method 'processEngineEndpoint' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'processEngine' defined in class path resource [org/flowable/spring/boot/ProcessEngineServicesAutoConfiguration$AlreadyInitializedAppEngineConfiguration.class]: Unsatisfied dependency expressed through method 'processEngine' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.flowable.spring.boot.app.AppEngineServicesAutoConfiguration': Unsatisfied dependency expressed through method 'setEngineConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.flowable.spring.boot.ProcessEngineAutoConfiguration$ProcessEngineAppConfiguration': Unsatisfied dependency expressed through method 'setEngineConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jpaProcessEngineConfigurer' defined in class path resource [org/flowable/spring/boot/FlowableTransactionAutoConfiguration$JpaTransactionConfiguration.class]: Unsatisfied dependency expressed through method 'jpaProcessEngineConfigurer' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.persistence.EntityManagerFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[WARN ][2018-10-25 14:43:42.947][restartedMain] o.s.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext content: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+[ERROR][2018-10-25 14:43:43.601][restartedMain] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter content: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method jpaProcessEngineConfigurer in org.flowable.spring.boot.FlowableTransactionAutoConfiguration$JpaTransactionConfiguration required a bean of type 'javax.persistence.EntityManagerFactory' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'javax.persistence.EntityManagerFactory' in your configuration.
+
+[WARN ][2018-10-25 15:11:18.748][restartedMain] o.s.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext content: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: A circular @Import has been detected: Illegal attempt by @Configuration class 'MsJpaRepositorieConfiguration' to import class 'MsJpaRepositorieConfiguration' as 'MsJpaRepositorieConfiguration' is already present in the current import stack [MsJpaRepositorieConfiguration->MsJpaRepositorieConfiguration->FlowAppBoot]
+Offending resource: class path resource [tp/ms/common/data/jpa/config/MsJpaRepositorieConfiguration.class]
+[ERROR][2018-10-25 15:11:18.774][restartedMain] org.springframework.boot.SpringApplication content: Application run failed
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: A circular @Import has been detected: Illegal attempt by @Configuration class 'MsJpaRepositorieConfiguration' to import class 'MsJpaRepositorieConfiguration' as 'MsJpaRepositorieConfiguration' is already present in the current import stack [MsJpaRepositorieConfiguration->MsJpaRepositorieConfiguration->FlowAppBoot]
+Offending resource: class path resource [tp/ms/common/data/jpa/config/MsJpaRepositorieConfiguration.class]
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:72)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:636)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:618)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:636)
+	at org.springframework.context.annotation.ConfigurationClassParser.lambda$processDeferredImportSelectors$2(ConfigurationClassParser.java:566)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:563)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:316)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:271)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:91)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
+	at com.ms.workable.flow.api.FlowAppBoot.main(FlowAppBoot.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)

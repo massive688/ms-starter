@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tp.ms.base.rest.ots.orgs.entity.MyAdreamOrgelementsMapper">
+  <resultMap id="BaseResultMap" type="tp.ms.base.rest.ots.orgs.entity.MyAdreamOrgelements">
+    <id column="pk_orgelements" jdbcType="VARCHAR" property="pkOrgelements" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="parent_id" jdbcType="VARCHAR" property="parentId" />
+    <result column="type" jdbcType="SMALLINT" property="type" />
+    <result column="pk_corp" jdbcType="VARCHAR" property="pkCorp" />
+    <result column="pk_group" jdbcType="VARCHAR" property="pkGroup" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="creationtime" jdbcType="VARCHAR" property="creationtime" />
+    <result column="modifier" jdbcType="VARCHAR" property="modifier" />
+    <result column="modifiedtime" jdbcType="VARCHAR" property="modifiedtime" />
+    <result column="billtype" jdbcType="VARCHAR" property="billtype" />
+    <result column="enabled" jdbcType="SMALLINT" property="enabled" />
+    <result column="ts" jdbcType="CHAR" property="ts" />
+    <result column="dr" jdbcType="SMALLINT" property="dr" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    pk_orgelements, code, name, parent_id, type, pk_corp, pk_group, creator, creationtime, 
+    modifier, modifiedtime, billtype, enabled, ts, dr
+  </sql>
+  <select id="selectByExample" parameterType="tp.ms.base.rest.ots.orgs.entity.MyAdreamOrgelementsExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ms_base_orgelements
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ms_base_orgelements
+    where pk_orgelements = #{pkOrgelements,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from ms_base_orgelements
+    where pk_orgelements = #{pkOrgelements,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="tp.ms.base.rest.ots.orgs.entity.MyAdreamOrgelementsExample">
+    delete from ms_base_orgelements
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="tp.ms.base.rest.ots.orgs.entity.MyAdreamOrgelements">
+    insert into ms_base_orgelements (pk_orgelements, code, name, 
+      parent_id, type, pk_corp, 
+      pk_group, creator, creationtime, 
+      modifier, modifiedtime, billtype, 
+      enabled, ts, dr)
+    values (#{pkOrgelements,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{parentId,jdbcType=VARCHAR}, #{type,jdbcType=SMALLINT}, #{pkCorp,jdbcType=VARCHAR}, 
+      #{pkGroup,jdbcType=VARCHAR}, #{creator,jdbcType=VARCHAR}, #{creationtime,jdbcType=VARCHAR}, 
+      #{modifier,jdbcType=VARCHAR}, #{modifiedtime,jdbcType=VARCHAR}, #{billtype,jdbcType=VARCHAR}, 
+      #{enabled,jdbcType=SMALLINT}, #{ts,jdbcType=CHAR}, #{dr,jdbcType=SMALLINT})
+  </insert>
+  <insert id="insertSelective" parameterType="tp.ms.base.rest.ots.orgs.entity.MyAdreamOrgelements">
+    insert into ms_base_orgelements
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="pkOrgelements != null">
+        pk_orgelements,
+      </if>
+      <if test="code != null">
+        code,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="parentId != null">
+        parent_id,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="pkCorp != null">
+        pk_corp,
+      </if>
+      <if test="pkGroup != null">
+        pk_group,
+      </if>
+      <if test="creator != null">
+        creator,
+      </if>
+      <if test="creationtime != null">
+        creationtime,
+      </if>
+      <if test="modifier != null">
+        modifier,
+      </if>
+      <if test="modifiedtime != null">
+        modifiedtime,
+      </if>
+      <if test="billtype != null">
+        billtype,
+      </if>
+      <if test="enabled != null">
+        enabled,
+      </if>
+      <if test="ts != null">
+        ts,
+      </if>
+      <if test="dr != null">
+        dr,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="pkOrgelements != null">
+        #{pkOrgelements,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null">
+        #{parentId,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=SMALLINT},
+      </if>
+      <if test="pkCorp != null">
+        #{pkCorp,jdbcType=VARCHAR},
+      </if>
+      <if test="pkGroup != null">
+        #{pkGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="creator != null">
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null">
+        #{creationtime,jdbcType=VARCHAR},
+      </if>
+      <if test="modifier != null">
+        #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="modifiedtime != null">
+        #{modifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="billtype != null">
+        #{billtype,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null">
+        #{enabled,jdbcType=SMALLINT},
+      </if>
+      <if test="ts != null">
+        #{ts,jdbcType=CHAR},
+      </if>
+      <if test="dr != null">
+        #{dr,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="tp.ms.base.rest.ots.orgs.entity.MyAdreamOrgelementsExample" resultType="java.lang.Long">
+    select count(*) from ms_base_orgelements
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update ms_base_orgelements
+    <set>
+      <if test="record.pkOrgelements != null">
+        pk_orgelements = #{record.pkOrgelements,jdbcType=VARCHAR},
+      </if>
+      <if test="record.code != null">
+        code = #{record.code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.parentId != null">
+        parent_id = #{record.parentId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=SMALLINT},
+      </if>
+      <if test="record.pkCorp != null">
+        pk_corp = #{record.pkCorp,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkGroup != null">
+        pk_group = #{record.pkGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creator != null">
+        creator = #{record.creator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creationtime != null">
+        creationtime = #{record.creationtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifier != null">
+        modifier = #{record.modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifiedtime != null">
+        modifiedtime = #{record.modifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.billtype != null">
+        billtype = #{record.billtype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.enabled != null">
+        enabled = #{record.enabled,jdbcType=SMALLINT},
+      </if>
+      <if test="record.ts != null">
+        ts = #{record.ts,jdbcType=CHAR},
+      </if>
+      <if test="record.dr != null">
+        dr = #{record.dr,jdbcType=SMALLINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update ms_base_orgelements
+    set pk_orgelements = #{record.pkOrgelements,jdbcType=VARCHAR},
+      code = #{record.code,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      parent_id = #{record.parentId,jdbcType=VARCHAR},
+      type = #{record.type,jdbcType=SMALLINT},
+      pk_corp = #{record.pkCorp,jdbcType=VARCHAR},
+      pk_group = #{record.pkGroup,jdbcType=VARCHAR},
+      creator = #{record.creator,jdbcType=VARCHAR},
+      creationtime = #{record.creationtime,jdbcType=VARCHAR},
+      modifier = #{record.modifier,jdbcType=VARCHAR},
+      modifiedtime = #{record.modifiedtime,jdbcType=VARCHAR},
+      billtype = #{record.billtype,jdbcType=VARCHAR},
+      enabled = #{record.enabled,jdbcType=SMALLINT},
+      ts = #{record.ts,jdbcType=CHAR},
+      dr = #{record.dr,jdbcType=SMALLINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="tp.ms.base.rest.ots.orgs.entity.MyAdreamOrgelements">
+    update ms_base_orgelements
+    <set>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null">
+        parent_id = #{parentId,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=SMALLINT},
+      </if>
+      <if test="pkCorp != null">
+        pk_corp = #{pkCorp,jdbcType=VARCHAR},
+      </if>
+      <if test="pkGroup != null">
+        pk_group = #{pkGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="creator != null">
+        creator = #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null">
+        creationtime = #{creationtime,jdbcType=VARCHAR},
+      </if>
+      <if test="modifier != null">
+        modifier = #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="modifiedtime != null">
+        modifiedtime = #{modifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="billtype != null">
+        billtype = #{billtype,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null">
+        enabled = #{enabled,jdbcType=SMALLINT},
+      </if>
+      <if test="ts != null">
+        ts = #{ts,jdbcType=CHAR},
+      </if>
+      <if test="dr != null">
+        dr = #{dr,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where pk_orgelements = #{pkOrgelements,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="tp.ms.base.rest.ots.orgs.entity.MyAdreamOrgelements">
+    update ms_base_orgelements
+    set code = #{code,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      parent_id = #{parentId,jdbcType=VARCHAR},
+      type = #{type,jdbcType=SMALLINT},
+      pk_corp = #{pkCorp,jdbcType=VARCHAR},
+      pk_group = #{pkGroup,jdbcType=VARCHAR},
+      creator = #{creator,jdbcType=VARCHAR},
+      creationtime = #{creationtime,jdbcType=VARCHAR},
+      modifier = #{modifier,jdbcType=VARCHAR},
+      modifiedtime = #{modifiedtime,jdbcType=VARCHAR},
+      billtype = #{billtype,jdbcType=VARCHAR},
+      enabled = #{enabled,jdbcType=SMALLINT},
+      ts = #{ts,jdbcType=CHAR},
+      dr = #{dr,jdbcType=SMALLINT}
+    where pk_orgelements = #{pkOrgelements,jdbcType=VARCHAR}
+  </update>
+</mapper>
