@@ -61,20 +61,4 @@ file-manager:
 #   http2https: true 
 #http:
 #   port: 80 
- 
-##### CAS 配置部分
-cas:
-   sec:
-#      authenticationUserDetailsService: com.ms.support.security.MsAuthenticationUserDetailsService
-#      userDetailsService: com.ms.support.security.MsUserDetailsService
-       cas-server-url: https://accounttest.adream.org/cas
-#       cas-server-url: https://account.adream.org/cas
-       app-service-url: http://10.104.23.197:${server.port}
-#       app-service-url: http://192.168.1.102:${server.port}
-   ref:
-      url:
-         users: http://accounttest.adream.org/account/restful/queryUserListByUid
 
- 
-
- 
