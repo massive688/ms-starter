@@ -1,4 +1,4 @@
-package tp.ms.common.batis.cfg;
+package tp.ms.common.data.jpa.config;
 
 
 import java.util.Map;

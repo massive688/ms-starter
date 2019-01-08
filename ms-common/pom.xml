@@ -22,7 +22,6 @@
   <packaging>pom</packaging>
   <modules>
     <module>ms-common-bean</module>
-    <module>ms-common-batis</module>
     <module>ms-common-data</module>
   </modules>
 </project>

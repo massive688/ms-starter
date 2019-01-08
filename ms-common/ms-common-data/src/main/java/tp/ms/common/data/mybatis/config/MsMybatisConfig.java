@@ -1,4 +1,4 @@
-package tp.ms.common.batis.cfg;
+package tp.ms.common.data.mybatis.config;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,39 +28,38 @@ import com.github.pagehelper.PageInterceptor;
 
 import lombok.val;
 import lombok.extern.slf4j.Slf4j;
-import tp.ms.common.batis.properties.DSourceProperties;
-import tp.ms.common.batis.properties.MsProperties;
-//import tp.ms.common.data.TargetDataSource;
+import tp.ms.common.data.mybatis.properties.DSourceProperties;
+import tp.ms.common.data.mybatis.properties.MsProperties;
 
 @Slf4j
-//@Configuration
-//@EnableConfigurationProperties(MsProperties.class)
-//@EnableTransactionManagement
-//@EnableAspectJAutoProxy(proxyTargetClass=true)
-//@ComponentScan({
+////@Configuration
+////@EnableConfigurationProperties(MsProperties.class)
+////@EnableTransactionManagement
+////@EnableAspectJAutoProxy(proxyTargetClass=true)
+////@ComponentScan({
 //	"tp.ms.common.batis.aspect",
 //})
-//@Import({
+////@Import({
 //	MsDynamicDataSourceRegister_Temp.class,
 //	DruidStatViewServletFilterConfiguration.class
 //	})
-public class MsMybatisConfig implements EnvironmentAware {
+public class MsMybatisConfig {
 
 	static final String MAPPERLOCATION = "classpath*:mappers/*/*.xml";
 
    /*
      * 配置上下文（也可以理解为配置文件的获取工具）
      */
-	@Autowired
+	//@Autowired
     private Environment evn;
 	
 	
-//	@Bean
+//	//@Bean
 //	public DataSourceTransactionManager transactionManager(DataSource dataSource) {
 //		return new DataSourceTransactionManager(dataSource);
 //	}
 	
-	@Bean
+	//@Bean
 	public MapperScannerConfigurer mapperScannerConfigurer() {
 		MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
 		mapperScannerConfigurer.setBasePackage(evn.getProperty("ms.dyn.myb.mapper-scan"));
@@ -68,8 +67,8 @@ public class MsMybatisConfig implements EnvironmentAware {
 		return mapperScannerConfigurer;
 	}
 	
-	@SuppressWarnings("unused")
-	@Bean
+	//@SuppressWarnings("unused")
+	//@Bean
 	public SqlSessionFactory sqlSessionFactory(DataSource dataSource, MsProperties mds)
 			throws Exception {
 		SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
@@ -93,18 +92,18 @@ public class MsMybatisConfig implements EnvironmentAware {
 		return sessionFactoryBean.getObject();
 	}
 
-	@Bean
+	//@Bean
 	public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) throws Exception {
 		return new SqlSessionTemplate(sqlSessionFactory);
 	}
 
-	   @Bean
+	   //@Bean
 	    public TransactionManager atomikosTransactionManager() {
 	        val userTransactionManager = new UserTransactionManager();
 	        userTransactionManager.setForceShutdown(true);
 	        return userTransactionManager;
 	    }
-	   @Bean
+	   //@Bean
 	    public UserTransaction atomikosUserTransaction() {
 	        val userTransaction = new UserTransactionImp();
 	        try {
@@ -113,7 +112,7 @@ public class MsMybatisConfig implements EnvironmentAware {
 			}
 	        return userTransaction;
 	    }
-	   @Bean
+	   //@Bean
 	    public PlatformTransactionManager springTransactionManager() {
 	        val jta = new JtaTransactionManager();
 	        jta.setTransactionManager(atomikosTransactionManager());
@@ -123,7 +122,7 @@ public class MsMybatisConfig implements EnvironmentAware {
 	    }
 	
 	
-	@SuppressWarnings("unused")
+	//@SuppressWarnings("unused")
 	private Interceptor createPageInterceptor(DSourceProperties dSourceProperties) {
 		val pageInterceptor = new PageInterceptor();
 		Properties properties = new Properties();
@@ -148,7 +147,7 @@ public class MsMybatisConfig implements EnvironmentAware {
 		return pageInterceptor;
 	}
 
-	@Override
+	//@Override
 	public void setEnvironment(Environment environment) {
 		this.evn = environment;
 	}
@@ -160,7 +159,7 @@ public class MsMybatisConfig implements EnvironmentAware {
 	 * - 设置dao所在的package路径；
 	 * - 关联注解在dao类上的Annotation名字；
 	 */
-//	@Bean(name="nc6302MapperScannerConfigurer")
+//	//@Bean(name="nc6302MapperScannerConfigurer")
 //	public MapperScannerConfigurer nc6302MapperScannerConfigurer() {
 //		MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
 //		mapperScannerConfigurer.setSqlSessionFactoryBeanName("nc6302SqlSessionFactory");
@@ -170,10 +169,10 @@ public class MsMybatisConfig implements EnvironmentAware {
 //	}
 //	/*
 //	 * nc6302 数据源
-//	 * @return
+//	 * //@return
 //	 */
-//	@Bean(name = "nc6302DataSource")
-//	@ConfigurationProperties(prefix = "spring.datasource.mssql10122624932nc6302")
+//	//@Bean(name = "nc6302DataSource")
+//	//@ConfigurationProperties(prefix = "spring.datasource.mssql10122624932nc6302")
 //	public DataSource nc6302DataSource(MsProperties ds){
 //		DruidDataSource datasource = DataSourceBuilder.create().type(DruidDataSource.class).build();
 //		datasource.setUrl(ds.getUrl());
@@ -200,13 +199,13 @@ public class MsMybatisConfig implements EnvironmentAware {
 //		log.info("DataSource {} Initialization end。", datasource.getClass().getName());
 //		return datasource;
 //	}
-//	@Bean(name = "nc6302TransactionManager")
+//	//@Bean(name = "nc6302TransactionManager")
 //	public DataSourceTransactionManager nc6302TransactionManager() {
 //		return new DataSourceTransactionManager(nc6302DataSource());
 //	}
-//	@Bean(name = "nc6302SqlSessionFactory")
-//	@Qualifier
-//	public SqlSessionFactory nc6302SqlSessionFactory(@Qualifier("nc6302DataSource") DataSource nc6302DataSource)
+//	//@Bean(name = "nc6302SqlSessionFactory")
+//	//@Qualifier
+//	public SqlSessionFactory nc6302SqlSessionFactory(//@Qualifier("nc6302DataSource") DataSource nc6302DataSource)
 //			throws Exception {
 //		final SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
 //		sessionFactoryBean.setDataSource(nc6302DataSource);
