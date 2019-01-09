@@ -4,7 +4,7 @@
 
 	<groupId>top.plong</groupId>
 	<artifactId>ms</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.4</version>
 	<packaging>pom</packaging>
 
 	<name>ms</name>
@@ -193,13 +193,13 @@
             <id>release</id>
             <build>
                 <plugins>
-                    <plugin>
+                    <!-- <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
                         <version>1.6.8</version>
                         <extensions>true</extensions>
                         <configuration>
-                            <serverId>oss</serverId>
+                            <serverId>oss-tp-ms</serverId>
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
@@ -213,7 +213,7 @@
                             <releaseProfiles>release</releaseProfiles>
                             <goals>deploy</goals>
                         </configuration>
-                    </plugin>
+                    </plugin> -->
                     <!-- Source -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -260,11 +260,11 @@
             </build>
             <distributionManagement>
                 <snapshotRepository>
-                    <id>oss</id>
+                    <id>oss-tp-ms</id>
                     <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                 </snapshotRepository>
                 <repository>
-                    <id>oss</id>
+                    <id>oss-tp-ms</id>
                     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>

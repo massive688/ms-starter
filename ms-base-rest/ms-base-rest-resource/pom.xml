@@ -5,7 +5,7 @@
   <parent>
     <groupId>top.plong</groupId>
     <artifactId>ms-base-rest</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.4</version>
   </parent>
   <artifactId>ms-base-rest-resource</artifactId>
   <name>ms-base-rest-resource</name>
