@@ -4,7 +4,7 @@
 
 	<groupId>top.plong</groupId>
 	<artifactId>ms</artifactId>
-	<version>0.0.4</version>
+	<version>0.0.5</version>
 	<packaging>pom</packaging>
 
 	<name>ms</name>
@@ -73,6 +73,19 @@
 			<!-- 本项目依赖devtools；若依赖本项目的其他项目想要使用devtools，需要重新引入 -->
 			<!-- <optional>true</optional> -->
 		</dependency>
+		
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		 
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		
 		
 		<!-- 公共部分的依赖 -->
 		<!-- mybatis jdk8换成10缺少的jar log 依赖 -->

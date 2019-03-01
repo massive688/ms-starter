@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.flowable.bpmn.model.BpmnModel;
 import org.flowable.common.engine.api.FlowableObjectNotFoundException;
+import org.flowable.engine.ManagementService;
 import org.flowable.engine.ProcessEngine;
 import org.flowable.engine.ProcessEngineConfiguration;
 import org.flowable.engine.RepositoryService;
@@ -74,8 +75,8 @@ public class FlowProcessServiceImpl implements FlowProcessService {
 	@Autowired
     private BeanHelperEnv beanHelperEnv;
 	
-//	@Autowired
-//	private ManagementService managementService;
+	@Autowired
+	private ManagementService managementService;
 //	
 	@Autowired
     private RepositoryService repositoryService;
@@ -103,7 +104,7 @@ public class FlowProcessServiceImpl implements FlowProcessService {
 	//处理提交动作
 	@Override
 	public MajorAuditBaseVO startSubmit(MajorAuditBaseVO auditVO, AuditCall<?> auditCall) throws ADBusinessException {
-		
+//		managementService.executeCommand(command);
 		try {
 			String pkUser = MsEnvContextHolder.getContext().user().getPkUser();
 			String billtype = auditVO.getBilltype();
